@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "ZZ",
+        " Y",
+        " Y"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:heavy_ingot"
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:stick_crystal"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:heavy_hoe"
+    }
+}

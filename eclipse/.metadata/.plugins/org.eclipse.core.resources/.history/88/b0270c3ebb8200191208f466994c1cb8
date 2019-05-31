@@ -1,0 +1,71 @@
+package com.laz.tirphycraft.particles;
+
+import com.laz.tirphycraft.util.Reference;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.client.renderer.BufferBuilder;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+
+public class ParticleGlint extends Particle {
+
+	private int i;
+	private int i2;
+
+	public ParticleGlint(World world, double x, double y, double z, double f, double f1, double f2) {
+		this(world, x, y, z, 1.0F, f, f1, f2);
+	}
+
+	public ParticleGlint(World world, double x, double y, double z, float f, double f1, double f2, double f3) {
+		super(world, x, y, z, 0.0D, 0.0D, 0.0D);
+		motionX *= 2.10000000149011612D;
+		motionY *= 2.10000000149011612D;
+		motionZ *= 2.10000000149011612D;
+		particleRed = particleGreen = 1.0F * f;
+		particleBlue = 0.0F;
+		particleScale = 1.0f + (rand.nextFloat() * 0.6f);
+		particleScale *= f;
+		i = particleMaxAge = 10 + rand.nextInt(21);
+		particleMaxAge *= f;
+		i2 = i / 2;
+		canCollide = true;
+		
+		this.setParticleTexture(Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(new ResourceLocation(Reference.MOD_ID, "particle/glint").toString()));
+	}
+
+	@Override
+	public void renderParticle(BufferBuilder buffer, Entity entity, float partialTicks, float rotationX, float rotationZ, float rotationYZ, float rotationXY, float rotationXZ) {
+
+		particleAlpha = getGlowBrightness();
+		super.renderParticle(buffer, entity, partialTicks, rotationX, rotationZ, rotationYZ, rotationXY, rotationXZ);
+	}
+
+	@Override
+	public void onUpdate() {
+		if (i <= 1) {
+			setExpired();
+		} else {
+			i--;
+		}
+	}
+
+	public float getGlowBrightness() {
+		if (i <= i2) {
+			return (float) i / (float) i2;
+		} else {
+			return Math.max(1.0f - (((float) i - i2) / i2), 0);
+		}
+	}
+
+	@Override
+	public int getBrightnessForRender(float partialTicks) {
+		return 0xF000F0;
+	}
+
+	@Override
+	public int getFXLayer() {
+		return 1;
+	}
+}

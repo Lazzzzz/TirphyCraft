@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "WWW",
+        "WZW",
+        " Y "
+    ],
+
+    "key": 
+    {
+        "W": 
+        {
+            "item": "tirphycraft:poly_crystal_pyrodes"
+        },
+
+        "Z": 
+        {
+            "item": "tirphycraft:pyrodes_sword"
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:stick_crystal"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:pyrodes_large"
+    }
+}

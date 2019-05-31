@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "ZZZ",
+        "Z Z",
+        "Z Z"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:poly_crystal_pyrodes"
+        }
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:pyrodes_leggings"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "Z Z",
+        "Z Z"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:nixium_ingot"
+        }
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:nixium_boots"
+    }
+}

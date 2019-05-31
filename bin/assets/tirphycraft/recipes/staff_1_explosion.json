@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        " XZ",
+        " XX",
+        "X  "
+    ],
+
+    "key": 
+    {
+
+        "Z": 
+        {
+            "item": "tirphycraft:explosion_core"
+        },
+
+        "X": 
+        {
+            "item": "tirphycraft:stick_coppir"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:staff_1_explosion"
+    }
+}

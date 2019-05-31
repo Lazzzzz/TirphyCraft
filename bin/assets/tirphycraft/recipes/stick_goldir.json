@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "Z",
+        "Z"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:planks_goldir"
+        }
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:stick_goldir"
+    }
+}

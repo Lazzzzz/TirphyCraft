@@ -1,0 +1,38 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "XZX",
+        "WYW",
+        "XXX"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "minecraft:chest"
+        },
+
+        "X": 
+        {
+            "item": "tirphycraft:noxis_cobblestone"
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:block_pyrodes"
+        },
+
+        "W": 
+        {
+            "item": "tirphycraft:pyrodes_furnace"
+        }                
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:alloy_furnace"
+    }
+}

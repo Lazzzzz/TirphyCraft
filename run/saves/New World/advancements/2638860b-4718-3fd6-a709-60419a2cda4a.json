@@ -1,0 +1,20 @@
+{
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2019-05-31 16:03:26 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2019-05-31 16:03:28 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "plains": "2019-05-31 15:48:38 +0200"
+    },
+    "done": false
+  }
+}

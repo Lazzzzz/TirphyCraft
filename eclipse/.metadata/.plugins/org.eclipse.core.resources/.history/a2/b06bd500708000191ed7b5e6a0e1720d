@@ -1,0 +1,5 @@
+package com.laz.tirphycraft.world.biomes.laputa;
+
+public class BiomeLaputaDecorator {
+
+}

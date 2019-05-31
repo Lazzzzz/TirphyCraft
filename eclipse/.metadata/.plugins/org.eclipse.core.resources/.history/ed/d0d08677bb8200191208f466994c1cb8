@@ -1,0 +1,6 @@
+package com.laz.tirphycraft.util.interfaces;
+
+public enum ParticleTypes {
+	GLINT_WHITE,
+	GLINT_BLUE
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "XXX",
+        "XYX",
+        "XXX"
+    ],
+
+    "key": 
+    {
+        "Y": 
+        {
+            "item": "minecraft:furnace"
+        },
+
+        "X": 
+        {
+            "item": "tirphycraft:crystal_purodes"
+        }
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:pyrodes_furnace"
+    }
+}

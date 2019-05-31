@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "X  ",
+        "XX ",
+        "XXX"
+    ],
+
+    "key": 
+    {
+
+        "X": 
+        {
+            "item": "tirphycraft:planks_coppir"
+        }            
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:stairs_coppir",
+        "count": 4
+    }
+}

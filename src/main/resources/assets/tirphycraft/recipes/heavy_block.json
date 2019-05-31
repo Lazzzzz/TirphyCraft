@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "XXX",
+        "XXX",
+        "XXX"
+    ],
+
+    "key": 
+    {
+        "X": 
+        {
+            "item": "tirphycraft:heavy_ingot"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:block_heavy"
+    }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="729" key="DIALOG_X_ORIGIN"/>
+		<item value="403" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="BlockRenderLayer" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="BlockRenderLayer"/>
+			<item value="proxy"/>
+			<item value="mater"/>
+			<item value="laputa_blue"/>
+			<item value="bedrock"/>
+			<item value="crystal"/>
+			<item value="getActualState"/>
+			<item value="TRUNK"/>
+			<item value="generate"/>
+			<item value="floor"/>
+			<item value="doubl"/>
+			<item value="NOXIS"/>
+			<item value="caveGenerator"/>
+			<item value="acti"/>
+			<item value="fruit"/>
+		</list>
+		<list key="replacehistory">
+			<item value="atlas"/>
+			<item value="FROZ_BOSS_WALL"/>
+			<item value=""/>
+			<item value="froz"/>
+			<item value="laputa"/>
+			<item value="brick_noxis"/>
+			<item value="brick_froz"/>
+			<item value="brick_laputa"/>
+			<item value="BlockInit.BLACK_CRYSTAL"/>
+			<item value="LEAVES"/>
+			<item value="LOG"/>
+			<item value="silvir"/>
+			<item value="goldir"/>
+			<item value="stairs_outer_coppir"/>
+			<item value="stairs_inner_coppir"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="505" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="630" key="DIALOG_HEIGHT"/>
+		<item value="84" key="DIALOG_X_ORIGIN"/>
+		<item value="409" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

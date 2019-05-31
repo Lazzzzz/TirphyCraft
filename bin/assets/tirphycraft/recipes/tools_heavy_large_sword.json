@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "WWW",
+        "WZW",
+        " Y "
+    ],
+
+    "key": 
+    {
+        "W": 
+        {
+            "item": "tirphycraft:heavy_ingot"
+        },
+
+        "Z": 
+        {
+            "item": "tirphycraft:heavy_sword"
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:stick_crystal"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:heavy_large"
+    }
+}

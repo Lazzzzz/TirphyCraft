@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "XZX",
+        "ZYZ",
+        "XZX"
+    ],
+
+    "key": 
+    {
+        "Y": 
+        {
+            "item": "minecraft:emerald_block"
+        },
+
+        "Z": 
+        {
+            "item": "tirphycraft:amulet_2_health"
+        },
+
+        "X": 
+        {
+            "item": "minecraft:diamond"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:amulet_3_health"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "X  ",
+        "XX ",
+        "XXX"
+    ],
+
+    "key": 
+    {
+
+        "X": 
+        {
+            "item": "tirphycraft:brick_laputa"
+        }            
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:stairs_brick_laputa",
+        "count": 4
+    }
+}

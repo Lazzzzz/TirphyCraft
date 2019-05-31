@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "XXX",
+        "XXX",
+        "XXX"
+    ],
+
+    "key": 
+    {
+        "X": 
+        {
+            "item": "tirphycraft:coal_on_coke"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:block_coal_on_coke"
+    }
+}

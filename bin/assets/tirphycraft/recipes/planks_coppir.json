@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": 
+    [
+        {
+            "item": "tirphycraft:log_coppir"
+        }
+    ],
+
+    "result": 
+    {
+        "item": "tirphycraft:planks_coppir",
+        "count": 2
+    }
+}

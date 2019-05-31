@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "XXX",
+        "XXX",
+        "XXX"
+    ],
+
+    "key": 
+    {
+        "X": 
+        {
+            "item": "tirphycraft:nixium_ingot"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:block_nixium"
+    }
+}

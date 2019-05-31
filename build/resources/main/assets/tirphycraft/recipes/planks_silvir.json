@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": 
+    [
+        {
+            "item": "tirphycraft:log_silvir"
+        }
+    ],
+
+    "result": 
+    {
+        "item": "tirphycraft:planks_silvir",
+        "count": 2
+    }
+}

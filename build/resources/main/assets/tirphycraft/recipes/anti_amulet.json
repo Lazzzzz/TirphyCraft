@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "XZX",
+        "ZYZ",
+        "XZX"
+    ],
+
+    "key": 
+    {
+        "Y": 
+        {
+            "item": "tirphycraft:heavy_ingot"
+        },
+
+        "Z": 
+        {
+            "item": "minecraft:stone",
+            "data": 0
+        },
+
+        "X": 
+        {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:anti_amulet"
+    }
+}

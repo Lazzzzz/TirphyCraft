@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "X  ",
+        "XX ",
+        "XXX"
+    ],
+
+    "key": 
+    {
+
+        "X": 
+        {
+            "item": "tirphycraft:planks_silvir"
+        }            
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:stairs_silvir",
+        "count": 4
+    }
+}

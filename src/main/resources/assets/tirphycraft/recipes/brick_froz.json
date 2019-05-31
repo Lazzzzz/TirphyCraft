@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "YY",
+        "YY"
+    ],
+
+    "key": 
+    {
+        "Y": 
+        {
+            "item": "tirphycraft:froz_stone"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:brick_froz",
+        "count": 4
+    }
+}

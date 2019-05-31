@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "Z",
+        "Z",
+        "Y"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:poly_crystal_pyrodes"
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:stick_crystal"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:pyrodes_sword"
+    }
+}

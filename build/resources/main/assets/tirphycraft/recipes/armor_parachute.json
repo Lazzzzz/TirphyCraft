@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "ZZZ",
+        "ZZZ",
+        " Y "
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "minecraft:wool",
+            "data": 0
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:pyrodes_helmet"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:parachute"
+    }
+}

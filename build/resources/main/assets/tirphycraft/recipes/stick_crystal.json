@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "ZZZ",
+        "ZXZ",
+        "ZZZ"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:crystal"
+        },
+
+        "X": 
+        {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:stick_crystal",
+        "count": 2
+    }
+}

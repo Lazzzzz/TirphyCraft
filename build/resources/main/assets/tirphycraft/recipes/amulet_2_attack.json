@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "XZX",
+        "ZYZ",
+        "XZX"
+    ],
+
+    "key": 
+    {
+        "Y": 
+        {
+            "item": "minecraft:diamond_block"
+        },
+
+        "Z": 
+        {
+            "item": "tirphycraft:amulet_1_attack"
+        },
+
+        "X": 
+        {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:amulet_2_attack"
+    }
+}

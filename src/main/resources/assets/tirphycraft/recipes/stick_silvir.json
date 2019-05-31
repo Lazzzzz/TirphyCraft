@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "Z",
+        "Z"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:planks_silvir"
+        }
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:stick_silvir"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "Z Z",
+        "ZZZ",
+        "ZZZ"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:heavy_ingot"
+        }
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:heavy_chestplate"
+    }
+}

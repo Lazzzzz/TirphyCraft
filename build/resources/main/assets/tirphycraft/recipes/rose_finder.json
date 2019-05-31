@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        " Z ",
+        "ZYZ",
+        " Z "
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:blue_rose_shard"
+        },
+
+        "Y": 
+        {
+            "item": "minecraft:compass"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:rose_finder"
+    }
+}

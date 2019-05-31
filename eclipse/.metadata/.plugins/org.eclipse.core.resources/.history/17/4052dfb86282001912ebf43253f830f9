@@ -1,0 +1,5 @@
+package com.laz.tirphycraft.particles;
+
+public enum ParticleTypes {
+	GLINT
+}

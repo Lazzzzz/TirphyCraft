@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        " Z ",
+        "ZYZ",
+        " Z "
+    ],
+
+    "key": 
+    {
+
+        "Z": 
+        {
+            "item": "tirphycraft:nixium_ingot"
+        },
+
+        "Y": 
+        {
+            "item": "minecraft:clock"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:noxis_clock"
+    }
+}

@@ -1,0 +1,5 @@
+package com.laz.tirphycraft.proxy;
+
+public class ClientEvent {
+
+}

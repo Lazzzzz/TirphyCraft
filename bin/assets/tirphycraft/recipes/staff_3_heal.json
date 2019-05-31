@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        " XZ",
+        " XX",
+        "X  "
+    ],
+
+    "key": 
+    {
+
+        "Z": 
+        {
+            "item": "tirphycraft:life_core"
+        },
+
+        "X": 
+        {
+            "item": "tirphycraft:stick_goldir"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:staff_3_heal"
+    }
+}

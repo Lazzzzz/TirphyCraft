@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "ZZZ",
+        "Z Z",
+        "Z Z"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:blue_rose_shard"
+        }
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:rose_leggings"
+    }
+}

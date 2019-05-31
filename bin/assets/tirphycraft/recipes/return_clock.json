@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        " Z ",
+        "ZYZ",
+        " Z "
+    ],
+
+    "key": 
+    {
+
+        "Z": 
+        {
+            "item": "minecraft:grass"
+        },
+
+        "Y": 
+        {
+            "item": "minecraft:clock"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:return_clock"
+    }
+}

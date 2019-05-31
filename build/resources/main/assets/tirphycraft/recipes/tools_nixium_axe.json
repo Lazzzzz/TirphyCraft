@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "ZZ",
+        "ZY",
+        " Y"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:nixium_ingot"
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:stick_silvir"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:nixium_axe"
+    }
+}

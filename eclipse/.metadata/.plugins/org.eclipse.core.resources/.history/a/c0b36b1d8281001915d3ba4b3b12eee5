@@ -1,0 +1,68 @@
+package com.laz.tirphycraft.world.gen.generators.deco.laputa;
+
+import java.util.Random;
+
+import com.laz.tirphycraft.init.BlockInit;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockLog;
+import net.minecraft.block.BlockLog.EnumAxis;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
+import net.minecraft.world.chunk.Chunk;
+import net.minecraft.world.gen.feature.WorldGenerator;
+
+public class WorldGenLaputaPick extends WorldGenerator {
+
+	public WorldGenLaputaPick(int meta) {
+		this.meta = meta;
+	}
+
+	private int meta = 0;
+
+	@Override
+	public boolean generate(World world, Random rand, BlockPos pos) {
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+
+		if (world.getBlockState(new BlockPos(x, y - 1, z)).getMaterial().isLiquid()
+				|| world.getBlockState(new BlockPos(x, y - 1, z)) != BlockInit.LAPUTA_GRASS) {
+			return false;
+		}
+
+		int directionX = 0;
+		int directionZ = 0;
+		while (directionZ == 0 && directionX == 0) {
+			directionX = 1 - rand.nextInt(3);
+			directionZ = 1 - rand.nextInt(3);
+		}
+
+		int length = 5 + rand.nextInt(4);
+		float radius = length / 2F;
+
+		for (int j = 0; j < length; j++) {
+			for (int i = (int) -radius; i < radius; i++) {
+				for (int k = (int) -radius; k < radius; k++) {
+					if (i * i + k * k < radius) {
+						IBlockState old = world.getBlockState(new BlockPos(x + i + directionX * j, y + j, z + k + directionZ * j));
+							world.setBlockState(new BlockPos(x + i + directionX * j, y + j, z + k + directionZ * j), BlockInit.LAPUTA_BLUE.getDefaultState());
+
+						old = world.getBlockState(new BlockPos(x - i - directionX * j, y - j, z - k - directionZ * j));
+							world.setBlockState(new BlockPos(x - i - directionX * j, y - j, z - k - directionZ * j), BlockInit.LAPUTA_BLUE.getDefaultState());
+
+						
+					}
+				}
+			}
+			radius -= 0.5F;
+		}
+
+		return true;
+	}
+}

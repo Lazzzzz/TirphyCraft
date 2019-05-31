@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "WWW",
+        "WZW",
+        " Y "
+    ],
+
+    "key": 
+    {
+        "W": 
+        {
+            "item": "tirphycraft:nixium_ingot"
+        },
+
+        "Z": 
+        {
+            "item": "tirphycraft:nixium_sword"
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:stick_silvir"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:nixium_large"
+    }
+}

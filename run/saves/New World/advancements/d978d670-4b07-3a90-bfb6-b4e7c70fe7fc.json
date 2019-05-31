@@ -1,0 +1,21 @@
+{
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2019-05-29 19:05:51 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2019-05-29 18:49:23 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "plains": "2019-05-29 18:56:38 +0200",
+      "extreme_hills": "2019-05-29 18:49:31 +0200"
+    },
+    "done": false
+  }
+}

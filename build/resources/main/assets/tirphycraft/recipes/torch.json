@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "Z",
+        "W"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:coal_on_coke"
+        },
+
+        "W": 
+        {
+            "item": "minecraft:stick"
+        }
+    },
+
+    "result": 
+    {
+        "item": "minecraft:torch",
+        "count": 8
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "X  ",
+        "XX ",
+        "XXX"
+    ],
+
+    "key": 
+    {
+
+        "X": 
+        {
+            "item": "tirphycraft:brick_froz"
+        }            
+
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:stairs_brick_froz",
+        "count": 4
+    }
+}
