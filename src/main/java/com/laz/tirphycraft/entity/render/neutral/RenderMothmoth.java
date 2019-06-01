@@ -1,7 +1,5 @@
 package com.laz.tirphycraft.entity.render.neutral;
 
-import com.laz.tirphycraft.entity.aggressive.EntityCerbere;
-import com.laz.tirphycraft.entity.model.aggresive.ModelCerbere;
 import com.laz.tirphycraft.entity.model.neutral.ModelMothmoth;
 import com.laz.tirphycraft.entity.neutral.EntityMothmoth;
 import com.laz.tirphycraft.util.Reference;

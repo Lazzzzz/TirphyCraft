@@ -23,6 +23,7 @@ import com.laz.tirphycraft.entity.boss.EntityPharaoh;
 import com.laz.tirphycraft.entity.boss.EntityPoseidon;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryAttack;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryHeal;
+import com.laz.tirphycraft.entity.boss.EntityPrimaryStrength;
 import com.laz.tirphycraft.entity.boss.EntityQueenCreeper;
 import com.laz.tirphycraft.entity.neutral.EntityMothmoth;
 import com.laz.tirphycraft.entity.passif.EntityBuffalo;
@@ -41,7 +42,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class EntityInit {
@@ -93,6 +93,7 @@ public class EntityInit {
 		registerEntity("artikon", EntityArtikon.class, Reference.ARTIKON, 50, 16711680, 16711680);
 		registerEntity("primary_attack", EntityPrimaryAttack.class, Reference.PRIMARY_ATTACK, 50, 16711680, 16711680);
 		registerEntity("primary_heal", EntityPrimaryHeal.class, Reference.PRIMARY_HEAL, 50, 16711680, 16711680);
+		registerEntity("primary_strength", EntityPrimaryStrength.class, Reference.PRIMARY_STRENGTH, 50, 16711680, 16711680);
 		
 		addSpawn();
 		

@@ -10,7 +10,6 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
-import scala.tools.nsc.backend.icode.TypeKinds.REFERENCE;
 
 public class EntityBuffalo extends EntityCow {
 	public EntityBuffalo(World worldIn) {

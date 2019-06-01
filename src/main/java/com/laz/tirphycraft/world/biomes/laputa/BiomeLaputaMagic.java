@@ -3,19 +3,10 @@ package com.laz.tirphycraft.world.biomes.laputa;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.deco.laputa.WorldGenLaputaBigCloud;
-import com.laz.tirphycraft.world.gen.generators.pad.WorldGenLightPad;
-import com.laz.tirphycraft.world.gen.generators.pick.WorldBlackCrystal;
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenLaputaMagicPlant;
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenLaputaPlant;
-import com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenGeantTree;
-import com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenNormalTree;
 
-import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.feature.WorldGenLakes;
 
 public class BiomeLaputaMagic extends Biome {
 

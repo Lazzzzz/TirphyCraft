@@ -1,6 +1,5 @@
 package com.laz.tirphycraft.entity.aggressive;
 
-import com.laz.tirphycraft.entity.passif.EntityDragonFly;
 import com.laz.tirphycraft.init.ItemInit;
 import com.laz.tirphycraft.util.handlers.LootTableHandler;
 

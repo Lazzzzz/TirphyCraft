@@ -22,6 +22,7 @@ import com.laz.tirphycraft.entity.boss.EntityPharaoh;
 import com.laz.tirphycraft.entity.boss.EntityPoseidon;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryAttack;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryHeal;
+import com.laz.tirphycraft.entity.boss.EntityPrimaryStrength;
 import com.laz.tirphycraft.entity.boss.EntityQueenCreeper;
 import com.laz.tirphycraft.entity.neutral.EntityMothmoth;
 import com.laz.tirphycraft.entity.passif.EntityBuffalo;
@@ -56,6 +57,7 @@ import com.laz.tirphycraft.entity.render.boss.RenderPharaoh;
 import com.laz.tirphycraft.entity.render.boss.RenderPoseidon;
 import com.laz.tirphycraft.entity.render.boss.RenderPrimaryAttack;
 import com.laz.tirphycraft.entity.render.boss.RenderPrimaryHeal;
+import com.laz.tirphycraft.entity.render.boss.RenderPrimaryStrength;
 import com.laz.tirphycraft.entity.render.boss.RenderQueenCreeper;
 import com.laz.tirphycraft.entity.render.neutral.RenderMothmoth;
 import com.laz.tirphycraft.entity.render.passif.RenderBuffalo;
@@ -411,6 +413,16 @@ public class RenderHandler {
 					@Override
 					public RenderPrimaryHeal createRenderFor(RenderManager manager) {
 						return new RenderPrimaryHeal(manager);
+
+					}
+
+				});	
+		RenderingRegistry.registerEntityRenderingHandler(EntityPrimaryStrength.class,
+				new IRenderFactory<EntityPrimaryStrength>() {
+
+					@Override
+					public RenderPrimaryStrength createRenderFor(RenderManager manager) {
+						return new RenderPrimaryStrength(manager);
 
 					}
 

@@ -2,16 +2,10 @@ package com.laz.tirphycraft.world.biomes.noxis;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.entity.aggressive.EntityPhorus;
-import com.laz.tirphycraft.entity.aggressive.EntityTotam;
-import com.laz.tirphycraft.entity.passif.EntityFrozenBoar;
-import com.laz.tirphycraft.entity.passif.EntityFrozenBuffalo;
-import com.laz.tirphycraft.entity.passif.EntityMontauk;
 import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.world.gen.generators.deco.WorldGenNoxisSmoker;
 import com.laz.tirphycraft.world.gen.generators.pick.WorldFrozenCrystal;
 import com.laz.tirphycraft.world.gen.generators.structures.portal.WorldGenPortalFroz;
-import com.laz.tirphycraft.world.gen.generators.structures.portal.WorldGenPortalLaputa;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;

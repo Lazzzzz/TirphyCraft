@@ -1,39 +1,26 @@
 package com.laz.tirphycraft.entity.boss;
 
 import java.util.List;
-import java.util.Random;
 
-import com.laz.tirphycraft.entity.aggressive.EntitySkull;
 import com.laz.tirphycraft.init.ItemInit;
 import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.interfaces.ParticleTypes;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackMelee;
-import net.minecraft.entity.ai.EntityAIFollow;
-import net.minecraft.entity.ai.EntityAIFollowParent;
-import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAIAvoidEntity;
 import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
 import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
-import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWanderAvoidWater;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.MobEffects;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -46,6 +33,7 @@ public class EntityPrimaryStrength extends EntityMob {
 
 	private int range = 30;
 	EntityPrimaryAttack entityTarget;
+	int cooldown = 0;
 
 	public EntityPrimaryStrength(World worldIn) {
 
@@ -62,6 +50,8 @@ public class EntityPrimaryStrength extends EntityMob {
 		this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D));
 		this.tasks.addTask(20, new EntityAIWatchClosest(this, EntityPrimaryAttack.class, 30.0F));
 		this.tasks.addTask(8, new EntityAILookIdle(this));
+		this.tasks.addTask(15,
+				new EntityAIAvoidEntity(this, EntityPlayer.class, 20, 1.25000000298023224D, 1.25000000298023224D));
 		this.applyEntityAI();
 	}
 
@@ -89,7 +79,7 @@ public class EntityPrimaryStrength extends EntityMob {
 	}
 
 	private final BossInfoServer bossInfo = (BossInfoServer) (new BossInfoServer(this.getDisplayName(),
-			BossInfo.Color.PURPLE, BossInfo.Overlay.PROGRESS));
+			BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
 
 	@Override
 	protected boolean canDespawn() {
@@ -137,6 +127,8 @@ public class EntityPrimaryStrength extends EntityMob {
 
 	@Override
 	public void onLivingUpdate() {
+		if (this.cooldown > 0)
+			this.cooldown -= 1;
 		this.getAndHealTarget();
 		this.beam();
 		super.onLivingUpdate();
@@ -149,6 +141,13 @@ public class EntityPrimaryStrength extends EntityMob {
 
 	@Override
 	public boolean hitByEntity(Entity entityIn) {
+		if (this.entityTarget != null) {
+			this.entityTarget.strength_is_attack = true;
+
+		}
+
+		this.cooldown = 10 * 20;
+
 		return super.hitByEntity(entityIn);
 	}
 
@@ -176,12 +175,14 @@ public class EntityPrimaryStrength extends EntityMob {
 				this.posX + this.range, this.posY + this.range, this.posZ + this.range);
 
 		List list = this.world.getEntitiesWithinAABB(EntityPrimaryAttack.class, box);
+		if (this.entityTarget != null)
+			entityTarget.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(30.0D);
 		this.entityTarget = null;
 		if (!list.isEmpty()) {
 
 			for (int i = 0; i <= list.size() - 1; i++) {
 				EntityPrimaryAttack target = (EntityPrimaryAttack) list.get(i);
-				target.heal(1);
+				target.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(40.0D);
 				this.entityTarget = target;
 
 			}
@@ -192,19 +193,17 @@ public class EntityPrimaryStrength extends EntityMob {
 	public void beam() {
 		if (this.entityTarget != null) {
 
-			Vec3d dir = new Vec3d((this.posX - this.entityTarget.posX) / 120,
-					(((this.posY + (this.height / 2)) - (this.entityTarget.posY + (this.entityTarget.height / 2))))
-							/ 120,
-					((this.posZ - this.entityTarget.posZ)) / 120);
+			Vec3d dir = new Vec3d((this.posX - this.entityTarget.posX) / 10,
+					(((this.posY + (this.height / 2)) - (this.entityTarget.posY + (this.entityTarget.height / 2)))
+							/ 10),
+					((this.posZ - this.entityTarget.posZ)) / 10);
 
-			if (this.rand.nextBoolean()) {
+			double x = this.posX + ((this.rand.nextDouble() - 0.5D) * this.width) / 2;
+			double y = this.posY + ((this.rand.nextDouble() + 2D) * this.width) / 2;
+			double z = this.posZ + ((this.rand.nextDouble() - 0.5D) * this.width) / 2;
 
-				double x = this.posX + ((this.rand.nextDouble() - 0.5D) * this.width) / 2;
-				double y = this.posY + ((this.rand.nextDouble() + 2D) * this.width) / 2;
-				double z = this.posZ + ((this.rand.nextDouble() - 0.5D) * this.width) / 2;
+			Reference.PROXY.spawnParticle(this.world, ParticleTypes.GLINT_BOSS_GREEN, x, y, z, -dir.x, -dir.y, -dir.z);
 
-				Reference.PROXY.spawnParticle(this.world, ParticleTypes.GLINT_PURPLE, x, y, z, -dir.x, -dir.y, -dir.z);
-			}
 		}
 
 	}

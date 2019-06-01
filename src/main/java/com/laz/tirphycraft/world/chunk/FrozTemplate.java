@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.chunk.cave.FrozCaveGen;
 
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
@@ -28,7 +27,6 @@ import net.minecraft.world.gen.MapGenRavine;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 import net.minecraft.world.gen.feature.WorldGenDungeons;
-import net.minecraft.world.gen.feature.WorldGenLakes;
 
 public class FrozTemplate implements IChunkGenerator {
 

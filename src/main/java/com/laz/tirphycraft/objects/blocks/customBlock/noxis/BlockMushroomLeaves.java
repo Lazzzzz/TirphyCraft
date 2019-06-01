@@ -5,9 +5,6 @@ import java.util.Random;
 
 import com.laz.tirphycraft.init.ItemInit;
 import com.laz.tirphycraft.objects.base.BlockLightBase;
-import com.laz.tirphycraft.proxy.ClientProxy;
-import com.laz.tirphycraft.proxy.CommonProxy;
-import com.laz.tirphycraft.util.interfaces.ParticleTypes;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

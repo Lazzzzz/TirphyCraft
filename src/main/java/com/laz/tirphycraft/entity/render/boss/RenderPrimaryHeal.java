@@ -1,9 +1,6 @@
 package com.laz.tirphycraft.entity.render.boss;
 
-import com.laz.tirphycraft.entity.boss.EntityArtikon;
-import com.laz.tirphycraft.entity.boss.EntityPrimaryAttack;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryHeal;
-import com.laz.tirphycraft.entity.model.boss.ModelArtikon;
 import com.laz.tirphycraft.entity.model.boss.ModelPrimary;
 import com.laz.tirphycraft.util.Reference;
 

@@ -5,13 +5,11 @@ import java.util.List;
 
 import com.laz.tirphycraft.objects.base.BlockBase;
 import com.laz.tirphycraft.objects.base.BlockDungeonBase;
-import com.laz.tirphycraft.objects.base.BlockLightBase;
 import com.laz.tirphycraft.objects.base.BlockLogBase;
 import com.laz.tirphycraft.objects.base.BlockOre;
 import com.laz.tirphycraft.objects.base.BlockPlanksBase;
 import com.laz.tirphycraft.objects.base.BlockPortalBase;
 import com.laz.tirphycraft.objects.base.BlockStairsBase;
-import com.laz.tirphycraft.objects.base.BlockCrystalFullBase;
 import com.laz.tirphycraft.objects.base.GrassBase;
 import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeon;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBase;

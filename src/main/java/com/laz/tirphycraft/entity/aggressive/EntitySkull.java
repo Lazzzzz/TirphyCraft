@@ -1,8 +1,6 @@
 package com.laz.tirphycraft.entity.aggressive;
 
 import com.laz.tirphycraft.init.ItemInit;
-import com.laz.tirphycraft.util.Reference;
-import com.laz.tirphycraft.util.interfaces.ParticleTypes;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;

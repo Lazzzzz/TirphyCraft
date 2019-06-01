@@ -3,13 +3,6 @@ package com.laz.tirphycraft.world.biomes.laputa;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.deco.laputa.WorldGenLaputaBigCloud;
-import com.laz.tirphycraft.world.gen.generators.deco.laputa.WorldGenLaputaCave;
-import com.laz.tirphycraft.world.gen.generators.pad.WorldGenLightPad;
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenLaputaPlant;
-import com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenGeantTree;
-import com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenNormalTree;
-import com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenStem;
 
 import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;

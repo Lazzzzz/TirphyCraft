@@ -1,8 +1,6 @@
 package com.laz.tirphycraft.entity.render.passif;
 
-import com.laz.tirphycraft.entity.model.passif.ModelBuffalo;
 import com.laz.tirphycraft.entity.model.passif.ModelCrystim;
-import com.laz.tirphycraft.entity.passif.EntityBuffalo;
 import com.laz.tirphycraft.entity.passif.EntityCrystim;
 import com.laz.tirphycraft.util.Reference;
 

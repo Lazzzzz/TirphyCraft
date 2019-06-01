@@ -2,20 +2,14 @@ package com.laz.tirphycraft.world.biomes.froz;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.entity.neutral.EntityMothmoth;
-import com.laz.tirphycraft.entity.passif.EntityBuffalo;
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.deco.laputa.WorldGenLaputaCave;
-import com.laz.tirphycraft.world.gen.generators.pick.WorldGenCrystalPick;
 import com.laz.tirphycraft.world.gen.generators.structures.froz.WorldGenFrozDungeon;
-import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBigTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biome.SpawnListEntry;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 public class BiomeFrozPlaine extends Biome {

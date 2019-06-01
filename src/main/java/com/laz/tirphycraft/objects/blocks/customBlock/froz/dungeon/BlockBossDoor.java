@@ -1,6 +1,5 @@
 package com.laz.tirphycraft.objects.blocks.customBlock.froz.dungeon;
 
-import java.util.List;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.ItemInit;
@@ -9,13 +8,10 @@ import com.laz.tirphycraft.objects.base.BlockBase;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;

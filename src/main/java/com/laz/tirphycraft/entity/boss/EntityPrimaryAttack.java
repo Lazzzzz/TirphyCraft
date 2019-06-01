@@ -1,18 +1,13 @@
 package com.laz.tirphycraft.entity.boss;
 
-import java.util.List;
-import java.util.Random;
-
-import com.laz.tirphycraft.entity.aggressive.EntitySkull;
 import com.laz.tirphycraft.init.ItemInit;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackMelee;
-import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
 import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
@@ -20,24 +15,22 @@ import net.minecraft.entity.ai.EntityAIWanderAvoidWater;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.BossInfoServer;
 import net.minecraft.world.World;
 
 public class EntityPrimaryAttack extends EntityMob {
 
+	boolean heal_is_attack = false;
+	boolean strength_is_attack = false;
+	private final BossInfoServer bossInfo = (BossInfoServer) (new BossInfoServer(this.getDisplayName(),
+			BossInfo.Color.BLUE, BossInfo.Overlay.PROGRESS));
 
 	public EntityPrimaryAttack(World worldIn) {
 
@@ -80,9 +73,6 @@ public class EntityPrimaryAttack extends EntityMob {
 	public boolean isNonBoss() {
 		return false;
 	}
-
-	private final BossInfoServer bossInfo = (BossInfoServer) (new BossInfoServer(this.getDisplayName(),
-			BossInfo.Color.BLUE, BossInfo.Overlay.PROGRESS));
 
 	@Override
 	protected boolean canDespawn() {
@@ -138,7 +128,6 @@ public class EntityPrimaryAttack extends EntityMob {
 		return true;
 	}
 
-
 	@Override
 	public boolean hitByEntity(Entity entityIn) {
 		return super.hitByEntity(entityIn);
@@ -161,6 +150,14 @@ public class EntityPrimaryAttack extends EntityMob {
 	@Override
 	public boolean canBeHitWithPotion() {
 		return false;
+	}
+
+	public void goHelp() {
+		if (this.heal_is_attack == true || this.strength_is_attack == true)
+			this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(2.10000000298023224D);
+		else
+			this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.20000000298023224D);
+
 	}
 
 }
