@@ -20,10 +20,10 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 	public boolean generate(World worldIn, Random rand, BlockPos pos) {
 		if (!checkSpace(worldIn, pos))
 			return false;
-		makeSpace(worldIn, pos);
 		makeWall(worldIn, pos, rand);
+		makeSpace(worldIn, pos);
 		placeLamp(worldIn, pos);
-		
+
 		System.out.println(pos);
 		return true;
 	}
@@ -72,10 +72,7 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 		for (int i = -1; i < 22; i++) {
 			for (int j = -1; j < 22; j++) {
 				for (int k = -1; k < 7; k++) {
-					if (worldIn.getBlockState(new BlockPos(x + i, y - k, z + j)) != Blocks.AIR.getDefaultState()) {
-						worldIn.setBlockState(new BlockPos(x + i, y - k, z + j),
-								BlockInit.BRICK_DUNGEON.getDefaultState());
-					}
+					worldIn.setBlockState(new BlockPos(x + i, y - k, z + j), BlockInit.BRICK_DUNGEON.getDefaultState());
 				}
 			}
 		}
@@ -103,7 +100,7 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 			worldIn.setBlockState(new BlockPos(x + 3, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
 			worldIn.setBlockState(new BlockPos(x + 17, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
 		}
-		
+
 		for (int i = 9; i < 13; i += 2) {
 			worldIn.setBlockState(new BlockPos(x + i, y, z + 8), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
 			worldIn.setBlockState(new BlockPos(x + i, y, z + 12), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
@@ -111,7 +108,7 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 			worldIn.setBlockState(new BlockPos(x + 12, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
 		}
 		worldIn.setBlockState(new BlockPos(x + 10, y, z + 10), BlockInit.BRICK_DUNGEON_CONTROLER.getDefaultState());
-		
+
 	}
 
 }

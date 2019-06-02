@@ -51,7 +51,7 @@ public class EntityPrimaryHeal extends EntityMob {
 		this.tasks.addTask(20, new EntityAIWatchClosest(this, EntityPrimaryAttack.class, 30.0F));
 		this.tasks.addTask(8, new EntityAILookIdle(this));
 		this.tasks.addTask(15,
-				new EntityAIAvoidEntity(this, EntityPlayer.class, 20, 1.25000000298023224D, 1.25000000298023224D));
+				new EntityAIAvoidEntity(this, EntityPlayer.class, 20, 2.25000000298023224D, 2.25000000298023224D));
 		this.applyEntityAI();
 	}
 

@@ -1,8 +1,0 @@
-{
-  "minecraft:recipes/building_blocks/polished_andesite": {
-    "criteria": {
-      "has_stone": "2019-06-02 17:15:59 +0200"
-    },
-    "done": true
-  }
-}

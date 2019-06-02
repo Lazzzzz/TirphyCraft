@@ -6,12 +6,15 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Living" key="selection"/>
+		<item value="Player" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="player"/>
+			<item value="pla"/>
+			<item value="print"/>
 			<item value="LIVING"/>
 			<item value="BlockRenderLayer"/>
 			<item value="proxy"/>
@@ -24,9 +27,6 @@
 			<item value="generate"/>
 			<item value="floor"/>
 			<item value="doubl"/>
-			<item value="NOXIS"/>
-			<item value="caveGenerator"/>
-			<item value="acti"/>
 		</list>
 		<list key="replacehistory">
 			<item value="atlas"/>

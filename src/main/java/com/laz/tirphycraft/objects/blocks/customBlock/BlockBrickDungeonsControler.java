@@ -6,6 +6,7 @@ import java.util.Random;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryAttack;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryHeal;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryStrength;
+import com.laz.tirphycraft.entity.neutral.EntityStellar;
 import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.init.ItemInit;
 import com.laz.tirphycraft.objects.base.BlockBase;
@@ -19,10 +20,12 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
 public class BlockBrickDungeonsControler extends BlockBase {
@@ -36,6 +39,12 @@ public class BlockBrickDungeonsControler extends BlockBase {
 
 	@Override
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
+		BlockPos b = new BlockPos(world.getHeight(pos));
+		EntityStellar e = new EntityStellar(world);
+
+		e.setPosition(b.getX() + 0.5, b.getY(), b.getZ() + 0.5);
+
+		world.spawnEntity(e);
 		world.scheduleUpdate(pos, this, this.tickRate(world));
 
 	}
@@ -48,115 +57,128 @@ public class BlockBrickDungeonsControler extends BlockBase {
 
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		AxisAlignedBB box = new AxisAlignedBB(pos.getX() - 20, pos.getY(), pos.getZ() - 20, pos.getX() + 21,
-				pos.getY() + 6, pos.getZ() + 21);
-
-		List list = worldIn.getEntitiesWithinAABB(EntityPlayer.class, box);
-		if (!list.isEmpty()) {
-
-			if (this.spawn == false) {
-				spawnBoss(worldIn, pos, rand);
-				this.spawn = true;
+		if (worldIn.getDifficulty() != EnumDifficulty.PEACEFUL) {
+			if (this.spawn == true && this.checkBoss(worldIn, pos) == false) {
+				worldIn.setBlockState(pos, BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+				this.spawn = false;
 			}
-
-		} else {
-
-			this.killBoss(worldIn, pos);
-			this.spawn = false;
-
-		}
-		killOtherMob(worldIn, pos);
-
-		worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
-	}
-
-	private void killOtherMob(World worldIn, BlockPos pos) {
-		AxisAlignedBB box = new AxisAlignedBB(pos.getX() - 20, pos.getY(), pos.getZ() - 20, pos.getX() + 21,
-				pos.getY() + 6, pos.getZ() + 21);
-
-		List list = worldIn.getEntitiesWithinAABB(EntityLiving.class, box);
-		for (int i = 0; i <= list.size() - 1; i++) {
-
-			if (list.get(i) instanceof EntityPlayerMP || (list.get(i) instanceof EntityPrimaryAttack)
-					|| (list.get(i) instanceof EntityPrimaryHeal) || (list.get(i) instanceof EntityPrimaryStrength)) {
-
+	
+			if (this.checkPlayer(worldIn, pos) == true) {
+				if (this.spawn == false) {
+					if (this.checkBoss(worldIn, pos) == false) {
+						if (worldIn.getBlockState(pos) == BlockInit.BRICK_DUNGEON_CONTROLER.getDefaultState()) {
+							this.spawnBoss(worldIn, pos, rand);
+							this.spawn = true;
+						}
+					}
+				}
 			} else {
-				((EntityLiving) list.get(i)).isDead = true;
+				this.killBoss(worldIn, pos);
+				this.spawn = false;
+	
 			}
+	
+			this.killAllMob(worldIn, pos);
 		}
-	}
-
-	private void killBoss(World worldIn, BlockPos pos) {
-		AxisAlignedBB box = new AxisAlignedBB(pos.getX() - 20, pos.getY(), pos.getZ() - 20, pos.getX() + 21,
-				pos.getY() + 6, pos.getZ() + 21);
-		List list = worldIn.getEntitiesWithinAABB(EntityPrimaryAttack.class, box);
-		for (int i = 0; i <= list.size() - 1; i++) {
-			EntityPrimaryAttack entity = (EntityPrimaryAttack) list.get(i);
-			entity.isDead = true;
-		}
-
-		list = worldIn.getEntitiesWithinAABB(EntityPrimaryHeal.class, box);
-		for (int i = 0; i <= list.size() - 1; i++) {
-			EntityPrimaryHeal entity = (EntityPrimaryHeal) list.get(i);
-			entity.isDead = true;
-		}
-
-		list = worldIn.getEntitiesWithinAABB(EntityPrimaryStrength.class, box);
-		for (int i = 0; i <= list.size() - 1; i++) {
-			EntityPrimaryStrength entity = (EntityPrimaryStrength) list.get(i);
-			entity.isDead = true;
-		}
-
+		worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
 	}
 
 	@Override
 	public int tickRate(World world) {
-		return 1;
+		return 20;
+	}
+
+	private boolean checkBoss(World worldIn, BlockPos pos) {
+		AxisAlignedBB box = new AxisAlignedBB(pos.getX() - 10, pos.getY(), pos.getZ() - 10, pos.getX() + 11,
+				pos.getY() + 6, pos.getZ() + 11);
+		List l1 = worldIn.getEntitiesWithinAABB(EntityPrimaryAttack.class, box);
+		List l2 = worldIn.getEntitiesWithinAABB(EntityPrimaryHeal.class, box);
+		List l3 = worldIn.getEntitiesWithinAABB(EntityPrimaryStrength.class, box);
+
+		if (l1.size() + l2.size() + l3.size() == 0)
+			return false;
+		return true;
 	}
 
 	private void spawnBoss(World worldIn, BlockPos pos, Random rand) {
+		int x = pos.getX();
+		int y = pos.getY() + 1;
+		int z = pos.getZ();
 
-		for (int i = 0; i < 360; i++) {
-			double x = rand.nextDouble() - .5;
-			double z = rand.nextDouble() - .5;
-			Reference.PROXY.spawnParticle(worldIn, ParticleTypes.GLINT_WHITE, pos.getX() + .5, pos.getY() + 2,
-					pos.getZ() + .5, x, 0, z);
-
-		}
 		EntityPrimaryAttack e1 = new EntityPrimaryAttack(worldIn);
-		e1.setPosition(pos.getX() + 6, pos.getY() + 1, pos.getZ());
+		e1.setPosition(x + 6, y, z);
 		EntityPrimaryHeal e2 = new EntityPrimaryHeal(worldIn);
-		e2.setPosition(pos.getX() - 5, pos.getY() + 1, pos.getZ() - 5);
+		e2.setPosition(x - 5, y, z - 5);
 		EntityPrimaryStrength e3 = new EntityPrimaryStrength(worldIn);
-		e3.setPosition(pos.getX() - 5, pos.getY() + 1, pos.getZ() + 5);
+		e3.setPosition(x - 5, y, z + 5);
 
 		worldIn.spawnEntity(e1);
 		worldIn.spawnEntity(e2);
 		worldIn.spawnEntity(e3);
-		
-		for (int i = 0; i < 150; i++) {
-			double x = rand.nextDouble() - .5;
-			double y = rand.nextDouble();
-			double z = rand.nextDouble() - .5;
-			Reference.PROXY.spawnParticle(worldIn, ParticleTypes.GLINT_BLUE, e1.posX, e1.posY,
-					e1.posZ, x, y, z);
 
-		}
-		for (int i = 0; i < 150; i++) {
-			double x = rand.nextDouble() - .5;
-			double y = rand.nextDouble();
-			double z = rand.nextDouble() - .5;
-			Reference.PROXY.spawnParticle(worldIn, ParticleTypes.GLINT_PURPLE, e2.posX, e2.posY,
-					e2.posZ, x, y, z);
+		spawnParticles(worldIn, pos, ParticleTypes.GLINT_WHITE, 100, 1, rand);
+		spawnParticles(worldIn, new BlockPos(x + 6, y, z), ParticleTypes.GLINT_BLUE, 100, 0.5, rand);
+		spawnParticles(worldIn, new BlockPos(x - 5, y, z - 5), ParticleTypes.GLINT_PURPLE, 100, 0.5, rand);
+		spawnParticles(worldIn, new BlockPos(x - 5, y, z + 5), ParticleTypes.GLINT_GREEN, 100, 0.5, rand);
+	}
 
+	private boolean checkPlayer(World worldIn, BlockPos pos) {
+		AxisAlignedBB box = new AxisAlignedBB(pos.getX() - 10, pos.getY(), pos.getZ() - 10, pos.getX() + 11,
+				pos.getY() + 6, pos.getZ() + 11);
+		List l1 = worldIn.getEntitiesWithinAABB(EntityPlayer.class, box);
+
+		if (l1.size() == 0)
+			return false;
+		return true;
+	}
+
+	private void killBoss(World worldIn, BlockPos pos) {
+		AxisAlignedBB box = new AxisAlignedBB(pos.getX() - 10, pos.getY(), pos.getZ() - 10, pos.getX() + 11,
+				pos.getY() + 6, pos.getZ() + 11);
+		List l1 = worldIn.getEntitiesWithinAABB(EntityPrimaryAttack.class, box);
+		List l2 = worldIn.getEntitiesWithinAABB(EntityPrimaryHeal.class, box);
+		List l3 = worldIn.getEntitiesWithinAABB(EntityPrimaryStrength.class, box);
+
+		for (int i = 0; i < l1.size(); i++) {
+			((EntityPrimaryAttack) l1.get(i)).isDead = true;
 		}
-		for (int i = 0; i < 150; i++) {
-			double x = rand.nextDouble() - .5;
-			double y = rand.nextDouble();
-			double z = rand.nextDouble() - .5;
-			Reference.PROXY.spawnParticle(worldIn, ParticleTypes.GLINT_GREEN, e3.posX, e3.posY,
-					e3.posZ, x, y, z);
+		for (int i = 0; i < l2.size(); i++) {
+			((EntityPrimaryHeal) l2.get(i)).isDead = true;
+		}
+		for (int i = 0; i < l3.size(); i++) {
+			((EntityPrimaryStrength) l3.get(i)).isDead = true;
+		}
+	}
+
+	private void spawnParticles(World worldIn, BlockPos pos, ParticleTypes type, int amount, double speed,
+			Random rand) {
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+
+		for (int i = 0; i < amount; i++) {
+			double vx = (rand.nextDouble() - 0.5) * speed;
+			double vy = rand.nextDouble() * speed;
+			double vz = (rand.nextDouble() - 0.5) * speed;
+
+			Reference.PROXY.spawnParticle(worldIn, type, x, y, z, vx, vy, vz);
+		}
+	}
+
+	private void killAllMob(World worldIn, BlockPos pos) {
+		AxisAlignedBB box = new AxisAlignedBB(pos.getX() - 10, pos.getY(), pos.getZ() - 10, pos.getX() + 11,
+				pos.getY() + 6, pos.getZ() + 11);
+		List l1 = worldIn.getEntitiesWithinAABB(EntityLiving.class, box);
+
+		for (int i = 0; i < l1.size(); i++) {
+			if (l1.get(i) instanceof EntityPlayerMP || l1.get(i) instanceof EntityPrimaryAttack
+					|| l1.get(i) instanceof EntityPrimaryHeal || l1.get(i) instanceof EntityPrimaryStrength) {
+
+			} else {
+				((EntityLiving) l1.get(i)).isDead = true;
+			}
 
 		}
 	}
+
 }
