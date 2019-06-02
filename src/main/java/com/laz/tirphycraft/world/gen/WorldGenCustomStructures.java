@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal;
+import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest;
+import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMagic;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaNoManLand;
 import com.laz.tirphycraft.world.biomes.noxis.BiomeBigForestNoxis;
 import com.laz.tirphycraft.world.biomes.noxis.BiomeForestNoxis;
@@ -47,8 +50,8 @@ public class WorldGenCustomStructures implements IWorldGenerator {
 		case 121:
 			generateStructure(HOUSE_1, world, random, chunkX, chunkZ, 5, 0, BlockInit.LAPUTA_GRASS,
 					BiomeLaputaNoManLand.class);
-			generateStructure(LAPUTA_BOSS, world, random, chunkX, chunkZ, 10, -15, BlockInit.LAPUTA_GRASS,
-					BiomeLaputaNoManLand.class);
+			generateStructure(LAPUTA_BOSS, world, random, chunkX, chunkZ, 50, -15, BlockInit.LAPUTA_GRASS,
+					BiomeLaputaNoManLand.class, BiomeLaputaCrystal.class, BiomeLaputaForest.class, BiomeLaputaMagic.class);
 			break;
 		case 120:
 			int i = new Random().nextInt(50) + 50;
