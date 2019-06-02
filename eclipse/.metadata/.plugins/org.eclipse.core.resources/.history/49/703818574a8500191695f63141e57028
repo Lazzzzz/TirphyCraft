@@ -110,7 +110,7 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 			worldIn.setBlockState(new BlockPos(x + 8, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
 			worldIn.setBlockState(new BlockPos(x + 12, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
 		}
-		worldIn.setBlockState(new BlockPos(x + 10, y, z + 10), BlockInit.BRICK_DUNGEON_CONTROLER.getDefaultState());
+		worldIn.setBlockState(new BlockPos(x + 10, y, z + 10), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
 		
 	}
 
