@@ -13,6 +13,7 @@ import com.laz.tirphycraft.objects.base.BlockStairsBase;
 import com.laz.tirphycraft.objects.base.GrassBase;
 import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeon;
 import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeonSun;
+import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeonsControler;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBase;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBlue;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushGreen;
@@ -81,22 +82,23 @@ public class BlockInit {
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
 	//BLOCKS
-	public static final Block BRICK_DUNGEON 	= new BlockBrickDungeon();
-	public static final Block BRICK_DUNGEON_SUN = new BlockBrickDungeonSun();
-	public static final Block BLOCK_PYRODES 	= new BlockBase("block_pyrodes", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
-	public static final Block BLOCK_HEAVY   	= new BlockBase("block_heavy", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
-	public static final Block BLOCK_NIXIUM  	= new BlockBase("block_nixium", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
-	public static final Block BLOCK_COAL	  	= new BlockBase("block_coal_on_coke", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
-	public static final Block CLOUD				= new BlockCloud();
-	public static final Block FROZEN_CRYSTAL	= new BlockBase("frozen_crystal", Material.GLASS, 3, 15, "pickaxe", 1, SoundType.GLASS);
-	public static final Block BLACK_CRYSTAL		= new BlockBase("black_crystal", Material.GLASS, 3, 15, "pickaxe", 1, SoundType.GLASS);
-	public static final Block SUN_STONE			= new BlockSunStone("sun_stone", Material.ROCK, 1, 10, "pickaxe", 0, SoundType.STONE, 1F);
-	public static final Block PORTAL_BASE		= new BlockBase("portal_base", Material.ROCK, 3, 15, "pickaxe", 3, SoundType.STONE);
-	public static final Block LAPUTA_BLUE		= new BlockBlueCrystalFull();
-	public static final Block LAPUTA_PINK		= new BlockPinkCrystalFull();
-	public static final Block LAPUTA_PURPLE		= new BlockPurpleCrystalFull();
-	public static final Block LAPUTA_GREEN		= new BlockGreenCrystalFull();
-	public static final Block LAPUTA_YELLOW		= new BlockYellowCrystalFull();
+	public static final Block BRICK_DUNGEON 			= new BlockBrickDungeon();
+	public static final Block BRICK_DUNGEON_SUN 		= new BlockBrickDungeonSun();
+	public static final Block BRICK_DUNGEON_CONTROLER 	= new BlockBrickDungeonsControler();
+	public static final Block BLOCK_PYRODES 			= new BlockBase("block_pyrodes", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
+	public static final Block BLOCK_HEAVY   			= new BlockBase("block_heavy", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
+	public static final Block BLOCK_NIXIUM  			= new BlockBase("block_nixium", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
+	public static final Block BLOCK_COAL	  			= new BlockBase("block_coal_on_coke", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
+	public static final Block CLOUD						= new BlockCloud();
+	public static final Block FROZEN_CRYSTAL			= new BlockBase("frozen_crystal", Material.GLASS, 3, 15, "pickaxe", 1, SoundType.GLASS);
+	public static final Block BLACK_CRYSTAL				= new BlockBase("black_crystal", Material.GLASS, 3, 15, "pickaxe", 1, SoundType.GLASS);
+	public static final Block SUN_STONE					= new BlockSunStone("sun_stone", Material.ROCK, 1, 10, "pickaxe", 0, SoundType.STONE, 1F);
+	public static final Block PORTAL_BASE				= new BlockBase("portal_base", Material.ROCK, 3, 15, "pickaxe", 3, SoundType.STONE);
+	public static final Block LAPUTA_BLUE				= new BlockBlueCrystalFull();
+	public static final Block LAPUTA_PINK				= new BlockPinkCrystalFull();
+	public static final Block LAPUTA_PURPLE				= new BlockPurpleCrystalFull();
+	public static final Block LAPUTA_GREEN				= new BlockGreenCrystalFull();
+	public static final Block LAPUTA_YELLOW				= new BlockYellowCrystalFull();
 	
 	//LOGS
 	public static final Block LOG_COPPIR 		= new BlockLogBase("log_coppir");
