@@ -11,6 +11,7 @@ import com.laz.tirphycraft.world.biomes.noxis.BiomeForestNoxis;
 import com.laz.tirphycraft.world.biomes.noxis.BiomeHillsNoxis;
 import com.laz.tirphycraft.world.biomes.noxis.BiomeLacNoxis;
 import com.laz.tirphycraft.world.gen.generators.structures.laputa.WorldGenDungeonGroundTier2;
+import com.laz.tirphycraft.world.gen.generators.structures.laputa.WorldGenLaputaBossRoom;
 import com.laz.tirphycraft.world.gen.generators.structures.noxis.WorldGenNoxisBasicHouse;
 import com.laz.tirphycraft.world.gen.generators.structures.tower.WorldGenBattleTower;
 import com.laz.tirphycraft.world.gen.generators.structures.vanilla.WorldGenDungeonDesert;
@@ -30,21 +31,23 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 public class WorldGenCustomStructures implements IWorldGenerator {
 
 	public static final WorldGenDungeonDesert DESERT = new WorldGenDungeonDesert("desert_dungeon");
-
 	public static final WorldGenDungeonTier1 ALTAR = new WorldGenDungeonTier1("altar");
 	public static final WorldGenDungeonTier1 ISLAND_CRYSTAL = new WorldGenDungeonTier1("island_crystal");
 	public static final WorldGenNoxisBasicHouse N_B_H_1 = new WorldGenNoxisBasicHouse("small_house_noxis_1");
-
 	public static final WorldGenDungeonGroundTier2 HOUSE_1 = new WorldGenDungeonGroundTier2("laputa_house_1_0");
-
 	public static final WorldGenBattleTower TOWER = new WorldGenBattleTower();
+	public static final WorldGenLaputaBossRoom LAPUTA_BOSS = new WorldGenLaputaBossRoom();
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
 			IChunkProvider chunkProvider) {
 		switch (world.provider.getDimension()) {
+		case 123:
+			break;
 		case 121:
 			generateStructure(HOUSE_1, world, random, chunkX, chunkZ, 5, 0, BlockInit.LAPUTA_GRASS,
+					BiomeLaputaNoManLand.class);
+			generateStructure(LAPUTA_BOSS, world, random, chunkX, chunkZ, 10, -15, BlockInit.LAPUTA_GRASS,
 					BiomeLaputaNoManLand.class);
 			break;
 		case 120:

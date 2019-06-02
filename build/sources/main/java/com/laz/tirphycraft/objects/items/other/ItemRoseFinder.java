@@ -3,26 +3,15 @@ package com.laz.tirphycraft.objects.items.other;
 import java.util.List;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.init.ItemInit;
 import com.laz.tirphycraft.objects.base.ItemBase;
 
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
-import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArrow;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 

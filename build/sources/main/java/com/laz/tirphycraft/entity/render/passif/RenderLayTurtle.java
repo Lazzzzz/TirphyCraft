@@ -1,8 +1,6 @@
 package com.laz.tirphycraft.entity.render.passif;
 
-import com.laz.tirphycraft.entity.model.passif.ModelBuffalo;
 import com.laz.tirphycraft.entity.model.passif.ModelLayTurtle;
-import com.laz.tirphycraft.entity.passif.EntityBuffalo;
 import com.laz.tirphycraft.entity.passif.EntityLayTurtle;
 import com.laz.tirphycraft.util.Reference;
 

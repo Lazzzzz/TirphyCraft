@@ -1,6 +1,8 @@
 package com.laz.tirphycraft.proxy;
 
 import com.laz.tirphycraft.particles.ParticleGlintBlue;
+import com.laz.tirphycraft.particles.ParticleGlintBossGreen;
+import com.laz.tirphycraft.particles.ParticleGlintBossPurple;
 import com.laz.tirphycraft.particles.ParticleGlintGreen;
 import com.laz.tirphycraft.particles.ParticleGlintPink;
 import com.laz.tirphycraft.particles.ParticleGlintPurple;
@@ -80,6 +82,12 @@ public class ClientProxy extends CommonProxy {
 					break;
 				case GLINT_YELLOW:
 					particle = new ParticleGlintYellow(world, x, y, z, velX, velY, velZ);
+					break;
+				case GLINT_BOSS_GREEN:
+					particle = new ParticleGlintBossGreen(world, x, y, z, velX, velY, velZ);
+					break;
+				case GLINT_BOSS_PURPLE:
+					particle = new ParticleGlintBossPurple(world, x, y, z, velX, velY, velZ);
 					break;
 				}
 

@@ -8,7 +8,6 @@ import com.laz.tirphycraft.util.interfaces.IStructure;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Rotation;

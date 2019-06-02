@@ -5,15 +5,14 @@ import java.util.List;
 
 import com.laz.tirphycraft.objects.base.BlockBase;
 import com.laz.tirphycraft.objects.base.BlockDungeonBase;
-import com.laz.tirphycraft.objects.base.BlockLightBase;
 import com.laz.tirphycraft.objects.base.BlockLogBase;
 import com.laz.tirphycraft.objects.base.BlockOre;
 import com.laz.tirphycraft.objects.base.BlockPlanksBase;
 import com.laz.tirphycraft.objects.base.BlockPortalBase;
 import com.laz.tirphycraft.objects.base.BlockStairsBase;
-import com.laz.tirphycraft.objects.base.BlockCrystalFullBase;
 import com.laz.tirphycraft.objects.base.GrassBase;
 import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeon;
+import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeonSun;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBase;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBlue;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushGreen;
@@ -83,6 +82,7 @@ public class BlockInit {
 	
 	//BLOCKS
 	public static final Block BRICK_DUNGEON 	= new BlockBrickDungeon();
+	public static final Block BRICK_DUNGEON_SUN = new BlockBrickDungeonSun();
 	public static final Block BLOCK_PYRODES 	= new BlockBase("block_pyrodes", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
 	public static final Block BLOCK_HEAVY   	= new BlockBase("block_heavy", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
 	public static final Block BLOCK_NIXIUM  	= new BlockBase("block_nixium", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);

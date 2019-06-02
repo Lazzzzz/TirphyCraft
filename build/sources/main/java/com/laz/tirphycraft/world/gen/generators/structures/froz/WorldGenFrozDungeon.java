@@ -2,7 +2,6 @@ package com.laz.tirphycraft.world.gen.generators.structures.froz;
 
 import java.util.Random;
 
-import com.jcraft.jorbis.Block;
 import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.util.interfaces.IStructure;
 

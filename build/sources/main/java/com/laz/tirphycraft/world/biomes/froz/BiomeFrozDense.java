@@ -7,14 +7,11 @@ import com.laz.tirphycraft.world.gen.generators.plants.WorldGenFrozBlueRose;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBigTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenTaiga1;
-import net.minecraft.world.gen.feature.WorldGenTrees;
 
 public class BiomeFrozDense extends Biome {
 

@@ -1,0 +1,45 @@
+package com.laz.tirphycraft.objects.blocks.customBlock;
+
+import java.util.List;
+import java.util.Random;
+
+import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.objects.base.BlockBase;
+
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class BlockBrickDungeonsControler extends BlockBase {
+
+	public BlockBrickDungeonsControler() {
+		super("brick_dungeon_controler", Material.ROCK, 3, 15, "pickaxe", 3, SoundType.STONE);
+		this.setBlockUnbreakable();
+	}
+
+	@Override
+	public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
+		world.scheduleUpdate(pos, this, this.tickRate(world));
+
+	}
+
+	@Override
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+		AxisAlignedBB box = new AxisAlignedBB(pos.getX() - 20, pos.getY(), pos.getZ() - 20, pos.getX() + 21, pos.getY() + 6, pos.getZ() + 21);
+
+		List list = worldIn.getEntitiesWithinAABB(EntityPlayer.class, box);
+		if (!list.isEmpty()) {
+		}
+
+		worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
+	}
+
+	@Override
+	public int tickRate(World world) {
+		return 1;
+	}
+}

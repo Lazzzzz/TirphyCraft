@@ -20,9 +20,9 @@ public class ParticleGlintWhite extends Particle {
 
 	public ParticleGlintWhite(World world, double x, double y, double z, float f, double f1, double f2, double f3) {
 		super(world, x, y, z, 0.0D, 0.0D, 0.0D);
-		motionX *= f1;
-		motionY *= f2;
-		motionZ *= f3;
+		motionX = f1;
+		motionY = f2;
+		motionZ = f3;
 		particleRed = 1.0F;
 		particleBlue = 1.0F;
 		particleGreen = 1.0F;

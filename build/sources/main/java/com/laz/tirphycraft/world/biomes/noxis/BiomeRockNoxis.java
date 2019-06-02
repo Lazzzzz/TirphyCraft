@@ -2,9 +2,6 @@ package com.laz.tirphycraft.world.biomes.noxis;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.entity.aggressive.EntityPhorus;
-import com.laz.tirphycraft.entity.aggressive.EntityTotam;
-import com.laz.tirphycraft.entity.passif.EntityBuffalo;
 import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.world.gen.generators.pad.WorldGenRockPad;
 

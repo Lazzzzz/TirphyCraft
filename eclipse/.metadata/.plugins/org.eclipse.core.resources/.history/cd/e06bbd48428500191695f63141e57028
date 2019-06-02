@@ -1,0 +1,23 @@
+package com.laz.tirphycraft.objects.blocks.customBlock;
+
+import com.laz.tirphycraft.objects.base.BlockBase;
+
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class BlockBrickDungeonsControler extends BlockBase {
+
+	public BlockBrickDungeonsControler() {
+		super("brick_dungeon_controler", Material.ROCK, 3, 15, "pickaxe", 3, SoundType.STONE);
+		this.setBlockUnbreakable();
+	}
+
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+		// TODO Auto-generated method stub
+		super.onBlockAdded(worldIn, pos, state);
+	}
+}

@@ -3,8 +3,6 @@ package com.laz.tirphycraft.entity.boss;
 import com.laz.tirphycraft.init.ItemInit;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackMelee;
 import net.minecraft.entity.ai.EntityAILookIdle;
