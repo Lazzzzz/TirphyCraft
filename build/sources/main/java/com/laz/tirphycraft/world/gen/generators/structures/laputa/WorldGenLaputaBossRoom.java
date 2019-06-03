@@ -3,22 +3,13 @@ package com.laz.tirphycraft.world.gen.generators.structures.laputa;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.util.Reference;
-import com.laz.tirphycraft.util.handlers.LootTableHandler;
 import com.laz.tirphycraft.util.interfaces.IStructure;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraft.world.gen.structure.template.Template;
-import net.minecraft.world.gen.structure.template.TemplateManager;
 
 public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure {
 
@@ -29,8 +20,10 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 	public boolean generate(World worldIn, Random rand, BlockPos pos) {
 		if (!checkSpace(worldIn, pos))
 			return false;
-		makeSpace(worldIn, pos);
 		makeWall(worldIn, pos, rand);
+		makeSpace(worldIn, pos);
+		placeLamp(worldIn, pos);
+
 		System.out.println(pos);
 		return true;
 	}
@@ -62,8 +55,6 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 		double y = pos.getY();
 		double z = pos.getZ();
 
-		System.out.println(pos);
-
 		for (int i = 0; i < 21; i++) {
 			for (int j = 0; j < 21; j++) {
 				for (int k = 0; k < 6; k++) {
@@ -78,15 +69,10 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 		double y = pos.getY();
 		double z = pos.getZ();
 
-		System.out.println(pos);
-
 		for (int i = -1; i < 22; i++) {
 			for (int j = -1; j < 22; j++) {
 				for (int k = -1; k < 7; k++) {
-					if (worldIn.getBlockState(new BlockPos(x + i, y - k, z + j)) != Blocks.AIR.getDefaultState()) {
-						worldIn.setBlockState(new BlockPos(x + i, y - k, z + j),
-								pickBlock(rand));
-					}
+					worldIn.setBlockState(new BlockPos(x + i, y - k, z + j), BlockInit.BRICK_DUNGEON.getDefaultState());
 				}
 			}
 		}
@@ -100,6 +86,28 @@ public class WorldGenLaputaBossRoom extends WorldGenerator implements IStructure
 			block = BlockInit.BRICK_DUNGEON.getDefaultState();
 
 		return block;
+
+	}
+
+	public void placeLamp(World worldIn, BlockPos pos) {
+		double x = pos.getX();
+		double y = pos.getY() - 6;
+		double z = pos.getZ();
+
+		for (int i = 4; i < 17; i += 2) {
+			worldIn.setBlockState(new BlockPos(x + i, y, z + 3), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+			worldIn.setBlockState(new BlockPos(x + i, y, z + 17), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+			worldIn.setBlockState(new BlockPos(x + 3, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+			worldIn.setBlockState(new BlockPos(x + 17, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+		}
+
+		for (int i = 9; i < 13; i += 2) {
+			worldIn.setBlockState(new BlockPos(x + i, y, z + 8), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+			worldIn.setBlockState(new BlockPos(x + i, y, z + 12), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+			worldIn.setBlockState(new BlockPos(x + 8, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+			worldIn.setBlockState(new BlockPos(x + 12, y, z + i), BlockInit.BRICK_DUNGEON_SUN.getDefaultState());
+		}
+		worldIn.setBlockState(new BlockPos(x + 10, y, z + 10), BlockInit.BRICK_DUNGEON_CONTROLER.getDefaultState());
 
 	}
 

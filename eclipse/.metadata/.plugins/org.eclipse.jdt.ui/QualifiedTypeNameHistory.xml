@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ca.weblite.objc.Client"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.particles.ParticleTypes"/>
-<fullyQualifiedTypeName name="ca.weblite.objc.Proxy"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.tabs.TirphycraftTab"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.util.interfaces.ParticleTypes"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.proxy.ClientProxy"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.proxy.CommonProxy"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.particles.ParticleGlintBlue"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.particles.ParticleGlintPink"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.particles.ParticleGlintPurple"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.particles.ParticleGlintGreen"/>
@@ -37,27 +29,35 @@
 <fullyQualifiedTypeName name="net.minecraft.entity.monster.EntityMob"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.ai.EntityAIAvoidEntity"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeonSun"/>
-<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.world.gen.generators.structures.laputa.WorldGenLaputaBossRoom"/>
-<fullyQualifiedTypeName name="net.minecraft.block.state.IBlockState"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.init.BlockInit"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.entity.model.neutral.ModelStellar"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderLiving"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.entity.neutral.EntityStelar"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.passive.EntityAnimal"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.SharedMonsterAttributes"/>
-<fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeonsControler"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.util.Reference"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="net.minecraft.util.math.Vec3d"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="net.minecraft.entity.EntityLiving"/>
-<fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayerMP"/>
 <fullyQualifiedTypeName name="net.minecraft.world.World"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.item.EntityTNTPrimed"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.util.interfaces.ParticleTypes"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.util.Reference"/>
+<fullyQualifiedTypeName name="net.minecraft.block.state.IBlockState"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.entity.neutral.EntityStellar"/>
 <fullyQualifiedTypeName name="net.minecraft.util.math.BlockPos"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayerMP"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.entity.boss.EntityPrimaryAttack"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.entity.boss.EntityPrimaryHeal"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.entity.boss.EntityPrimaryStrength"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.EntityLiving"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.init.BlockInit"/>
+<fullyQualifiedTypeName name="net.minecraft.world.EnumDifficulty"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.init.BiomeInit"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMagic"/>
 </qualifiedTypeNameHistroy>

@@ -8,8 +8,8 @@ import net.minecraft.world.gen.layer.IntCache;
 
 public class GenLayerBiomesLaputa extends GenLayer {
 
-	private Biome[] allowedBiomes = { BiomeInit.LAPUTA_CRYSTAL, BiomeInit.LAPUTA, BiomeInit.LAPUTA_MAGIC,
-			BiomeInit.LAPUTANML, BiomeInit.LAPUTANML, BiomeInit.LAPUTA };
+	private Biome[] allowedBiomes = { BiomeInit.LAPUTANML, BiomeInit.LAPUTANML, BiomeInit.LAPUTA, BiomeInit.LAPUTA,
+			BiomeInit.LAPUTA_CRYSTAL, BiomeInit.LAPUTA_MAGIC };
 
 	public GenLayerBiomesLaputa(long seed) {
 		super(seed);

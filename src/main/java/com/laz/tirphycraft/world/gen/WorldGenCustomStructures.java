@@ -18,6 +18,7 @@ import com.laz.tirphycraft.world.gen.generators.structures.laputa.WorldGenLaputa
 import com.laz.tirphycraft.world.gen.generators.structures.noxis.WorldGenNoxisBasicHouse;
 import com.laz.tirphycraft.world.gen.generators.structures.tower.WorldGenBattleTower;
 import com.laz.tirphycraft.world.gen.generators.structures.vanilla.WorldGenDungeonDesert;
+import com.laz.tirphycraft.world.gen.generators.structures.vanilla.WorldGenDungeonOcean;
 import com.laz.tirphycraft.world.gen.generators.structures.vanilla.WorldGenDungeonTier1;
 
 import net.minecraft.block.Block;
@@ -34,6 +35,7 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 public class WorldGenCustomStructures implements IWorldGenerator {
 
 	public static final WorldGenDungeonDesert DESERT = new WorldGenDungeonDesert("desert_dungeon");
+	public static final WorldGenDungeonOcean OCEAN = new WorldGenDungeonOcean("ocean_dungeon");
 	public static final WorldGenDungeonTier1 ALTAR = new WorldGenDungeonTier1("altar");
 	public static final WorldGenDungeonTier1 ISLAND_CRYSTAL = new WorldGenDungeonTier1("island_crystal");
 	public static final WorldGenNoxisBasicHouse N_B_H_1 = new WorldGenNoxisBasicHouse("small_house_noxis_1");
@@ -51,7 +53,7 @@ public class WorldGenCustomStructures implements IWorldGenerator {
 			generateStructure(HOUSE_1, world, random, chunkX, chunkZ, 5, 0, BlockInit.LAPUTA_GRASS,
 					BiomeLaputaNoManLand.class);
 			generateStructure(LAPUTA_BOSS, world, random, chunkX, chunkZ, 50, -15, BlockInit.LAPUTA_GRASS,
-					BiomeLaputaNoManLand.class, BiomeLaputaCrystal.class, BiomeLaputaForest.class, BiomeLaputaMagic.class);
+					BiomeLaputaNoManLand.class, BiomeLaputaCrystal.class, BiomeLaputaForest.class);
 			break;
 		case 120:
 			int i = new Random().nextInt(50) + 50;
@@ -68,6 +70,7 @@ public class WorldGenCustomStructures implements IWorldGenerator {
 		case 0:
 			generateStructure(ALTAR, world, random, chunkX, chunkZ, 2000, 100, Blocks.WATER, BiomeOcean.class);
 			generateStructure(DESERT, world, random, chunkX, chunkZ, 5, -17, Blocks.SAND, BiomeDesert.class);
+			generateStructure(OCEAN, world, random, chunkX, chunkZ, 1000, -17, Blocks.WATER, BiomeOcean.class);
 			break;
 		case -1:
 

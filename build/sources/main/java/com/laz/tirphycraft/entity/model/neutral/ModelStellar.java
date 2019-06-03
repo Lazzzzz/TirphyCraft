@@ -3,6 +3,7 @@ package com.laz.tirphycraft.entity.model.neutral;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
 
 /**
  * ModelStellar - LaZz_ Created using Tabula 7.0.1
@@ -45,7 +46,6 @@ public class ModelStellar extends ModelBase {
 	@Override
 	public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 			float headPitch, float scaleFactor, Entity entityIn) {
-		// TODO Auto-generated method stub
-		super.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor, entityIn);
+		this.shape2.rotateAngleY += MathHelper.cos(0.6662f) * 0.02f;
 	}
 }

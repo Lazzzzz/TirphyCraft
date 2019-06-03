@@ -53,7 +53,7 @@ public class Reference {
 	public static final int PRIMARY_ATTACK 			= 153;
 	public static final int PRIMARY_HEAL 			= 154;
 	public static final int PRIMARY_STRENGTH		= 155;
-	public static final int ENTITY_STELAR 			= 156;
+	public static final int ENTITY_STELLAR 			= 156;
 	
 	//WORLD
 	public static final int DIMENSION_NOXIS_ID		= 120;

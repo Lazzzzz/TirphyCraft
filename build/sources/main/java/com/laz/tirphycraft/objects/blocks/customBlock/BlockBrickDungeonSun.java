@@ -10,6 +10,7 @@ public class BlockBrickDungeonSun extends BlockBase {
 	public BlockBrickDungeonSun() {
 		super("brick_dungeon_sun", Material.ROCK, 3, 15, "pickaxe", 3, SoundType.STONE);
 		this.setLightLevel(0.4F);
+		this.setBlockUnbreakable();
 	}
 
 }

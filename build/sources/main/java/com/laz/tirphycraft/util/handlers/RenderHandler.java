@@ -25,7 +25,7 @@ import com.laz.tirphycraft.entity.boss.EntityPrimaryHeal;
 import com.laz.tirphycraft.entity.boss.EntityPrimaryStrength;
 import com.laz.tirphycraft.entity.boss.EntityQueenCreeper;
 import com.laz.tirphycraft.entity.neutral.EntityMothmoth;
-import com.laz.tirphycraft.entity.neutral.EntityStelar;
+import com.laz.tirphycraft.entity.neutral.EntityStellar;
 import com.laz.tirphycraft.entity.passif.EntityBuffalo;
 import com.laz.tirphycraft.entity.passif.EntityCrystim;
 import com.laz.tirphycraft.entity.passif.EntityDragonFly;
@@ -61,7 +61,7 @@ import com.laz.tirphycraft.entity.render.boss.RenderPrimaryHeal;
 import com.laz.tirphycraft.entity.render.boss.RenderPrimaryStrength;
 import com.laz.tirphycraft.entity.render.boss.RenderQueenCreeper;
 import com.laz.tirphycraft.entity.render.neutral.RenderMothmoth;
-import com.laz.tirphycraft.entity.render.neutral.RenderStelar;
+import com.laz.tirphycraft.entity.render.neutral.RenderStellar;
 import com.laz.tirphycraft.entity.render.passif.RenderBuffalo;
 import com.laz.tirphycraft.entity.render.passif.RenderCrystim;
 import com.laz.tirphycraft.entity.render.passif.RenderDragonFly;
@@ -429,12 +429,12 @@ public class RenderHandler {
 					}
 
 				});	
-		RenderingRegistry.registerEntityRenderingHandler(EntityStelar.class,
-				new IRenderFactory<EntityStelar>() {
+		RenderingRegistry.registerEntityRenderingHandler(EntityStellar.class,
+				new IRenderFactory<EntityStellar>() {
 
 					@Override
-					public RenderStelar createRenderFor(RenderManager manager) {
-						return new RenderStelar(manager);
+					public RenderStellar createRenderFor(RenderManager manager) {
+						return new RenderStellar(manager);
 
 					}
 

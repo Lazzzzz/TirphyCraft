@@ -3,7 +3,6 @@ package com.laz.tirphycraft.world.biomes.laputa;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.structures.laputa.WorldGenLaputaBossRoom;
 
 import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;

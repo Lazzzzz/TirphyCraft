@@ -9,6 +9,7 @@ public class BlockBrickDungeon extends BlockBase {
 
 	public BlockBrickDungeon() {
 		super("brick_dungeon", Material.ROCK, 3, 15, "pickaxe", 3, SoundType.STONE);
+		this.setBlockUnbreakable();
 	}
 
 }
