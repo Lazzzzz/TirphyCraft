@@ -1,0 +1,492 @@
+[23:01:21] [main/INFO] [GradleStart]: Extra: []
+[23:01:21] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Lazar/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[23:01:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:01:21] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:01:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:01:21] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:01:21] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2768 for Minecraft 1.12.2 loading
+[23:01:21] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_201, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jre1.8.0_201
+[23:01:21] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[23:01:21] [main/ERROR] [FML]: Full: C:\Users\Lazar\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[23:01:21] [main/ERROR] [FML]: Trimmed: c:/users/lazar/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[23:01:21] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[23:01:21] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[23:01:22] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[23:01:22] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[23:01:22] [main/INFO] [FML]: Searching C:\Users\Lazar\Desktop\programmation\mods - TirphyCraft\TirphyCraft\run\.\mods for mods
+[23:01:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:01:22] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[23:01:22] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[23:01:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:01:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:01:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[23:01:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:01:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:01:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:01:24] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[23:01:24] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:01:24] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:01:24] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[23:01:24] [main/INFO] [GradleStart]: Remapping AccessTransformer rules...
+[23:01:24] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:01:24] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:01:24] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[23:01:24] [main/INFO] [net.minecraft.client.Minecraft]: Setting user: Player334
+[23:01:27] [main/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[23:01:27] [main/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[23:01:29] [main/INFO] [FML]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1708811368 bytes (1629 MB) / 2052587520 bytes (1957 MB) up to 4149739520 bytes (3957 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx4024M -Xms2024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 388.73' Renderer: 'GeForce MX150/PCIe/SSE2'
+[23:01:29] [main/INFO] [FML]: MinecraftForge v14.23.5.2768 Initialized
+[23:01:29] [main/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[23:01:29] [main/INFO] [FML]: Replaced 1036 ore ingredients
+[23:01:29] [main/INFO] [FML]: Searching C:\Users\Lazar\Desktop\programmation\mods - TirphyCraft\TirphyCraft\run\.\mods for mods
+[23:01:31] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 153278600 nanos
+[23:01:32] [main/INFO] [FML]: Forge Mod Loader has identified 6 mods to load
+[23:01:32] [main/WARN] [FML]: ****************************************
+[23:01:32] [main/WARN] [FML]: * The API JustEnoughItemsAPI from source C:\Users\Lazar\.gradle\caches\modules-2\files-2.1\mezz.jei\jei_1.12.2\4.14.4.267\c669793e57527b8d8b5085b06a786524f98c6cbf\jei_1.12.2-4.14.4.267.jar is loaded from an incompatible classloader. THIS WILL NOT WORK!
+[23:01:32] [main/WARN] [FML]: *  at net.minecraftforge.fml.common.ModAPIManager$APIContainer.validate(ModAPIManager.java:114)
+[23:01:32] [main/WARN] [FML]: *  at net.minecraftforge.fml.common.ModAPIManager.registerDataTableAndParseAPI(ModAPIManager.java:174)
+[23:01:32] [main/WARN] [FML]: *  at net.minecraftforge.fml.common.ModAPIManager.manageAPI(ModAPIManager.java:232)
+[23:01:32] [main/WARN] [FML]: *  at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:567)
+[23:01:32] [main/WARN] [FML]: *  at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:232)
+[23:01:32] [main/WARN] [FML]: *  at net.minecraft.client.Minecraft.init(Minecraft.java:513)...
+[23:01:32] [main/WARN] [FML]: ****************************************
+[23:01:32] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, tirphycraft, jei] at CLIENT
+[23:01:32] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, tirphycraft, jei] at SERVER
+[23:01:33] [main/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TirphyCraft, FMLFileResourcePack:Just Enough Items
+[23:01:33] [main/INFO] [FML]: Processing ObjectHolder annotations
+[23:01:33] [main/INFO] [FML]: Found 1169 ObjectHolder annotations
+[23:01:33] [main/INFO] [FML]: Identifying ItemStackHolder annotations
+[23:01:33] [main/INFO] [FML]: Found 0 ItemStackHolder annotations
+[23:01:33] [main/INFO] [FML]: Configured a dormant chunk cache size of 0
+[23:01:33] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization anti_amulet
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_1_health
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_2_health
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_3_health
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_1_attack
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_2_attack
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_3_attack
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_1_speed
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_2_speed
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization amulet_3_speed
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization fragment_blue
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization fragment_green
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization fragment_red
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization fragment_white
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization fragment_yellow
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization crystal
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization crystal_purodes
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization poly_crystal_pyrodes
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization coal_on_coke
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization heavy_ingot
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization nixium_ingot
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization tenium_ingot
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization blue_rose_shard
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization diamond_nugget
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization mummy_wraps
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization empty_syringe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization blue_rose_petal
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization coins
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization queen_heart
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization ankh
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization explosion_core
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization life_core
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordBase:<init>:19]: initializationexplosion_sword
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolShovelBase:<init>:19]: initializationpyrodes_shovel
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordBase:<init>:19]: initializationpyrodes_sword
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolPickaxeBase:<init>:19]: initializationpyrodes_pickaxe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolAxeBase:<init>:32]: initializationpyrodes_axe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolHoeBase:<init>:19]: initializationpyrodes_hoe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordLarge:<init>:29]: initializationpyrodes_large
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolShovelBase:<init>:19]: initializationheavy_shovel
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordBase:<init>:19]: initializationheavy_sword
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolPickaxeBase:<init>:19]: initializationheavy_pickaxe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolAxeBase:<init>:32]: initializationheavy_axe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolHoeBase:<init>:19]: initializationheavy_hoe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordLarge:<init>:29]: initializationheavy_large
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolShovelBase:<init>:19]: initializationnixium_shovel
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordBase:<init>:19]: initializationnixium_sword
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolPickaxeBase:<init>:19]: initializationnixium_pickaxe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolAxeBase:<init>:32]: initializationnixium_axe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolHoeBase:<init>:19]: initializationnixium_hoe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordLarge:<init>:29]: initializationnixium_large
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolShovelBase:<init>:19]: initializationtenium_shovel
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordBase:<init>:19]: initializationtenium_sword
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolPickaxeBase:<init>:19]: initializationtenium_pickaxe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolAxeBase:<init>:32]: initializationtenium_axe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolHoeBase:<init>:19]: initializationtenium_hoe
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.tools.ToolSwordLarge:<init>:29]: initializationtenium_large
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization stick_crystal
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization stick_coppir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization stick_silvir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization stick_goldir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization return_clock
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization noxis_clock
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization laputa_clock
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.items.ItemBase:<init>:18]: initialization froz_clock
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization brick_dungeon
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization block_pyrodes
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization block_heavy
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization block_nixium
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization block_coal_on_coke
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization cloud
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization frozen_crystal
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization black_crystal
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization sun_stone
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization portal_base
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization planks_coppir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization planks_silvir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization planks_goldir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization planks_froz
+[23:01:34] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: UP_TO_DATE Target: null
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization leaves_mushroom
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization pyrodes_furnace
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization alloy_furnace
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization noxis_stone
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization noxis_cobblestone
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization noxis_dirt
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization noxis_frozen_dirt
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization laputa_dirt
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization laputa_stone
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization laputa_cobblestone
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization smoker
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization powder_snow
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization froz_stone
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization froz_cobblestone
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization brick_noxis
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization brick_laputa
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization brick_froz
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockStairsBase:<init>:31]: initialization stairs_coppir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockStairsBase:<init>:31]: initialization stairs_silvir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockStairsBase:<init>:31]: initialization stairs_goldir
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockStairsBase:<init>:31]: initialization stairs_froz
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization neutral_pillar
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization altar
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization nixium_crytsal
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization bush_base
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization bush_red
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization bush_blue
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization bush_green
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization egg_queen_creeper
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization egg_pharaon
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization egg_hell_king
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization egg_poseidon
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization egg_artikon
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization portal_laputa
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.objects.blocks.bases.BlockBase:<init>:28]: initialization portal_froz
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Noxis Forest
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Noxis Forest
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Noxis Hills
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Noxis Hills
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Noxis Lac
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Noxis Lac
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Noxis Ice
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Noxis Ice
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Noxis Small Hills
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Noxis Small Hills
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Noxis Big Forest
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Noxis Big Forest
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Noxis Mushroom
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Noxis Mushroom
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Noxis Rock
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Noxis Rock
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Laputa forest
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Laputa forest
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register Laputa no man land
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added Laputa no man land
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register froz plaine
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added froz plaine
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:67]: Biome Register froz dense
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.init.BiomeInit:initBiomeNoOverworld:70]: Biome added froz dense
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.util.handlers.RegistryHandler:preInitRegistries:76]: Init Entities
+[23:01:34] [main/INFO] [STDOUT]: [com.laz.tirphycraft.util.handlers.RegistryHandler:preInitRegistries:78]: done
+[23:01:35] [main/INFO] [FML]: Applying holder lookups
+[23:01:35] [main/INFO] [FML]: Holder lookups applied
+[23:01:35] [main/INFO] [FML]: Applying holder lookups
+[23:01:35] [main/INFO] [FML]: Holder lookups applied
+[23:01:35] [main/INFO] [FML]: Applying holder lookups
+[23:01:35] [main/INFO] [FML]: Holder lookups applied
+[23:01:35] [main/INFO] [FML]: Applying holder lookups
+[23:01:35] [main/INFO] [FML]: Holder lookups applied
+[23:01:35] [main/INFO] [FML]: Injecting itemstacks
+[23:01:35] [main/INFO] [FML]: Itemstack injection complete
+[23:01:43] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[23:01:43] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[23:01:43] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:01:43] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[23:01:43] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[23:01:49] [main/INFO] [FML]: Max texture size: 16384
+[23:01:50] [main/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 1024x512 textures-atlas
+[23:01:51] [main/ERROR] [FML]: Exception loading model for variant tirphycraft:altar#inventory for item "tirphycraft:altar", normal location exception: 
+net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model tirphycraft:item/altar with loader VanillaLoader.INSTANCE, skipping
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
+	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:302) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:559) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.io.FileNotFoundException: tirphycraft:models/item/altar.json
+	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:69) ~[FallbackResourceManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:65) ~[SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadModel(ModelBakery.java:334) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.access$1400(ModelLoader.java:115) ~[ModelLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:861) ~[ModelLoader$VanillaLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
+	... 20 more
+[23:01:51] [main/ERROR] [FML]: Exception loading model for variant tirphycraft:altar#inventory for item "tirphycraft:altar", blockstate location exception: 
+net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model tirphycraft:altar#inventory with loader VariantLoader.INSTANCE, skipping
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
+	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:296) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:559) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$MissingVariantException
+	at net.minecraft.client.renderer.block.model.ModelBlockDefinition.getVariant(ModelBlockDefinition.java:83) ~[ModelBlockDefinition.class:?]
+	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1175) ~[ModelLoader$VariantLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
+	... 20 more
+[23:01:51] [main/ERROR] [FML]: Exception loading model for variant tirphycraft:green_pillar#inventory for item "tirphycraft:green_pillar", normal location exception: 
+net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model tirphycraft:item/green_pillar with loader VanillaLoader.INSTANCE, skipping
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
+	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:302) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:559) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.io.FileNotFoundException: tirphycraft:models/item/green_pillar.json
+	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:69) ~[FallbackResourceManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:65) ~[SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadModel(ModelBakery.java:334) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.access$1400(ModelLoader.java:115) ~[ModelLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:861) ~[ModelLoader$VanillaLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
+	... 20 more
+[23:01:51] [main/ERROR] [FML]: Exception loading model for variant tirphycraft:green_pillar#inventory for item "tirphycraft:green_pillar", blockstate location exception: 
+net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model tirphycraft:green_pillar#inventory with loader VariantLoader.INSTANCE, skipping
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
+	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:296) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:559) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$MissingVariantException
+	at net.minecraft.client.renderer.block.model.ModelBlockDefinition.getVariant(ModelBlockDefinition.java:83) ~[ModelBlockDefinition.class:?]
+	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1175) ~[ModelLoader$VariantLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
+	... 20 more
+[23:01:51] [main/ERROR] [FML]: Exception loading model for variant tirphycraft:blue_pillar#inventory for item "tirphycraft:blue_pillar", normal location exception: 
+net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model tirphycraft:item/blue_pillar with loader VanillaLoader.INSTANCE, skipping
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
+	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:302) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:559) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.io.FileNotFoundException: tirphycraft:models/item/blue_pillar.json
+	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:69) ~[FallbackResourceManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:65) ~[SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadModel(ModelBakery.java:334) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.access$1400(ModelLoader.java:115) ~[ModelLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:861) ~[ModelLoader$VanillaLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
+	... 20 more
+[23:01:51] [main/ERROR] [FML]: Exception loading model for variant tirphycraft:blue_pillar#inventory for item "tirphycraft:blue_pillar", blockstate location exception: 
+net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model tirphycraft:blue_pillar#inventory with loader VariantLoader.INSTANCE, skipping
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
+	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:296) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:559) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$MissingVariantException
+	at net.minecraft.client.renderer.block.model.ModelBlockDefinition.getVariant(ModelBlockDefinition.java:83) ~[ModelBlockDefinition.class:?]
+	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1175) ~[ModelLoader$VariantLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
+	... 20 more
+[23:01:51] [main/ERROR] [FML]: Exception loading model for variant tirphycraft:yellow_pillar#inventory for item "tirphycraft:yellow_pillar", normal location exception: 
+net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model tirphycraft:item/yellow_pillar with loader VanillaLoader.INSTANCE, skipping
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
+	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:302) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:559) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.io.FileNotFoundException: tirphycraft:models/item/yellow_pillar.json
+	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:69) ~[FallbackResourceManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:65) ~[SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadModel(ModelBakery.java:334) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.access$1400(ModelLoader.java:115) ~[ModelLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:861) ~[ModelLoader$VanillaLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
+	... 20 more
+[23:01:51] [main/ERROR] [FML]: Exception loading model for variant tirphycraft:yellow_pillar#inventory for item "tirphycraft:yellow_pillar", blockstate location exception: 
+net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model tirphycraft:yellow_pillar#inventory with loader VariantLoader.INSTANCE, skipping
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:161) ~[ModelLoaderRegistry.class:?]
+	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:296) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelBakery.loadVariantItemModels(ModelBakery.java:175) ~[ModelBakery.class:?]
+	at net.minecraftforge.client.model.ModelLoader.setupModelRegistry(ModelLoader.java:151) ~[ModelLoader.class:?]
+	at net.minecraft.client.renderer.block.model.ModelManager.onResourceManagerReload(ModelManager.java:28) [ModelManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.registerReloadListener(SimpleReloadableResourceManager.java:121) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.init(Minecraft.java:559) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_201]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$MissingVariantException
+	at net.minecraft.client.renderer.block.model.ModelBlockDefinition.getVariant(ModelBlockDefinition.java:83) ~[ModelBlockDefinition.class:?]
+	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1175) ~[ModelLoader$VariantLoader.class:?]
+	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:157) ~[ModelLoaderRegistry.class:?]
+	... 20 more
+[23:01:51] [main/FATAL] [FML]: Suppressed additional 1 model loading errors for domain tirphycraft
+[23:01:52] [main/INFO] [FML]: Applying holder lookups
+[23:01:52] [main/INFO] [FML]: Holder lookups applied
+[23:01:52] [main/INFO] [jei]: Created: 256x128 textures-atlas
+[23:01:52] [main/INFO] [FML]: Injecting itemstacks
+[23:01:52] [main/INFO] [FML]: Itemstack injection complete
+[23:01:52] [main/INFO] [jei]: Starting JEI...
+[23:01:52] [main/INFO] [jei]: Registering recipe categories...
+[23:01:52] [main/INFO] [jei]: Registering recipe categories took 49.79 ms
+[23:01:52] [main/INFO] [jei]: Registering mod plugins...
+[23:01:53] [main/INFO] [jei]: Registering mod plugins took 414.4 ms
+[23:01:53] [main/INFO] [jei]: Building recipe registry...
+[23:01:53] [main/INFO] [jei]: Building recipe registry took 110.0 ms
+[23:01:53] [main/INFO] [jei]: Building ingredient list...
+[23:01:53] [main/INFO] [jei]: Building ingredient list took 43.07 ms
+[23:01:53] [main/INFO] [jei]: Building ingredient filter...
+[23:01:53] [main/INFO] [jei]: Building ingredient filter took 253.6 ms
+[23:01:53] [main/INFO] [jei]: Building bookmarks...
+[23:01:53] [main/INFO] [jei]: Building bookmarks took 11.62 ms
+[23:01:53] [main/INFO] [jei]: Building runtime...
+[23:01:53] [main/INFO] [jei]: Building runtime took 160.5 ms
+[23:01:53] [main/INFO] [jei]: Starting JEI took 1.340 s
+[23:01:54] [main/INFO] [FML]: Forge Mod Loader has successfully loaded 6 mods
+[23:01:54] [main/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[23:01:54] [main/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[23:01:55] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id

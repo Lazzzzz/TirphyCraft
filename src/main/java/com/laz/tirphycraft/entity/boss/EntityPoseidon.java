@@ -186,6 +186,8 @@ public class EntityPoseidon extends EntityMob {
 			this.world.spawnEntity(
 					new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.COINS, 20)));
 			this.world.spawnEntity(
+					new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.POSEIDON_EYE, 1)));
+			this.world.spawnEntity(
 					new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.FRAGMENT_BLUE, 1)));
 		}
 		super.onDeath(cause);
