@@ -27,6 +27,7 @@ import com.laz.tirphycraft.objects.items.clock.ItemClock;
 import com.laz.tirphycraft.objects.items.food.ItemCustomFood;
 import com.laz.tirphycraft.objects.items.other.ItemAnkh;
 import com.laz.tirphycraft.objects.items.other.ItemCoins;
+import com.laz.tirphycraft.objects.items.other.ItemPoseidonEye;
 import com.laz.tirphycraft.objects.items.other.ItemQueenHeart;
 import com.laz.tirphycraft.objects.items.other.ItemRoseFinder;
 import com.laz.tirphycraft.objects.items.other.ItemTeniumIngot;
@@ -49,6 +50,7 @@ import com.laz.tirphycraft.objects.items.tools.ToolShovelBase;
 import com.laz.tirphycraft.objects.items.tools.ToolSwordBase;
 import com.laz.tirphycraft.objects.items.tools.ToolSwordLarge;
 import com.laz.tirphycraft.objects.items.tools.custom.ToolSwordExplosion;
+import com.laz.tirphycraft.objects.items.tools.custom.ToolThunderHarp;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -102,13 +104,16 @@ public class ItemInit {
 	//BOSSDROP
 	public static final Item QUEEN_HEART 		  = new ItemQueenHeart();
 	public static final Item ANKH				  = new ItemAnkh();
+	public static final Item POSEIDON_EYE		  = new ItemPoseidonEye();
 	
 	//CORE
 	public static final Item EXPLOSION_CORE 	  = new ItemBase("explosion_core", 64);
+	public static final Item SEA_CORE 			  = new ItemBase("sea_core", 64);
 	public static final Item LIFE_CORE 			  = new ItemBase("life_core", 64);
 	
 	//BOSS WEAPON
 	public static final Item EXPLOSION_SWORD     = new ToolSwordExplosion("explosion_sword", ToolsInit.PYRODES_TOOL);
+	public static final Item THUNDER_HARP		 = new ToolThunderHarp("thunder_harp");
 	
 	//PYRODES
 	public static final Item PYRODES_BOOTS 		 = new ArmorPyrodes("pyrodes_boots", ArmorInit.PYRODES_ARMOR, 1, EntityEquipmentSlot.FEET);

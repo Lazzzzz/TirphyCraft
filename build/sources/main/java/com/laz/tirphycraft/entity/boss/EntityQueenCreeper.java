@@ -40,28 +40,25 @@ public class EntityQueenCreeper extends EntityMob {
 		super(worldIn);
 		this.setSize(1.2F, 2F);
 		this.stepHeight = 2f;
-		this.isImmuneToFire = true;	
+		this.isImmuneToFire = true;
 
 	}
-	
-    protected void initEntityAI()
-    {
-        this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAIAttackMelee(this, 1.2D, false));
-        this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
-        this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D));
-        this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
-        this.tasks.addTask(8, new EntityAILookIdle(this));
-        this.applyEntityAI();
-    }
 
-    protected void applyEntityAI()
-    {
-        this.tasks.addTask(6, new EntityAIMoveThroughVillage(this, 1.0D, false));
-        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true, new Class[] {EntityPigZombie.class}));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
-    }	
-	
+	protected void initEntityAI() {
+		this.tasks.addTask(0, new EntityAISwimming(this));
+		this.tasks.addTask(2, new EntityAIAttackMelee(this, 1.2D, false));
+		this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
+		this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D));
+		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+		this.tasks.addTask(8, new EntityAILookIdle(this));
+		this.applyEntityAI();
+	}
+
+	protected void applyEntityAI() {
+		this.tasks.addTask(6, new EntityAIMoveThroughVillage(this, 1.0D, false));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true, new Class[] { EntityPigZombie.class }));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
+	}
 
 	@Override
 	protected void applyEntityAttributes() {
@@ -75,14 +72,14 @@ public class EntityQueenCreeper extends EntityMob {
 	public float getEyeHeight() {
 		return 2F;
 	}
-	
+
 	@Override
 	public boolean isNonBoss() {
 		return false;
 	}
 
-	private final BossInfoServer bossInfo = (BossInfoServer) (new BossInfoServer(this.getDisplayName(), BossInfo.Color.GREEN,
-			BossInfo.Overlay.PROGRESS));
+	private final BossInfoServer bossInfo = (BossInfoServer) (new BossInfoServer(this.getDisplayName(),
+			BossInfo.Color.GREEN, BossInfo.Overlay.PROGRESS));
 
 	@Override
 	public void addTrackingPlayer(EntityPlayerMP player) {
@@ -100,12 +97,12 @@ public class EntityQueenCreeper extends EntityMob {
 	protected boolean canDespawn() {
 		return false;
 	}
-	
+
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
 		this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
-		
+
 	}
 
 	@Override
@@ -140,26 +137,26 @@ public class EntityQueenCreeper extends EntityMob {
 
 	@Override
 	public boolean hitByEntity(Entity entityIn) {
-			if (!this.getEntityWorld().isRemote) {
-				int rand = new Random().nextInt(4);
-				if (rand == 1) {
-					double x = entityIn.posX;
-					double y = entityIn.posY;
-					double z = entityIn.posZ;
+		if (!this.getEntityWorld().isRemote) {
+			int rand = new Random().nextInt(4);
+			if (rand == 1) {
+				double x = entityIn.posX;
+				double y = entityIn.posY;
+				double z = entityIn.posZ;
 
-					EntityAreaEffectCloud cloud = new EntityAreaEffectCloud(this.getEntityWorld(), x, y, z);
-					cloud.setOwner(this);
-					cloud.setRadius(1.0F);
-					cloud.setDuration(3 * 20);
-					cloud.setRadiusPerTick((1.0F - cloud.getRadius()) / (float)cloud.getDuration());
-					cloud.setColor(0x15680a);
-					cloud.addEffect(new PotionEffect(MobEffects.POISON, 200, 1));
-					cloud.addEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, 200, 0));
-		            
-		            this.getEntityWorld().spawnEntity(cloud);
+				EntityAreaEffectCloud cloud = new EntityAreaEffectCloud(this.getEntityWorld(), x, y, z);
+				cloud.setOwner(this);
+				cloud.setRadius(1.0F);
+				cloud.setDuration(3 * 20);
+				cloud.setRadiusPerTick((1.0F - cloud.getRadius()) / (float) cloud.getDuration());
+				cloud.setColor(0x15680a);
+				cloud.addEffect(new PotionEffect(MobEffects.POISON, 200, 1));
+				cloud.addEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, 200, 0));
 
-				}
+				this.getEntityWorld().spawnEntity(cloud);
+
 			}
+		}
 		return super.hitByEntity(entityIn);
 	}
 
@@ -175,16 +172,22 @@ public class EntityQueenCreeper extends EntityMob {
 	protected boolean isValidLightLevel() {
 		return true; // don't care about the light level to spawn
 	}
+
 	@Override
 	public void onDeath(DamageSource cause) {
 		if (!this.world.isRemote) {
-				this.world.spawnEntity(new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.COINS, 20)));
-				this.world.spawnEntity(new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.QUEEN_HEART, 1)));
-				this.world.spawnEntity(new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.EXPLOSION_SWORD, 1)));
-			}
+			this.world.spawnEntity(
+					new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.COINS, 20)));
+			this.world.spawnEntity(new EntityItem(this.world, this.posX, this.posY, this.posZ,
+					new ItemStack(ItemInit.QUEEN_HEART, 1)));
+			this.world.spawnEntity(new EntityItem(this.world, this.posX, this.posY, this.posZ,
+					new ItemStack(ItemInit.EXPLOSION_SWORD, 1)));
+			this.world.spawnEntity(new EntityItem(this.world, this.posX, this.posY, this.posZ,
+					new ItemStack(ItemInit.FRAGMENT_GREEN, 1)));
+		}
 		super.onDeath(cause);
 	}
-	
+
 	@Override
 	public boolean canBeHitWithPotion() {
 		return false;

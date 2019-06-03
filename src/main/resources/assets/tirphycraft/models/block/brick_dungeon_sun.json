@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "tirphycraft:blocks/brick_dungeon_sun"
+       "all": "tirphycraft:blocks/dungeon_brick_sun"
    }
 }

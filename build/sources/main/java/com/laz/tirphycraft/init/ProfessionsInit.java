@@ -32,7 +32,8 @@ public class ProfessionsInit {
 	public static void associateCareersAndTrades() {
 		core_seller = (new VillagerCareer(seller, "core_seller"))
 				.addTrade(1, new customTrade.TradeQueenHeartExplosionCore())
-				.addTrade(1, new customTrade.TradeAnkhLifeCore());
+				.addTrade(1, new customTrade.TradeAnkhLifeCore())
+				.addTrade(1, new customTrade.TradeHarpSeaCore());
 	}
 
 }

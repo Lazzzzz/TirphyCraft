@@ -29,7 +29,7 @@ public class EntityMontauk extends EntityCow {
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(40.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.35D);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.1D);
 	}
 
 	@Override
@@ -98,16 +98,16 @@ public class EntityMontauk extends EntityCow {
 			this.rotationYawHead = this.renderYawOffset;
 			this.moveVertical = entitylivingbase.moveVertical;
 			strafe = entitylivingbase.moveStrafing * 0.5f;
-			forward = entitylivingbase.moveForward * 2;
+			forward = entitylivingbase.moveForward * 0.4f;
 			vertical = entitylivingbase.moveVertical;
 			this.stepHeight = 2f;
 			this.fallDistance = 0;
 			
 			if (forward <= 0.0f) {
-				forward *= 0.25f;
+				forward *= 0.001f;
 			}
 			
-			this.jumpMovementFactor = this.getAIMoveSpeed() * 0.1f;
+			this.jumpMovementFactor = this.getAIMoveSpeed() * 0.4f;
 			
 			if (this.canPassengerSteer()) {
 				this.setAIMoveSpeed(0.5f);
