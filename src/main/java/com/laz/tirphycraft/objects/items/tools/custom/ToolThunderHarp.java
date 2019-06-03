@@ -22,20 +22,18 @@ public class ToolThunderHarp extends ItemBase {
 		ItemStack item = playerIn.getHeldItem(handIn);
 		Vec3d dir = playerIn.getLookVec();
 		for (int i = 3; i < 8; i++) {
-			worldIn.setThunderStrength(1f);
-			if (!worldIn.isRemote) {
-				double x = playerIn.posX + (dir.x * i * i);
-				double y = playerIn.posY + (dir.y * i * i);
-				double z = playerIn.posZ + (dir.z * i * i);
-				EntityLightningBolt m = new EntityLightningBolt(worldIn, x, y, z, false);
 
-				worldIn.addWeatherEffect(m);
-			}
+			double x = playerIn.posX + (dir.x * i * i);
+			double y = playerIn.posY + (dir.y * i * i);
+			double z = playerIn.posZ + (dir.z * i * i);
+			EntityLightningBolt m = new EntityLightningBolt(worldIn, x, y, z, false);
 
-			if (playerIn instanceof EntityPlayer) {
-				((EntityPlayer) playerIn).getCooldownTracker().setCooldown(this, 30);
-			}
+			worldIn.addWeatherEffect(m);
 
+		}
+
+		if (playerIn instanceof EntityPlayer) {
+			((EntityPlayer) playerIn).getCooldownTracker().setCooldown(this, 30);
 		}
 		item.damageItem(1, playerIn);
 		return super.onItemRightClick(worldIn, playerIn, handIn);

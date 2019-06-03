@@ -185,10 +185,10 @@ public class EntityPoseidon extends EntityMob {
 		if (!this.world.isRemote) {
 			this.world.spawnEntity(
 					new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.COINS, 20)));
-			this.world.spawnEntity(
-					new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.POSEIDON_EYE, 1)));
-			this.world.spawnEntity(
-					new EntityItem(this.world, this.posX, this.posY, this.posZ, new ItemStack(ItemInit.FRAGMENT_BLUE, 1)));
+			this.world.spawnEntity(new EntityItem(this.world, this.posX, this.posY, this.posZ,
+					new ItemStack(ItemInit.POSEIDON_EYE, 1)));
+			this.world.spawnEntity(new EntityItem(this.world, this.posX, this.posY, this.posZ,
+					new ItemStack(ItemInit.FRAGMENT_BLUE, 1)));
 		}
 		super.onDeath(cause);
 	}
@@ -209,22 +209,20 @@ public class EntityPoseidon extends EntityMob {
 	private void thunderRain(Entity entityIn) {
 		this.expulse(entityIn);
 
-		this.world.setThunderStrength(1f);
 		this.thunderCounter -= 1;
 		if (this.thunderCounter > 0) {
 			double x = entityIn.posX + entityIn.motionX + ra.nextInt(2) - 1;
 			double y = entityIn.posY + entityIn.motionY;
 			double z = entityIn.posZ + entityIn.motionZ + ra.nextInt(2) - 1;
 
-			if (!this.world.isRemote) {
-				EntityLightningBolt m = new EntityLightningBolt(this.world, x, y, z, false);
+			EntityLightningBolt m = new EntityLightningBolt(this.world, x, y, z, false);
 
-				this.world.addWeatherEffect(m);
-			}
+			this.world.addWeatherEffect(m);
+
 		} else {
 			this.thunderCounter = this.maxThunder + ra.nextInt(10);
 			this.thunderOn = false;
-			this.setHealth(this.getHealth()+1);
+			this.setHealth(this.getHealth() + 1);
 		}
 	}
 
