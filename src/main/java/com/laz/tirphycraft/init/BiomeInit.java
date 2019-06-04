@@ -1,6 +1,7 @@
 package com.laz.tirphycraft.init;
 
 import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozDense;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozPlaine;
@@ -87,7 +88,7 @@ public class BiomeInit
 		System.out.println("Biome Register " + name);
 		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addSpawnBiome(biome);	
-		if (Reference.SPAWN_BIOMES_OVERWORLD) BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 0));
+		if (ConfigHandler.SPAWN_BIOMES_OVERWORLD) BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 0));
 			
 		System.out.println("Biome added " + name);		
 		return biome;

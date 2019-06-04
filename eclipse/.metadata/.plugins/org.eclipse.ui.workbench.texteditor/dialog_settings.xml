@@ -6,12 +6,15 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="slow" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="reference."/>
+			<item value="reference"/>
+			<item value="final"/>
 			<item value="slow"/>
 			<item value="poiso"/>
 			<item value="player"/>
@@ -24,14 +27,12 @@
 			<item value="laputa_blue"/>
 			<item value="bedrock"/>
 			<item value="crystal"/>
-			<item value="getActualState"/>
-			<item value="TRUNK"/>
-			<item value="generate"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="this"/>
 			<item value="atlas"/>
 			<item value="FROZ_BOSS_WALL"/>
-			<item value=""/>
 			<item value="froz"/>
 			<item value="laputa"/>
 			<item value="brick_noxis"/>
@@ -43,7 +44,6 @@
 			<item value="silvir"/>
 			<item value="goldir"/>
 			<item value="stairs_outer_coppir"/>
-			<item value="stairs_inner_coppir"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
@@ -51,6 +51,6 @@
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="630" key="DIALOG_HEIGHT"/>
 		<item value="84" key="DIALOG_X_ORIGIN"/>
-		<item value="409" key="DIALOG_Y_ORIGIN"/>
+		<item value="400" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

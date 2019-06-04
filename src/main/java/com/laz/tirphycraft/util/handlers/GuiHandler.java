@@ -18,14 +18,14 @@ public class GuiHandler implements IGuiHandler{
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		
-		if (ID == Reference.GUI_PYRODES_FURNACE) return new ContainerPyrodesFurnace(player.inventory, (TileEntityPyrodesFurnace)world.getTileEntity(new BlockPos(x,y,z)));
-		if (ID == Reference.GUI_ALLOY_FURNACE) return new ContainerAlloyFurnace(player.inventory, (TileEntityAlloyFurnace)world.getTileEntity(new BlockPos(x,y,z)));	
+		if (ID == ConfigHandler.GUI_PYRODES_FURNACE) return new ContainerPyrodesFurnace(player.inventory, (TileEntityPyrodesFurnace)world.getTileEntity(new BlockPos(x,y,z)));
+		if (ID == ConfigHandler.GUI_ALLOY_FURNACE) return new ContainerAlloyFurnace(player.inventory, (TileEntityAlloyFurnace)world.getTileEntity(new BlockPos(x,y,z)));	
 		return null;
 	}
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		if (ID == Reference.GUI_PYRODES_FURNACE) return new GuiPyrodesFurnace(player.inventory, (TileEntityPyrodesFurnace)world.getTileEntity(new BlockPos(x,y,z)));
-		if (ID == Reference.GUI_ALLOY_FURNACE) return new GuiAlloyFurnace(player.inventory, (TileEntityAlloyFurnace)world.getTileEntity(new BlockPos(x,y,z)));
+		if (ID == ConfigHandler.GUI_PYRODES_FURNACE) return new GuiPyrodesFurnace(player.inventory, (TileEntityPyrodesFurnace)world.getTileEntity(new BlockPos(x,y,z)));
+		if (ID == ConfigHandler.GUI_ALLOY_FURNACE) return new GuiAlloyFurnace(player.inventory, (TileEntityAlloyFurnace)world.getTileEntity(new BlockPos(x,y,z)));
 		return null;
 	}
 

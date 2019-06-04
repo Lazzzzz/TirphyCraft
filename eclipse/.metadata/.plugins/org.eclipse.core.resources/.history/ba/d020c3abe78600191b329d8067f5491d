@@ -1,0 +1,70 @@
+package com.laz.tirphycraft.util;
+
+import com.laz.tirphycraft.proxy.ClientProxy;
+import com.laz.tirphycraft.proxy.CommonProxy;
+
+public class Reference {
+	public static final String MOD_ID = "tirphycraft";
+	public static final String NAME = "Tirphy Craft";
+	public static final String VERSION = "0.2";
+	public static final String ACCEPTED_VERSION = "[1.12.2]";
+	public static final String CLIENT_PROXY_CLASS = "com.laz.tirphycraft.proxy.ClientProxy";
+	public static final String COMMOM_PROXY_CLASS = "com.laz.tirphycraft.proxy.CommonProxy";
+	public static final CommonProxy PROXY = new ClientProxy();
+
+	// TILE ENTITY
+	public static int GUI_PYRODES_FURNACE = 0;
+	public static int GUI_ALLOY_FURNACE = 1;
+
+	// ENTITY
+	public static int ENTITY_GUARDIAN_GOLEM = 120;
+	public static int ENTITY_VIDARGAVIA = 121;
+	public static int ENTITY_DRAGON_FLY = 122;
+	public static int ENTITY_MONTAUK = 123;
+	public static int ENTITY_FROZEN_BUFFALO = 124;
+	public static int ENTITY_FROZEN_BOAR = 125;
+	public static int ENTITY_BUFFALO = 126;
+	public static int ENTITY_BOAR = 127;
+	public static int ENTITY_PHORUS = 128;
+	public static int ENTITY_TOTAM = 129;
+	public static int QUEEN_CREEPER = 130;
+	public static int GRINDLY_UP = 131;
+	public static int GRINDLY_FRONT = 132;
+	public static int GRINDLY_BOTH = 133;
+	public static int CLOUDY = 134;
+	public static int CERBERE = 135;
+	public static int DEMON = 136;
+	public static int DEAD_PLAYER = 137;
+	public static int KIWI = 138;
+	public static int PHARAOH = 139;
+	public static int MUMMY = 140;
+	public static int HELL_KING = 141;
+	public static int GIANT_SPIDER = 142;
+	public static int FAILED_GOLEM = 143;
+	public static int HEAD_LESS = 144;
+	public static int GIRIL = 145;
+	public static int POSEIDON = 146;
+	public static int ARTIKON = 147;
+	public static int TOXIC_COW = 148;
+	public static int SKULL = 149;
+	public static int ENTITY_MOTHMOTH = 150;
+	public static int ENTITY_LAYTURTLE = 151;
+	public static int ENTITY_CRYSTIM = 152;
+	public static int PRIMARY_ATTACK = 153;
+	public static int PRIMARY_HEAL = 154;
+	public static int PRIMARY_STRENGTH = 155;
+	public static int ENTITY_STELLAR = 156;
+	public static int ENTITY_COLOSSE = 157;
+	public static int ENTITY_ICE_BALL = 158;
+
+	// WORLD
+	public static int DIMENSION_NOXIS_ID = 120;
+	public static int DIMENSION_LAPUTA_ID = 121;
+	public static int DIMENSION_MUSHROOM_ID = 122;
+	public static int DIMENSION_FROZ_ID = 123;
+
+	public static boolean SPAWN_BIOMES_OVERWORLD = false;
+	public static int MAX_PASSIF_CREATURE = 50;
+	public static int MAX_SIZE_CLOUD = 50;
+
+}

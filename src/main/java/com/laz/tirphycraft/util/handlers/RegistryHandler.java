@@ -89,6 +89,7 @@ public class RegistryHandler {
 		EntityInit.registerEntitites();
 		System.out.println("done");
 		PotionInit.registerPotions();
+		ConfigHandler.registerConfig(event);
 
 	}
 

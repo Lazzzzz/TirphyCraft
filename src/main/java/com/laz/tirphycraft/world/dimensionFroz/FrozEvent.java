@@ -3,9 +3,7 @@ package com.laz.tirphycraft.world.dimensionFroz;
 import com.laz.tirphycraft.init.ItemInit;
 import com.laz.tirphycraft.init.PotionInit;
 
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.potion.PotionEffect;

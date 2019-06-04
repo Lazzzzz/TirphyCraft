@@ -1,9 +1,0 @@
-{
-    "variants":
-    {
-        "axis=y":  { "model": "tirphycraft:nixium_crytsal" },
-        "axis=z":   { "model": "tirphycraft:nixium_crytsal", "x": 90 },
-        "axis=x":   { "model": "tirphycraft:nixium_crytsal", "x": 90, "y": 90 },
-        "axis=none": { "model": "tirphycraft:nixium_crytsal" }
-    }
-}

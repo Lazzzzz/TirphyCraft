@@ -8,11 +8,6 @@
 		<item value="1000" key="org.eclipse.jdt.search.resultpage.limit"/>
 		<item value="TRUE" key="org.eclipse.jdt.search.resultpage.limit_enabled"/>
 	</section>
-	<section name="">
-		<item value="1000" key="org.eclipse.search.resultpage.limit"/>
-		<item value="1000" key="org.eclipse.jdt.search.resultpage.limit"/>
-		<item value="TRUE" key="org.eclipse.jdt.search.resultpage.limit_enabled"/>
-	</section>
 	<section name="TextSearchPage">
 		<item value="10" key="HISTORY_SIZE"/>
 		<item value="true" key="CASE_SENSITIVE"/>
@@ -162,7 +157,7 @@
 		</list>
 	</section>
 	<section name="SearchDialog">
-		<item value="org.eclipse.search.internal.ui.text.TextSearchPage" key="PREVIOUS_PAGE"/>
+		<item value="org.eclipse.jdt.ui.JavaSearchPage" key="PREVIOUS_PAGE"/>
 	</section>
 	<section name="org.eclipse.jdt.ui.JavaSearchResultPage">
 		<item value="1000" key="org.eclipse.jdt.search.resultpage.limit"/>
@@ -172,7 +167,7 @@
 		<item value="661" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="561" key="DIALOG_HEIGHT"/>
-		<item value="1268" key="DIALOG_X_ORIGIN"/>
+		<item value="1194" key="DIALOG_X_ORIGIN"/>
 		<item value="303" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
