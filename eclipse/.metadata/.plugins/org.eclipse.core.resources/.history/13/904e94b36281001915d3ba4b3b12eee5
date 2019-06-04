@@ -1,9 +1,0 @@
-{
-    "variants":
-    {
-        "axis=y":  { "model": "tirphycraft:test" },
-        "axis=z":   { "model": "tirphycraft:test", "x": 90 },
-        "axis=x":   { "model": "tirphycraft:test", "x": 90, "y": 90 },
-        "axis=none": { "model": "tirphycraft:test" }
-    }
-}

@@ -1,42 +1,44 @@
 package com.laz.tirphycraft.init;
 
 import com.laz.tirphycraft.Main;
-import com.laz.tirphycraft.entity.aggressive.EntityCerbere;
-import com.laz.tirphycraft.entity.aggressive.EntityCloudy;
-import com.laz.tirphycraft.entity.aggressive.EntityDeadPlayer;
-import com.laz.tirphycraft.entity.aggressive.EntityDemon;
-import com.laz.tirphycraft.entity.aggressive.EntityFailedGolem;
-import com.laz.tirphycraft.entity.aggressive.EntityGiantSpider;
-import com.laz.tirphycraft.entity.aggressive.EntityGiril;
-import com.laz.tirphycraft.entity.aggressive.EntityGrindlyBoth;
-import com.laz.tirphycraft.entity.aggressive.EntityGrindlyFront;
-import com.laz.tirphycraft.entity.aggressive.EntityGrindlyUp;
-import com.laz.tirphycraft.entity.aggressive.EntityGuardianGolem;
-import com.laz.tirphycraft.entity.aggressive.EntityHeadLess;
-import com.laz.tirphycraft.entity.aggressive.EntityMummy;
-import com.laz.tirphycraft.entity.aggressive.EntityPhorus;
-import com.laz.tirphycraft.entity.aggressive.EntitySkull;
-import com.laz.tirphycraft.entity.aggressive.EntityTotam;
-import com.laz.tirphycraft.entity.boss.EntityArtikon;
-import com.laz.tirphycraft.entity.boss.EntityHellKing;
-import com.laz.tirphycraft.entity.boss.EntityPharaoh;
-import com.laz.tirphycraft.entity.boss.EntityPoseidon;
-import com.laz.tirphycraft.entity.boss.EntityPrimaryAttack;
-import com.laz.tirphycraft.entity.boss.EntityPrimaryHeal;
-import com.laz.tirphycraft.entity.boss.EntityPrimaryStrength;
-import com.laz.tirphycraft.entity.boss.EntityQueenCreeper;
-import com.laz.tirphycraft.entity.neutral.EntityMothmoth;
-import com.laz.tirphycraft.entity.neutral.EntityStellar;
-import com.laz.tirphycraft.entity.passif.EntityBuffalo;
-import com.laz.tirphycraft.entity.passif.EntityCrystim;
-import com.laz.tirphycraft.entity.passif.EntityDragonFly;
-import com.laz.tirphycraft.entity.passif.EntityFrozenBoar;
-import com.laz.tirphycraft.entity.passif.EntityFrozenBuffalo;
-import com.laz.tirphycraft.entity.passif.EntityKiwi;
-import com.laz.tirphycraft.entity.passif.EntityLayTurtle;
-import com.laz.tirphycraft.entity.passif.EntityMontauk;
-import com.laz.tirphycraft.entity.passif.EntityToxisCow;
-import com.laz.tirphycraft.entity.passif.EntityVidargavia;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCerbere;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCloudy;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDeadPlayer;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDemon;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityFailedGolem;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGiantSpider;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGiril;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyBoth;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyFront;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyUp;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGuardianGolem;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityHeadLess;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityMummy;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityPhorus;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntitySkull;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityTotam;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityArtikon;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityHellKing;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPharaoh;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPoseidon;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryAttack;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryHeal;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryStrength;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityQueenCreeper;
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityMothmoth;
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityStellar;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityBuffalo;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityColosse;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityCrystim;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityDragonFly;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityFrozenBoar;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityFrozenBuffalo;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityKiwi;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityLayTurtle;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityMontauk;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityToxisCow;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityVidargavia;
+import com.laz.tirphycraft.entity.entityClass.projectile.EntityIceBall;
 import com.laz.tirphycraft.util.Reference;
 
 import net.minecraft.entity.Entity;
@@ -73,7 +75,6 @@ public class EntityInit {
 		
 		//NEUTRAL
 		registerEntity("mothmoth", EntityMothmoth.class, Reference.ENTITY_MOTHMOTH, 50, 3690832, 3690832);	
-		registerEntity("stellar", EntityStellar.class, Reference.ENTITY_STELLAR, 50, 3690832, 3690832);
 		
 		//PASSIF
 		registerEntity("montauk", EntityMontauk.class, Reference.ENTITY_MONTAUK, 50, 16777215, 16777215);		
@@ -82,6 +83,7 @@ public class EntityInit {
 		registerEntity("buffalo", EntityBuffalo.class, Reference.ENTITY_BUFFALO, 50, 16777215, 16777215);
 		registerEntity("layturtle", EntityLayTurtle.class, Reference.ENTITY_LAYTURTLE, 50, 16777215, 16777215);
 		registerEntity("crystim", EntityCrystim.class, Reference.ENTITY_CRYSTIM, 50, 16777215, 16777215);
+		registerEntity("colosse", EntityColosse.class, Reference.ENTITY_COLOSSE, 50, 16777215, 16777215);
 		
 		//registerEntity("boar", EntityFrozenPig.class, Reference.ENTITY_BOAR, 50, 16777215, 16777215);	
 		registerEntity("kiwi", EntityKiwi.class, Reference.KIWI, 50, 16777215, 16777215);	
@@ -96,6 +98,10 @@ public class EntityInit {
 		registerEntity("primary_attack", EntityPrimaryAttack.class, Reference.PRIMARY_ATTACK, 50, 16711680, 16711680);
 		registerEntity("primary_heal", EntityPrimaryHeal.class, Reference.PRIMARY_HEAL, 50, 16711680, 16711680);
 		registerEntity("primary_strength", EntityPrimaryStrength.class, Reference.PRIMARY_STRENGTH, 50, 16711680, 16711680);
+		
+		//OTHER
+		registerEntity("stellar", EntityStellar.class, Reference.ENTITY_STELLAR, 50, 3092992, 3092992);
+		registerEntity("ice_ball", EntityIceBall.class, Reference.ENTITY_ICE_BALL, 50, 3092992, 3092992);
 		
 		addSpawn();
 		
@@ -125,6 +131,7 @@ public class EntityInit {
 		EntityRegistry.addSpawn(EntityMontauk.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_ICE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
 		EntityRegistry.addSpawn(EntityFrozenBuffalo.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_ICE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);		
 		EntityRegistry.addSpawn(EntityFrozenBoar.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_ICE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
+		EntityRegistry.addSpawn(EntityColosse.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_ICE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
 		
 		//MECHANT
 		

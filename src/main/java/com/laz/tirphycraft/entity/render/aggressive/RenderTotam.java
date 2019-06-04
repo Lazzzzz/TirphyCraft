@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityTotam;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityTotam;
 import com.laz.tirphycraft.entity.model.aggresive.ModelTotam;
 import com.laz.tirphycraft.util.Reference;
 

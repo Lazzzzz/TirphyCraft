@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntitySkull;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntitySkull;
 import com.laz.tirphycraft.entity.model.aggresive.modelSkull;
 import com.laz.tirphycraft.util.Reference;
 

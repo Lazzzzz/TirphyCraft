@@ -9,6 +9,7 @@ import com.laz.tirphycraft.init.DimensionInit;
 import com.laz.tirphycraft.init.EntityInit;
 import com.laz.tirphycraft.init.FurnaceRecipeInit;
 import com.laz.tirphycraft.init.ItemInit;
+import com.laz.tirphycraft.init.PotionInit;
 import com.laz.tirphycraft.init.ProfessionsInit;
 import com.laz.tirphycraft.objects.items.bow.BowPyrodes;
 import com.laz.tirphycraft.util.interfaces.IHasModel;
@@ -87,6 +88,7 @@ public class RegistryHandler {
 		System.out.println("Init Entities");
 		EntityInit.registerEntitites();
 		System.out.println("done");
+		PotionInit.registerPotions();
 
 	}
 

@@ -1,0 +1,10 @@
+package com.laz.tirphycraft.init;
+
+import com.laz.tirphycraft.potion.FreezePotion;
+
+import net.minecraft.potion.Potion;
+
+public class PotionInit {
+	public static final Potion FREEZE = new FreezePotion();
+
+}

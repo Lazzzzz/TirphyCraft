@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.boss;
 
-import com.laz.tirphycraft.entity.boss.EntityHellKing;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityHellKing;
 import com.laz.tirphycraft.entity.model.boss.ModelHellKing;
 import com.laz.tirphycraft.util.Reference;
 

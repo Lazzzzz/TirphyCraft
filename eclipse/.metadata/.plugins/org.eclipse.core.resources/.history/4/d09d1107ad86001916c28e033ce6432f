@@ -1,0 +1,7 @@
+package com.laz.tirphycraft.init;
+
+import net.minecraft.potion.Potion;
+
+public class FreezePotion extends Potion {
+
+}

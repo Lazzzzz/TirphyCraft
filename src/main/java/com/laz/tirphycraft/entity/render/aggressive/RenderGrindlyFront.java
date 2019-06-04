@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityGrindlyFront;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyFront;
 import com.laz.tirphycraft.entity.model.aggresive.ModelGrindlyFront;
 import com.laz.tirphycraft.util.Reference;
 

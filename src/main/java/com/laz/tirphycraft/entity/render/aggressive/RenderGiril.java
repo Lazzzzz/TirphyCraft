@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityGiril;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGiril;
 import com.laz.tirphycraft.entity.model.aggresive.ModelGiril;
 import com.laz.tirphycraft.util.Reference;
 

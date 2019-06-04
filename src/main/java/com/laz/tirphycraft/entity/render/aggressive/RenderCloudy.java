@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityCloudy;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCloudy;
 import com.laz.tirphycraft.entity.model.aggresive.ModelCloudy;
 import com.laz.tirphycraft.util.Reference;
 

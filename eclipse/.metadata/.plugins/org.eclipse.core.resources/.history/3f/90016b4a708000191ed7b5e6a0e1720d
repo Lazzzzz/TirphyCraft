@@ -1,8 +1,0 @@
-package com.laz.tirphycraft.world.biomes.laputa;
-
-public class BiomeLaputaDecorator {
-	public void genDecorator(int tree, int big_tree, int light_pad, int grass, int flower, int crystal) {
-		
-	}
-	
-}

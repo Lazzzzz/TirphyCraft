@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.objects.blocks.customModel.egg;
 
-import com.laz.tirphycraft.entity.boss.EntityHellKing;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityHellKing;
 import com.laz.tirphycraft.objects.base.BlockBase;
 
 import net.minecraft.block.SoundType;

@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityGrindlyBoth;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyBoth;
 import com.laz.tirphycraft.entity.model.aggresive.ModelGrindlyBoth;
 import com.laz.tirphycraft.util.Reference;
 

@@ -1,0 +1,5 @@
+package com.laz.tirphycraft.potion;
+
+public class FreezePotionEvent {
+
+}

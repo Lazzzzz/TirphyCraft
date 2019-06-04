@@ -1,0 +1,23 @@
+package com.laz.tirphycraft.potion;
+
+import com.laz.tirphycraft.init.PotionInit;
+
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
+
+@EventBusSubscriber
+public class FreezePotionEvent {
+	
+	@SubscribeEvent
+	public static void potionActive(PlayerTickEvent event) {
+		System.out.println("activeeeddd");
+		boolean isActive = false;
+		if (event.player.isPotionActive(PotionInit.FREEZE)) isActive = false;
+	
+		if (isActive) {
+			System.out.println("activeee");
+		}
+	}
+	
+}

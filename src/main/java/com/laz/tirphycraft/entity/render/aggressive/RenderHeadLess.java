@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityHeadLess;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityHeadLess;
 import com.laz.tirphycraft.entity.model.aggresive.ModelHeadless;
 import com.laz.tirphycraft.util.Reference;
 

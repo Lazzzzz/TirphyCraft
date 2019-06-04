@@ -1,7 +1,7 @@
 package com.laz.tirphycraft.entity.render.neutral;
 
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityStellar;
 import com.laz.tirphycraft.entity.model.neutral.ModelStellar;
-import com.laz.tirphycraft.entity.neutral.EntityStellar;
 import com.laz.tirphycraft.util.Reference;
 
 import net.minecraft.client.renderer.entity.RenderLiving;

@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.boss;
 
-import com.laz.tirphycraft.entity.boss.EntityPrimaryStrength;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryStrength;
 import com.laz.tirphycraft.entity.model.boss.ModelPrimary;
 import com.laz.tirphycraft.util.Reference;
 
