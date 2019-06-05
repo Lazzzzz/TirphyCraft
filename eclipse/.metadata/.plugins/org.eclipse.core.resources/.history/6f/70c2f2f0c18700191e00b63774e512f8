@@ -1,0 +1,33 @@
+package com.laz.tirphycraft.util.loot;
+
+import java.util.Random;
+
+import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.init.ItemInit;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class CratesIceLoot {
+	private final SetLoot SNOW_BALL 		= new SetLoot(Items.SNOWBALL, 40);
+	private final SetLoot ICE		 		= new SetLoot(Blocks.ICE, 40);
+	private final SetLoot SNOW		 		= new SetLoot(Blocks.SNOW, 40);
+	private final SetLoot IRON		 		= new SetLoot(Items.IRON_INGOT, 30);	
+	private final SetLoot GOLD		 		= new SetLoot(Items.GOLD_INGOT, 20);
+	private final SetLoot DIAMOND			= new SetLoot(Items.DIAMOND, 10);
+	private final SetLoot ROSE				= new SetLoot(ItemInit.BLUE_ROSE_PETAL, 15);
+	private final SetLoot BLUE_ROSE_CHEST	= new SetLoot(ItemInit.ROSE_CHESTPLATE, 1);
+	private final SetLoot BLUE_ROSE_HELM	= new SetLoot(ItemInit.ROSE_HELMET, 1);
+	private final SetLoot BLUE_ROSE_BOOTS	= new SetLoot(ItemInit.ROSE_BOOTS, 1);
+	private final SetLoot BLUE_ROSE_LEGG	= new SetLoot(ItemInit.ROSE_LEGGINGS, 1);
+	
+	public void spawnLoot(World worldIn, Random rand, BlockPos pos) {
+		
+	}
+	
+	
+}
+

@@ -22,8 +22,8 @@
 			<item value="org.eclipse.ui.commands"/>
 		</list>
 		<list key="textArray">
-			<item value="con"/>
 			<item value="cons"/>
+			<item value="c"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">

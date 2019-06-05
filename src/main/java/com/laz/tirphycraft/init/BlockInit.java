@@ -18,6 +18,7 @@ import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBase;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBlue;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushGreen;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushRed;
+import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockFrozCrate;
 import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockFrozStone;
 import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockPlantBlueRose;
 import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockPowderSnow;
@@ -82,9 +83,6 @@ public class BlockInit {
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 	
 	//BLOCKS
-	public static final Block BRICK_DUNGEON 			= new BlockBrickDungeon();
-	public static final Block BRICK_DUNGEON_SUN 		= new BlockBrickDungeonSun();
-	public static final Block BRICK_DUNGEON_CONTROLER 	= new BlockBrickDungeonsControler();
 	public static final Block BLOCK_PYRODES 			= new BlockBase("block_pyrodes", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
 	public static final Block BLOCK_HEAVY   			= new BlockBase("block_heavy", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
 	public static final Block BLOCK_NIXIUM  			= new BlockBase("block_nixium", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
@@ -215,8 +213,11 @@ public class BlockInit {
 	public static final Block PORTAL_FROZ				= new BlockPortalBase("portal_froz", 123);
 	
 	//DUNGEONS
+	public static final Block BRICK_DUNGEON 			= new BlockBrickDungeon();
+	public static final Block BRICK_DUNGEON_SUN 		= new BlockBrickDungeonSun();
+	public static final Block BRICK_DUNGEON_CONTROLER 	= new BlockBrickDungeonsControler();
 	public static final Block FROZ_BOSS_WALL			= new BlockDungeonBase("froz_boss_wall", SoundType.GROUND);
 	public static final Block FROZ_BOSS_DOOR	        = new BlockBossDoor();
-	
+	public static final Block FRO_CREATE				= new BlockFrozCrate();
 	
 }
