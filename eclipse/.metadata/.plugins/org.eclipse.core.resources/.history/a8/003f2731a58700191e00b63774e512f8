@@ -1,0 +1,136 @@
+package com.laz.tirphycraft.entity.entityClass.aggressive;
+
+import java.util.Random;
+
+import com.laz.tirphycraft.init.ItemInit;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
+import com.laz.tirphycraft.util.handlers.LootTableHandler;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityFlying;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.IRangedAttackMob;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackMelee;
+import net.minecraft.entity.ai.EntityAIAttackRanged;
+import net.minecraft.entity.ai.EntityAIBase;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
+import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.ai.EntityAIWanderAvoidWater;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.ai.EntityMoveHelper;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.entity.monster.EntityPigZombie;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityLargeFireball;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
+import scala.reflect.internal.Trees.This;
+
+public class EntityPlyton extends EntityMob {
+
+	private final int maxInterval;
+	private final int minInterval;
+	private final double speedFly;
+
+	public EntityPlyton(World worldIn) {
+
+		super(worldIn);
+		this.setSize(5F, 1F);
+		this.isImmuneToFire = true;
+		this.maxInterval = this.rand.nextInt(30) + 200;
+		this.minInterval = this.rand.nextInt(30) + 150;
+		this.speedFly = this.rand.nextDouble() * 2;
+		this.posY += 100;
+
+	}
+
+	@Override
+	protected void initEntityAI() {
+		this.tasks.addTask(1, new EntityAISwimming(this));
+		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
+		this.tasks.addTask(5, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+		this.tasks.addTask(20, new EntityAILookIdle(this));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(9,	new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true, false, null));
+	}
+
+	@Override
+	public boolean hasNoGravity() {
+		return true;
+	}
+
+	@Override
+	protected void applyEntityAttributes() {
+		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(40.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0D);
+		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(1.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(4.0D);
+	}
+
+	@Override
+	public void onLivingUpdate() {
+		snipePlayer();
+		moveHelper();
+		super.onLivingUpdate();
+	}
+
+	@Override
+	public boolean getCanSpawnHere() {
+		if (this.posY < 100)
+			return false;
+		return super.getCanSpawnHere();
+	}
+
+	@Override
+	protected boolean canDespawn() {
+		int i = this.world.countEntities(EntityPlyton.class);
+		return i > 5;
+	}
+	
+	private void moveHelper() {
+
+		this.motionX = this.getLookVec().x * this.speedFly;
+		this.motionZ = this.getLookVec().z * this.speedFly;
+
+		this.rotationPitch += this.rand.nextFloat();
+		this.rotationYaw += this.rand.nextFloat();
+
+		if (this.world.getWorldTime() % 500 == 0) {
+
+			this.motionY = (this.rand.nextDouble() * 2) - 1;
+
+			if (this.posY > this.maxInterval)
+				this.motionY = -0.5f;
+			else if (this.posY < this.minInterval)
+				this.motionY = 0.5f;
+
+		}
+	}
+
+	private void snipePlayer() {
+		if (this.getAttackTarget() != null) {
+			System.out.println("snipeee");
+		}
+	}
+
+}

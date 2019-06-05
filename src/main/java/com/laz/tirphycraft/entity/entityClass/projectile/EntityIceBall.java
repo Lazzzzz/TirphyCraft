@@ -35,7 +35,7 @@ public class EntityIceBall extends EntityFlying {
 	public boolean smacked;
 
 	public EntityIceBall(World var1) {
-		
+
 		super(var1);
 		this.lifeSpan = this.rand.nextInt(300) + 200;
 		this.life = this.lifeSpan;
@@ -46,14 +46,14 @@ public class EntityIceBall extends EntityFlying {
 
 	}
 
-	public EntityIceBall(World var1, double x, double y, double z) {
-		this(var1);
+	public void setLife(int life) {
+		this.life = life;
+	}
 
-		this.setPositionAndRotation(x, y, z, this.rotationYaw, this.rotationPitch);
-
-		this.smotionX = (0.2D + (double) this.rand.nextFloat() * 0.15D) * (this.rand.nextInt(2) == 0 ? 1.0D : -1.0D);
-		this.smotionY = (0.2D + (double) this.rand.nextFloat() * 0.15D) * (this.rand.nextInt(2) == 0 ? 1.0D : -1.0D);
-		this.smotionZ = (0.2D + (double) this.rand.nextFloat() * 0.15D) * (this.rand.nextInt(2) == 0 ? 1.0D : -1.0D);
+	public void setVel(double x, double y, double z) {
+		this.smotionX = x;
+		this.smotionY = y;
+		this.smotionZ = z;
 	}
 
 	public void onUpdate() {
@@ -141,15 +141,10 @@ public class EntityIceBall extends EntityFlying {
 	public void applyEntityCollision(Entity var1) {
 		super.applyEntityCollision(var1);
 
-		if (var1 != null && var1 instanceof EntityLivingBase && !(var1 instanceof EntityIceBall)) {
-			if (!(var1 instanceof EntityColosse) && !(var1 instanceof EntityColosse)) {
-				if (this.shootingEntity != null) {
-					((EntityLivingBase) var1).addPotionEffect(new PotionEffect(PotionInit.FREEZE, 20 * 10, 0, false, false));
-					this.splode();
-					this.isDead = true;
-				}
-			}
-		}
+		((EntityLivingBase) var1).addPotionEffect(new PotionEffect(PotionInit.FREEZE, 20 * 10, 0, false, false));
+		this.splode();
+		this.isDead = true;
+
 	}
 
 	@Override

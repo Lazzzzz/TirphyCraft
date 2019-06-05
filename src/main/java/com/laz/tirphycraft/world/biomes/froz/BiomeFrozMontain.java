@@ -23,7 +23,7 @@ public class BiomeFrozMontain extends Biome {
 		topBlock = BlockInit.POWDER_SNOW.getDefaultState();
 		fillerBlock = Blocks.SNOW.getDefaultState();
 
-		this.decorator.treesPerChunk = 10;
+		this.decorator.treesPerChunk = 0;
 		this.spawnableMonsterList.clear();
 		this.spawnableCreatureList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -31,14 +31,5 @@ public class BiomeFrozMontain extends Biome {
 
 	}
 
-	@Override
-	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
-		int o = rand.nextInt(20);
-		if (o == 1)
-			return new WorldGenFrozBigTree();
-		else
-			return new WorldGenFrozNormalTree(rand.nextInt(8) + 2);
-
-	}
 
 }

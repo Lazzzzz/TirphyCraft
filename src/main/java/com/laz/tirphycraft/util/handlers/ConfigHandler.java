@@ -9,6 +9,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ConfigHandler {
+
 	public static Configuration config;
 
 	// TILE ENTITY
@@ -55,6 +56,7 @@ public class ConfigHandler {
 	public static int ENTITY_STELLAR = 156;
 	public static int ENTITY_COLOSSE = 157;
 	public static int ENTITY_ICE_BALL = 158;
+	public static int ENTITY_PLYTON = 159;
 
 	// WORLD
 	public static int DIMENSION_NOXIS_ID = 120;
@@ -136,37 +138,39 @@ public class ConfigHandler {
 				1000, "");
 		ENTITY_COLOSSE = config.getInt("ENTITY_COLOSSE", category, ENTITY_COLOSSE, ENTITY_COLOSSE,
 				1000, "");
+		ENTITY_PLYTON = config.getInt("PLYTON", category, ENTITY_PLYTON, ENTITY_PLYTON,
+				1000, "");
 
 		category = "IDs GUI";
 
 		config.addCustomCategoryComment(category, "Set ID's for GUI");
 
 		GUI_PYRODES_FURNACE = config.getInt("GUI_PYRODES_FURNACE", category, GUI_PYRODES_FURNACE,
-				GUI_PYRODES_FURNACE, 1000, "");
+				0, 1000, "");
 		GUI_ALLOY_FURNACE = config.getInt("GUI_ALLOY_FURNACE", category, GUI_ALLOY_FURNACE,
-				GUI_ALLOY_FURNACE, 1000, "");
+				0, 1000, "");
 
 		category = "IDs Dimensions";
 
 		config.addCustomCategoryComment(category, "Set ID's for Dimensions");
 
 		DIMENSION_NOXIS_ID = config.getInt("DIMENSION_NOXIS_ID", category, DIMENSION_NOXIS_ID,
-				DIMENSION_NOXIS_ID, 1000, "");
+				2, 1000, "");
 		DIMENSION_LAPUTA_ID = config.getInt("DIMENSION_LAPUTA_ID", category, DIMENSION_LAPUTA_ID,
-				DIMENSION_LAPUTA_ID, 1000, "");
+				2, 1000, "");
 		DIMENSION_MUSHROOM_ID = config.getInt("DIMENSION_MUSHROOM_ID", category, DIMENSION_MUSHROOM_ID,
-				DIMENSION_MUSHROOM_ID, 1000, "");
+				2, 1000, "");
 		DIMENSION_FROZ_ID = config.getInt("DIMENSION_FROZ_ID", category, DIMENSION_FROZ_ID,
-				DIMENSION_FROZ_ID, 1000, "");
+				2, 1000, "");
 
 		category = "World Gen & max Entity";
 
 		config.addCustomCategoryComment(category, "World Gen & max Entity");
 		MAX_PASSIF_CREATURE = config.getInt("MAX_PASSIF_CREATURE", category, MAX_PASSIF_CREATURE,
-				MAX_PASSIF_CREATURE, 1000, "Max passive creatures");
+				0, 1000, "Max passive creatures");
 
 		MAX_SIZE_CLOUD = config.getInt("MAX_PASSIF_CREATURE", category, MAX_PASSIF_CREATURE,
-			MAX_PASSIF_CREATURE, 1000, "Max cloud size");
+			0, 1000, "Max cloud size");
 
 		SPAWN_BIOMES_OVERWORLD = config.getBoolean("SPAWN_BIOMES_OVERWORLD", category, SPAWN_BIOMES_OVERWORLD, "block biome spawning in overworld");
 

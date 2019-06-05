@@ -18,9 +18,10 @@ public class FrozEvent {
 	public static void freez(PlayerTickEvent event) {
 		if (event.player.dimension == 123) {
 			if (!asProtection(event.player)) {
-				event.player.addPotionEffect(new PotionEffect(PotionInit.FREEZE, 20*1, 0, false, false));
+				event.player.addPotionEffect(new PotionEffect(PotionInit.FREEZE, 20*1, 0, true, false));
 			}
 		}
+	
 	}
 
 	public static boolean asProtection(EntityPlayer player) {

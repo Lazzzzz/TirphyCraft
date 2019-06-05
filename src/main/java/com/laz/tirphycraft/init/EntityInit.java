@@ -15,6 +15,7 @@ import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGuardianGolem;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityHeadLess;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityMummy;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityPhorus;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityPlyton;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntitySkull;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityTotam;
 import com.laz.tirphycraft.entity.entityClass.boss.EntityArtikon;
@@ -73,6 +74,7 @@ public class EntityInit {
 		registerEntity("head_less", EntityHeadLess.class, ConfigHandler.HEAD_LESS, 50, 000000, 000000);
 		registerEntity("giril", EntityGiril.class, ConfigHandler.GIRIL, 50, 000000, 000000);
 		registerEntity("skull", EntitySkull.class, ConfigHandler.SKULL, 50, 000000, 000000);
+		registerEntity("plyton", EntityPlyton.class, ConfigHandler.ENTITY_PLYTON, 500, 000000, 000000);
 		
 		//NEUTRAL
 		registerEntity("mothmoth", EntityMothmoth.class, ConfigHandler.ENTITY_MOTHMOTH, 50, 3690832, 3690832);	
@@ -158,6 +160,7 @@ public class EntityInit {
 			
 			//FROZ
 		EntityRegistry.addSpawn(EntityMothmoth.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
+		EntityRegistry.addSpawn(EntityPlyton.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.FROZ_MONTAIN);
 	}
 	
 }
