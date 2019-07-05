@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityMummy;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityMummy;
 import com.laz.tirphycraft.util.Reference;
 
 import net.minecraft.client.model.ModelBiped;

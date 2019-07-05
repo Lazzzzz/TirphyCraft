@@ -1,0 +1,26 @@
+package com.laz.tirphycraft.entity.render.neutral;
+
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityVelociraptor;
+import com.laz.tirphycraft.entity.model.neutral.ModelMothmoth;
+import com.laz.tirphycraft.entity.model.neutral.ModelVelociraptor;
+import com.laz.tirphycraft.util.Reference;
+
+import net.minecraft.client.renderer.entity.RenderLiving;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.util.ResourceLocation;
+
+public class RenderVelociraptor extends RenderLiving<EntityVelociraptor>{
+	public ResourceLocation TEXTURES_BASIC = new ResourceLocation(Reference.MOD_ID + ":textures/entity/velociraptor/velociraptor_basic.png");
+	public ResourceLocation TEXTURES_SADDLE = new ResourceLocation(Reference.MOD_ID + ":textures/entity/velociraptor/velociraptor_saddle.png");
+	
+	public RenderVelociraptor(RenderManager manager) {
+		super(manager, new ModelVelociraptor(), 0.5F);
+	}
+	
+	@Override
+	protected ResourceLocation getEntityTexture(EntityVelociraptor entity) {
+		if (!entity.tameable) return TEXTURES_BASIC;
+		else return TEXTURES_SADDLE;
+	}
+	
+}

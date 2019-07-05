@@ -7,7 +7,6 @@ import com.laz.tirphycraft.objects.blocks.machine.alloy.TileEntityAlloyFurnace;
 import com.laz.tirphycraft.objects.blocks.machine.pyrodes.ContainerPyrodesFurnace;
 import com.laz.tirphycraft.objects.blocks.machine.pyrodes.GuiPyrodesFurnace;
 import com.laz.tirphycraft.objects.blocks.machine.pyrodes.TileEntityPyrodesFurnace;
-import com.laz.tirphycraft.util.Reference;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;

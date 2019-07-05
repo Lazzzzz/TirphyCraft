@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityFailedGolem;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityFailedGolem;
 import com.laz.tirphycraft.entity.model.aggresive.ModelFailedGolem;
 import com.laz.tirphycraft.util.Reference;
 

@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @net.minecraftforge.fml.common.Mod.EventBusSubscriber(modid = Reference.MOD_ID, value = {
 		net.minecraftforge.fml.relauncher.Side.CLIENT })
+
 public class ClientEvent {
 
 	public ClientEvent() {

@@ -7,7 +7,6 @@ import java.util.Random;
 import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest;
-import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMagic;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaNoManLand;
 import com.laz.tirphycraft.world.biomes.noxis.BiomeBigForestNoxis;
 import com.laz.tirphycraft.world.biomes.noxis.BiomeForestNoxis;

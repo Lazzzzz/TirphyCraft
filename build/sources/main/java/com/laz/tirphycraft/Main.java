@@ -1,5 +1,7 @@
 package com.laz.tirphycraft;
 
+import java.io.File;
+
 import com.laz.tirphycraft.proxy.CommonProxy;
 import com.laz.tirphycraft.tabs.TirphycraftTab;
 import com.laz.tirphycraft.util.Reference;
@@ -19,6 +21,9 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main 
 {
+	
+	public static File config;
+	
 	@Instance
 	public static Main instance;
 	

@@ -1,5 +1,0 @@
-package com.setrion.koratio.particles;
-
-public enum ParticleTypes {
-	GLINT
-}

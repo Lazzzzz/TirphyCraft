@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityPhorus;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityPhorus;
 import com.laz.tirphycraft.entity.model.aggresive.ModelPhorus;
 import com.laz.tirphycraft.util.Reference;
 

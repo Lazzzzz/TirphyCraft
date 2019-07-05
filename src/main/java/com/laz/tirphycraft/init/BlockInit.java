@@ -137,6 +137,7 @@ public class BlockInit {
 	public static final Block ORE_NOXIS        	= new BlockOre("ore_noxis", "noxis");
 	public static final Block ORE_OVERWORLD 	= new BlockOre("ore_overworld", "overworld");
 	public static final Block ORE_LAPUTA     	= new BlockOre("ore_laputa", "laputa");
+	public static final Block HISOIRE_ICE     	= new BlockBase("histoire_ice", Material.ROCK, 1.5F, 15, "pickaxe", 2, SoundType.STONE);
 	
 	//TILE ENTITY
 	public static final Block PYRODES_FURNACE 	= new BlockPyrodesFurnace("pyrodes_furnace");
@@ -216,7 +217,7 @@ public class BlockInit {
 	public static final Block BRICK_DUNGEON 			= new BlockBrickDungeon();
 	public static final Block BRICK_DUNGEON_SUN 		= new BlockBrickDungeonSun();
 	public static final Block BRICK_DUNGEON_CONTROLER 	= new BlockBrickDungeonsControler();
-	public static final Block FROZ_BOSS_WALL			= new BlockDungeonBase("froz_boss_wall", SoundType.GROUND);
+	public static final Block FROZ_BOSS_WALL			= new BlockDungeonBase("froz_boss_wall", SoundType.STONE);
 	public static final Block FROZ_BOSS_DOOR	        = new BlockBossDoor();
 	public static final Block FRO_CREATE				= new BlockFrozCrate();
 	

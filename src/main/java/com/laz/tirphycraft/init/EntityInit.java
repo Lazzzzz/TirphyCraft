@@ -28,6 +28,7 @@ import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryStrength;
 import com.laz.tirphycraft.entity.entityClass.boss.EntityQueenCreeper;
 import com.laz.tirphycraft.entity.entityClass.neutral.EntityMothmoth;
 import com.laz.tirphycraft.entity.entityClass.neutral.EntityStellar;
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityVelociraptor;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityBuffalo;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityColosse;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityCrystim;
@@ -78,6 +79,7 @@ public class EntityInit {
 		
 		//NEUTRAL
 		registerEntity("mothmoth", EntityMothmoth.class, ConfigHandler.ENTITY_MOTHMOTH, 50, 3690832, 3690832);	
+		registerEntity("velociraptor", EntityVelociraptor.class, ConfigHandler.ENTITY_VELOCIRAPTOR, 50, 3690832, 3690832);	
 		
 		//PASSIF
 		registerEntity("montauk", EntityMontauk.class, ConfigHandler.ENTITY_MONTAUK, 50, 16777215, 16777215);		

@@ -5,7 +5,7 @@ import java.util.Random;
 import com.laz.tirphycraft.Main;
 import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.objects.base.BlockBase;
-import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.ITileEntityProvider;
@@ -57,7 +57,7 @@ public class BlockAlloyFurnace extends BlockBase implements ITileEntityProvider 
 			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 
 		if (!worldIn.isRemote) {
-			playerIn.openGui(Main.instance, Reference.GUI_ALLOY_FURNACE, worldIn, pos.getX(), pos.getY(), pos.getZ());
+			playerIn.openGui(Main.instance, ConfigHandler.GUI_ALLOY_FURNACE, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 
 		return true;

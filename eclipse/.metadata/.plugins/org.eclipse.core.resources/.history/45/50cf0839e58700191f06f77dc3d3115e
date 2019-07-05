@@ -1,0 +1,5 @@
+package com.laz.tirphycraft.objects.items.bow.customArrow;
+
+public class FrozenArrow {
+
+}

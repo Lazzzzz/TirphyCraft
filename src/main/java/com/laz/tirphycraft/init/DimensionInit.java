@@ -1,6 +1,5 @@
 package com.laz.tirphycraft.init;
 
-import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 import com.laz.tirphycraft.world.dimensionFroz.DimensionLibraryFroz;
 import com.laz.tirphycraft.world.dimensionLaputa.DimensionLibraryLaputa;

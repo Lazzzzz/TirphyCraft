@@ -39,6 +39,10 @@ public class ItemClock extends ItemBase {
 			MinecraftServer minecraftserver = FMLCommonHandler.instance().getMinecraftServerInstance();
 			if (minecraftserver != null) {
 				minecraftserver.getCommandManager().executeCommand((EntityPlayerMP) playerIn, "tpdim " + this.dim);
+				if (playerIn instanceof EntityPlayer) {
+					((EntityPlayer) playerIn).getCooldownTracker().setCooldown(this, 20 * 60);
+				}
+				
 			}
 		}
 

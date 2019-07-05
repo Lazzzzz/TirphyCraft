@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.boss;
 
-import com.laz.tirphycraft.entity.boss.EntityQueenCreeper;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityQueenCreeper;
 import com.laz.tirphycraft.entity.model.boss.ModelQueenCreeper;
 import com.laz.tirphycraft.util.Reference;
 

@@ -27,6 +27,7 @@ import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryStrength;
 import com.laz.tirphycraft.entity.entityClass.boss.EntityQueenCreeper;
 import com.laz.tirphycraft.entity.entityClass.neutral.EntityMothmoth;
 import com.laz.tirphycraft.entity.entityClass.neutral.EntityStellar;
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityVelociraptor;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityBuffalo;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityColosse;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityCrystim;
@@ -66,6 +67,7 @@ import com.laz.tirphycraft.entity.render.boss.RenderPrimaryStrength;
 import com.laz.tirphycraft.entity.render.boss.RenderQueenCreeper;
 import com.laz.tirphycraft.entity.render.neutral.RenderMothmoth;
 import com.laz.tirphycraft.entity.render.neutral.RenderStellar;
+import com.laz.tirphycraft.entity.render.neutral.RenderVelociraptor;
 import com.laz.tirphycraft.entity.render.passif.RenderBuffalo;
 import com.laz.tirphycraft.entity.render.passif.RenderColosse;
 import com.laz.tirphycraft.entity.render.passif.RenderCrystim;
@@ -454,6 +456,15 @@ public class RenderHandler {
 			@Override
 			public RenderPlyton createRenderFor(RenderManager manager) {
 				return new RenderPlyton(manager);
+
+			}
+
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityVelociraptor.class, new IRenderFactory<EntityVelociraptor>() {
+
+			@Override
+			public RenderVelociraptor createRenderFor(RenderManager manager) {
+				return new RenderVelociraptor(manager);
 
 			}
 

@@ -18,6 +18,7 @@ import com.laz.tirphycraft.objects.items.amulets.AntiAmulet;
 import com.laz.tirphycraft.objects.items.armor.ArmorGasMask;
 import com.laz.tirphycraft.objects.items.armor.ArmorHeavy;
 import com.laz.tirphycraft.objects.items.armor.ArmorNixium;
+import com.laz.tirphycraft.objects.items.armor.ArmorOrigin;
 import com.laz.tirphycraft.objects.items.armor.ArmorParachute;
 import com.laz.tirphycraft.objects.items.armor.ArmorPyrodes;
 import com.laz.tirphycraft.objects.items.armor.ArmorRose;
@@ -99,7 +100,9 @@ public class ItemInit {
 	public static final Item BLUE_ROSE_PETAL	   = new ItemBase("blue_rose_petal", 64);
 	public static final Item COINS				   = new ItemCoins();
 	public static final Item ROSE_FINDER           = new ItemRoseFinder("rose_finder", 1);
-	public static final Item FROZ_KEY			   = new ItemBase("froz_key", 3); 
+	public static final Item FROZ_KEY			   = new ItemBase("froz_key", 3);
+	public static final Item ORIGIN_MATTER		   = new ItemBase("origin_matter", 64);	
+	public static final Item ORIGIN_INGOT		   = new ItemBase("origin_ingot", 64);	
 	
 	//BOSSDROP
 	public static final Item QUEEN_HEART 		  = new ItemQueenHeart();
@@ -138,7 +141,7 @@ public class ItemInit {
 	public static final Item HEAVY_PICKAXE 	 	= new ToolPickaxeBase("heavy_pickaxe", ToolsInit.HEAVY_TOOL);		
 	public static final Item HEAVY_AXE	 	 	= new ToolAxeBase("heavy_axe", ToolsInit.HEAVY_TOOL);
 	public static final Item HEAVY_HOE 		 	= new ToolHoeBase("heavy_hoe", ToolsInit.HEAVY_TOOL);
-	public static final Item HEAVY_LARGE_SWORD = new ToolSwordLarge("heavy_large", ToolsInit.HEAVY_LARGE_SWORD);
+	public static final Item HEAVY_LARGE_SWORD  = new ToolSwordLarge("heavy_large", ToolsInit.HEAVY_LARGE_SWORD);
 	
 	//NIXIUM INGOT
 	public static final Item NIXIUM_BOOTS		 = new ArmorNixium("nixium_boots", ArmorInit.NIXIUM_ARMOR, 1, EntityEquipmentSlot.FEET);	
@@ -157,8 +160,7 @@ public class ItemInit {
 	public static final Item ROSE_LEGGINGS 	     = new ArmorRose("rose_leggings", ArmorInit.ROSE_ARMOR, 2, EntityEquipmentSlot.LEGS);
 	public static final Item ROSE_CHESTPLATE	 = new ArmorRose("rose_chestplate", ArmorInit.ROSE_ARMOR, 1, EntityEquipmentSlot.CHEST);
 	public static final Item ROSE_HELMET		 = new ArmorRose("rose_helmet", ArmorInit.ROSE_ARMOR, 1, EntityEquipmentSlot.HEAD);
-	
-	
+		
 	//TENIUM
 	public static final Item TENIUM_BOOTS		 = new ArmorTenium("tenium_boots", ArmorInit.TENIUM_ARMOR, 1, EntityEquipmentSlot.FEET);	
 	public static final Item TENIUM_LEGGINGS	 = new ArmorTenium("tenium_leggings", ArmorInit.TENIUM_ARMOR, 2, EntityEquipmentSlot.LEGS);	
@@ -170,6 +172,12 @@ public class ItemInit {
 	public static final Item TENIUM_AXE	 	 	 = new ToolAxeBase("tenium_axe", ToolsInit.TENIUM_TOOL);
 	public static final Item TENIUM_HOE 		 = new ToolHoeBase("tenium_hoe", ToolsInit.TENIUM_TOOL);
 	public static final Item TENIUM_LARGE_SWORD  = new ToolSwordLarge("tenium_large", ToolsInit.TENIUM_LARGE_SWORD);	
+	
+	//ORIGIN
+	public static final Item ORIGIN_BOOTS		 = new ArmorOrigin("origin_boots", ArmorInit.ORIGIN_ARMOR, 1, EntityEquipmentSlot.FEET);	
+	public static final Item ORIGIN_LEGGINGS	 = new ArmorOrigin("origin_leggings", ArmorInit.ORIGIN_ARMOR, 2, EntityEquipmentSlot.LEGS);	
+	public static final Item ORIGIN_CHESTPLATE	 = new ArmorOrigin("origin_chestplate", ArmorInit.ORIGIN_ARMOR, 1, EntityEquipmentSlot.CHEST);	
+	public static final Item ORIGIN_HELMET		 = new ArmorOrigin("origin_helmet", ArmorInit.ORIGIN_ARMOR, 1, EntityEquipmentSlot.HEAD);
 	
 	//BOW
 	public static final Item BOW_PYRODES		= new BowPyrodes("bow_pyrodes", 30F, true);

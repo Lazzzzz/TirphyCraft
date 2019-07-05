@@ -1,0 +1,39 @@
+package com.laz.tirphycraft.objects.items.bow.customArrow;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.projectile.EntityTippedArrow;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
+
+public class FrozenArrow extends EntityTippedArrow{
+
+	public FrozenArrow(World worldIn) {
+			super(worldIn);
+		}
+
+		public FrozenArrow(World worldIn, double x, double y, double z) {
+			super(worldIn, x, y, z);
+		}
+
+		public FrozenArrow(World worldIn, EntityLivingBase shooter) {
+			super(worldIn, shooter);
+		}
+
+		@Override
+		public void onUpdate() {
+			super.onUpdate();
+			int x = MathHelper.floor(this.getEntityBoundingBox().minX);
+			int y = MathHelper.floor(this.getEntityBoundingBox().minY);
+			int z = MathHelper.floor(this.getEntityBoundingBox().minZ);
+			World world = this.world;
+			Entity entity = (Entity) shootingEntity;
+			if (this.inGround) {
+				{
+					System.out.println("FrozenArrow.onUpdate()");
+				}
+				this.world.removeEntity(this);
+			}
+		}
+
+}

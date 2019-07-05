@@ -1,7 +1,7 @@
 package com.laz.tirphycraft.entity.render.passif;
 
+import com.laz.tirphycraft.entity.entityClass.passif.EntityFrozenBoar;
 import com.laz.tirphycraft.entity.model.passif.ModelFrozenPig;
-import com.laz.tirphycraft.entity.passif.EntityFrozenBoar;
 import com.laz.tirphycraft.util.Reference;
 
 import net.minecraft.client.renderer.entity.RenderLiving;

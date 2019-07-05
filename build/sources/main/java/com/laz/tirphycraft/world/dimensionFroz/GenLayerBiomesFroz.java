@@ -8,7 +8,7 @@ import net.minecraft.world.gen.layer.IntCache;
 
 public class GenLayerBiomesFroz extends GenLayer {
 
-	private Biome[] allowedBiomes = {BiomeInit.FROZ_PLAINE, BiomeInit.FROZ_DENSE};
+	private Biome[] allowedBiomes = {BiomeInit.FROZ_PLAINE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_MONTAIN};
 
 	public GenLayerBiomesFroz(long seed) {
 		super(seed);

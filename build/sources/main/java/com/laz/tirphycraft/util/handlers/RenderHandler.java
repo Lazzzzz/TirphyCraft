@@ -1,41 +1,45 @@
 package com.laz.tirphycraft.util.handlers;
 
-import com.laz.tirphycraft.entity.aggressive.EntityCerbere;
-import com.laz.tirphycraft.entity.aggressive.EntityCloudy;
-import com.laz.tirphycraft.entity.aggressive.EntityDeadPlayer;
-import com.laz.tirphycraft.entity.aggressive.EntityDemon;
-import com.laz.tirphycraft.entity.aggressive.EntityFailedGolem;
-import com.laz.tirphycraft.entity.aggressive.EntityGiantSpider;
-import com.laz.tirphycraft.entity.aggressive.EntityGiril;
-import com.laz.tirphycraft.entity.aggressive.EntityGrindlyBoth;
-import com.laz.tirphycraft.entity.aggressive.EntityGrindlyFront;
-import com.laz.tirphycraft.entity.aggressive.EntityGrindlyUp;
-import com.laz.tirphycraft.entity.aggressive.EntityGuardianGolem;
-import com.laz.tirphycraft.entity.aggressive.EntityHeadLess;
-import com.laz.tirphycraft.entity.aggressive.EntityMummy;
-import com.laz.tirphycraft.entity.aggressive.EntityPhorus;
-import com.laz.tirphycraft.entity.aggressive.EntitySkull;
-import com.laz.tirphycraft.entity.aggressive.EntityTotam;
-import com.laz.tirphycraft.entity.boss.EntityArtikon;
-import com.laz.tirphycraft.entity.boss.EntityHellKing;
-import com.laz.tirphycraft.entity.boss.EntityPharaoh;
-import com.laz.tirphycraft.entity.boss.EntityPoseidon;
-import com.laz.tirphycraft.entity.boss.EntityPrimaryAttack;
-import com.laz.tirphycraft.entity.boss.EntityPrimaryHeal;
-import com.laz.tirphycraft.entity.boss.EntityPrimaryStrength;
-import com.laz.tirphycraft.entity.boss.EntityQueenCreeper;
-import com.laz.tirphycraft.entity.neutral.EntityMothmoth;
-import com.laz.tirphycraft.entity.neutral.EntityStellar;
-import com.laz.tirphycraft.entity.passif.EntityBuffalo;
-import com.laz.tirphycraft.entity.passif.EntityCrystim;
-import com.laz.tirphycraft.entity.passif.EntityDragonFly;
-import com.laz.tirphycraft.entity.passif.EntityFrozenBoar;
-import com.laz.tirphycraft.entity.passif.EntityFrozenBuffalo;
-import com.laz.tirphycraft.entity.passif.EntityKiwi;
-import com.laz.tirphycraft.entity.passif.EntityLayTurtle;
-import com.laz.tirphycraft.entity.passif.EntityMontauk;
-import com.laz.tirphycraft.entity.passif.EntityToxisCow;
-import com.laz.tirphycraft.entity.passif.EntityVidargavia;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCerbere;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCloudy;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDeadPlayer;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDemon;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityFailedGolem;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGiantSpider;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGiril;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyBoth;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyFront;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyUp;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGuardianGolem;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityHeadLess;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityMummy;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityPhorus;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityPlyton;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntitySkull;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityTotam;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityArtikon;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityHellKing;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPharaoh;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPoseidon;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryAttack;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryHeal;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityPrimaryStrength;
+import com.laz.tirphycraft.entity.entityClass.boss.EntityQueenCreeper;
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityMothmoth;
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityStellar;
+import com.laz.tirphycraft.entity.entityClass.neutral.EntityVelociraptor;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityBuffalo;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityColosse;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityCrystim;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityDragonFly;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityFrozenBoar;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityFrozenBuffalo;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityKiwi;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityLayTurtle;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityMontauk;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityToxisCow;
+import com.laz.tirphycraft.entity.entityClass.passif.EntityVidargavia;
+import com.laz.tirphycraft.entity.entityClass.projectile.EntityIceBall;
 import com.laz.tirphycraft.entity.render.aggressive.RenderCerbere;
 import com.laz.tirphycraft.entity.render.aggressive.RenderCloudy;
 import com.laz.tirphycraft.entity.render.aggressive.RenderDeadPlayer;
@@ -50,6 +54,7 @@ import com.laz.tirphycraft.entity.render.aggressive.RenderGuardianGolem;
 import com.laz.tirphycraft.entity.render.aggressive.RenderHeadLess;
 import com.laz.tirphycraft.entity.render.aggressive.RenderMummy;
 import com.laz.tirphycraft.entity.render.aggressive.RenderPhorus;
+import com.laz.tirphycraft.entity.render.aggressive.RenderPlyton;
 import com.laz.tirphycraft.entity.render.aggressive.RenderSkull;
 import com.laz.tirphycraft.entity.render.aggressive.RenderTotam;
 import com.laz.tirphycraft.entity.render.boss.RenderArtikon;
@@ -62,7 +67,9 @@ import com.laz.tirphycraft.entity.render.boss.RenderPrimaryStrength;
 import com.laz.tirphycraft.entity.render.boss.RenderQueenCreeper;
 import com.laz.tirphycraft.entity.render.neutral.RenderMothmoth;
 import com.laz.tirphycraft.entity.render.neutral.RenderStellar;
+import com.laz.tirphycraft.entity.render.neutral.RenderVelociraptor;
 import com.laz.tirphycraft.entity.render.passif.RenderBuffalo;
+import com.laz.tirphycraft.entity.render.passif.RenderColosse;
 import com.laz.tirphycraft.entity.render.passif.RenderCrystim;
 import com.laz.tirphycraft.entity.render.passif.RenderDragonFly;
 import com.laz.tirphycraft.entity.render.passif.RenderFrozenBoar;
@@ -72,6 +79,7 @@ import com.laz.tirphycraft.entity.render.passif.RenderLayTurtle;
 import com.laz.tirphycraft.entity.render.passif.RenderMontauk;
 import com.laz.tirphycraft.entity.render.passif.RenderToxicCow;
 import com.laz.tirphycraft.entity.render.passif.RenderVidargavia;
+import com.laz.tirphycraft.entity.render.projectile.RenderIceBall;
 
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -241,49 +249,45 @@ public class RenderHandler {
 					}
 
 				});
-		RenderingRegistry.registerEntityRenderingHandler(EntityKiwi.class,
-				new IRenderFactory<EntityKiwi>() {
+		RenderingRegistry.registerEntityRenderingHandler(EntityKiwi.class, new IRenderFactory<EntityKiwi>() {
 
-					@Override
-					public Render<? super EntityKiwi> createRenderFor(RenderManager manager) {
-						return new RenderKiwi(manager);
+			@Override
+			public Render<? super EntityKiwi> createRenderFor(RenderManager manager) {
+				return new RenderKiwi(manager);
 
-					}
+			}
 
-				});
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityPharaoh.class,
-				new IRenderFactory<EntityPharaoh>() {
+		});
 
-					@Override
-					public Render<? super EntityPharaoh> createRenderFor(RenderManager manager) {
-						return new RenderPharaoh(manager);
+		RenderingRegistry.registerEntityRenderingHandler(EntityPharaoh.class, new IRenderFactory<EntityPharaoh>() {
 
-					}
+			@Override
+			public Render<? super EntityPharaoh> createRenderFor(RenderManager manager) {
+				return new RenderPharaoh(manager);
 
-				});	
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityMummy.class,
-				new IRenderFactory<EntityMummy>() {
+			}
 
-					@Override
-					public Render<? super EntityMummy> createRenderFor(RenderManager manager) {
-						return new RenderMummy(manager);
+		});
 
-					}
+		RenderingRegistry.registerEntityRenderingHandler(EntityMummy.class, new IRenderFactory<EntityMummy>() {
 
-				});			
-		RenderingRegistry.registerEntityRenderingHandler(EntityHellKing.class,
-				new IRenderFactory<EntityHellKing>() {
+			@Override
+			public Render<? super EntityMummy> createRenderFor(RenderManager manager) {
+				return new RenderMummy(manager);
 
-					@Override
-					public Render<? super EntityHellKing> createRenderFor(RenderManager manager) {
-						return new RenderHellKing(manager);
+			}
 
-					}
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityHellKing.class, new IRenderFactory<EntityHellKing>() {
 
-				});	
-		
+			@Override
+			public Render<? super EntityHellKing> createRenderFor(RenderManager manager) {
+				return new RenderHellKing(manager);
+
+			}
+
+		});
+
 		RenderingRegistry.registerEntityRenderingHandler(EntityGiantSpider.class,
 				new IRenderFactory<EntityGiantSpider>() {
 
@@ -293,8 +297,8 @@ public class RenderHandler {
 
 					}
 
-				});	
-		
+				});
+
 		RenderingRegistry.registerEntityRenderingHandler(EntityFailedGolem.class,
 				new IRenderFactory<EntityFailedGolem>() {
 
@@ -304,101 +308,92 @@ public class RenderHandler {
 
 					}
 
-				});	
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityHeadLess.class,
-				new IRenderFactory<EntityHeadLess>() {
-
-					@Override
-					public Render<? super EntityHeadLess> createRenderFor(RenderManager manager) {
-						return new RenderHeadLess(manager);
-
-					}
-
-				});	
-		RenderingRegistry.registerEntityRenderingHandler(EntityGiril.class,
-				new IRenderFactory<EntityGiril>() {
-
-					@Override
-					public Render<? super EntityGiril> createRenderFor(RenderManager manager) {
-						return new RenderGiril(manager);
-
-					}
-
-				});		
-
-		RenderingRegistry.registerEntityRenderingHandler(EntityPoseidon.class,
-				new IRenderFactory<EntityPoseidon>() {
-
-					@Override
-					public Render<? super EntityPoseidon> createRenderFor(RenderManager manager) {
-						return new RenderPoseidon(manager);
-
-					}
-
-				});		
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityArtikon.class,
-				new IRenderFactory<EntityArtikon>() {
-
-					@Override
-					public Render<? super EntityArtikon> createRenderFor(RenderManager manager) {
-						return new RenderArtikon(manager);
-
-					}
-
-				});	
-		RenderingRegistry.registerEntityRenderingHandler(EntityToxisCow.class,
-				new IRenderFactory<EntityToxisCow>() {
-
-					@Override
-					public Render<? super EntityToxisCow> createRenderFor(RenderManager manager) {
-						return new RenderToxicCow(manager);
-
-					}
-
 				});
 
-		RenderingRegistry.registerEntityRenderingHandler(EntitySkull.class,
-				new IRenderFactory<EntitySkull>() {
+		RenderingRegistry.registerEntityRenderingHandler(EntityHeadLess.class, new IRenderFactory<EntityHeadLess>() {
 
-					@Override
-					public Render<? super EntitySkull> createRenderFor(RenderManager manager) {
-						return new RenderSkull(manager);
+			@Override
+			public Render<? super EntityHeadLess> createRenderFor(RenderManager manager) {
+				return new RenderHeadLess(manager);
 
-					}
+			}
 
-				});	
-		RenderingRegistry.registerEntityRenderingHandler(EntityMothmoth.class,
-				new IRenderFactory<EntityMothmoth>() {
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityGiril.class, new IRenderFactory<EntityGiril>() {
 
-					@Override
-					public Render<? super EntityMothmoth> createRenderFor(RenderManager manager) {
-						return new RenderMothmoth(manager);
+			@Override
+			public Render<? super EntityGiril> createRenderFor(RenderManager manager) {
+				return new RenderGiril(manager);
 
-					}
+			}
 
-				});	
-		RenderingRegistry.registerEntityRenderingHandler(EntityLayTurtle.class,
-				new IRenderFactory<EntityLayTurtle>() {
+		});
 
-					@Override
-					public RenderLayTurtle createRenderFor(RenderManager manager) {
-						return new RenderLayTurtle(manager);
+		RenderingRegistry.registerEntityRenderingHandler(EntityPoseidon.class, new IRenderFactory<EntityPoseidon>() {
 
-					}
+			@Override
+			public Render<? super EntityPoseidon> createRenderFor(RenderManager manager) {
+				return new RenderPoseidon(manager);
 
-				});
-		RenderingRegistry.registerEntityRenderingHandler(EntityCrystim.class,
-				new IRenderFactory<EntityCrystim>() {
+			}
 
-					@Override
-					public RenderCrystim createRenderFor(RenderManager manager) {
-						return new RenderCrystim(manager);
+		});
 
-					}
+		RenderingRegistry.registerEntityRenderingHandler(EntityArtikon.class, new IRenderFactory<EntityArtikon>() {
 
-				});	
+			@Override
+			public Render<? super EntityArtikon> createRenderFor(RenderManager manager) {
+				return new RenderArtikon(manager);
+
+			}
+
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityToxisCow.class, new IRenderFactory<EntityToxisCow>() {
+
+			@Override
+			public Render<? super EntityToxisCow> createRenderFor(RenderManager manager) {
+				return new RenderToxicCow(manager);
+
+			}
+
+		});
+
+		RenderingRegistry.registerEntityRenderingHandler(EntitySkull.class, new IRenderFactory<EntitySkull>() {
+
+			@Override
+			public Render<? super EntitySkull> createRenderFor(RenderManager manager) {
+				return new RenderSkull(manager);
+
+			}
+
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityMothmoth.class, new IRenderFactory<EntityMothmoth>() {
+
+			@Override
+			public Render<? super EntityMothmoth> createRenderFor(RenderManager manager) {
+				return new RenderMothmoth(manager);
+
+			}
+
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityLayTurtle.class, new IRenderFactory<EntityLayTurtle>() {
+
+			@Override
+			public RenderLayTurtle createRenderFor(RenderManager manager) {
+				return new RenderLayTurtle(manager);
+
+			}
+
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityCrystim.class, new IRenderFactory<EntityCrystim>() {
+
+			@Override
+			public RenderCrystim createRenderFor(RenderManager manager) {
+				return new RenderCrystim(manager);
+
+			}
+
+		});
 		RenderingRegistry.registerEntityRenderingHandler(EntityPrimaryAttack.class,
 				new IRenderFactory<EntityPrimaryAttack>() {
 
@@ -408,7 +403,7 @@ public class RenderHandler {
 
 					}
 
-				});	
+				});
 		RenderingRegistry.registerEntityRenderingHandler(EntityPrimaryHeal.class,
 				new IRenderFactory<EntityPrimaryHeal>() {
 
@@ -418,7 +413,7 @@ public class RenderHandler {
 
 					}
 
-				});	
+				});
 		RenderingRegistry.registerEntityRenderingHandler(EntityPrimaryStrength.class,
 				new IRenderFactory<EntityPrimaryStrength>() {
 
@@ -428,18 +423,53 @@ public class RenderHandler {
 
 					}
 
-				});	
-		RenderingRegistry.registerEntityRenderingHandler(EntityStellar.class,
-				new IRenderFactory<EntityStellar>() {
+				});
+		RenderingRegistry.registerEntityRenderingHandler(EntityStellar.class, new IRenderFactory<EntityStellar>() {
 
-					@Override
-					public RenderStellar createRenderFor(RenderManager manager) {
-						return new RenderStellar(manager);
+			@Override
+			public RenderStellar createRenderFor(RenderManager manager) {
+				return new RenderStellar(manager);
 
-					}
+			}
 
-				});	
-				
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityColosse.class, new IRenderFactory<EntityColosse>() {
+
+			@Override
+			public RenderColosse createRenderFor(RenderManager manager) {
+				return new RenderColosse(manager);
+
+			}
+
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityIceBall.class, new IRenderFactory<EntityIceBall>() {
+
+			@Override
+			public RenderIceBall createRenderFor(RenderManager manager) {
+				return new RenderIceBall(manager);
+
+			}
+
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityPlyton.class, new IRenderFactory<EntityPlyton>() {
+
+			@Override
+			public RenderPlyton createRenderFor(RenderManager manager) {
+				return new RenderPlyton(manager);
+
+			}
+
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityVelociraptor.class, new IRenderFactory<EntityVelociraptor>() {
+
+			@Override
+			public RenderVelociraptor createRenderFor(RenderManager manager) {
+				return new RenderVelociraptor(manager);
+
+			}
+
+		});
+
 	}
 
 }

@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityCerbere;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCerbere;
 import com.laz.tirphycraft.entity.model.aggresive.ModelCerbere;
 import com.laz.tirphycraft.util.Reference;
 

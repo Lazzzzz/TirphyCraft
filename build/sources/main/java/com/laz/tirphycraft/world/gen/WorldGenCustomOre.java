@@ -20,7 +20,7 @@ public class WorldGenCustomOre implements IWorldGenerator {
 
 	private WorldGenerator ore_laputa_purodes, ore_overworld_purodes, ore_noxis_purodes, ore_overworld_crystal,
 			ore_noxis_crystal, ore_laputa_crystal, ore_laputa_tenium, ore_overworld_coal_on_coke,
-			ore_noxis_coal_on_coke, ore_laputa_coal_on_coke;
+			ore_noxis_coal_on_coke, ore_laputa_coal_on_coke, histoire_ice;
 
 	public WorldGenCustomOre() {
 		ore_overworld_purodes = new WorldGenMinable(
@@ -55,6 +55,8 @@ public class WorldGenCustomOre implements IWorldGenerator {
 		ore_laputa_tenium = new WorldGenMinable(
 				BlockInit.ORE_LAPUTA.getDefaultState().withProperty(BlockOre.VARIANT, EnumHandler.EnumType.TENIUM), 3,
 				BlockMatcher.forBlock(BlockInit.LAPUTA_STONE));
+		
+		histoire_ice = new WorldGenMinable(BlockInit.HISOIRE_ICE.getDefaultState(), 4, BlockMatcher.forBlock(BlockInit.FROZ_STONE));
 	}
 
 	@Override
@@ -76,6 +78,9 @@ public class WorldGenCustomOre implements IWorldGenerator {
 			runGenerator(ore_laputa_crystal, world, random, chunkX, chunkZ, 40, 10, 256);
 			runGenerator(ore_laputa_tenium, world, random, chunkX, chunkZ, 20, 0, 250);
 			runGenerator(ore_laputa_coal_on_coke, world, random, chunkX, chunkZ, 40, 10, 256);
+		
+		case 123:
+			runGenerator(histoire_ice, world, random, chunkX, chunkZ, 20, 70, 256);
 		}
 
 	}

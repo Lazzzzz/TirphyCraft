@@ -1,7 +1,8 @@
 package com.laz.tirphycraft.init;
 
-import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozDense;
+import com.laz.tirphycraft.world.biomes.froz.BiomeFrozMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozPlaine;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest;
@@ -44,6 +45,7 @@ public class BiomeInit
 	
 	public static final Biome FROZ_PLAINE		= new BiomeFrozPlaine();
 	public static final Biome FROZ_DENSE 		= new BiomeFrozDense();
+	public static final Biome FROZ_MONTAIN		= new BiomeFrozMontain();
 	
 	public static void registerBiomes()
 	{
@@ -63,6 +65,7 @@ public class BiomeInit
 		
 		initBiomeNoOverworld(FROZ_PLAINE, "froz plaine", BiomeType.ICY, Type.COLD, Type.PLAINS);
 		initBiomeNoOverworld(FROZ_DENSE, "froz dense", BiomeType.ICY, Type.COLD, Type.DENSE);
+		initBiomeNoOverworld(FROZ_MONTAIN, "froz montain", BiomeType.ICY, Type.COLD, Type.DENSE);
 		
 } 
 	
@@ -84,7 +87,7 @@ public class BiomeInit
 		System.out.println("Biome Register " + name);
 		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addSpawnBiome(biome);	
-		if (Reference.SPAWN_BIOMES_OVERWORLD) BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 0));
+		if (ConfigHandler.SPAWN_BIOMES_OVERWORLD) BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 0));
 			
 		System.out.println("Biome added " + name);		
 		return biome;

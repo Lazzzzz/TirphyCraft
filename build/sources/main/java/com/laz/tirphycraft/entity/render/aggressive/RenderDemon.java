@@ -1,6 +1,6 @@
 package com.laz.tirphycraft.entity.render.aggressive;
 
-import com.laz.tirphycraft.entity.aggressive.EntityDemon;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDemon;
 import com.laz.tirphycraft.entity.model.aggresive.ModelDemon;
 import com.laz.tirphycraft.util.Reference;
 
