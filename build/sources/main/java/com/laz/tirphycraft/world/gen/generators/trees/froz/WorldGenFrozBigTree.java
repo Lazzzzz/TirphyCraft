@@ -80,7 +80,7 @@ public class WorldGenFrozBigTree extends WorldGenAbstractTree
 			} else {
 				IBlockState state = worldIn.getBlockState(pos.down());
 				
-				if ( worldIn.getBlockState(pos.down()) == BlockInit.POWDER_SNOW.getDefaultState() && y < worldIn.getHeight() - height - 1)
+				if (worldIn.getBlockState(pos.down()).isFullBlock() && y < worldIn.getHeight() - height - 1)
 				{
 					state.getBlock().onPlantGrow(state, worldIn, pos.down(), pos);
 					

@@ -1,7 +1,11 @@
 package com.laz.tirphycraft.init;
 
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
+import com.laz.tirphycraft.world.biomes.froz.BiomeFrozDead;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozDense;
+import com.laz.tirphycraft.world.biomes.froz.BiomeFrozEternal;
+import com.laz.tirphycraft.world.biomes.froz.BiomeFrozForest;
+import com.laz.tirphycraft.world.biomes.froz.BiomeFrozIceMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozPlaine;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal;
@@ -46,6 +50,11 @@ public class BiomeInit
 	public static final Biome FROZ_PLAINE		= new BiomeFrozPlaine();
 	public static final Biome FROZ_DENSE 		= new BiomeFrozDense();
 	public static final Biome FROZ_MONTAIN		= new BiomeFrozMontain();
+	public static final Biome FROZ_ICE_MONTAIN	= new BiomeFrozIceMontain();
+	public static final Biome FROZ_ETERNAL		= new BiomeFrozEternal();
+	public static final Biome FROZ_FOREST		= new BiomeFrozForest();
+	public static final Biome FROZ_DEAD			= new BiomeFrozDead();
+	
 	
 	public static void registerBiomes()
 	{
@@ -66,6 +75,10 @@ public class BiomeInit
 		initBiomeNoOverworld(FROZ_PLAINE, "froz plaine", BiomeType.ICY, Type.COLD, Type.PLAINS);
 		initBiomeNoOverworld(FROZ_DENSE, "froz dense", BiomeType.ICY, Type.COLD, Type.DENSE);
 		initBiomeNoOverworld(FROZ_MONTAIN, "froz montain", BiomeType.ICY, Type.COLD, Type.DENSE);
+		initBiomeNoOverworld(FROZ_ICE_MONTAIN, "froz ice montain", BiomeType.ICY, Type.COLD, Type.DENSE);
+		initBiomeNoOverworld(FROZ_ETERNAL, "froz eternal", BiomeType.ICY, Type.COLD, Type.DEAD);
+		initBiomeNoOverworld(FROZ_FOREST, "froz forest",  BiomeType.ICY, Type.COLD, Type.DENSE);
+		initBiomeNoOverworld(FROZ_DEAD, "froz dead",  BiomeType.ICY, Type.COLD, Type.DENSE);
 		
 } 
 	

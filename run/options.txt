@@ -25,11 +25,11 @@ chatLinks:true
 chatLinksPrompt:true
 chatOpacity:1.0
 snooperEnabled:true
-fullscreen:false
+fullscreen:true
 enableVsync:false
 useVbo:true
 hideServerAddress:false
-advancedItemTooltips:false
+advancedItemTooltips:true
 pauseOnLostFocus:true
 touchscreen:false
 overrideWidth:0

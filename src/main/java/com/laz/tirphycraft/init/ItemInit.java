@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.laz.tirphycraft.Main;
 import com.laz.tirphycraft.objects.base.ItemBase;
+import com.laz.tirphycraft.objects.items.debugStickySticky;
 import com.laz.tirphycraft.objects.items.amulets.Amulet_1_attack;
 import com.laz.tirphycraft.objects.items.amulets.Amulet_1_health;
 import com.laz.tirphycraft.objects.items.amulets.Amulet_1_speed;
@@ -226,5 +227,7 @@ public class ItemInit {
 	public static final Item NOXIS_CLOCK		   = new ItemClock("noxis_clock", 120, "Go to noxis");
 	public static final Item LAPUTA_CLOCK		   = new ItemClock("laputa_clock", 121, "Go to Laputa");
 	public static final Item FROZ_CLOCK			   = new ItemClock("froz_clock", 123, "Go to Froz");
+	
+	public static final Item DEBUG				   = new debugStickySticky();
 		
 }

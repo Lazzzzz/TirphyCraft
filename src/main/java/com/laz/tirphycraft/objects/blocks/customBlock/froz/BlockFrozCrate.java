@@ -28,7 +28,7 @@ public class BlockFrozCrate extends BlockBase{
 	
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return BlockInit.FROZ_COBBLESTONE.getItemDropped(Blocks.AIR.getDefaultState(), rand, fortune);
+        return BlockInit.FROZ_CRATE.getItemDropped(Blocks.AIR.getDefaultState(), rand, fortune);
     }
 	
 }

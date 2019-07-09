@@ -58,10 +58,34 @@ public class FrozTemplate implements IChunkGenerator {
 	double[] field_185989_h;
 
 	public FrozTemplate(World worldIn, long seed) {
-		caveGenerator = net.minecraftforge.event.terraingen.TerrainGen.getModdedMapGen(new MapGenCaves(),
-				net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.CAVE);
-		ravineGenerator = net.minecraftforge.event.terraingen.TerrainGen.getModdedMapGen(new MapGenRavine(),
-				net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.RAVINE);
+		caveGenerator = net.minecraftforge.event.terraingen.TerrainGen.getModdedMapGen(new MapGenCaves() {
+
+			@Override
+			protected boolean canReplaceBlock(IBlockState a, IBlockState b) {
+				if (a.getBlock() == STONE.getBlock())
+					return true;
+				return super.canReplaceBlock(a, b);
+			}
+		}, net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.CAVE);
+		ravineGenerator = net.minecraftforge.event.terraingen.TerrainGen.getModdedMapGen(new MapGenRavine() {
+
+			@Override
+			protected void digBlock(ChunkPrimer data, int x, int y, int z, int chunkX, int chunkZ, boolean foundTop) {
+				net.minecraft.world.biome.Biome biome = world.getBiome(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
+				IBlockState state = data.getBlockState(x, y, z);
+				if (state.getBlock() == STONE.getBlock() || state.getBlock() == biome.topBlock.getBlock()
+						|| state.getBlock() == biome.fillerBlock.getBlock()) {
+					if (y - 1 < 10) {
+						data.setBlockState(x, y, z, FLOWING_LAVA);
+					} else {
+						data.setBlockState(x, y, z, AIR);
+						if (foundTop && data.getBlockState(x, y - 1, z).getBlock() == biome.fillerBlock.getBlock()) {
+							data.setBlockState(x, y - 1, z, biome.topBlock.getBlock().getDefaultState());
+						}
+					}
+				}
+			}
+		}, net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.RAVINE);
 		this.world = worldIn;
 		this.terrainType = worldIn.getWorldInfo().getTerrainType();
 		this.rand = new Random(seed);
@@ -117,32 +141,24 @@ public class FrozTemplate implements IChunkGenerator {
 		int i = x * 16;
 		int j = z * 16;
 		BlockPos blockpos = new BlockPos(i, 0, j);
-		Biome Biome = this.world.getBiome(blockpos.add(16, 0, 16));
+		Biome biome = this.world.getBiome(blockpos.add(16, 0, 16));
 		this.rand.setSeed(this.world.getSeed());
 		long k = this.rand.nextLong() / 2L * 2L + 1L;
 		long l = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed((long) x * k + (long) z * l ^ this.world.getSeed());
-		boolean flag = false;
-		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(true, this, this.world, this.rand, x, z, flag);
-		if (Biome != Biomes.DESERT && Biome != Biomes.DESERT_HILLS && this.settings.useWaterLakes && !flag
+		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(true, this, this.world, this.rand, x, z, false);
+		if (biome != Biomes.DESERT && biome != Biomes.DESERT_HILLS && this.settings.useWaterLakes
 				&& this.rand.nextInt(this.settings.waterLakeChance) == 0)
-			if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, flag,
+			if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, false,
 					net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.LAKE)) {
-				int i1 = this.rand.nextInt(16) + 8;
-				int j1 = this.rand.nextInt(256);
-				int k1 = this.rand.nextInt(16) + 8;
-							}
-		if (!flag && this.rand.nextInt(this.settings.lavaLakeChance / 10) == 0 && this.settings.useLavaLakes)
-			if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, flag,
+
+			}
+		if (this.rand.nextInt(this.settings.lavaLakeChance / 10) == 0 && this.settings.useLavaLakes)
+			if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, false,
 					net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.LAVA)) {
-				int i2 = this.rand.nextInt(16) + 8;
-				int l2 = this.rand.nextInt(this.rand.nextInt(248) + 8);
-				int k3 = this.rand.nextInt(16) + 8;
-				if (l2 < this.world.getSeaLevel() || this.rand.nextInt(this.settings.lavaLakeChance / 8) == 0) {
-									}
 			}
 		if (this.settings.useDungeons)
-			if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, flag,
+			if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, false,
 					net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.DUNGEON)) {
 				for (int j2 = 0; j2 < this.settings.dungeonChance; ++j2) {
 					int i3 = this.rand.nextInt(16) + 8;
@@ -151,12 +167,12 @@ public class FrozTemplate implements IChunkGenerator {
 					(new WorldGenDungeons()).generate(this.world, this.rand, blockpos.add(i3, l3, l1));
 				}
 			}
-		Biome.decorate(this.world, this.rand, new BlockPos(i, 0, j));
-		if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, flag,
+		biome.decorate(this.world, this.rand, new BlockPos(i, 0, j));
+		if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, false,
 				net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.ANIMALS))
-			WorldEntitySpawner.performWorldGenSpawning(this.world, Biome, i + 8, j + 8, 16, 16, this.rand);
+			WorldEntitySpawner.performWorldGenSpawning(this.world, biome, i + 8, j + 8, 16, 16, this.rand);
 		blockpos = blockpos.add(8, 0, 8);
-		if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, flag,
+		if (net.minecraftforge.event.terraingen.TerrainGen.populate(this, this.world, this.rand, x, z, false,
 				net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.ICE)) {
 			for (int k2 = 0; k2 < 16; ++k2) {
 				for (int j3 = 0; j3 < 16; ++j3) {
@@ -165,17 +181,20 @@ public class FrozTemplate implements IChunkGenerator {
 					if (this.world.canBlockFreezeWater(blockpos2)) {
 						this.world.setBlockState(blockpos2, Blocks.ICE.getDefaultState(), 2);
 					}
+					if (this.world.canSnowAt(blockpos1, true)) {
+						this.world.setBlockState(blockpos1, Blocks.SNOW_LAYER.getDefaultState(), 2);
+					}
 				}
 			}
 		}
-		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(false, this, this.world, this.rand, x, z, flag);
+		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(false, this, this.world, this.rand, x, z, false);
 		BlockFalling.fallInstantly = false;
 	}
 
 	@Override
 	public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
-		Biome Biome = this.world.getBiome(pos);
-		return Biome.getSpawnableList(creatureType);
+		Biome biome = this.world.getBiome(pos);
+		return biome.getSpawnableList(creatureType);
 	}
 
 	@Override
@@ -262,10 +281,10 @@ public class FrozTemplate implements IChunkGenerator {
 		}
 	}
 
-	private void generateBiomeTerrain(World worldIn, Random rand, ChunkPrimer chunkPrimerIn, int x, int z, double noiseVal, Biome Biome) {
+	private void generateBiomeTerrain(World worldIn, Random rand, ChunkPrimer chunkPrimerIn, int x, int z, double noiseVal, Biome biome) {
 		int i = worldIn.getSeaLevel();
-		IBlockState iblockstate = Biome.topBlock;
-		IBlockState iblockstate1 = Biome.fillerBlock;
+		IBlockState iblockstate = biome.topBlock;
+		IBlockState iblockstate1 = biome.fillerBlock;
 		int j = -1;
 		int k = (int) (noiseVal / 3.0D + 3.0D + rand.nextDouble() * 0.25D);
 		int l = x & 15;
@@ -284,11 +303,11 @@ public class FrozTemplate implements IChunkGenerator {
 							iblockstate = AIR;
 							iblockstate1 = STONE;
 						} else if (j1 >= i - 4 && j1 <= i + 1) {
-							iblockstate = Biome.topBlock;
-							iblockstate1 = Biome.fillerBlock;
+							iblockstate = biome.topBlock;
+							iblockstate1 = biome.fillerBlock;
 						}
 						if (j1 < i && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
-							iblockstate1 = WATER.getBlock().getDefaultState();
+							iblockstate1 = WATER;
 						}
 						j = k;
 						if (j1 >= i - 1) {
@@ -333,18 +352,18 @@ public class FrozTemplate implements IChunkGenerator {
 				float f3 = 0.0F;
 				float f4 = 0.0F;
 				int i1 = 2;
-				Biome Biome = this.biomesForGeneration[k + 2 + (l + 2) * 10];
+				Biome biome = this.biomesForGeneration[k + 2 + (l + 2) * 10];
 				for (int j1 = -i1; j1 <= i1; ++j1) {
 					for (int k1 = -i1; k1 <= i1; ++k1) {
-						Biome Biome1 = this.biomesForGeneration[k + j1 + 2 + (l + k1 + 2) * 10];
-						float f5 = this.settings.biomeDepthOffSet + Biome1.getBaseHeight() * this.settings.biomeDepthWeight;
-						float f6 = this.settings.biomeScaleOffset + Biome1.getHeightVariation() * this.settings.biomeScaleWeight;
+						Biome biome1 = this.biomesForGeneration[k + j1 + 2 + (l + k1 + 2) * 10];
+						float f5 = this.settings.biomeDepthOffSet + biome1.getBaseHeight() * this.settings.biomeDepthWeight;
+						float f6 = this.settings.biomeScaleOffset + biome1.getHeightVariation() * this.settings.biomeScaleWeight;
 						if (this.terrainType == WorldType.AMPLIFIED && f5 > 0.0F) {
 							f5 = 1.0F + f5 * 2.0F;
 							f6 = 1.0F + f6 * 4.0F;
 						}
 						float f7 = this.field_185999_r[j1 + 2 + (k1 + 2) * 5] / (f5 + 2.0F);
-						if (Biome1.getBaseHeight() > Biome.getBaseHeight()) {
+						if (biome1.getBaseHeight() > biome.getBaseHeight()) {
 							f7 /= 2.0F;
 						}
 						f2 += f6 * f7;
@@ -400,3 +419,4 @@ public class FrozTemplate implements IChunkGenerator {
 		}
 	}
 }
+

@@ -31,9 +31,8 @@ public class WorldGenFrozNormalTree extends WorldGenAbstractTree {
 		// check for space
 		if (y <= 0 || y + height > 255)
 			return false;
-		int testY;
 
-		for (testY = y + 1; testY <= y + height + 1; ++testY)
+		for (int testY = y + 1; testY <= y + height + 1; ++testY)
 			for (int testX = x - 2; testX <= x + 2; ++testX)
 				for (int testZ = z - 2; testZ <= z + 2; ++testZ)
 					if (!world.isAirBlock(new BlockPos(testX, testY, testZ)))

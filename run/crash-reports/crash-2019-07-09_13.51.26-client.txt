@@ -1,0 +1,119 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 7/9/19 1:51 PM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at com.laz.tirphycraft.objects.items.debugStickySticky.onItemRightClick(debugStickySticky.java:24)
+	at net.minecraft.item.ItemStack.useItemRightClick(ItemStack.java:234)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.processRightClick(PlayerControllerMP.java:543)
+	at net.minecraft.client.Minecraft.rightClickMouse(Minecraft.java:1711)
+	at net.minecraft.client.Minecraft.processKeyBinds(Minecraft.java:2380)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2146)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1934)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1187)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at com.laz.tirphycraft.objects.items.debugStickySticky.onItemRightClick(debugStickySticky.java:24)
+	at net.minecraft.item.ItemStack.useItemRightClick(ItemStack.java:234)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.processRightClick(PlayerControllerMP.java:543)
+	at net.minecraft.client.Minecraft.rightClickMouse(Minecraft.java:1711)
+	at net.minecraft.client.Minecraft.processKeyBinds(Minecraft.java:2380)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2146)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player684'/139, l='MpServer', x=-584.53, y=7.62, z=-917.22]]
+	Chunk stats: MultiplayerChunkCache: 1000, 1000
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-583,4,-931), Chunk: (at 9,0,13 in -37,-59; contains blocks -592,0,-944 to -577,255,-929), Region: (-2,-2; contains chunks -64,-64 to -33,-33, blocks -1024,0,-1024 to -513,255,-513)
+	Level time: 6102 game time, 6102 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 94 total; [EntityChicken['Chicken'/128, l='MpServer', x=-516.50, y=4.00, z=-853.50], EntityChicken['Chicken'/129, l='MpServer', x=-516.36, y=4.00, z=-863.19], EntityPig['Pig'/130, l='MpServer', x=-520.50, y=4.00, z=-857.50], EntitySlime['Slime'/8, l='MpServer', x=-655.03, y=4.00, z=-946.16], EntitySlime['Slime'/9736, l='MpServer', x=-530.09, y=4.42, z=-996.01], EntitySlime['Slime'/9, l='MpServer', x=-664.30, y=4.00, z=-931.09], EntitySlime['Slime'/12, l='MpServer', x=-661.41, y=4.00, z=-839.84], EntityCow['Cow'/14, l='MpServer', x=-643.01, y=4.00, z=-969.32], EntityCow['Cow'/15, l='MpServer', x=-647.90, y=4.00, z=-973.20], EntitySlime['Slime'/16, l='MpServer', x=-648.08, y=4.00, z=-923.21], EntitySlime['Slime'/17, l='MpServer', x=-643.94, y=4.00, z=-921.97], EntitySlime['Slime'/18, l='MpServer', x=-652.24, y=4.92, z=-905.20], EntitySlime['Slime'/19, l='MpServer', x=-649.55, y=4.00, z=-902.50], EntitySlime['Slime'/20, l='MpServer', x=-648.12, y=4.00, z=-868.95], EntitySlime['Slime'/21, l='MpServer', x=-648.92, y=4.00, z=-857.72], EntitySlime['Slime'/22, l='MpServer', x=-654.48, y=4.67, z=-843.22], EntityPig['Pig'/28, l='MpServer', x=-636.50, y=4.00, z=-969.50], EntityPig['Pig'/29, l='MpServer', x=-638.50, y=4.00, z=-967.50], EntitySlime['Slime'/30, l='MpServer', x=-644.54, y=5.17, z=-920.09], EntitySlime['Slime'/31, l='MpServer', x=-632.39, y=4.67, z=-892.66], EntityChicken['Chicken'/37, l='MpServer', x=-613.17, y=4.00, z=-963.25], EntityChicken['Chicken'/38, l='MpServer', x=-616.96, y=4.00, z=-965.55], EntityChicken['Chicken'/39, l='MpServer', x=-610.20, y=4.00, z=-959.74], EntitySlime['Slime'/40, l='MpServer', x=-608.47, y=4.95, z=-940.64], EntitySlime['Slime'/41, l='MpServer', x=-620.25, y=4.00, z=-937.68], EntitySlime['Slime'/42, l='MpServer', x=-613.27, y=4.67, z=-916.40], EntitySlime['Slime'/43, l='MpServer', x=-618.35, y=4.14, z=-924.71], EntitySlime['Slime'/44, l='MpServer', x=-612.53, y=4.00, z=-895.38], EntitySlime['Slime'/45, l='MpServer', x=-613.67, y=4.00, z=-888.65], EntitySlime['Slime'/46, l='MpServer', x=-615.31, y=4.00, z=-876.47], EntityCow['Cow'/47, l='MpServer', x=-609.50, y=4.00, z=-857.50], EntityCow['Cow'/48, l='MpServer', x=-610.50, y=4.00, z=-855.50], EntityCow['Cow'/49, l='MpServer', x=-611.50, y=4.00, z=-861.50], EntityChicken['Chicken'/51, l='MpServer', x=-598.33, y=4.00, z=-929.87], EntitySlime['Slime'/52, l='MpServer', x=-602.89, y=4.00, z=-879.89], EntitySlime['Slime'/53, l='MpServer', x=-606.04, y=5.17, z=-887.59], EntitySlime['Slime'/54, l='MpServer', x=-590.06, y=5.10, z=-874.48], EntitySlime['Slime'/55, l='MpServer', x=-587.84, y=4.00, z=-849.25], EntityCow['Cow'/58, l='MpServer', x=-605.48, y=4.00, z=-846.82], EntitySheep['Sheep'/67, l='MpServer', x=-581.87, y=4.00, z=-880.29], EntitySlime['Slime'/68, l='MpServer', x=-583.47, y=4.08, z=-891.74], EntityPig['Pig'/69, l='MpServer', x=-583.73, y=4.00, z=-879.10], EntityCow['Cow'/70, l='MpServer', x=-586.60, y=4.00, z=-877.41], EntitySheep['Sheep'/71, l='MpServer', x=-586.82, y=4.00, z=-870.00], EntitySlime['Slime'/72, l='MpServer', x=-590.78, y=4.00, z=-870.35], EntitySlime['Slime'/73, l='MpServer', x=-579.61, y=4.53, z=-869.17], EntityChicken['Chicken'/74, l='MpServer', x=-576.68, y=4.00, z=-858.67], EntityChicken['Chicken'/75, l='MpServer', x=-577.78, y=4.00, z=-853.99], EntityChicken['Chicken'/76, l='MpServer', x=-576.51, y=4.00, z=-840.54], EntityChicken['Chicken'/77, l='MpServer', x=-580.22, y=4.00, z=-853.83], EntitySlime['Slime'/78, l='MpServer', x=-594.43, y=4.00, z=-840.93], EntitySlime['Slime'/80, l='MpServer', x=-577.33, y=4.72, z=-988.86], EntityHorse['Horse'/81, l='MpServer', x=-562.95, y=4.00, z=-954.91], EntitySheep['Sheep'/82, l='MpServer', x=-571.36, y=4.00, z=-956.40], EntityHorse['Horse'/83, l='MpServer', x=-560.18, y=4.00, z=-960.81], EntityChicken['Chicken'/84, l='MpServer', x=-564.89, y=4.00, z=-937.27], EntitySlime['Slime'/85, l='MpServer', x=-571.89, y=4.00, z=-933.68], EntityHorse['Horse'/86, l='MpServer', x=-565.26, y=4.00, z=-899.17], EntitySlime['Slime'/87, l='MpServer', x=-566.71, y=4.00, z=-880.63], EntitySlime['Slime'/88, l='MpServer', x=-566.44, y=4.00, z=-877.35], EntitySlime['Slime'/89, l='MpServer', x=-575.46, y=4.00, z=-855.69], EntitySlime['Slime'/90, l='MpServer', x=-558.89, y=4.00, z=-854.24], EntitySlime['Slime'/5594, l='MpServer', x=-572.79, y=4.00, z=-868.93], EntityPig['Pig'/91, l='MpServer', x=-553.50, y=4.00, z=-988.50], EntityPig['Pig'/92, l='MpServer', x=-551.50, y=4.00, z=-985.50], EntityPig['Pig'/93, l='MpServer', x=-560.81, y=4.00, z=-987.39], EntitySlime['Slime'/94, l='MpServer', x=-552.50, y=4.30, z=-977.56], EntitySlime['Slime'/95, l='MpServer', x=-554.14, y=4.00, z=-979.15], EntitySheep['Sheep'/96, l='MpServer', x=-553.56, y=4.00, z=-948.50], EntityChicken['Chicken'/97, l='MpServer', x=-555.07, y=4.00, z=-946.36], EntitySlime['Slime'/98, l='MpServer', x=-553.06, y=4.00, z=-951.73], EntityChicken['Chicken'/99, l='MpServer', x=-555.43, y=4.00, z=-942.13], EntityHorse['Horse'/100, l='MpServer', x=-547.20, y=4.00, z=-935.07], EntityHorse['Horse'/101, l='MpServer', x=-547.90, y=4.00, z=-929.92], EntityHorse['Horse'/102, l='MpServer', x=-550.39, y=4.00, z=-930.53], EntityHorse['Horse'/103, l='MpServer', x=-548.09, y=4.00, z=-943.75], EntityHorse['Horse'/104, l='MpServer', x=-557.04, y=4.00, z=-916.93], EntityChicken['Chicken'/105, l='MpServer', x=-544.83, y=4.00, z=-913.77], EntityHorse['Horse'/106, l='MpServer', x=-559.50, y=4.00, z=-904.50], EntityHorse['Horse'/107, l='MpServer', x=-549.53, y=4.00, z=-898.16], EntitySheep['Sheep'/108, l='MpServer', x=-544.65, y=4.00, z=-845.24], EntitySheep['Sheep'/109, l='MpServer', x=-552.75, y=4.00, z=-842.58], EntitySheep['Sheep'/110, l='MpServer', x=-545.50, y=4.00, z=-840.50], EntityPlayerSP['Player684'/139, l='MpServer', x=-584.53, y=7.62, z=-917.22], EntitySheep['Sheep'/111, l='MpServer', x=-549.24, y=4.00, z=-842.55], EntitySlime['Slime'/119, l='MpServer', x=-546.23, y=4.95, z=-994.72], EntitySlime['Slime'/120, l='MpServer', x=-537.09, y=5.02, z=-996.64], EntityHorse['Horse'/121, l='MpServer', x=-543.15, y=4.00, z=-928.00], EntitySheep['Sheep'/122, l='MpServer', x=-517.94, y=4.00, z=-980.99], EntitySheep['Sheep'/123, l='MpServer', x=-516.50, y=4.00, z=-977.50], EntitySheep['Sheep'/124, l='MpServer', x=-518.97, y=4.00, z=-980.15], EntityPig['Pig'/125, l='MpServer', x=-518.28, y=4.00, z=-977.50], EntitySlime['Slime'/126, l='MpServer', x=-524.46, y=4.95, z=-994.62], EntityDonkey['Donkey'/127, l='MpServer', x=-515.50, y=4.00, z=-857.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:461)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2888)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:470)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1646167552 bytes (1569 MB) / 2052587520 bytes (1957 MB) up to 4149739520 bytes (3957 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx4024M -Xms2024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2768 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID          | Version      | Source                           | Signature |
+	|:--------- |:----------- |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft   | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp         | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML         | 8.0.99.99    | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | forge       | 14.23.5.2768 | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | tirphycraft | 0.2          | bin                              | None      |
+	| UCHIJAAAA | jei         | 4.14.4.267   | jei_1.12.2-4.14.4.267.jar        | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 419.71' Renderer: 'GeForce MX150/PCIe/SSE2'
+	Launched Version: 1.12.2
+	LWJGL: 2.9.4
+	OpenGL: GeForce MX150/PCIe/SSE2 GL version 4.6.0 NVIDIA 419.71, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz

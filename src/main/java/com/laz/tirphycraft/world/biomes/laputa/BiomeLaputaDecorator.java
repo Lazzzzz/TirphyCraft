@@ -3,12 +3,12 @@ package com.laz.tirphycraft.world.biomes.laputa;
 import java.util.Random;
 
 import com.laz.tirphycraft.util.Reference;
-import com.laz.tirphycraft.world.gen.generators.deco.laputa.WorldGenLaputaBigCloud;
-import com.laz.tirphycraft.world.gen.generators.pad.WorldGenLightPad;
-import com.laz.tirphycraft.world.gen.generators.pick.WorldBlackCrystal;
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenLaputaFlower;
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenLaputaMagicPlant;
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenLaputaPlant;
+import com.laz.tirphycraft.world.gen.generators.laputa.WorldBlackCrystal;
+import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaBigCloud;
+import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaFlower;
+import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaMagicPlant;
+import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaPlant;
+import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLightPad;
 import com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenGeantTree;
 import com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenNormalTree;
 import com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenStem;

@@ -1,7 +1,6 @@
 package com.laz.tirphycraft.entity.render.neutral;
 
 import com.laz.tirphycraft.entity.entityClass.neutral.EntityVelociraptor;
-import com.laz.tirphycraft.entity.model.neutral.ModelMothmoth;
 import com.laz.tirphycraft.entity.model.neutral.ModelVelociraptor;
 import com.laz.tirphycraft.util.Reference;
 

@@ -1,9 +1,9 @@
 package com.laz.tirphycraft.init;
 
+import com.laz.tirphycraft.dimension.Froz.DimensionLibraryFroz;
+import com.laz.tirphycraft.dimension.Laputa.DimensionLibraryLaputa;
+import com.laz.tirphycraft.dimension.Noxis.DimensionLibraryNoxis;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
-import com.laz.tirphycraft.world.dimensionFroz.DimensionLibraryFroz;
-import com.laz.tirphycraft.world.dimensionLaputa.DimensionLibraryLaputa;
-import com.laz.tirphycraft.world.dimensionsNoxis.DimensionLibraryNoxis;
 
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;

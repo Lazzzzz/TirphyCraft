@@ -219,6 +219,6 @@ public class BlockInit {
 	public static final Block BRICK_DUNGEON_CONTROLER 	= new BlockBrickDungeonsControler();
 	public static final Block FROZ_BOSS_WALL			= new BlockDungeonBase("froz_boss_wall", SoundType.STONE);
 	public static final Block FROZ_BOSS_DOOR	        = new BlockBossDoor();
-	public static final Block FRO_CREATE				= new BlockFrozCrate();
+	public static final Block FROZ_CRATE				= new BlockFrozCrate();
 	
 }

@@ -6,27 +6,27 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="this.setVariant(1);" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="this.setVariant(1);"/>
-			<item value="heart"/>
-			<item value="hea"/>
-			<item value="setHorseTexturePaths"/>
-			<item value="HORSE_TEXTURES"/>
-			<item value="BOSS"/>
-			<item value="arrow"/>
-			<item value="chance"/>
-			<item value="Reference"/>
-			<item value="reference."/>
-			<item value="reference"/>
-			<item value="final"/>
-			<item value="slow"/>
-			<item value="poiso"/>
-			<item value="player"/>
+			<item value="generateHeightmap"/>
+			<item value="SETB"/>
+			<item value="FROZ"/>
+			<item value="froz"/>
+			<item value="generateStructures"/>
+			<item value="biome"/>
+			<item value="decor"/>
+			<item value="ravine"/>
+			<item value="cave"/>
+			<item value="desert"/>
+			<item value="topb"/>
+			<item value="TOPBL"/>
+			<item value="getgr"/>
+			<item value="get"/>
+			<item value="CRATE"/>
 		</list>
 		<list key="replacehistory">
 			<item value="ConfigHandler"/>
@@ -50,7 +50,7 @@
 		<item value="504" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="630" key="DIALOG_HEIGHT"/>
-		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="130" key="DIALOG_X_ORIGIN"/>
 		<item value="339" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

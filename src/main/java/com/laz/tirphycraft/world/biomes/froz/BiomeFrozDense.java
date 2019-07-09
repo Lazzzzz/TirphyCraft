@@ -2,8 +2,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenFrozBlueRose;
+import com.laz.tirphycraft.world.gen.generators.froz.WorldGenFrozBlueRose;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBigTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
 
@@ -12,6 +11,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraft.world.gen.feature.WorldGenTaiga1;
+import net.minecraft.world.gen.feature.WorldGenTaiga2;
 
 public class BiomeFrozDense extends Biome {
 
@@ -21,8 +22,8 @@ public class BiomeFrozDense extends Biome {
 		super(new BiomeProperties("Forz Dense").setBaseHeight(0.15F).setHeightVariation(0.125F).setTemperature(-10F)
 				.setRainfall(100F).setWaterColor(4092311));
 
-		topBlock = BlockInit.POWDER_SNOW.getDefaultState();
-		fillerBlock = Blocks.SNOW.getDefaultState();
+		topBlock = Blocks.GRASS.getDefaultState();
+		fillerBlock = Blocks.DIRT.getDefaultState();
 
 		this.decorator.treesPerChunk = 10;
 		this.spawnableMonsterList.clear();
@@ -45,10 +46,16 @@ public class BiomeFrozDense extends Biome {
 	
 	@Override
 	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
-		int o = rand.nextInt(20);
+		int o = rand.nextInt(50);
 		if (o==1) return new WorldGenFrozBigTree();
+		else if (rand.nextInt(5) == 0)  return new WorldGenTaiga2(true);
 		else return new WorldGenFrozNormalTree(rand.nextInt(8)+2);
 
+	}
+	
+	@Override
+	public int getGrassColorAtPos(BlockPos pos) {
+		return 2908825;
 	}
 
 
