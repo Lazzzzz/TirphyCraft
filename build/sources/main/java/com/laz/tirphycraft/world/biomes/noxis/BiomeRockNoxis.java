@@ -3,7 +3,7 @@ package com.laz.tirphycraft.world.biomes.noxis;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.pad.WorldGenRockPad;
+import com.laz.tirphycraft.world.gen.generators.noxis.WorldGenRockPad;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;

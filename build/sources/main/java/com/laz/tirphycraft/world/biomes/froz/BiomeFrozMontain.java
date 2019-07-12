@@ -1,19 +1,21 @@
 package com.laz.tirphycraft.world.biomes.froz;
 
+import java.util.Random;
+
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenFrozBlueRose;
+import com.laz.tirphycraft.world.gen.generators.froz.WorldGenSmallRockPick;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
 public class BiomeFrozMontain extends Biome {
-
-	public final WorldGenFrozBlueRose PLANT_ROSE = new WorldGenFrozBlueRose();
+	public final WorldGenSmallRockPick S_ROCK_PICK = new WorldGenSmallRockPick();
 
 	public BiomeFrozMontain() {
 
-		super(new BiomeProperties("Forz Montain").setBaseHeight(0.8F).setHeightVariation(0.9F).setTemperature(-10F)
+		super(new BiomeProperties("Forz Montain").setBaseHeight(1.0F).setHeightVariation(0.9F).setTemperature(-10F)
 				.setRainfall(100F).setWaterColor(4092311));
 
 		topBlock = Blocks.GRASS.getDefaultState();
@@ -32,7 +34,16 @@ public class BiomeFrozMontain extends Biome {
 
 	@Override
 	public int getGrassColorAtPos(BlockPos pos) {
-		return 2903449;
+		return 2908825;
+	}
+	
+	@Override
+	public void decorate(World worldIn, Random rand, BlockPos pos) {
+		if (rand.nextInt(3) == 0) {
+			int j = rand.nextInt(16) + 8;
+			int k = rand.nextInt(16) + 8;
+			S_ROCK_PICK.generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
+		}
 	}
 
 }

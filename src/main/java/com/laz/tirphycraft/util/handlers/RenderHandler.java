@@ -1,5 +1,7 @@
 package com.laz.tirphycraft.util.handlers;
 
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemRange;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemSoldier;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCerbere;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCloudy;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDeadPlayer;
@@ -40,6 +42,8 @@ import com.laz.tirphycraft.entity.entityClass.passif.EntityMontauk;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityToxisCow;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityVidargavia;
 import com.laz.tirphycraft.entity.entityClass.projectile.EntityIceBall;
+import com.laz.tirphycraft.entity.render.aggressive.RenderAngrySnowGolemRange;
+import com.laz.tirphycraft.entity.render.aggressive.RenderAngrySnowGolemSoldier;
 import com.laz.tirphycraft.entity.render.aggressive.RenderCerbere;
 import com.laz.tirphycraft.entity.render.aggressive.RenderCloudy;
 import com.laz.tirphycraft.entity.render.aggressive.RenderDeadPlayer;
@@ -469,7 +473,26 @@ public class RenderHandler {
 			}
 
 		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityAngrySnowGolemSoldier.class, new IRenderFactory<EntityAngrySnowGolemSoldier>() {
 
+			@Override
+			public RenderAngrySnowGolemSoldier createRenderFor(RenderManager manager) {
+				return new RenderAngrySnowGolemSoldier(manager);
+
+			}
+
+		});
+
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityAngrySnowGolemRange.class, new IRenderFactory<EntityAngrySnowGolemRange>() {
+
+			@Override
+			public RenderAngrySnowGolemRange createRenderFor(RenderManager manager) {
+				return new RenderAngrySnowGolemRange(manager);
+
+			}
+
+		});
 	}
 
 }

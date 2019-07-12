@@ -8,6 +8,7 @@ import com.laz.tirphycraft.world.biomes.froz.BiomeFrozForest;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozIceMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozPlaine;
+import com.laz.tirphycraft.world.biomes.froz.BiomeFrozPlate;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMagic;
@@ -54,6 +55,7 @@ public class BiomeInit
 	public static final Biome FROZ_ETERNAL		= new BiomeFrozEternal();
 	public static final Biome FROZ_FOREST		= new BiomeFrozForest();
 	public static final Biome FROZ_DEAD			= new BiomeFrozDead();
+	public static final Biome FROZ_PLATE 		= new BiomeFrozPlate();
 	
 	
 	public static void registerBiomes()
@@ -79,6 +81,7 @@ public class BiomeInit
 		initBiomeNoOverworld(FROZ_ETERNAL, "froz eternal", BiomeType.ICY, Type.COLD, Type.DEAD);
 		initBiomeNoOverworld(FROZ_FOREST, "froz forest",  BiomeType.ICY, Type.COLD, Type.DENSE);
 		initBiomeNoOverworld(FROZ_DEAD, "froz dead",  BiomeType.ICY, Type.COLD, Type.DENSE);
+		initBiomeNoOverworld(FROZ_PLATE, "froz plate",  BiomeType.ICY, Type.COLD, Type.DENSE);
 		
 } 
 	

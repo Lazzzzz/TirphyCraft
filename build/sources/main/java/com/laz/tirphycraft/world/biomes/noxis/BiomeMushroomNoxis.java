@@ -3,7 +3,7 @@ package com.laz.tirphycraft.world.biomes.noxis;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.deco.WorldGenMushroomNoxis;
+import com.laz.tirphycraft.world.gen.generators.noxis.WorldGenMushroomNoxis;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;

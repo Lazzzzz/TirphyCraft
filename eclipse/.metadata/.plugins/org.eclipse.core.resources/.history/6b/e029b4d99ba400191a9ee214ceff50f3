@@ -1,0 +1,33 @@
+package com.laz.tirphycraft.objects.items;
+
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityPlyton;
+import com.laz.tirphycraft.objects.base.ItemBase;
+import com.laz.tirphycraft.util.interfaces.IStructure;
+
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityMobSpawner;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
+
+public class debugStickySticky extends ItemBase  implements IStructure{
+
+	public debugStickySticky() {
+		super("debug", 1);
+	}
+
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+		
+		TileEntityMobSpawner spawner = new TileEntityMobSpawner();
+		spawner.getSpawnerBaseLogic().setEntityId(EntityList.getKey(EntityPlyton.class));
+		spawner.setPos(playerIn.getPosition());
+		worldIn.addTileEntity(spawner);
+		
+		return super.onItemRightClick(worldIn, playerIn, handIn);
+	
+	}
+
+}

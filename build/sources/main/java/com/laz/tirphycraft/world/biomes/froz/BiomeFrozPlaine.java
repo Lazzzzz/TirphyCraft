@@ -2,8 +2,10 @@ package com.laz.tirphycraft.world.biomes.froz;
 
 import java.util.Random;
 
+import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.world.gen.generators.structures.froz.WorldGenFrozDungeon;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
+import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozSlick;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -21,7 +23,7 @@ public class BiomeFrozPlaine extends Biome {
 		topBlock = Blocks.GRASS.getDefaultState();
 		fillerBlock = Blocks.DIRT.getDefaultState();
 
-		this.decorator.treesPerChunk = 1;
+		this.decorator.treesPerChunk = 3;
 		this.spawnableMonsterList.clear();
 		this.spawnableCreatureList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -37,18 +39,21 @@ public class BiomeFrozPlaine extends Biome {
 			int k = rand.nextInt(16) + 8;
 			new WorldGenFrozDungeon().generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
 		}
+		
+		
+		
 		super.decorate(worldIn, rand, pos);
 	}
 
 	@Override
 	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
-		return new WorldGenFrozNormalTree(rand.nextInt(4) + 2);
-
+		if (rand.nextBoolean())	return new WorldGenFrozNormalTree(rand.nextInt(4) + 2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState());
+		return new WorldGenFrozSlick();
 	}
 
 	@Override
 	public int getGrassColorAtPos(BlockPos pos) {
-		return 4153998;
+		return 2908825;
 	}
 	
 }

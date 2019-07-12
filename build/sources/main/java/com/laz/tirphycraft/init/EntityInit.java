@@ -1,6 +1,8 @@
 package com.laz.tirphycraft.init;
 
 import com.laz.tirphycraft.Main;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemRange;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemSoldier;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCerbere;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCloudy;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDeadPlayer;
@@ -76,6 +78,8 @@ public class EntityInit {
 		registerEntity("giril", EntityGiril.class, ConfigHandler.GIRIL, 50, 000000, 000000);
 		registerEntity("skull", EntitySkull.class, ConfigHandler.SKULL, 50, 000000, 000000);
 		registerEntity("plyton", EntityPlyton.class, ConfigHandler.ENTITY_PLYTON, 500, 000000, 000000);
+		registerEntity("Soldier Snow Golem", EntityAngrySnowGolemSoldier.class, ConfigHandler.ENTITY_SOLDIER_SNOWGOLEM, 500, 000000, 000000);
+		registerEntity("Range Snow Golem", EntityAngrySnowGolemRange.class, ConfigHandler.ENTITY_RANGE_SNOWGOLEM, 500, 000000, 000000);
 		
 		//NEUTRAL
 		registerEntity("mothmoth", EntityMothmoth.class, ConfigHandler.ENTITY_MOTHMOTH, 50, 3690832, 3690832);	

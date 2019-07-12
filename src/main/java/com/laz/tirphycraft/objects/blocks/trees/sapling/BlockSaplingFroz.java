@@ -118,7 +118,8 @@ public class BlockSaplingFroz extends BlockBush implements IGrowable, IHasModel 
 
 		switch (type) {
 		case "SELF":
-			gen = new WorldGenFrozNormalTree(rand.nextInt(8)+2);
+			gen = new WorldGenFrozNormalTree(rand.nextInt(8)+2, BlockInit.LEAVES_FROZ.getDefaultState(),
+					BlockInit.LOG_FROZ.getDefaultState());
 
 			break;
 		}

@@ -2,10 +2,18 @@ package com.laz.tirphycraft.world.gen.generators.structures.froz;
 
 import java.util.Random;
 
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemRange;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemSoldier;
 import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.init.ItemInit;
 import com.laz.tirphycraft.util.interfaces.IStructure;
 
+import net.minecraft.entity.EntityList;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityChest;
+import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -14,10 +22,13 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 
 	int size = new Random().nextInt(10) + 8;
 	private BlockPos[] roomList = new BlockPos[size];
+	private int[] lockList = new int[3];
+	private int[][] roomSize = new int[size][2];
 
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 
+		System.out.println(position);
 		int minSize = 4;
 		int maxSize = 10;
 		int posY = rand.nextInt(20) + 20;
@@ -26,7 +37,7 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 		int sizeZ = 0;
 
 		BlockPos p = position;
-		
+
 		for (int i = 0; i < roomList.length; i++) {
 			boolean done = false;
 
@@ -43,11 +54,12 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 			generateRoom(worldIn, rand, p, sizeX, sizeZ, 6, false);
 
 			if (i == 0) { // Generate event for first Room
-				System.out.println(p);
 				generateEnter(worldIn, rand, p, sizeX, sizeZ);
 			}
 
 			roomList[i] = p;
+			roomSize[i][0] = sizeX;
+			roomSize[i][1] = sizeZ;
 
 		}
 
@@ -59,6 +71,11 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 		}
 
 		generateEnd(worldIn, rand, position, rayon);
+		genChest(worldIn, rand);
+
+		for (int i = 1; i < roomList.length; i++) {
+			fillRoom(worldIn, roomList[i], roomSize[i][0] - 2, roomSize[i][1] - 2, rand, 6);
+		}
 
 		return true;
 	}
@@ -132,7 +149,7 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 	}
 
 	private void generateEnter(World worldIn, Random rand, BlockPos center, int sizeX, int sizeZ) {
-		for (int y = 0; y < 120; y++) {
+		for (int y = 0; y < 256; y++) {
 			for (int x = -2; x < 2; x++) {
 				for (int z = -2; z < 2; z++) {
 					worldIn.setBlockToAir(getPos(center, x, y, z));
@@ -140,7 +157,7 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 			}
 		}
 
-		for (int y = 0; y < 120; y++) {
+		for (int y = 0; y < 256; y++) {
 			for (int x = -3; x < 3; x++) {
 				for (int z = -3; z < 3; z++) {
 					if (worldIn.getBlockState(getPos(center, x, y, z)) != Blocks.AIR.getDefaultState())
@@ -399,5 +416,132 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 
 	private BlockPos getPos(BlockPos pos, int x, int y, int z) {
 		return new BlockPos(pos.getX() + x, pos.getY() + y, pos.getZ() + z);
+	}
+
+	private void fillRoom(World worldIn, BlockPos room, int sizeX, int sizeZ, Random rand, int height) {
+		for (int i = -sizeX / 2; i < sizeX / 2; i++) {
+			for (int j = -sizeZ / 2; j < sizeZ / 2; j++) {
+				if (rand.nextBoolean()) {
+					makePillar(worldIn, room.add(i, 0, j), rand, height);
+				}
+			}
+		}
+		for (int i = -sizeX / 2; i < sizeX / 2; i++) {
+			for (int j = -sizeZ / 2; j < sizeZ / 2; j++) {
+				if (rand.nextBoolean()) {
+					makePillar(worldIn, room.add(i, 0, j), rand, height);
+
+					if (rand.nextInt(20) == 0)
+						makeCrate(worldIn, room.add(i, 0, j), rand);
+				}
+			}
+		}
+	}
+
+	private void makePillar(World worldIn, BlockPos pos, Random rand, int height) {
+		boolean can = true;
+		for (int i = -3; i < 5; i++) {
+			for (int j = -3; j < 5; j++) {
+				for (int k = 0; k < height; k++) {
+					if (worldIn.getBlockState(pos.add(i, k, j)) != Blocks.AIR.getDefaultState()) {
+						can = false;
+					}
+				}
+			}
+		}
+		if (can) {
+			for (int i = 0; i < 2; i++) {
+				for (int j = 0; j < 2; j++) {
+					for (int k = 0; k < height; k++) {
+						if (k == 2 || k == 3) {
+							if (rand.nextInt(10) == 0) {
+								worldIn.setBlockState(pos.add(i, k, j), Blocks.MOB_SPAWNER.getDefaultState());
+								TileEntityMobSpawner spawner = (TileEntityMobSpawner) worldIn
+										.getTileEntity(pos.add(i, k, j));
+								if (rand.nextBoolean())
+									spawner.getSpawnerBaseLogic()
+											.setEntityId(EntityList.getKey(EntityAngrySnowGolemRange.class));
+								else
+									spawner.getSpawnerBaseLogic()
+											.setEntityId(EntityList.getKey(EntityAngrySnowGolemSoldier.class));
+							} else {
+								placeStoneBrick(worldIn, pos.add(i, k, j), rand);
+							}
+						} else {
+
+							placeStoneBrick(worldIn, pos.add(i, k, j), rand);
+						}
+
+					}
+				}
+			}
+		}
+	}
+
+	private void makeCrate(World worldIn, BlockPos pos, Random rand) {
+		boolean can = true;
+		for (int x = -1; x < 2; x++) {
+			for (int z = -1; z < 2; z++) {
+				for (int y = 0; y < 2; y++) {
+
+					if (worldIn.getBlockState(pos.add(x, y, z)) != Blocks.AIR.getDefaultState()) {
+						can = false;
+					}
+				}
+			}
+		}
+		if (can) {
+			int size = rand.nextInt(2) + 1;
+			for (int i = 0; i < size; i++) {
+				worldIn.setBlockState(pos.add(0, i, 0), BlockInit.FROZ_CRATE.getDefaultState());
+			}
+			if (rand.nextInt(3) == 0)
+				worldIn.setBlockState(pos.add(1, 0, 0), BlockInit.FROZ_CRATE.getDefaultState());
+			if (rand.nextInt(3) == 0)
+				worldIn.setBlockState(pos.add(-1, 0, 0), BlockInit.FROZ_CRATE.getDefaultState());
+			if (rand.nextInt(3) == 0)
+				worldIn.setBlockState(pos.add(0, 0, 1), BlockInit.FROZ_CRATE.getDefaultState());
+			if (rand.nextInt(3) == 0)
+				worldIn.setBlockState(pos.add(0, 0, -1), BlockInit.FROZ_CRATE.getDefaultState());
+		}
+	}
+
+	private void placeChest(World worldIn, BlockPos pos, Random rand) {
+		
+		for (int i = -1; i < 2; i++) {
+			for (int j = -1; j < 2; j++) {
+				for (int k = 0; k < 6; k++) {
+					if (i != 0 || j != 0) worldIn.setBlockState(pos.add(i, k, j), Blocks.STAINED_GLASS_PANE.getStateFromMeta(11));
+				}
+			}
+		}
+		
+		worldIn.setBlockState(pos.down(), Blocks.LAPIS_BLOCK.getDefaultState());
+		worldIn.setBlockState(pos, Blocks.CHEST.getDefaultState());
+		worldIn.setBlockState(pos.up(6), Blocks.GLOWSTONE.getDefaultState());
+		TileEntityChest chest = (TileEntityChest) worldIn.getTileEntity(pos);
+		chest.setInventorySlotContents(4, new ItemStack(Items.EMERALD, 1));
+		chest.setInventorySlotContents(10, new ItemStack(Items.DIAMOND, 1));
+		chest.setInventorySlotContents(11, new ItemStack(Items.DIAMOND, 1));
+		chest.setInventorySlotContents(12, new ItemStack(Items.EMERALD, 1));
+		chest.setInventorySlotContents(13, new ItemStack(ItemInit.FROZ_KEY, 1));		
+		chest.setInventorySlotContents(14, new ItemStack(Items.EMERALD, 1));
+		chest.setInventorySlotContents(15, new ItemStack(Items.DIAMOND, 1));
+		chest.setInventorySlotContents(16, new ItemStack(Items.DIAMOND, 1));
+		chest.setInventorySlotContents(22, new ItemStack(Items.EMERALD, 1));
+
+	}
+
+	private void genChest(World worldIn, Random rand) {
+		int nb = 0;
+		int ra = 0;
+		while (nb < 3) {
+			ra = rand.nextInt(size - 1) + 1;
+			if (worldIn.getBlockState(roomList[ra].down()) != Blocks.LAPIS_BLOCK.getDefaultState()) {
+				placeChest(worldIn, roomList[ra], rand);
+				nb += 1;
+
+			}
+		}
 	}
 }

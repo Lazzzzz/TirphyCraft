@@ -72,13 +72,13 @@ public class EntityPlyton extends EntityMob {
 	public boolean getCanSpawnHere() {
 		if (this.posY < 100)
 			return false;
-		return super.getCanSpawnHere();
+		int i = this.world.countEntities(EntityPlyton.class);
+		return i < 5;
 	}
 
 	@Override
 	protected boolean canDespawn() {
-		int i = this.world.countEntities(EntityPlyton.class);
-		return i > 5;
+		return true;
 	}
 
 	private void moveHelper() {

@@ -12,13 +12,15 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 public class WorldGenFrozNormalTree extends WorldGenAbstractTree {
 
-	public static final IBlockState LOG = BlockInit.LOG_FROZ.getDefaultState();
-	public static final IBlockState LEAVES = BlockInit.LEAVES_FROZ.getDefaultState();
+	public static IBlockState LOG;
+	public static IBlockState LEAVES;
 	public static int size;
 	
-	public WorldGenFrozNormalTree(int size) {
+	public WorldGenFrozNormalTree(int size, IBlockState leaves, IBlockState log) {
 		super(false);
 		this.size = size;
+		LOG = log;
+		LEAVES = leaves;
 	}
 
 	@Override

@@ -1,0 +1,41 @@
+package com.laz.tirphycraft.dimension.Froz;
+
+import com.laz.tirphycraft.util.Reference;
+
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
+import net.minecraft.world.gen.structure.template.Template;
+import net.minecraft.world.gen.structure.template.TemplateManager;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+
+public class GenLoadStructures {	
+
+	ResourceLocation village_littlehouse1 = new ResourceLocation(Reference.MOD_ID, "froz/village/little_house_1");
+	ResourceLocation village_littlehouse2 = new ResourceLocation(Reference.MOD_ID, "froz/village/little_house_2");
+	ResourceLocation village_house1		  = new ResourceLocation(Reference.MOD_ID, "froz/village/house_1");
+	ResourceLocation village_tower		  = new ResourceLocation(Reference.MOD_ID, "froz/village/tower");
+	ResourceLocation village_camp		  = new ResourceLocation(Reference.MOD_ID, "froz/village/camp");
+	ResourceLocation village_plantation   = new ResourceLocation(Reference.MOD_ID, "froz/village/plantation");
+	
+	Template template_village_littlehouse1;
+	Template template_village_littlehouse2;
+	Template template_village_house1;
+	Template template_village_tower;
+	Template template_village_camp;
+	Template template_village_plantation;
+	
+	public GenLoadStructures(World worldIn) {
+		TemplateManager manager = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(0).getStructureTemplateManager();
+		MinecraftServer mcServer = worldIn.getMinecraftServer();
+
+		template_village_littlehouse1 = manager.get(mcServer, village_littlehouse1);
+		template_village_littlehouse2 = manager.get(mcServer, village_littlehouse2);
+		template_village_house1 = manager.get(mcServer, village_house1);
+		template_village_tower = manager.get(mcServer, village_tower);
+		template_village_camp = manager.get(mcServer, village_camp);
+		template_village_plantation = manager.get(mcServer, village_plantation);
+		
+	}
+}

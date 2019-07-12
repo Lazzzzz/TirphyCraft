@@ -2,6 +2,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 
 import java.util.Random;
 
+import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.world.gen.generators.froz.WorldGenFrozBlueRose;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBigTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
@@ -12,7 +13,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenTaiga1;
 import net.minecraft.world.gen.feature.WorldGenTaiga2;
 
 public class BiomeFrozForest extends Biome {
@@ -49,7 +49,7 @@ public class BiomeFrozForest extends Biome {
 	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
 		int o = rand.nextInt(100);
 		if (o==1) return new WorldGenFrozBigTree();
-		if (rand.nextInt(2) == 0) return new WorldGenFrozNormalTree(rand.nextInt(8)+2);
+		if (rand.nextInt(2) == 0) return new WorldGenFrozNormalTree(rand.nextInt(8)+2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState());
 		else if (rand.nextInt(2) == 0)  return new WorldGenTaiga2(true);
 		else return new WorldGenFrozSlick();
 		

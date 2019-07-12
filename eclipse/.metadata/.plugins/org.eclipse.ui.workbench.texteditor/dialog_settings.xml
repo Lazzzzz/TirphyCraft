@@ -6,12 +6,19 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="Transform" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Transform"/>
+			<item value="getStructureTemplateManager"/>
+			<item value="worldServer"/>
+			<item value="sett"/>
+			<item value="true"/>
+			<item value="TRUE"/>
+			<item value="hills"/>
 			<item value="generateHeightmap"/>
 			<item value="SETB"/>
 			<item value="FROZ"/>
@@ -20,13 +27,6 @@
 			<item value="biome"/>
 			<item value="decor"/>
 			<item value="ravine"/>
-			<item value="cave"/>
-			<item value="desert"/>
-			<item value="topb"/>
-			<item value="TOPBL"/>
-			<item value="getgr"/>
-			<item value="get"/>
-			<item value="CRATE"/>
 		</list>
 		<list key="replacehistory">
 			<item value="ConfigHandler"/>

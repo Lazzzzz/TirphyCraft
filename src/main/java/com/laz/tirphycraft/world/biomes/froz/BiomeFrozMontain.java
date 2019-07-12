@@ -3,8 +3,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.froz.WorldGenFrozBlueRose;
-import com.laz.tirphycraft.world.gen.generators.froz.WorldSmallRockPick;
+import com.laz.tirphycraft.world.gen.generators.froz.WorldGenSmallRockPick;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -12,11 +11,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
 public class BiomeFrozMontain extends Biome {
-	public final WorldSmallRockPick S_ROCK_PICK = new WorldSmallRockPick();
+	public final WorldGenSmallRockPick S_ROCK_PICK = new WorldGenSmallRockPick();
 
 	public BiomeFrozMontain() {
 
-		super(new BiomeProperties("Forz Montain").setBaseHeight(0.8F).setHeightVariation(0.9F).setTemperature(-10F)
+		super(new BiomeProperties("Forz Montain").setBaseHeight(1.0F).setHeightVariation(0.9F).setTemperature(-10F)
 				.setRainfall(100F).setWaterColor(4092311));
 
 		topBlock = Blocks.GRASS.getDefaultState();

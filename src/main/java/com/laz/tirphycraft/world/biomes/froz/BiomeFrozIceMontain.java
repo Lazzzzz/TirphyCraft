@@ -2,8 +2,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.world.gen.generators.froz.WorldGenFrozBlueRose;
-import com.laz.tirphycraft.world.gen.generators.froz.WorldSmallRockPick;
+import com.laz.tirphycraft.world.gen.generators.froz.WorldGenGiantPick;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -15,7 +14,7 @@ public class BiomeFrozIceMontain extends Biome {
 
 	public BiomeFrozIceMontain() {
 
-		super(new BiomeProperties("Forz Ice Montain").setBaseHeight(0.8F).setHeightVariation(0.9F).setTemperature(-10F)
+		super(new BiomeProperties("Forz Ice Montain").setBaseHeight(1.0F).setHeightVariation(0.9F).setTemperature(-10F)
 				.setRainfall(100F).setWaterColor(4092311));
 
 		topBlock = Blocks.ICE.getDefaultState();
@@ -34,11 +33,21 @@ public class BiomeFrozIceMontain extends Biome {
 		return 2908825;
 	}
  
+	
+	@Override
+	public void decorate(World worldIn, Random rand, BlockPos pos) {
+		int o = rand.nextInt(7);
+		if (o == 0) {
+			int j = rand.nextInt(16) + 16;
+			int k = rand.nextInt(16) + 16;
+			new WorldGenGiantPick(rand.nextInt(20) + 10).generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
+		}
+	}
 
     public void genTerrainBlocks(World worldIn, Random rand, ChunkPrimer chunkPrimerIn, int x, int z, double noiseVal)
     {
 		topBlock = Blocks.ICE.getDefaultState();
-		fillerBlock = Blocks.SNOW.getDefaultState();
+		fillerBlock = Blocks.PACKED_ICE.getDefaultState();
 
         if ((noiseVal < -1.0D || noiseVal > 2.0D))
         {

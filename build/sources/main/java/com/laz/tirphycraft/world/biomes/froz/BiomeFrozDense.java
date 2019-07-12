@@ -2,7 +2,8 @@ package com.laz.tirphycraft.world.biomes.froz;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.world.gen.generators.plants.WorldGenFrozBlueRose;
+import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.world.gen.generators.froz.WorldGenFrozBlueRose;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBigTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
 
@@ -11,7 +12,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenTaiga1;
 import net.minecraft.world.gen.feature.WorldGenTaiga2;
 
 public class BiomeFrozDense extends Biome {
@@ -19,7 +19,7 @@ public class BiomeFrozDense extends Biome {
 	public final WorldGenFrozBlueRose PLANT_ROSE = new WorldGenFrozBlueRose();
 	public BiomeFrozDense() {
 
-		super(new BiomeProperties("Forz Dense").setBaseHeight(0.15F).setHeightVariation(0.125F).setTemperature(-10F)
+		super(new BiomeProperties("Forz Dense").setBaseHeight(1F).setHeightVariation(0.125F).setTemperature(-10F)
 				.setRainfall(100F).setWaterColor(4092311));
 
 		topBlock = Blocks.GRASS.getDefaultState();
@@ -49,13 +49,13 @@ public class BiomeFrozDense extends Biome {
 		int o = rand.nextInt(50);
 		if (o==1) return new WorldGenFrozBigTree();
 		else if (rand.nextInt(5) == 0)  return new WorldGenTaiga2(true);
-		else return new WorldGenFrozNormalTree(rand.nextInt(8)+2);
+		else return new WorldGenFrozNormalTree(rand.nextInt(8)+2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState());
 
 	}
 	
 	@Override
 	public int getGrassColorAtPos(BlockPos pos) {
-		return 21379;
+		return 2908825;
 	}
 
 

@@ -2,19 +2,23 @@ package com.laz.tirphycraft.objects.items;
 
 import java.util.Random;
 
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemRange;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDeadPlayer;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityPlyton;
 import com.laz.tirphycraft.objects.base.ItemBase;
-import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBushTree;
-import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozSlick;
+import com.laz.tirphycraft.util.interfaces.IStructure;
+import com.laz.tirphycraft.world.gen.generators.structures.froz.WorldGenFrozDungeon;
 
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class debugStickySticky extends ItemBase {
+public class debugStickySticky extends ItemBase implements IStructure {
 
 	public debugStickySticky() {
 		super("debug", 1);
@@ -22,10 +26,11 @@ public class debugStickySticky extends ItemBase {
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-		Vec3d v = playerIn.getLookVec();
-		new WorldGenFrozBushTree().generate(worldIn, new Random(),
-				playerIn.getPosition().add(3 * v.x, 3 * v.y, 3 * v.z));
+		if (!worldIn.isRemote) {
+			new WorldGenFrozDungeon().generate(worldIn, new Random(), playerIn.getPosition());
+		}
 		return super.onItemRightClick(worldIn, playerIn, handIn);
+
 	}
 
 }

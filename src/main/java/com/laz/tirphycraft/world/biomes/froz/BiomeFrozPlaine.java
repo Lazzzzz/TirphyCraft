@@ -2,6 +2,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 
 import java.util.Random;
 
+import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.world.gen.generators.structures.froz.WorldGenFrozDungeon;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozSlick;
@@ -46,7 +47,7 @@ public class BiomeFrozPlaine extends Biome {
 
 	@Override
 	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
-		if (rand.nextBoolean())	return new WorldGenFrozNormalTree(rand.nextInt(4) + 2);
+		if (rand.nextBoolean())	return new WorldGenFrozNormalTree(rand.nextInt(4) + 2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState());
 		return new WorldGenFrozSlick();
 	}
 

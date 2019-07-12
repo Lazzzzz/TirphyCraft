@@ -1,0 +1,7 @@
+package com.laz.tirphycraft.dimension.Froz;
+
+public class GenLoadStructures {	
+	public GenLoadStructures() {
+		
+	}
+}

@@ -1,0 +1,27 @@
+package com.laz.tirphycraft.dimension.Froz;
+
+import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.interfaces.IStructure;
+
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.gen.structure.template.TemplateManager;
+
+public class GenLoadStructures {	
+
+	ResourceLocation village_littlehouse1 = new ResourceLocation(Reference.MOD_ID, "froz/village/little_house_1");
+	ResourceLocation village_littlehouse2 = new ResourceLocation(Reference.MOD_ID, "froz/village/little_house_2");
+	ResourceLocation village_house1		  = new ResourceLocation(Reference.MOD_ID, "froz/village/house_1");
+	ResourceLocation village_tower		  = new ResourceLocation(Reference.MOD_ID, "froz/village/tower");
+	ResourceLocation village_camp		  = new ResourceLocation(Reference.MOD_ID, "froz/village/camp");
+	ResourceLocation village_plantation   = new ResourceLocation(Reference.MOD_ID, "froz/village/plantation");
+	
+	public GenLoadStructures() {
+		TemplateManager manager = worldServer.getStructureTemplateManager();
+		MinecraftServer mcServer = world.getMinecraftServer();
+
+		templateTower11 = manager.get(mcServer, tower11);
+		templateTower12 = manager.get(mcServer, tower12);
+		
+	}
+}

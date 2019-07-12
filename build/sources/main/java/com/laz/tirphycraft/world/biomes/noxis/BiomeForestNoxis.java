@@ -3,7 +3,7 @@ package com.laz.tirphycraft.world.biomes.noxis;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.deco.WorldGenNoxisLamp;
+import com.laz.tirphycraft.world.gen.generators.noxis.WorldGenNoxisLamp;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.WorldGenNormalCoppirTree;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.WorldGenNormalGoldirTree;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.WorldGenNormalSilvirTree;

@@ -1,0 +1,72 @@
+package com.laz.tirphycraft.world.gen.generators.froz;
+
+import java.util.Random;
+
+import com.laz.tirphycraft.dimension.Froz.GenLoadVillage;
+import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.StructureUtil;
+import com.laz.tirphycraft.util.interfaces.IStructure;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraft.world.gen.structure.template.Template;
+import net.minecraft.world.gen.structure.template.TemplateManager;
+
+public class WorldGenIceVillage extends WorldGenerator implements IStructure {
+
+	ResourceLocation village_littlehouse1 = new ResourceLocation(Reference.MOD_ID, "froz/village/little_house_1");
+	ResourceLocation village_littlehouse2 = new ResourceLocation(Reference.MOD_ID, "froz/village/little_house_2");
+	ResourceLocation village_house1 = new ResourceLocation(Reference.MOD_ID, "froz/village/house_1");
+	ResourceLocation village_tower = new ResourceLocation(Reference.MOD_ID, "froz/village/tower");
+	ResourceLocation village_camp = new ResourceLocation(Reference.MOD_ID, "froz/village/camp");
+	ResourceLocation village_plantation = new ResourceLocation(Reference.MOD_ID, "froz/village/plantation");
+
+	Template template_littlehouse1;
+	Template template_littlehouse2;
+	Template template_house1;
+	Template template_tower;
+	Template template_camp;
+	Template template_plantation;
+
+	public boolean generate(World worldIn, Random rand, BlockPos position) {
+
+		MinecraftServer mcServer = worldIn.getMinecraftServer();
+		TemplateManager manager = worldServer.getStructureTemplateManager();
+
+		template_littlehouse1 = manager.get(mcServer, village_littlehouse1);
+		template_littlehouse2 = manager.get(mcServer, village_littlehouse2);
+		template_house1 = manager.get(mcServer, village_house1);
+		template_tower = manager.get(mcServer, village_tower);
+		template_camp = manager.get(mcServer, village_plantation);
+		template_plantation = manager.get(mcServer, village_camp);
+
+		if (!checkSpace(worldIn, rand, position))
+			return false;
+
+		//template_camp.addBlocksToWorld(worldIn, position, settings.setRotation(pickRotion(rand)));
+
+		return true;
+
+	}
+
+	public boolean checkSpace(World worldIn, Random rand, BlockPos position) {
+		for (int i = 0; i < 30; i++) {
+			for (int j = 0; j < 30; j++) {
+				if (worldIn.getBlockState(position.add(i, -3, j)) == Blocks.AIR.getDefaultState())
+					return false;
+			}
+		}
+
+		return true;
+	}
+
+	public Rotation pickRotion(Random rand) {
+		return Rotation.NONE;
+	}
+
+}

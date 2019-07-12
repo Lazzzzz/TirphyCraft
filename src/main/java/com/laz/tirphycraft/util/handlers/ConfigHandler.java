@@ -58,7 +58,9 @@ public class ConfigHandler {
 	public static int ENTITY_ICE_BALL = 158;
 	public static int ENTITY_PLYTON = 159;
 	public static int ENTITY_VELOCIRAPTOR = 160;
-
+	public static int ENTITY_SOLDIER_SNOWGOLEM = 161;
+	public static int ENTITY_RANGE_SNOWGOLEM = 162;
+	
 	// WORLD
 	public static int DIMENSION_NOXIS_ID = 120;
 	public static int DIMENSION_LAPUTA_ID = 121;
@@ -142,6 +144,12 @@ public class ConfigHandler {
 		ENTITY_PLYTON = config.getInt("ENTITY_PLYTON", category, ENTITY_PLYTON, ENTITY_PLYTON,
 				1000, "");
 		ENTITY_VELOCIRAPTOR= config.getInt("ENTITY_VELOCIRAPTOR", category, ENTITY_VELOCIRAPTOR, ENTITY_VELOCIRAPTOR,
+				1000, "");
+
+		ENTITY_SOLDIER_SNOWGOLEM = config.getInt("ENTITY_SOLDIER_SNOWGOLEM", category, ENTITY_SOLDIER_SNOWGOLEM, ENTITY_SOLDIER_SNOWGOLEM,
+				1000, "");
+
+		ENTITY_RANGE_SNOWGOLEM = config.getInt("ENTITY_RANGE_SNOWGOLEM", category, ENTITY_RANGE_SNOWGOLEM, ENTITY_RANGE_SNOWGOLEM,
 				1000, "");
 
 		category = "IDs GUI";

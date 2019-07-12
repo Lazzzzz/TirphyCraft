@@ -80,4 +80,5 @@ public class ParticleGlintBlue extends Particle {
 	public int getFXLayer() {
 		return 1;
 	}
+	
 }
