@@ -1,0 +1,13 @@
+package com.laz.tirphycraft.objects.artefact;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class BlockNullLight extends Block {
+
+	public BlockNullLight(Material materialIn) {
+		super(materialIn);
+		// TODO Auto-generated constructor stub
+	}
+
+}

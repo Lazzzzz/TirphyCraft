@@ -1,0 +1,37 @@
+package com.laz.tirphycraft.objects.artefact;
+
+import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.init.ItemInit;
+import com.laz.tirphycraft.objects.base.ItemBase;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.EnumSkyBlock;
+import net.minecraft.world.World;
+
+public class ArtefactSunTear extends ItemBase {
+
+	public ArtefactSunTear() {
+		super("sun_tear", 1);
+
+	}
+
+	@Override
+	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+		if (worldIn.getWorldTime() % 10 == 0) {
+			if (worldIn.getBlockState(entityIn.getPosition()) == Blocks.AIR.getDefaultState()) {
+				// if player not underwater
+				if (!entityIn.isInWater() && !entityIn.isInLava()) {
+					worldIn.setBlockState(entityIn.getPosition(), BlockInit.NULL_LIGHT.getDefaultState());
+				}
+			}
+
+		}
+		
+		worldIn.setLightFor(EnumSkyBlock.BLOCK, entityIn.getPosition(), 15);
+
+	}
+
+}

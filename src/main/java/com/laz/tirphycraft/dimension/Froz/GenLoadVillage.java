@@ -4,14 +4,10 @@ import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.interfaces.IStructure;
 
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.Mirror;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
-import net.minecraft.world.gen.structure.template.PlacementSettings;
 import net.minecraft.world.gen.structure.template.Template;
 import net.minecraft.world.gen.structure.template.TemplateManager;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 
 public class GenLoadVillage implements IStructure {
 

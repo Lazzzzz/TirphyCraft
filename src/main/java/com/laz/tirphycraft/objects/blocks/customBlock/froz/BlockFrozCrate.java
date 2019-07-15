@@ -2,7 +2,6 @@ package com.laz.tirphycraft.objects.blocks.customBlock.froz;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.objects.base.BlockBase;
 import com.laz.tirphycraft.util.loot.BlockFrozCrateLoot;
 

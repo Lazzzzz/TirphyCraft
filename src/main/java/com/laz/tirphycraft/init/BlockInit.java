@@ -19,6 +19,7 @@ import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBlue;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushGreen;
 import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushRed;
 import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockFrozCrate;
+import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockFrozIceVines;
 import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockFrozStone;
 import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockPlantBlueRose;
 import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockPowderSnow;
@@ -200,7 +201,7 @@ public class BlockInit {
 	public static final Block BUSH_RED					= new BlockBushRed("bush_red", Material.LEAVES, 0.2f, 0, "all", 0, SoundType.PLANT);
 	public static final Block BUSH_BLUE					= new BlockBushBlue("bush_blue", Material.LEAVES, 0.2f, 0, "all", 0, SoundType.PLANT);
 	public static final Block BUSH_GREEN				= new BlockBushGreen("bush_green", Material.LEAVES, 0.2f, 0, "all", 0, SoundType.PLANT);
-	
+	public static final Block FROZ_VINES			 	= new BlockFrozIceVines();
 	
 	//EGG
 	public static final Block EGG_QUEEN_CREEPR			= new EggCreeperQueen("egg_queen_creeper");
@@ -220,5 +221,6 @@ public class BlockInit {
 	public static final Block FROZ_BOSS_WALL			= new BlockDungeonBase("froz_boss_wall", SoundType.STONE);
 	public static final Block FROZ_BOSS_DOOR	        = new BlockBossDoor();
 	public static final Block FROZ_CRATE				= new BlockFrozCrate();
+
 	
 }

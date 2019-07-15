@@ -1,0 +1,32 @@
+package com.laz.tirphycraft.objects.artefact;
+
+import com.laz.tirphycraft.objects.base.ItemBase;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class ArtefactSunTear extends ItemBase {
+
+	public ArtefactSunTear() {
+		super("feather_of_light", 1);
+
+	}
+
+	@Override
+	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+		BlockPos pos = entityIn.getPosition();
+		
+		for (int i = -2; i < 2; i++) {
+			for (int j = -2; j < 2; j++) {
+				if (worldIn.getBlockState(pos.add(i,0,j)) == Blocks.LAVA.getDefaultState()) {
+					worldIn.setBlockState(pos.add(i,0,j), Blocks.NETHER_BRICK.getDefaultState());
+				}
+			}
+		}
+
+	}
+
+}

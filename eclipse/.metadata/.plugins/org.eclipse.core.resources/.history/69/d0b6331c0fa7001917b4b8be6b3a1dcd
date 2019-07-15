@@ -1,0 +1,25 @@
+package com.laz.tirphycraft.objects.artefact;
+
+import com.laz.tirphycraft.init.ItemInit;
+import com.laz.tirphycraft.objects.base.ItemBase;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+
+public class ArtefactFeatherOfLight extends ItemBase {
+
+	public ArtefactFeatherOfLight() {
+		super("feather_of_light", 1);
+
+	}
+
+	@Override
+	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected)
+		System.out.println("d");
+	entityIn.fallDistance = 0;
+
+	}
+
+}

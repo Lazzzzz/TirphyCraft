@@ -3,7 +3,6 @@ package com.laz.tirphycraft.dimension.chunk;
 import java.util.List;
 import java.util.Random;
 
-import com.laz.tirphycraft.dimension.Froz.GenLoadVillage;
 import com.laz.tirphycraft.init.BiomeInit;
 import com.laz.tirphycraft.init.BlockInit;
 
@@ -62,8 +61,8 @@ public class FrozTemplate implements IChunkGenerator {
 		this.world = worldIn;
 		this.terrainType = worldIn.getWorldInfo().getTerrainType();
 		this.rand = new Random(seed);
-		this.noiseGen4		= new NoiseGeneratorOctaves(this.rand, 4);
-		this.stoneNoise     = new double[256];
+		this.noiseGen4 = new NoiseGeneratorOctaves(this.rand, 4);
+		this.stoneNoise = new double[256];
 		this.field_185991_j = new NoiseGeneratorOctaves(this.rand, 16);
 		this.field_185992_k = new NoiseGeneratorOctaves(this.rand, 16);
 		this.field_185993_l = new NoiseGeneratorOctaves(this.rand, 8);
@@ -98,6 +97,9 @@ public class FrozTemplate implements IChunkGenerator {
 		this.rand.setSeed((long) x * 341873128712L + (long) z * 132897987541L);
 		ChunkPrimer chunkprimer = new ChunkPrimer();
 		this.setBlocksInChunk(x, z, chunkprimer);
+
+		addIceForestTop(x, z, chunkprimer);
+
 		this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, x * 16, z * 16, 16,
 				16);
 		this.replaceBiomeBlocks(x, z, chunkprimer, this.biomesForGeneration);
@@ -413,7 +415,6 @@ public class FrozTemplate implements IChunkGenerator {
 			}
 		}
 	}
-	
 
 	private void addIceForestTop(int chunkX, int chunkZ, ChunkPrimer primer) {
 		int[] thicks = new int[5 * 5];
@@ -425,7 +426,7 @@ public class FrozTemplate implements IChunkGenerator {
 					for (int bz = -1; bz <= 1; bz++) {
 						Biome biome = biomesForGeneration[x + bx + 2 + (z + bz + 2) * (10)];
 
-						if (biome == BiomeInit.FROZ_DEAD || biome == BiomeInit.FROZ_DEAD) {
+						if (biome == BiomeInit.FROZ_SLAWOMIR) {
 							thicks[x + z * 5]++;
 						}
 					}
@@ -451,13 +452,12 @@ public class FrozTemplate implements IChunkGenerator {
 
 				thickness -= 4;
 
-				//int thickness = thicks[qz + (qz) * 5];
-
 				boolean generateForest = thickness > 1;
 
 				if (generateForest) {
 					double d = 0.03125D;
-					stoneNoise = noiseGen4.generateNoiseOctaves(stoneNoise, chunkX * 16, chunkZ * 16, 0, 16, 16, 1, d * 2D, d * 2D, d * 2D);
+					field_186002_u = noiseGen4.generateNoiseOctaves(field_186002_u, chunkX * 16, chunkZ * 16, 0, 16, 16,
+							1, d * 2D, d * 2D, d * 2D);
 
 					// find the (current) top block
 					int topLevel = -1;
@@ -476,21 +476,27 @@ public class FrozTemplate implements IChunkGenerator {
 					if (topLevel != -1) {
 						// just use the same noise generator as the terrain uses
 						// for stones
-						int noise = Math.min(3, (int) (stoneNoise[z & 15 | (x & 15) << 4] / 1.25f));
+						int noise = Math.min(3, (int) (field_186002_u[z & 15 | (x & 15) << 4] / 1.25f));
 
 						// manipulate top and bottom
-						int treeBottom = topLevel + 12 - (int) (thickness * 0.5F);
-						int treeTop = treeBottom + (int) (thickness * 1.5F);
+						int treeBottom = topLevel + 10 - (int) (thickness * 0.4F);
+						int treeTop = treeBottom + (int) (thickness * 2F);
 
 						treeBottom -= noise;
 
 						for (int y = treeBottom; y < treeTop; y++) {
-							primer.setBlockState(x, y, z, Blocks.PACKED_ICE.getDefaultState());
+							int r = rand.nextInt(10);
+							if (r < 5)
+								primer.setBlockState(x, y, z, Blocks.ICE.getDefaultState());
+							else if (r == 5)
+								primer.setBlockState(x, y, z, Blocks.OBSIDIAN.getDefaultState());
+							else
+								primer.setBlockState(x, y, z, Blocks.PACKED_ICE.getDefaultState());
 						}
+
 					}
 				}
 			}
 		}
 	}
-
 }

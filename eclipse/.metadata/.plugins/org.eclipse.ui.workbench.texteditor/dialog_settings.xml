@@ -6,29 +6,32 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Transform" key="selection"/>
+		<item value="inve" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="inve"/>
+			<item value="5"/>
+			<item value="addIceForestTop"/>
+			<item value="nearCenter"/>
+			<item value=""/>
+			<item value="new double[256]"/>
+			<item value="new double[256];"/>
+			<item value="30"/>
+			<item value="50"/>
+			<item value="crate"/>
+			<item value="return"/>
 			<item value="Transform"/>
 			<item value="getStructureTemplateManager"/>
 			<item value="worldServer"/>
 			<item value="sett"/>
-			<item value="true"/>
-			<item value="TRUE"/>
-			<item value="hills"/>
-			<item value="generateHeightmap"/>
-			<item value="SETB"/>
-			<item value="FROZ"/>
-			<item value="froz"/>
-			<item value="generateStructures"/>
-			<item value="biome"/>
-			<item value="decor"/>
-			<item value="ravine"/>
 		</list>
 		<list key="replacehistory">
+			<item value="size"/>
+			<item value="10"/>
+			<item value="20"/>
 			<item value="ConfigHandler"/>
 			<item value=""/>
 			<item value="this"/>
@@ -41,9 +44,6 @@
 			<item value="brick_laputa"/>
 			<item value="BlockInit.BLACK_CRYSTAL"/>
 			<item value="LEAVES"/>
-			<item value="LOG"/>
-			<item value="silvir"/>
-			<item value="goldir"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -9,6 +9,7 @@ import com.laz.tirphycraft.world.biomes.froz.BiomeFrozIceMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozPlaine;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozPlate;
+import com.laz.tirphycraft.world.biomes.froz.BiomeFrozSlawomirBurrows;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMagic;
@@ -56,6 +57,7 @@ public class BiomeInit
 	public static final Biome FROZ_FOREST		= new BiomeFrozForest();
 	public static final Biome FROZ_DEAD			= new BiomeFrozDead();
 	public static final Biome FROZ_PLATE 		= new BiomeFrozPlate();
+	public static final Biome FROZ_SLAWOMIR     = new BiomeFrozSlawomirBurrows();
 	
 	
 	public static void registerBiomes()
@@ -82,6 +84,7 @@ public class BiomeInit
 		initBiomeNoOverworld(FROZ_FOREST, "froz forest",  BiomeType.ICY, Type.COLD, Type.DENSE);
 		initBiomeNoOverworld(FROZ_DEAD, "froz dead",  BiomeType.ICY, Type.COLD, Type.DENSE);
 		initBiomeNoOverworld(FROZ_PLATE, "froz plate",  BiomeType.ICY, Type.COLD, Type.DENSE);
+		initBiomeNoOverworld(FROZ_SLAWOMIR, "froz Slawomir Burrows",  BiomeType.ICY, Type.COLD, Type.DENSE, Type.RARE);
 		
 } 
 	

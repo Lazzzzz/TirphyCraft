@@ -2,20 +2,16 @@ package com.laz.tirphycraft.world.gen.generators.froz;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.dimension.Froz.GenLoadVillage;
 import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.StructureUtil;
 import com.laz.tirphycraft.util.interfaces.IStructure;
 
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraft.world.gen.structure.template.Template;
 import net.minecraft.world.gen.structure.template.TemplateManager;
 
 public class WorldGenIceVillage extends WorldGenerator implements IStructure {
