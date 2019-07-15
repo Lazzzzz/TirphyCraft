@@ -8,6 +8,10 @@ public class OreDictionnarCompat {
 	
 	public static void registerOres() {
 		OreDictionary.registerOre("planks", BlockInit.PLANKS_COPPIR);
-		OreDictionary.registerOre("planks", BlockInit.PLANKS_SILVIR);		
+		OreDictionary.registerOre("planks", BlockInit.PLANKS_SILVIR);
+		OreDictionary.registerOre("planks", BlockInit.PLANKS_GOLDIR);
+		OreDictionary.registerOre("planks", BlockInit.PLANKS_FROZ);
+						
 	}
 }
+
