@@ -1,6 +1,7 @@
 package com.laz.tirphycraft.entity.entityClass.passif;
 
 import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -25,6 +26,7 @@ public class EntityColosse extends EntityAnimal {
 		this.setSize(1.8F, 4.5F);
 
 	}
+
 	@Override
 	protected void initEntityAI() {
 		this.tasks.addTask(0, new EntityAISwimming(this));
@@ -73,7 +75,7 @@ public class EntityColosse extends EntityAnimal {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		return this.world.loadedEntityList.size() < Reference.MAX_PASSIF_CREATURE;
+		return this.world.loadedEntityList.size() < ConfigHandler.MAX_PASSIF_CREATURE;
 
 	}
 

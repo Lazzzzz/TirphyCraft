@@ -1,0 +1,61 @@
+package com.laz.tirphycraft.dimension.Laputa;
+
+import javax.swing.text.html.parser.Entity;
+
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityGrindlyFront;
+import com.laz.tirphycraft.entity.entityClass.projectile.EntityMeteorite;
+import com.laz.tirphycraft.init.BiomeInit;
+import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.init.ItemInit;
+import com.laz.tirphycraft.init.PotionInit;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Items;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.ServerTickEvent;
+
+@EventBusSubscriber
+public class LaputaEvent {
+
+	@SubscribeEvent
+	public static void fall(PlayerTickEvent event) {
+		if (event.player.dimension == 121) {
+			if (event.player.posY < -20) {
+				if (event.player instanceof EntityPlayerMP) {
+					MinecraftServer minecraftserver = FMLCommonHandler.instance().getMinecraftServerInstance();
+					if (minecraftserver != null) {
+						minecraftserver.getCommandManager().executeCommand((EntityPlayerMP) event.player, "tpdim 0");
+					}
+				}
+			}
+
+		}
+
+	}
+
+	@SubscribeEvent
+	public static void meteorite(PlayerTickEvent event) {
+		World world = event.player.world;
+
+		if (world.getWorldTime() % 100 == 0 && event.player.dimension == 121 && !world.isRemote) {
+			EntityMeteorite e = new EntityMeteorite(world);
+			e.setPosition(event.player.posX + world.rand.nextInt(100) - 200, event.player.posY + 100,
+					event.player.posZ);
+			if (!world.isRemote) {
+				world.spawnEntity(e);
+			}
+
+		}
+
+	}
+}

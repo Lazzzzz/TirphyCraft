@@ -1,6 +1,9 @@
 {
-    "variants":
+    "variants": 
     {
-"normal": { "model": "tirphycraft:froz_plant_blue_rose" }
+        "normal": 
+        {
+            "model": "tirphycraft:froz_plant_blue_rose"
+        }
     }
 }

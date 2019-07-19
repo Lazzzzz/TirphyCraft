@@ -1,8 +1,10 @@
 package com.laz.tirphycraft.entity.entityClass.passif;
 
 import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
@@ -55,8 +57,7 @@ public class EntityFrozenBoar extends EntityPig {
 	}
 	@Override
 	public boolean getCanSpawnHere() {
-		return this.world.loadedEntityList.size() < Reference.MAX_PASSIF_CREATURE;
-
+		return this.world.loadedEntityList.size() < ConfigHandler.MAX_PASSIF_CREATURE;
 	}
 
 

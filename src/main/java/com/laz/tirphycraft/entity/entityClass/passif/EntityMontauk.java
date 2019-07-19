@@ -3,6 +3,7 @@ package com.laz.tirphycraft.entity.entityClass.passif;
 import javax.annotation.Nullable;
 
 import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -141,7 +142,7 @@ public class EntityMontauk extends EntityCow {
 	}
 	@Override
 	public boolean getCanSpawnHere() {
-		return this.world.loadedEntityList.size() < Reference.MAX_PASSIF_CREATURE;
+		return this.world.loadedEntityList.size() < ConfigHandler.MAX_PASSIF_CREATURE;
 
 	}
 

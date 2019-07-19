@@ -1,0 +1,143 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 7/18/19 2:44 PM
+Description: Ticking entity
+
+java.lang.Error: Unresolved compilation problems: 
+	Syntax error on token ",", delete this token
+	y cannot be resolved to a variable
+	z cannot be resolved to a variable
+
+	at com.laz.tirphycraft.dimension.Laputa.LaputaEvent.meteorite(LaputaEvent.java:53)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_9_LaputaEvent_meteorite_PlayerTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPreTick(FMLCommonHandler.java:365)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:228)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:230)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2171)
+	at net.minecraft.world.World.updateEntity(World.java:2130)
+	at net.minecraft.world.World.updateEntities(World.java:1931)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1973)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1187)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at com.laz.tirphycraft.dimension.Laputa.LaputaEvent.meteorite(LaputaEvent.java:53)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_9_LaputaEvent_meteorite_PlayerTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPreTick(FMLCommonHandler.java:365)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:228)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:230)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2171)
+	at net.minecraft.world.World.updateEntity(World.java:2130)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityPlayerSP)
+	Entity ID: 4
+	Entity Name: Player15
+	Entity's Exact location: -62.71, 81.74, 1905.52
+	Entity's Block location: World: (-63,81,1905), Chunk: (at 1,5,1 in -4,119; contains blocks -64,0,1904 to -49,255,1919), Region: (-1,3; contains chunks -32,96 to -1,127, blocks -512,0,1536 to -1,255,2047)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1931)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player15'/4, l='MpServer', x=-62.71, y=81.74, z=1905.52]]
+	Chunk stats: MultiplayerChunkCache: 1225, 1225
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (1738,4,-34), Chunk: (at 10,0,14 in 108,-3; contains blocks 1728,0,-48 to 1743,255,-33), Region: (3,-1; contains chunks 96,-32 to 127,-1, blocks 1536,0,-512 to 2047,255,-1)
+	Level time: 319347 game time, 55770 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: true), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 91 total; [EntityItem['item.tile.laputa_dirt'/120331, l='MpServer', x=-69.71, y=43.00, z=1905.96], EntityItem['item.tile.laputa_dirt'/120330, l='MpServer', x=-54.11, y=45.00, z=1906.13], EntityItem['item.tile.laputa_dirt'/120375, l='MpServer', x=-54.00, y=47.00, z=1909.88], EntityItem['item.tile.laputa_dirt'/120374, l='MpServer', x=-55.13, y=44.00, z=1909.88], EntityItem['item.tile.laputa_cobblestone'/120377, l='MpServer', x=-63.42, y=45.00, z=1910.27], EntityItem['item.tile.laputa_cobblestone'/120376, l='MpServer', x=-60.97, y=46.00, z=1910.88], EntityItem['item.tile.laputa_cobblestone'/120381, l='MpServer', x=-61.13, y=48.00, z=1912.76], EntityItem['item.tile.laputa_cobblestone'/120380, l='MpServer', x=-59.65, y=45.00, z=1911.44], EntityItem['item.tile.laputa_dirt'/120383, l='MpServer', x=-55.22, y=50.00, z=1913.88], EntityItem['item.tile.laputa_dirt'/120382, l='MpServer', x=-53.13, y=52.00, z=1912.51], EntityItem['item.tile.laputa_dirt'/120385, l='MpServer', x=-72.83, y=46.00, z=1906.13], EntityItem['item.tile.laputa_green'/120384, l='MpServer', x=-69.15, y=43.00, z=1905.49], EntityItem['item.tile.laputa_dirt'/120387, l='MpServer', x=-58.32, y=44.00, z=1909.87], EntityItem['item.tile.laputa_dirt'/120386, l='MpServer', x=-56.68, y=44.00, z=1908.24], EntityItem['item.tile.laputa_dirt'/120389, l='MpServer', x=-57.60, y=45.00, z=1908.29], EntityItem['item.tile.laputa_dirt'/120388, l='MpServer', x=-60.04, y=44.00, z=1909.42], EntityPlayerSP['Player15'/4, l='MpServer', x=-62.71, y=81.74, z=1905.52], EntityItem['item.tile.laputa_dirt'/113761, l='MpServer', x=-102.25, y=52.00, z=1913.15], EntityDeadPlayer['entity.dead_Player.name'/112750, l='MpServer', x=-107.50, y=55.00, z=1882.50], EntityItem['item.tile.laputa_dirt'/114830, l='MpServer', x=-84.51, y=66.00, z=1916.61], EntityItem['item.tile.laputa_dirt'/114835, l='MpServer', x=-91.96, y=59.00, z=1909.88], EntityItem['item.tile.laputa_cobblestone'/113829, l='MpServer', x=-99.13, y=52.00, z=1908.88], EntityItem['item.tile.laputa_dirt'/113831, l='MpServer', x=-110.76, y=54.00, z=1909.72], EntityGrindlyBoth['entity.grindlyBoth.name'/120999, l='MpServer', x=-79.10, y=60.00, z=1931.96], EntityItem['item.tile.laputa_cobblestone'/113830, l='MpServer', x=-97.11, y=54.00, z=1908.13], EntityItem['item.tile.laputa_dirt'/113833, l='MpServer', x=-112.08, y=56.00, z=1900.91], EntityItem['item.tile.laputa_dirt'/113832, l='MpServer', x=-110.99, y=57.00, z=1899.85], EntityItem['item.tile.laputa_dirt'/114859, l='MpServer', x=-86.92, y=69.00, z=1915.13], EntityItem['item.tile.laputa_dirt'/113834, l='MpServer', x=-113.88, y=57.00, z=1900.70], EntityItem['item.tile.laputa_cobblestone'/113837, l='MpServer', x=-100.84, y=53.00, z=1901.13], EntityItem['item.tile.laputa_cobblestone'/113836, l='MpServer', x=-102.78, y=50.00, z=1909.13], EntityItem['item.tile.laputa_dirt'/113839, l='MpServer', x=-112.88, y=56.00, z=1901.33], EntityItem['item.tile.laputa_dirt'/113838, l='MpServer', x=-93.13, y=55.00, z=1901.54], EntityItem['item.tile.laputa_dirt'/113855, l='MpServer', x=-103.18, y=58.00, z=1893.40], EntityItem['item.tile.laputa_cobblestone'/113857, l='MpServer', x=-99.46, y=52.00, z=1902.13], EntityItem['item.tile.laputa_dirt'/115905, l='MpServer', x=-73.97, y=44.00, z=1903.63], EntityGrindlyUp['entity.grindlyUp.name'/120513, l='MpServer', x=-95.50, y=26.00, z=1939.50], EntityItem['item.tile.laputa_dirt'/113856, l='MpServer', x=-103.28, y=47.00, z=1903.58], EntityItem['item.tile.laputa_dirt'/113859, l='MpServer', x=-94.13, y=55.00, z=1902.13], EntityItem['item.tile.laputa_cobblestone'/113858, l='MpServer', x=-97.90, y=54.00, z=1902.65], EntityItem['item.tile.laputa_dirt'/115906, l='MpServer', x=-65.88, y=41.00, z=1905.61], EntityGrindlyUp['entity.grindlyUp.name'/120514, l='MpServer', x=-95.50, y=26.00, z=1938.50], EntityItem['item.tile.laputa_dirt'/113861, l='MpServer', x=-111.82, y=55.00, z=1911.13], EntityItem['item.tile.laputa_pink'/113860, l='MpServer', x=-92.74, y=58.00, z=1902.88], EntityItem['item.tile.laputa_dirt'/113863, l='MpServer', x=-93.43, y=55.00, z=1903.88], EntityDeadPlayer['entity.dead_Player.name'/124103, l='MpServer', x=-22.57, y=41.00, z=1926.48], EntityItem['item.tile.laputa_cobblestone'/113862, l='MpServer', x=-97.13, y=54.00, z=1903.75], EntityDeadPlayer['entity.dead_Player.name'/124102, l='MpServer', x=-25.50, y=39.00, z=1928.50], EntityItem['item.tile.laputa_dirt'/113865, l='MpServer', x=-97.88, y=52.00, z=1912.88], EntityItem['item.tile.laputa_dirt'/113864, l='MpServer', x=-95.23, y=55.00, z=1903.13], EntityDeadPlayer['entity.dead_Player.name'/124104, l='MpServer', x=-26.50, y=39.00, z=1931.50], EntityItem['item.tile.laputa_dirt'/113867, l='MpServer', x=-103.88, y=57.00, z=1896.08], EntityGrindlyBoth['entity.grindlyBoth.name'/108234, l='MpServer', x=-65.50, y=40.00, z=1929.50], EntityItem['item.tile.laputa_dirt'/113866, l='MpServer', x=-107.44, y=56.00, z=1895.88], EntityItem['item.tile.laputa_dirt'/113869, l='MpServer', x=-106.25, y=48.00, z=1904.13], EntityItem['item.tile.laputa_dirt'/113868, l='MpServer', x=-107.88, y=50.00, z=1904.81], EntityItem['item.tile.laputa_dirt'/113871, l='MpServer', x=-99.47, y=57.00, z=1896.86], EntityItem['item.tile.laputa_dirt'/114895, l='MpServer', x=-83.88, y=66.00, z=1917.82], EntityItem['item.tile.laputa_cobblestone'/113870, l='MpServer', x=-96.40, y=54.00, z=1904.88], EntityItem['item.tile.laputa_dirt'/114894, l='MpServer', x=-79.21, y=66.00, z=1916.93], EntityItem['item.tile.laputa_dirt'/113873, l='MpServer', x=-95.68, y=58.00, z=1896.13], EntityItem['item.tile.laputa_dirt'/114897, l='MpServer', x=-90.52, y=62.00, z=1910.98], EntityItem['item.tile.laputa_dirt'/114896, l='MpServer', x=-85.13, y=67.00, z=1917.88], EntityItem['item.tile.laputa_dirt'/113875, l='MpServer', x=-97.43, y=61.00, z=1914.87], EntityItem['item.tile.laputa_cobblestone'/114899, l='MpServer', x=-87.02, y=65.00, z=1912.05], EntityItem['item.tile.laputa_dirt'/113874, l='MpServer', x=-102.47, y=54.00, z=1897.15], EntityItem['item.tile.laputa_cobblestone'/114898, l='MpServer', x=-85.66, y=58.00, z=1909.74], EntityItem['item.tile.laputa_dirt'/113877, l='MpServer', x=-101.88, y=47.00, z=1906.44], EntityItem['item.tile.laputa_cobblestone'/114901, l='MpServer', x=-83.88, y=65.00, z=1914.70], EntityItem['item.tile.laputa_dirt'/113876, l='MpServer', x=-102.13, y=46.00, z=1906.49], EntityItem['item.tile.laputa_cobblestone'/114900, l='MpServer', x=-79.94, y=63.00, z=1914.88], EntityItem['item.tile.laputa_dirt'/113879, l='MpServer', x=-96.09, y=55.00, z=1907.85], EntityItem['item.tile.laputa_dirt'/114903, l='MpServer', x=-90.13, y=67.00, z=1915.51], EntityItem['item.tile.laputa_cobblestone'/113878, l='MpServer', x=-101.02, y=51.00, z=1906.37], EntityItem['item.tile.laputa_dirt'/114902, l='MpServer', x=-85.88, y=65.00, z=1913.77], EntityItem['item.tile.laputa_dirt'/113881, l='MpServer', x=-95.48, y=55.00, z=1899.13], EntityItem['item.tile.laputa_cobblestone'/113880, l='MpServer', x=-104.88, y=53.00, z=1899.16], EntityDeadPlayer['entity.dead_Player.name'/123189, l='MpServer', x=-108.50, y=60.00, z=1866.50], EntityGrindlyBoth['entity.grindlyBoth.name'/123188, l='MpServer', x=-84.50, y=21.00, z=1920.50], EntityGrindlyFront['entity.grindlyFront.name'/121218, l='MpServer', x=-14.50, y=54.00, z=1904.50], EntityDeadPlayer['entity.dead_Player.name'/117129, l='MpServer', x=-105.50, y=56.00, z=1887.50], EntityGrindlyUp['entity.grindlyUp.name'/117131, l='MpServer', x=-105.50, y=56.00, z=1888.50], EntityGrindlyUp['entity.grindlyUp.name'/117132, l='MpServer', x=-102.50, y=56.00, z=1885.50], EntityGrindlyUp['entity.grindlyUp.name'/116153, l='MpServer', x=-93.92, y=37.00, z=1875.83], EntityGrindlyBoth['entity.grindlyBoth.name'/108479, l='MpServer', x=-97.50, y=26.00, z=1935.50], EntityGrindlyUp['entity.grindlyUp.name'/108483, l='MpServer', x=-96.50, y=26.00, z=1938.50], EntityGrindlyFront['entity.grindlyFront.name'/124899, l='MpServer', x=-106.07, y=55.00, z=1880.94], EntityGrindlyFront['entity.grindlyFront.name'/124900, l='MpServer', x=-106.50, y=55.00, z=1882.50], EntityGrindlyBoth['entity.grindlyBoth.name'/124902, l='MpServer', x=-111.50, y=55.00, z=1881.50], EntityGrindlyUp['entity.grindlyUp.name'/121850, l='MpServer', x=-15.03, y=74.00, z=1944.84], EntityGrindlyUp['entity.grindlyUp.name'/121854, l='MpServer', x=-104.50, y=65.00, z=1864.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:461)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2888)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:462)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1264220024 bytes (1205 MB) / 2052587520 bytes (1957 MB) up to 4149739520 bytes (3957 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx4024M -Xms2024M
+	IntCache: cache: 0, tcache: 0, allocated: 1, tallocated: 14
+	FML: MCP 9.42 Powered by Forge 14.23.5.2768 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID          | Version      | Source                           | Signature |
+	|:--------- |:----------- |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft   | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp         | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML         | 8.0.99.99    | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | forge       | 14.23.5.2768 | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | tirphycraft | 0.2          | bin                              | None      |
+	| UCHIJAAAA | jei         | 4.14.4.267   | jei_1.12.2-4.14.4.267.jar        | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 419.71' Renderer: 'GeForce MX150/PCIe/SSE2'
+	Launched Version: 1.12.2
+	LWJGL: 2.9.4
+	OpenGL: GeForce MX150/PCIe/SSE2 GL version 4.6.0 NVIDIA 419.71, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz

@@ -40,7 +40,6 @@ public class CommandTeleportDimension extends CommandBase
 		
 		if(sender instanceof EntityPlayer)
 		{
-			((EntityPlayer) sender).addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 30*20, 10, false, false));
 			CustomTeleporter.teleportToDimension((EntityPlayer) sender, dimension, ((EntityPlayer) sender).lastTickPosX, 256, ((EntityPlayer) sender).lastTickPosZ);
 		}
 	}

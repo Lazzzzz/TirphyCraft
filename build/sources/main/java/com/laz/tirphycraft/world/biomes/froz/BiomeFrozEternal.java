@@ -3,6 +3,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.world.biomes.froz.caveDecorator.BiomeFrozCaveDecorator;
 import com.laz.tirphycraft.world.gen.generators.froz.WorldGenIceCrystal;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBigTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
@@ -44,6 +45,12 @@ public class BiomeFrozEternal extends Biome {
 		if (rand.nextBoolean())	new WorldGenFrozNormalTree(rand.nextInt(4) + 2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState()).generate(worldIn, rand, worldIn.getHeight(pos.add(j, rand.nextInt(5), k)));
 		else new WorldGenFrozSlick().generate(worldIn, rand, worldIn.getHeight(pos.add(j, rand.nextInt(5), k)));
 	
+		for (int i = 0; i < 20; i++) {
+			j = rand.nextInt(16) + 8;
+			k = rand.nextInt(16) + 8;
+			new BiomeFrozCaveDecorator().genDecorator(worldIn, rand, pos.add(j,0,k), 80);
+		}
+		
 	}
 	
 

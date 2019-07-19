@@ -11,42 +11,49 @@ import com.laz.tirphycraft.objects.base.BlockPlanksBase;
 import com.laz.tirphycraft.objects.base.BlockPortalBase;
 import com.laz.tirphycraft.objects.base.BlockStairsBase;
 import com.laz.tirphycraft.objects.base.GrassBase;
-import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeon;
-import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeonSun;
-import com.laz.tirphycraft.objects.blocks.customBlock.BlockBrickDungeonsControler;
-import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBase;
-import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushBlue;
-import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushGreen;
-import com.laz.tirphycraft.objects.blocks.customBlock.bush.BlockBushRed;
-import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockFrozCrate;
-import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockFrozStone;
-import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockPlantBlueRose;
-import com.laz.tirphycraft.objects.blocks.customBlock.froz.BlockPowderSnow;
-import com.laz.tirphycraft.objects.blocks.customBlock.froz.dungeon.BlockBossDoor;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.BlockCloud;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.BlockLaputaStone;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.BlockSunStone;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockBlueCrystal;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockBlueCrystalFull;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockGreenCrystal;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockGreenCrystalFull;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockPinkCrystal;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockPinkCrystalFull;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockPurpleCrystal;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockPurpleCrystalFull;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockYellowCrystal;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.crystal.BlockYellowCrystalFull;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.plant.BlockLaputaBush;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.plant.BlockLaputaGrass;
-import com.laz.tirphycraft.objects.blocks.customBlock.laputa.plant.BlockLaputaTallGrass;
-import com.laz.tirphycraft.objects.blocks.customBlock.noxis.BlockMushroomLeaves;
-import com.laz.tirphycraft.objects.blocks.customBlock.noxis.BlockNoxisFrozenGrass;
-import com.laz.tirphycraft.objects.blocks.customBlock.noxis.BlockNoxisGrass;
-import com.laz.tirphycraft.objects.blocks.customBlock.noxis.BlockNoxisStone;
-import com.laz.tirphycraft.objects.blocks.customBlock.noxis.BlockSmoker;
+import com.laz.tirphycraft.objects.blocks.basicBlock.BlockBrickDungeon;
+import com.laz.tirphycraft.objects.blocks.basicBlock.BlockBrickDungeonSun;
+import com.laz.tirphycraft.objects.blocks.basicBlock.BlockBrickDungeonsControler;
+import com.laz.tirphycraft.objects.blocks.basicBlock.bush.BlockBushBase;
+import com.laz.tirphycraft.objects.blocks.basicBlock.bush.BlockBushBlue;
+import com.laz.tirphycraft.objects.blocks.basicBlock.bush.BlockBushGreen;
+import com.laz.tirphycraft.objects.blocks.basicBlock.bush.BlockBushRed;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.BlockFrozCrate;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.BlockFrozIceVines;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.BlockFrozStone;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.BlockPlantBlueRose;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.BlockPowderSnow;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.cavePick.BlockFrozCaveMoss;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.cavePick.BlockFrozCaveRoot;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.dungeon.BlockBlueBrick;
+import com.laz.tirphycraft.objects.blocks.basicBlock.froz.dungeon.BlockBossDoor;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.BlockCloud;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.BlockLaputaStone;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.BlockSunStone;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockBlueCrystal;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockBlueCrystalFull;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockGreenCrystal;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockGreenCrystalFull;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockPinkCrystal;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockPinkCrystalFull;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockPurpleCrystal;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockPurpleCrystalFull;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockYellowCrystal;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockYellowCrystalFull;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.plant.BlockLaputaBush;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.plant.BlockLaputaGrass;
+import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.plant.BlockLaputaTallGrass;
+import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockMushroomLeaves;
+import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockNoxisFrozenGrass;
+import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockNoxisGrass;
+import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockNoxisStone;
+import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockSmoker;
+import com.laz.tirphycraft.objects.blocks.basicBlock.pick.BlockStalactite;
+import com.laz.tirphycraft.objects.blocks.basicBlock.pick.BlockStalagmite;
 import com.laz.tirphycraft.objects.blocks.customModel.Altar;
 import com.laz.tirphycraft.objects.blocks.customModel.BluePillar;
 import com.laz.tirphycraft.objects.blocks.customModel.GreenPillar;
+import com.laz.tirphycraft.objects.blocks.customModel.Lantern;
 import com.laz.tirphycraft.objects.blocks.customModel.NeutralPillar;
 import com.laz.tirphycraft.objects.blocks.customModel.RedPillar;
 import com.laz.tirphycraft.objects.blocks.customModel.WhitePillar;
@@ -87,6 +94,8 @@ public class BlockInit {
 	public static final Block BLOCK_HEAVY   			= new BlockBase("block_heavy", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
 	public static final Block BLOCK_NIXIUM  			= new BlockBase("block_nixium", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
 	public static final Block BLOCK_COAL	  			= new BlockBase("block_coal_on_coke", Material.ROCK, 3, 15, "pickaxe", 0, SoundType.METAL);
+	public static final Block BLOCK_METEORITE  			= new BlockBase("block_meteorite", Material.ROCK, 15, 100, "pickaxe", 3, SoundType.STONE);
+	public static final Block BRICK_METEORITE  			= new BlockBase("brick_meteorite", Material.ROCK, 15, 100, "pickaxe", 3, SoundType.STONE);
 	public static final Block CLOUD						= new BlockCloud();
 	public static final Block FROZEN_CRYSTAL			= new BlockBase("frozen_crystal", Material.GLASS, 3, 15, "pickaxe", 1, SoundType.GLASS);
 	public static final Block BLACK_CRYSTAL				= new BlockBase("black_crystal", Material.GLASS, 3, 15, "pickaxe", 1, SoundType.GLASS);
@@ -200,7 +209,7 @@ public class BlockInit {
 	public static final Block BUSH_RED					= new BlockBushRed("bush_red", Material.LEAVES, 0.2f, 0, "all", 0, SoundType.PLANT);
 	public static final Block BUSH_BLUE					= new BlockBushBlue("bush_blue", Material.LEAVES, 0.2f, 0, "all", 0, SoundType.PLANT);
 	public static final Block BUSH_GREEN				= new BlockBushGreen("bush_green", Material.LEAVES, 0.2f, 0, "all", 0, SoundType.PLANT);
-	
+	public static final Block FROZ_VINES			 	= new BlockFrozIceVines();
 	
 	//EGG
 	public static final Block EGG_QUEEN_CREEPR			= new EggCreeperQueen("egg_queen_creeper");
@@ -220,5 +229,14 @@ public class BlockInit {
 	public static final Block FROZ_BOSS_WALL			= new BlockDungeonBase("froz_boss_wall", SoundType.STONE);
 	public static final Block FROZ_BOSS_DOOR	        = new BlockBossDoor();
 	public static final Block FROZ_CRATE				= new BlockFrozCrate();
+	public static final Block FROZ_LANTERN				= new Lantern();
+	public static final Block FROZ_BLUE_BRICK			= new BlockBlueBrick();
+	public static final Block FROZ_CAVE_MOSS			= new BlockFrozCaveMoss();
+	public static final Block FROZ_CAVE_ROOT			= new BlockFrozCaveRoot();
+	
+	//
+	public static final Block STALACTITE				= new BlockStalactite();
+	public static final Block STALAGMITE				= new BlockStalagmite();
+
 	
 }

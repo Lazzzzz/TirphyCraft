@@ -13,7 +13,7 @@
 		<item value="250" key="dialogHeight"/>
 		<item value="350" key="dialogWidth"/>
 		<list key="textEntries">
-			<item value="3"/>
+			<item value="2"/>
 			<item value="1"/>
 			<item value="1"/>
 		</list>
@@ -28,9 +28,8 @@
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
-			<item value="c"/>
 			<item value="cons"/>
-			<item value="co"/>
+			<item value="c"/>
 			<item value="de"/>
 			<item value="exp"/>
 		</list>

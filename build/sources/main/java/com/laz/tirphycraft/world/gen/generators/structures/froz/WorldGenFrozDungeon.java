@@ -28,10 +28,10 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 
+		int posY = rand.nextInt(20) + 20;
 		System.out.println(position);
 		int minSize = 4;
 		int maxSize = 10;
-		int posY = rand.nextInt(20) + 20;
 		int rayon = size * 10;
 		int sizeX = 0;
 		int sizeZ = 0;
@@ -40,8 +40,13 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 
 		for (int i = 0; i < roomList.length; i++) {
 			boolean done = false;
-
+			int o = 0;
 			while (done == false) {
+				o ++;
+				if (o == 100) {
+					System.out.println("IMPOSSIBLE....");
+					return false;
+				}
 				p = new BlockPos(position.getX() + rand.nextInt(rayon / 2) - rayon / 4, 30,
 						position.getZ() + rand.nextInt(rayon / 2) - rayon / 4);
 
@@ -297,34 +302,28 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 
 		for (int i = -2; i < sizeX + 2; i++) {
 			for (int j = -1; j < height + 3; j++) {
-				if (worldIn.getBlockState(getPos(corner, i, j, -2)) == BlockInit.FROZ_STONE.getDefaultState()
-						|| worldIn.getBlockState(getPos(corner, i, j, -2)) == Blocks.AIR.getDefaultState()) {
 
-					worldIn.setBlockState(getPos(corner, i, j, -2), BlockInit.FROZ_BOSS_WALL.getDefaultState());
-					worldIn.setBlockState(getPos(corner, i, j, sizeZ + 1), BlockInit.FROZ_BOSS_WALL.getDefaultState());
-				}
+				worldIn.setBlockState(getPos(corner, i, j, -2), BlockInit.FROZ_BOSS_WALL.getDefaultState());
+				worldIn.setBlockState(getPos(corner, i, j, sizeZ + 1), BlockInit.FROZ_BOSS_WALL.getDefaultState());
+
 			}
 		}
 
 		for (int i = -2; i < sizeZ + 2; i++) {
 			for (int j = -1; j < height + 2; j++) {
-				if (worldIn.getBlockState(getPos(corner, -2, j, i)) == BlockInit.FROZ_STONE.getDefaultState()
-						|| worldIn.getBlockState(getPos(corner, -2, j, i)) == Blocks.AIR.getDefaultState()) {
 
-					worldIn.setBlockState(getPos(corner, -2, j, i), BlockInit.FROZ_BOSS_WALL.getDefaultState());
-					worldIn.setBlockState(getPos(corner, sizeX + 1, j, i), BlockInit.FROZ_BOSS_WALL.getDefaultState());
-				}
+				worldIn.setBlockState(getPos(corner, -2, j, i), BlockInit.FROZ_BOSS_WALL.getDefaultState());
+				worldIn.setBlockState(getPos(corner, sizeX + 1, j, i), BlockInit.FROZ_BOSS_WALL.getDefaultState());
+
 			}
 		}
 
 		for (int i = -2; i < sizeX + 2; i++) {
 			for (int j = -2; j < sizeZ + 2; j++) {
-				if (worldIn.getBlockState(getPos(corner, i, height + 2, j)) == BlockInit.FROZ_STONE.getDefaultState()
-						|| worldIn.getBlockState(getPos(corner, i, height + 2, j)) == Blocks.AIR.getDefaultState()) {
 
-					worldIn.setBlockState(getPos(corner, i, height + 2, j), BlockInit.FROZ_BOSS_WALL.getDefaultState());
-					worldIn.setBlockState(getPos(corner, i, -1, j), BlockInit.FROZ_BOSS_WALL.getDefaultState());
-				}
+				worldIn.setBlockState(getPos(corner, i, height + 2, j), BlockInit.FROZ_BOSS_WALL.getDefaultState());
+				worldIn.setBlockState(getPos(corner, i, -1, j), BlockInit.FROZ_BOSS_WALL.getDefaultState());
+
 			}
 		}
 	}
@@ -507,15 +506,16 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 	}
 
 	private void placeChest(World worldIn, BlockPos pos, Random rand) {
-		
+
 		for (int i = -1; i < 2; i++) {
 			for (int j = -1; j < 2; j++) {
 				for (int k = 0; k < 6; k++) {
-					if (i != 0 || j != 0) worldIn.setBlockState(pos.add(i, k, j), Blocks.STAINED_GLASS_PANE.getStateFromMeta(11));
+					if (i != 0 || j != 0)
+						worldIn.setBlockState(pos.add(i, k, j), Blocks.STAINED_GLASS_PANE.getStateFromMeta(11));
 				}
 			}
 		}
-		
+
 		worldIn.setBlockState(pos.down(), Blocks.LAPIS_BLOCK.getDefaultState());
 		worldIn.setBlockState(pos, Blocks.CHEST.getDefaultState());
 		worldIn.setBlockState(pos.up(6), Blocks.GLOWSTONE.getDefaultState());
@@ -524,7 +524,7 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 		chest.setInventorySlotContents(10, new ItemStack(Items.DIAMOND, 1));
 		chest.setInventorySlotContents(11, new ItemStack(Items.DIAMOND, 1));
 		chest.setInventorySlotContents(12, new ItemStack(Items.EMERALD, 1));
-		chest.setInventorySlotContents(13, new ItemStack(ItemInit.FROZ_KEY, 1));		
+		chest.setInventorySlotContents(13, new ItemStack(ItemInit.FROZ_KEY, 1));
 		chest.setInventorySlotContents(14, new ItemStack(Items.EMERALD, 1));
 		chest.setInventorySlotContents(15, new ItemStack(Items.DIAMOND, 1));
 		chest.setInventorySlotContents(16, new ItemStack(Items.DIAMOND, 1));

@@ -1,0 +1,15 @@
+{
+    "variants": 
+    {
+        "variant=variant_0": 
+        {
+            "model": "tirphycraft:froz_stone_pick:"
+        },
+
+        "variant=variant_1": 
+        {
+            "model": "tirphycraft:froz_stone_pick",
+            "x": 180
+        }
+    }
+}

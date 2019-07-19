@@ -13,6 +13,7 @@ import com.laz.tirphycraft.world.biomes.froz.BiomeFrozSlawomirBurrows;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMagic;
+import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMeteorite;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaNoManLand;
 import com.laz.tirphycraft.world.biomes.noxis.BiomeBigForestNoxis;
 import com.laz.tirphycraft.world.biomes.noxis.BiomeForestNoxis;
@@ -46,6 +47,7 @@ public class BiomeInit
 	public static final Biome LAPUTA			= new BiomeLaputaForest();	
 	public static final Biome LAPUTANML			= new BiomeLaputaNoManLand();
 	public static final Biome LAPUTA_MAGIC		= new BiomeLaputaMagic();
+	public static final Biome LAPUTA_METEORITE	= new BiomeLaputaMeteorite();
 	public static final Biome LAPUTA_CRYSTAL	= new BiomeLaputaCrystal();
 	
 	
@@ -74,6 +76,7 @@ public class BiomeInit
 		initBiomeNoOverworld(LAPUTA, "Laputa forest", BiomeType.COOL, Type.DENSE, Type.PLAINS);
 		initBiomeNoOverworld(LAPUTANML, "Laputa no man land", BiomeType.COOL, Type.DENSE, Type.PLAINS);
 		initBiomeNoOverworld(LAPUTA_MAGIC, "Laputa magic", BiomeType.COOL, Type.DENSE, Type.PLAINS);
+		initBiomeNoOverworld(LAPUTA_METEORITE, "laputa meteorite",  BiomeType.DESERT, Type.DENSE, Type.HOT);
 		initBiomeNoOverworld(LAPUTA_CRYSTAL, "laputa crystal",  BiomeType.COOL, Type.DENSE, Type.PLAINS);
 		
 		initBiomeNoOverworld(FROZ_PLAINE, "froz plaine", BiomeType.ICY, Type.COLD, Type.PLAINS);

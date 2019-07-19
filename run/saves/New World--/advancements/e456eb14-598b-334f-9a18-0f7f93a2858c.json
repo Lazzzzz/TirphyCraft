@@ -1,0 +1,9 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "extreme_hills": "2019-07-18 17:43:27 +0200",
+      "desert": "2019-07-18 17:43:14 +0200"
+    },
+    "done": false
+  }
+}

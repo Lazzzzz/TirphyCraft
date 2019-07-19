@@ -80,7 +80,7 @@ public class WorldGenCustomOre implements IWorldGenerator {
 			runGenerator(ore_laputa_coal_on_coke, world, random, chunkX, chunkZ, 40, 10, 256);
 		
 		case 123:
-			runGenerator(histoire_ice, world, random, chunkX, chunkZ, 20, 70, 256);
+			runGenerator(histoire_ice, world, random, chunkX, chunkZ, 30, 1, 70);
 		}
 
 	}
@@ -96,7 +96,7 @@ public class WorldGenCustomOre implements IWorldGenerator {
 			int x = chunkX * 16 + rand.nextInt(16);
 			int y = minHeight + rand.nextInt(heightDiff);
 			int z = chunkZ * 16 + rand.nextInt(16);
-
+			
 			gen.generate(world, rand, new BlockPos(x, y, z));
 		}
 

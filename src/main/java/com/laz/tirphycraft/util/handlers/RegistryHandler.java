@@ -16,6 +16,7 @@ import com.laz.tirphycraft.util.interfaces.IHasModel;
 import com.laz.tirphycraft.world.gen.WorldGenCustomOre;
 import com.laz.tirphycraft.world.gen.WorldGenCustomStructures;
 import com.laz.tirphycraft.world.gen.WorldGenCustomTree;
+import com.laz.tirphycraft.world.gen.generators.froz.WorldGenRuinsStructures;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -82,6 +83,7 @@ public class RegistryHandler {
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOre(), 0);
 		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
 		GameRegistry.registerWorldGenerator(new WorldGenCustomTree(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenRuinsStructures(), 0);
 
 		BiomeInit.registerBiomes();
 		DimensionInit.registerDimensions();

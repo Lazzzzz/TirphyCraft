@@ -1,0 +1,29 @@
+package com.laz.tirphycraft.objects.blocks.customBlock.froz.cavePick;
+
+import com.laz.tirphycraft.objects.base.BlockBase;
+import com.laz.tirphycraft.util.interfaces.IHasModel;
+
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class BlockFrozCaveMoss extends BlockBase implements IHasModel {
+	public BlockFrozCaveMoss() {
+		super("froz_cave_moss", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE);
+
+	}
+
+	@Override
+	public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
+		world.scheduleUpdate(pos, this, this.tickRate(world));
+
+	}
+
+	@Override
+	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
+		return worldIn.getBlockState(pos.up()).isFullCube();
+	}
+
+}

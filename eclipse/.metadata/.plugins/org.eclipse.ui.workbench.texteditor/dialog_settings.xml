@@ -6,29 +6,30 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="inve" key="selection"/>
+		<item value="rotation" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="inve"/>
-			<item value="5"/>
-			<item value="addIceForestTop"/>
-			<item value="nearCenter"/>
-			<item value=""/>
-			<item value="new double[256]"/>
-			<item value="new double[256];"/>
-			<item value="30"/>
-			<item value="50"/>
-			<item value="crate"/>
-			<item value="return"/>
-			<item value="Transform"/>
-			<item value="getStructureTemplateManager"/>
-			<item value="worldServer"/>
-			<item value="sett"/>
+			<item value="rotation"/>
+			<item value="CONFIG"/>
+			<item value="enumStalactite"/>
+			<item value="start"/>
+			<item value="STON"/>
+			<item value="END"/>
+			<item value="dun"/>
+			<item value="dung"/>
+			<item value="du"/>
+			<item value="fro"/>
+			<item value="caveGenerator"/>
+			<item value="&#x09;&#x09;caveGenerator = net.minecraftforge.event.terraingen.TerrainGen.getModdedMapGen(new NoxisCaveGen(),"/>
+			<item value="enum"/>
+			<item value="enu"/>
+			<item value="ore"/>
 		</list>
 		<list key="replacehistory">
+			<item value="enumStalagmite"/>
 			<item value="size"/>
 			<item value="10"/>
 			<item value="20"/>
@@ -43,14 +44,13 @@
 			<item value="brick_froz"/>
 			<item value="brick_laputa"/>
 			<item value="BlockInit.BLACK_CRYSTAL"/>
-			<item value="LEAVES"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="504" key="DIALOG_WIDTH"/>
+		<item value="764" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-		<item value="630" key="DIALOG_HEIGHT"/>
-		<item value="130" key="DIALOG_X_ORIGIN"/>
-		<item value="339" key="DIALOG_Y_ORIGIN"/>
+		<item value="441" key="DIALOG_HEIGHT"/>
+		<item value="-76" key="DIALOG_X_ORIGIN"/>
+		<item value="371" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

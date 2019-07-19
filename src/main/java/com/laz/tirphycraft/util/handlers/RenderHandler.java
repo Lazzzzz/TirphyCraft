@@ -2,6 +2,7 @@ package com.laz.tirphycraft.util.handlers;
 
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemRange;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemSoldier;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityBreaker;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCerbere;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCloudy;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDeadPlayer;
@@ -42,8 +43,10 @@ import com.laz.tirphycraft.entity.entityClass.passif.EntityMontauk;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityToxisCow;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityVidargavia;
 import com.laz.tirphycraft.entity.entityClass.projectile.EntityIceBall;
+import com.laz.tirphycraft.entity.entityClass.projectile.EntityMeteorite;
 import com.laz.tirphycraft.entity.render.aggressive.RenderAngrySnowGolemRange;
 import com.laz.tirphycraft.entity.render.aggressive.RenderAngrySnowGolemSoldier;
+import com.laz.tirphycraft.entity.render.aggressive.RenderBreaker;
 import com.laz.tirphycraft.entity.render.aggressive.RenderCerbere;
 import com.laz.tirphycraft.entity.render.aggressive.RenderCloudy;
 import com.laz.tirphycraft.entity.render.aggressive.RenderDeadPlayer;
@@ -84,6 +87,7 @@ import com.laz.tirphycraft.entity.render.passif.RenderMontauk;
 import com.laz.tirphycraft.entity.render.passif.RenderToxicCow;
 import com.laz.tirphycraft.entity.render.passif.RenderVidargavia;
 import com.laz.tirphycraft.entity.render.projectile.RenderIceBall;
+import com.laz.tirphycraft.entity.render.projectile.RenderMeteorite;
 
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -489,6 +493,26 @@ public class RenderHandler {
 			@Override
 			public RenderAngrySnowGolemRange createRenderFor(RenderManager manager) {
 				return new RenderAngrySnowGolemRange(manager);
+
+			}
+
+		});
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityBreaker.class, new IRenderFactory<EntityBreaker>() {
+
+			@Override
+			public RenderBreaker createRenderFor(RenderManager manager) {
+				return new RenderBreaker(manager);
+
+			}
+
+		});
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityMeteorite.class, new IRenderFactory<EntityMeteorite>() {
+
+			@Override
+			public RenderMeteorite createRenderFor(RenderManager manager) {
+				return new RenderMeteorite(manager);
 
 			}
 

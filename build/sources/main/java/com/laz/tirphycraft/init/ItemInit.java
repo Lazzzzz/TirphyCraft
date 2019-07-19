@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.laz.tirphycraft.Main;
+import com.laz.tirphycraft.objects.artefact.ArtefactFeatherOfLight;
+import com.laz.tirphycraft.objects.artefact.ArtefactSunTear;
 import com.laz.tirphycraft.objects.base.ItemBase;
 import com.laz.tirphycraft.objects.items.debugStickySticky;
 import com.laz.tirphycraft.objects.items.amulets.Amulet_1_attack;
@@ -229,5 +231,9 @@ public class ItemInit {
 	public static final Item FROZ_CLOCK			   = new ItemClock("froz_clock", 123, "Go to Froz");
 	
 	public static final Item DEBUG				   = new debugStickySticky();
+
+	//ARTEFACT
+	public static final Item ARTEFACT_1 		   = new ArtefactFeatherOfLight();
+	public static final Item ARTEFACT_2			   = new ArtefactSunTear();
 		
 }

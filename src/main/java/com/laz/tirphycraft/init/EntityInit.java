@@ -3,6 +3,7 @@ package com.laz.tirphycraft.init;
 import com.laz.tirphycraft.Main;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemRange;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemSoldier;
+import com.laz.tirphycraft.entity.entityClass.aggressive.EntityBreaker;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCerbere;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityCloudy;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityDeadPlayer;
@@ -43,6 +44,7 @@ import com.laz.tirphycraft.entity.entityClass.passif.EntityMontauk;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityToxisCow;
 import com.laz.tirphycraft.entity.entityClass.passif.EntityVidargavia;
 import com.laz.tirphycraft.entity.entityClass.projectile.EntityIceBall;
+import com.laz.tirphycraft.entity.entityClass.projectile.EntityMeteorite;
 import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
@@ -80,6 +82,7 @@ public class EntityInit {
 		registerEntity("plyton", EntityPlyton.class, ConfigHandler.ENTITY_PLYTON, 500, 000000, 000000);
 		registerEntity("Soldier Snow Golem", EntityAngrySnowGolemSoldier.class, ConfigHandler.ENTITY_SOLDIER_SNOWGOLEM, 500, 000000, 000000);
 		registerEntity("Range Snow Golem", EntityAngrySnowGolemRange.class, ConfigHandler.ENTITY_RANGE_SNOWGOLEM, 500, 000000, 000000);
+		registerEntity("Breaker", EntityBreaker.class, ConfigHandler.ENTITY_BREAKER, 500, 000000, 000000);
 		
 		//NEUTRAL
 		registerEntity("mothmoth", EntityMothmoth.class, ConfigHandler.ENTITY_MOTHMOTH, 50, 3690832, 3690832);	
@@ -111,6 +114,7 @@ public class EntityInit {
 		//OTHER
 		registerEntity("stellar", EntityStellar.class, ConfigHandler.ENTITY_STELLAR, 50, 3092992, 3092992);
 		registerEntity("ice_ball", EntityIceBall.class, ConfigHandler.ENTITY_ICE_BALL, 50, 3092992, 3092992);
+		registerEntity("meteorite", EntityMeteorite.class, ConfigHandler.ENTITY_METEORITE, 500, 3092992, 3092992);
 		
 		addSpawn();
 		

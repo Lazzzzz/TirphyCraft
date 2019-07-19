@@ -60,6 +60,8 @@ public class ConfigHandler {
 	public static int ENTITY_VELOCIRAPTOR = 160;
 	public static int ENTITY_SOLDIER_SNOWGOLEM = 161;
 	public static int ENTITY_RANGE_SNOWGOLEM = 162;
+	public static int ENTITY_BREAKER = 163;
+	public static int ENTITY_METEORITE = 164;
 	
 	// WORLD
 	public static int DIMENSION_NOXIS_ID = 120;
@@ -150,6 +152,12 @@ public class ConfigHandler {
 				1000, "");
 
 		ENTITY_RANGE_SNOWGOLEM = config.getInt("ENTITY_RANGE_SNOWGOLEM", category, ENTITY_RANGE_SNOWGOLEM, ENTITY_RANGE_SNOWGOLEM,
+				1000, "");
+		
+		ENTITY_BREAKER = config.getInt("ENTITY_BREAKER", category, ENTITY_BREAKER, ENTITY_BREAKER,
+				1000, "");
+	
+		ENTITY_METEORITE = config.getInt("ENTITY_METEORITE", category, ENTITY_METEORITE, ENTITY_METEORITE,
 				1000, "");
 
 		category = "IDs GUI";

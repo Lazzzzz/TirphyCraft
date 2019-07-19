@@ -13,8 +13,5 @@ public class Reference {
 	public static final String COMMOM_PROXY_CLASS = "com.laz.tirphycraft.proxy.CommonProxy";
 	public static final CommonProxy PROXY = new ClientProxy();
 
-	public static int MAX_PASSIF_CREATURE = ConfigHandler.MAX_PASSIF_CREATURE;
-	public static int MAX_SIZE_CLOUD = ConfigHandler.MAX_SIZE_CLOUD;
-
 	public static boolean SPAWN_BIOMES_OVERWORLD = ConfigHandler.SPAWN_BIOMES_OVERWORLD;
 }

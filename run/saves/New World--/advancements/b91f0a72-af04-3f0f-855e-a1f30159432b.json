@@ -1,0 +1,8 @@
+{
+  "minecraft:nether/get_wither_skull": {
+    "criteria": {
+      "wither_skull": "2019-07-19 01:00:02 +0200"
+    },
+    "done": true
+  }
+}

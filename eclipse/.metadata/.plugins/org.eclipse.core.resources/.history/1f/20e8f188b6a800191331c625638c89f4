@@ -1,0 +1,56 @@
+package com.laz.tirphycraft.world.biomes.froz.caveDecorator;
+
+import java.util.Random;
+
+import com.laz.tirphycraft.init.BlockInit;
+
+import net.minecraft.block.BlockObserver;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+
+public class CaveGenMixte extends WorldGenAbstractTree {
+	public static final IBlockState GRASS = BlockInit.NOXIS_GRASS.getDefaultState();
+	public static final IBlockState PLANT = BlockInit.FROZ_PLANT_BLUE_ROSE.getDefaultState();
+
+	public CaveGenMixte() {
+		super(false);
+	}
+
+	@Override
+	public boolean generate(World worldIn, Random rand, BlockPos pos) {
+		for (int i = 0; i < 20; i++) {
+			int x = rand.nextInt(10) - 5;
+			int y = rand.nextInt(10) - 5;
+			int z = rand.nextInt(10) - 5;
+			if (worldIn.getBlockState(pos.add(x, y, z)) == BlockInit.FROZ_STONE.getDefaultState()) {
+				
+				if (worldIn.getBlockState(pos.add(x, y, z).down()) == Blocks.AIR.getDefaultState()) {
+					if (rand.nextBoolean()) worldIn.setBlockState(pos.add(x, y, z), BlockInit.FROZ_CAVE_MOSS.getDefaultState());
+					else worldIn.setBlockState(pos.add(x, y, z), BlockInit.FROZ_CAVE_ROOT.getDefaultState());
+				}
+				
+				
+				if (worldIn.getBlockState(pos.add(x, y, z).up()) == Blocks.AIR.getDefaultState()
+						|| worldIn.getBlockState(pos.add(x, y, z).down()) == Blocks.AIR.getDefaultState()
+						|| worldIn.getBlockState(pos.add(x, y, z).north()) == Blocks.AIR.getDefaultState()
+						|| worldIn.getBlockState(pos.add(x, y, z).south()) == Blocks.AIR.getDefaultState()
+						|| worldIn.getBlockState(pos.add(x, y, z).west()) == Blocks.AIR.getDefaultState()
+						|| worldIn.getBlockState(pos.add(x, y, z).east()) == Blocks.AIR.getDefaultState()) {
+					
+					if (rand.nextBoolean())
+						worldIn.setBlockState(pos.add(x, y, z), BlockInit.FROZ_COBBLESTONE.getDefaultState());
+					else {
+						if (pos.add(x, y, z).getY() > rand.nextInt(20) + 20) worldIn.setBlockState(pos.add(x, y, z), Blocks.ICE.getDefaultState());
+						else worldIn.setBlockState(pos.add(x, y, z), Blocks.PACKED_ICE.getDefaultState());
+					}
+					
+				}
+			}
+		}
+		return true;
+
+	}
+}

@@ -13,7 +13,7 @@ maxFps:260
 fboEnable:true
 difficulty:2
 fancyGraphics:false
-ao:2
+ao:0
 renderClouds:false
 resourcePacks:[]
 incompatibleResourcePacks:[]
@@ -96,7 +96,7 @@ key_key.jei.nextPage:209
 key_key.jei.bookmark:30
 key_key.jei.toggleBookmarkOverlay:0
 soundCategory_master:0.0
-soundCategory_music:0.0
+soundCategory_music:1.0
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0

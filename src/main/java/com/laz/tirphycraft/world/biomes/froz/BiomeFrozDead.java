@@ -2,6 +2,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 
 import java.util.Random;
 
+import com.laz.tirphycraft.world.biomes.froz.caveDecorator.BiomeFrozCaveDecorator;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBushTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozMiniBushDownTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozMiniBushTree;
@@ -45,6 +46,11 @@ public class BiomeFrozDead extends Biome {
 			j = rand.nextInt(16) + 8;
 			k = rand.nextInt(16) + 8;
 			new WorldGenFrozMiniBushDownTree().generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
+		}
+		for (int i = 0; i < 20; i++) {
+			int j = rand.nextInt(16) + 8;
+			int k = rand.nextInt(16) + 8;
+			new BiomeFrozCaveDecorator().genDecorator(worldIn, rand, pos.add(j,0,k), 80);
 		}
 	}
 
