@@ -1,7 +1,10 @@
 {
   "pools": [
     {
-      "rolls": 1,
+      "rolls": {
+        "min": 8,
+        "max": 14
+      },
       "entries": [
         {
           "type": "item",
