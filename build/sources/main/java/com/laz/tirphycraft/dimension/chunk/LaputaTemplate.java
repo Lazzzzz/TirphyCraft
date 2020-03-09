@@ -5,14 +5,15 @@ import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
 
-import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldEntitySpawner;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.SpawnListEntry;
 import net.minecraft.world.chunk.Chunk;
@@ -77,12 +78,17 @@ public class LaputaTemplate implements IChunkGenerator {
 		this.islandNoise = ctx.getIsland();
 	}
 
+	/**
+	 * Generates a bare-bones chunk of nothing but stone or ocean blocks, formed,
+	 * but featureless.
+	 */
 	public void setBlocksInChunk(int x, int z, ChunkPrimer primer) {
 		int i = 2;
 		int j = 3;
 		int k = 33;
 		int l = 3;
 		this.buffer = this.getHeights(this.buffer, x * 2, 0, z * 2, 3, 33, 3);
+
 		for (int i1 = 0; i1 < 2; ++i1) {
 			for (int j1 = 0; j1 < 2; ++j1) {
 				for (int k1 = 0; k1 < 32; ++k1) {
@@ -95,30 +101,37 @@ public class LaputaTemplate implements IChunkGenerator {
 					double d6 = (this.buffer[((i1 + 0) * 3 + j1 + 1) * 33 + k1 + 1] - d2) * 0.25D;
 					double d7 = (this.buffer[((i1 + 1) * 3 + j1 + 0) * 33 + k1 + 1] - d3) * 0.25D;
 					double d8 = (this.buffer[((i1 + 1) * 3 + j1 + 1) * 33 + k1 + 1] - d4) * 0.25D;
+
 					for (int l1 = 0; l1 < 4; ++l1) {
 						double d9 = 0.125D;
 						double d10 = d1;
 						double d11 = d2;
 						double d12 = (d3 - d1) * 0.125D;
 						double d13 = (d4 - d2) * 0.125D;
+
 						for (int i2 = 0; i2 < 8; ++i2) {
 							double d14 = 0.125D;
 							double d15 = d10;
 							double d16 = (d11 - d10) * 0.125D;
+
 							for (int j2 = 0; j2 < 8; ++j2) {
 								IBlockState iblockstate = AIR;
+
 								if (d15 > 0.0D) {
 									iblockstate = BlockInit.LAPUTA_STONE.getDefaultState();
 								}
+
 								int k2 = i2 + i1 * 8;
 								int l2 = l1 + k1 * 4;
 								int i3 = j2 + j1 * 8;
 								primer.setBlockState(k2, l2, i3, iblockstate);
 								d15 += d16;
 							}
+
 							d10 += d12;
 							d11 += d13;
 						}
+
 						d1 += d5;
 						d2 += d6;
 						d3 += d7;
@@ -139,13 +152,16 @@ public class LaputaTemplate implements IChunkGenerator {
 				int l = -1;
 				IBlockState iblockstate = BlockInit.LAPUTA_GRASS.getDefaultState();
 				IBlockState iblockstate1 = BlockInit.LAPUTA_DIRT.getDefaultState();
+
 				for (int i1 = 127; i1 >= 0; --i1) {
 					IBlockState iblockstate2 = primer.getBlockState(i, i1, j);
+
 					if (iblockstate2.getMaterial() == Material.AIR) {
 						l = -1;
 					} else if (iblockstate2.getBlock() == BlockInit.LAPUTA_STONE) {
 						if (l == -1) {
 							l = 3;
+
 							if (i1 >= 0) {
 								primer.setBlockState(i, i1, j, iblockstate);
 							} else {
@@ -161,11 +177,15 @@ public class LaputaTemplate implements IChunkGenerator {
 		}
 	}
 
+	/**
+	 * Generates the chunk at the specified position, from scratch
+	 */
 	public Chunk generateChunk(int x, int z) {
 		this.chunkX = x;
 		this.chunkZ = z;
 		this.rand.setSeed((long) x * 341873128712L + (long) z * 132897987541L);
 		ChunkPrimer chunkprimer = new ChunkPrimer();
+
 		this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, x * 16, z * 16, 16,
 				16);
 		this.setBlocksInChunk(x, z, chunkprimer);
@@ -325,55 +345,6 @@ public class LaputaTemplate implements IChunkGenerator {
 		return var1;
 	}
 
-	public void populate(int x, int z) {
-		BlockFalling.fallInstantly = true;
-		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(true, this, this.world, this.rand, x, z, false);
-		BlockPos blockpos = new BlockPos(x * 16, 0, z * 16);
-
-		this.world.getBiome(blockpos.add(16, 0, 16)).decorate(this.world, this.world.rand, blockpos);
-		long i = (long) x * (long) x + (long) z * (long) z;
-
-		if (i > 4096L) {
-			float f = this.getIslandHeightValue(x, z, 1, 1);
-
-			if (f < -20.0F && this.rand.nextInt(14) == 0) {
-				// this.endIslands.generate(this.world, this.rand,
-				// blockpos.add(this.rand.nextInt(16) + 8, 55 + this.rand.nextInt(16),
-				// this.rand.nextInt(16) + 8));
-
-				if (this.rand.nextInt(4) == 0) {
-					// this.endIslands.generate(this.world, this.rand,
-					// blockpos.add(this.rand.nextInt(16) + 8, 55 + this.rand.nextInt(16),
-					// this.rand.nextInt(16) + 8));
-				}
-			}
-
-			if (this.getIslandHeightValue(x, z, 1, 1) > 40.0F) {
-				int j = this.rand.nextInt(5);
-
-				for (int k = 0; k < j; ++k) {
-					int l = this.rand.nextInt(16) + 8;
-					int i1 = this.rand.nextInt(16) + 8;
-					int j1 = this.world.getHeight(blockpos.add(l, 0, i1)).getY();
-
-					if (j1 > 0) {
-						int k1 = j1 - 1;
-					}
-				}
-
-				if (this.rand.nextInt(700) == 0) {
-					int l1 = this.rand.nextInt(16) + 8;
-					int i2 = this.rand.nextInt(16) + 8;
-					int j2 = this.world.getHeight(blockpos.add(l1, 0, i2)).getY();
-
-				}
-			}
-		}
-
-		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(false, this, this.world, this.rand, x, z, false);
-		BlockFalling.fallInstantly = false;
-	}
-
 	@Override
 	public List<SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
 		Biome biome = this.world.getBiomeProvider().getBiome(pos);
@@ -400,6 +371,25 @@ public class LaputaTemplate implements IChunkGenerator {
 	public BlockPos getNearestStructurePos(World worldIn, String structureName, BlockPos position,
 			boolean findUnexplored) {
 		return null;
+	}
+
+	@Override
+	public void populate(int chunkX, int chunkZ) {
+		int x = chunkX * 16;
+		int z = chunkZ * 16;
+
+		BlockPos pos = new BlockPos(x, 0, z);
+		ChunkPos chunkpos = new ChunkPos(chunkX, chunkZ);
+
+		Biome biome = this.world.getBiome(pos.add(16, 0, 16));
+
+		this.rand.setSeed(this.world.getSeed());
+		long k = this.rand.nextLong() / 2L * 2L + 1L;
+		long l = this.rand.nextLong() / 2L * 2L + 1L;
+		this.rand.setSeed((long) x * k + (long) z * l ^ this.world.getSeed());
+		biome.decorate(this.world, this.rand, pos);
+
+		WorldEntitySpawner.performWorldGenSpawning(this.world, biome, x + 8, z + 8, 16, 16, this.rand);
 	}
 
 }

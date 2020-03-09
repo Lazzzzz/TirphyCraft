@@ -3,6 +3,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 import java.util.Random;
 
 import com.laz.tirphycraft.world.biomes.froz.caveDecorator.BiomeFrozCaveDecorator;
+import com.laz.tirphycraft.world.gen.generators.structures.froz.WorldGenFrozSmallDungeon;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozBushTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozMiniBushDownTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozMiniBushTree;
@@ -13,6 +14,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
 public class BiomeFrozDead extends Biome {
+
+	BiomeFrozCaveDecorator CAVE = new BiomeFrozCaveDecorator();
 
 	public BiomeFrozDead() {
 
@@ -50,7 +53,12 @@ public class BiomeFrozDead extends Biome {
 		for (int i = 0; i < 20; i++) {
 			int j = rand.nextInt(16) + 8;
 			int k = rand.nextInt(16) + 8;
-			new BiomeFrozCaveDecorator().genDecorator(worldIn, rand, pos.add(j,0,k), 80);
+			CAVE.genDecorator(worldIn, rand, pos.add(j, 0, k), 80);
+		}
+		if (rand.nextInt(25) == 0) {
+			int j = rand.nextInt(16) + 8;
+			int k = rand.nextInt(16) + 8;
+			new WorldGenFrozSmallDungeon().generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
 		}
 	}
 

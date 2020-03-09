@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeForestNoxis;
+import com.laz.tirphycraft.world.biomes.noxis.BiomeNoxis;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.WorldGenNormalCoppirTree;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.WorldGenNormalGoldirTree;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.WorldGenNormalSilvirTree;
@@ -37,9 +37,9 @@ public class WorldGenCustomTree implements IWorldGenerator
 			
 		case 0:
 			
-			runGenerator(NORMAL_COPPIR, world, random, chunkX, chunkZ, 1, BlockInit.NOXIS_GRASS, BiomeForestNoxis.class);
-			runGenerator(NORMAL_SILVIR, world, random, chunkX, chunkZ, 1, BlockInit.NOXIS_GRASS, BiomeForestNoxis.class);	
-			runGenerator(NORMAL_GOLDIR, world, random, chunkX, chunkZ, 1, BlockInit.NOXIS_GRASS, BiomeForestNoxis.class);				
+			runGenerator(NORMAL_COPPIR, world, random, chunkX, chunkZ, 1, BlockInit.NOXIS_GRASS, BiomeNoxis.class);
+			runGenerator(NORMAL_SILVIR, world, random, chunkX, chunkZ, 1, BlockInit.NOXIS_GRASS, BiomeNoxis.class);	
+			runGenerator(NORMAL_GOLDIR, world, random, chunkX, chunkZ, 1, BlockInit.NOXIS_GRASS, BiomeNoxis.class);				
 			break;
 			
 		case -1:

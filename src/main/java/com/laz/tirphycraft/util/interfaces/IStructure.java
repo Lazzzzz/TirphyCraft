@@ -1,6 +1,5 @@
 package com.laz.tirphycraft.util.interfaces;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.util.Mirror;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.gen.structure.template.PlacementSettings;

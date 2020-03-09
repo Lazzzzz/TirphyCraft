@@ -1,0 +1,12 @@
+package com.laz.tirphycraft.dimension.chunk.arcana;
+
+import com.laz.tirphycraft.init.BiomeInit;
+
+import net.minecraft.world.biome.BiomeProviderSingle;
+
+public class BiomeProviderArcana extends BiomeProviderSingle {
+
+    public BiomeProviderArcana() {
+        super(BiomeInit.FROZ_PLAINE);
+    }
+}

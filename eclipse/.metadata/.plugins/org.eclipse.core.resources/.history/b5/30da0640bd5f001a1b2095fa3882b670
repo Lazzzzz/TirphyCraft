@@ -1,0 +1,23 @@
+package com.laz.tirphycraft.objects.blocks.trees.sapling;
+
+import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.objects.base.BlockBase;
+
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class BlockNoxisThorns extends BlockBase {
+
+	public BlockNoxisThorns(String name, Material material, float hard, float resist, String type, int i, SoundType sound) {
+		super(name, material, hard, resist, type, i, sound);
+	
+	}
+
+	@Override
+	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
+		if (worldIn.getBlockState(pos.down()) != BlockInit.NOXIS_STONE.getDefaultState()) return false;
+		return super.canPlaceBlockAt(worldIn, pos);
+	}
+}

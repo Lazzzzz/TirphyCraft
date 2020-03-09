@@ -31,7 +31,7 @@ public class DimensionLibraryNoxis extends WorldProvider {
 
 	@Override
 	public IChunkGenerator createChunkGenerator() {
-		return new NoxisTemplate(this.world, this.world.getSeed());
+		return new NoxisTemplate(this.world, false, this.world.getSeed(), null);
 	}
 
 	@Override

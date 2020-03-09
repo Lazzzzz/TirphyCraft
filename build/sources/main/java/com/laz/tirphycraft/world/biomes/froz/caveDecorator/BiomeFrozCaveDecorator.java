@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 
 public class BiomeFrozCaveDecorator {
 	CaveGenMixte MIXTE = new CaveGenMixte();
+	CaveGenStruc STRUCT = new CaveGenStruc();
 	CaveGenWoodPillar WOOD_PILLAR = new CaveGenWoodPillar();
 	CaveGenVines VINES = new CaveGenVines();
 
@@ -21,6 +22,7 @@ public class BiomeFrozCaveDecorator {
 			y = newPos.getY() + 1;
 
 			// DO STUFF
+			STRUCT.generate(worldIn, newPos, rand);
 			MIXTE.generate(worldIn, rand, newPos);
 			generateRandomDeco(worldIn, rand, newPos);
 
@@ -43,17 +45,18 @@ public class BiomeFrozCaveDecorator {
 		// COMMON DECO
 		if (rand.nextInt(5) == 0) {
 			int i = rand.nextInt(2);
-			
-			if (i == 0)	VINES.generate(worldIn, rand, pos);
-			else if (i == 1) WOOD_PILLAR.generate(worldIn, rand, pos);
+
+			if (i == 0)
+				VINES.generate(worldIn, rand, pos);
+			else if (i == 1)
+				WOOD_PILLAR.generate(worldIn, rand, pos);
 
 		}
-
-		// RARE DECO
-		if (rand.nextInt(20) == 0) {
-
-		}
-
+		/*
+		 * rare if (rand.nextInt(20) == 0) {
+		 * 
+		 * }
+		 */
 	}
 
 }

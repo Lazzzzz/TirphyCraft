@@ -1,0 +1,60 @@
+package com.laz.tirphycraft.entity.model.neutral;
+
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelBox;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
+
+public class ModelMothmoth extends ModelBase {
+	private final ModelRenderer body2;
+	private final ModelRenderer upper_jaw;
+	private final ModelRenderer lowerjaw;
+	private final ModelRenderer body1;
+	private final ModelRenderer body3;
+
+	public ModelMothmoth() {
+		textureWidth = 128;
+		textureHeight = 128;
+
+		body2 = new ModelRenderer(this);
+		body2.setRotationPoint(0.0F, 20.0F, 9.0F);
+		body2.cubeList.add(new ModelBox(body2, 42, 42, -6.0F, -6.0F, -17.0F, 13, 10, 16, 0.0F, false));
+
+		upper_jaw = new ModelRenderer(this);
+		upper_jaw.setRotationPoint(0.0F, 19.0F, 24.0F);
+		upper_jaw.cubeList.add(new ModelBox(upper_jaw, 0, 52, -6.0F, -5.0F, 0.0F, 13, 6, 16, 0.0F, false));
+
+		lowerjaw = new ModelRenderer(this);
+		lowerjaw.setRotationPoint(0.0F, 22.0F, 24.0F);
+		setRotationAngle(lowerjaw, -0.1745F, 0.0F, 0.0F);
+		lowerjaw.cubeList.add(new ModelBox(lowerjaw, 42, 10, -6.0F, -2.0F, 0.0F, 13, 6, 16, 0.0F, false));
+
+		body1 = new ModelRenderer(this);
+		body1.setRotationPoint(0.0F, 21.0F, 25.0F);
+		body1.cubeList.add(new ModelBox(body1, 0, 0, -6.0F, -7.0F, -17.0F, 13, 10, 16, 0.0F, false));
+
+		body3 = new ModelRenderer(this);
+		body3.setRotationPoint(0.0F, 20.0F, -8.0F);
+		body3.cubeList.add(new ModelBox(body3, 0, 26, -6.0F, -6.0F, -16.0F, 13, 10, 16, 0.0F, false));
+	}
+
+	@Override
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+		body2.render(f5);
+		upper_jaw.render(f5);
+		lowerjaw.render(f5);
+		body1.render(f5);
+		body3.render(f5);
+	}
+	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+		modelRenderer.rotateAngleX = x;
+		modelRenderer.rotateAngleY = y;
+		modelRenderer.rotateAngleZ = z;
+	}
+	
+    @Override
+    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
+    		float headPitch, float scaleFactor, Entity entityIn) {
+    }
+}

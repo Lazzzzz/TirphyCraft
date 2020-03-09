@@ -13,6 +13,8 @@ import net.minecraft.world.biome.Biome;
 
 public class BiomeFrozSlawomirBurrows extends Biome {
 
+	BiomeFrozCaveDecorator CAVE = new BiomeFrozCaveDecorator();
+	
 	public BiomeFrozSlawomirBurrows() {
 
 		super(new BiomeProperties("Forz Slawomir Burrows").setBaseHeight(0.7F).setHeightVariation(0.05F).setTemperature(-10F)
@@ -45,7 +47,7 @@ public class BiomeFrozSlawomirBurrows extends Biome {
 		for (int i = 0; i < 20; i++) {
 			int j = rand.nextInt(16) + 8;
 			int k = rand.nextInt(16) + 8;
-			new BiomeFrozCaveDecorator().genDecorator(worldIn, rand, pos.add(j,0,k), 80);
+			CAVE.genDecorator(worldIn, rand, pos.add(j,0,k), 80);
 		}
 	}
 

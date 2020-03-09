@@ -1,10 +1,8 @@
 package com.laz.tirphycraft.entity.entityClass.passif;
 
-import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;

@@ -3,6 +3,7 @@ package com.laz.tirphycraft.world.biomes.froz;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.world.biomes.froz.caveDecorator.BiomeFrozCaveDecorator;
 import com.laz.tirphycraft.world.gen.generators.structures.froz.WorldGenFrozDungeon;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozSlick;
@@ -15,6 +16,8 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 public class BiomeFrozPlaine extends Biome {
 
+	BiomeFrozCaveDecorator CAVE = new BiomeFrozCaveDecorator();
+	
 	public BiomeFrozPlaine() {
 
 		super(new BiomeProperties("Forz plaine").setBaseHeight(0.125F).setHeightVariation(0.05F).setTemperature(-10F)
@@ -30,6 +33,8 @@ public class BiomeFrozPlaine extends Biome {
 		this.spawnableCaveCreatureList.clear();
 
 	}
+	
+	
 
 	@Override
 	public void decorate(World worldIn, Random rand, BlockPos pos) {
@@ -38,6 +43,12 @@ public class BiomeFrozPlaine extends Biome {
 			int j = rand.nextInt(16) + 8;
 			int k = rand.nextInt(16) + 8;
 			new WorldGenFrozDungeon().generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
+		}
+		
+		for (int i = 0; i < 20; i++) {
+			int j = rand.nextInt(16) + 8;
+			int k = rand.nextInt(16) + 8;
+			CAVE.genDecorator(worldIn, rand, pos.add(j,0,k), 130);
 		}
 		
 		

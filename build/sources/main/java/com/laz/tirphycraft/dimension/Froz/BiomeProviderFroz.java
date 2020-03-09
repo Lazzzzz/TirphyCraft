@@ -44,7 +44,7 @@ public class BiomeProviderFroz extends BiomeProvider {
 	public Biome getBiome(BlockPos pos, Biome defaultBiome) {
 		return this.biomeCache.getBiome(pos.getX(), pos.getZ(), defaultBiome);
 	}
-
+	   
 	@Override
 	public Biome[] getBiomesForGeneration(Biome[] par1ArrayOfBiome, int par2, int par3, int par4, int par5) {
 		IntCache.resetIntCache();

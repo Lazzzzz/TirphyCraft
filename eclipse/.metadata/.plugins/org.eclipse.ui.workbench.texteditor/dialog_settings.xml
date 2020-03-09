@@ -6,29 +6,33 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="rotation" key="selection"/>
+		<item value="particleRed" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="rotation"/>
-			<item value="CONFIG"/>
-			<item value="enumStalactite"/>
-			<item value="start"/>
-			<item value="STON"/>
-			<item value="END"/>
-			<item value="dun"/>
-			<item value="dung"/>
-			<item value="du"/>
-			<item value="fro"/>
-			<item value="caveGenerator"/>
-			<item value="&#x09;&#x09;caveGenerator = net.minecraftforge.event.terraingen.TerrainGen.getModdedMapGen(new NoxisCaveGen(),"/>
-			<item value="enum"/>
-			<item value="enu"/>
-			<item value="ore"/>
+			<item value="particleRed"/>
+			<item value="noxis"/>
+			<item value="river"/>
+			<item value="myst"/>
+			<item value="STONE"/>
+			<item value="stone"/>
+			<item value="this.rand"/>
+			<item value="rand"/>
+			<item value="random"/>
+			<item value="digBlock"/>
+			<item value="Y"/>
+			<item value="SET"/>
+			<item value="SETBL"/>
+			<item value="air"/>
+			<item value="froz"/>
 		</list>
 		<list key="replacehistory">
+			<item value="BlockInit.NOXIS_STONE"/>
+			<item value="OBSIDIAN"/>
+			<item value="tirphycraft:cave"/>
+			<item value="cave_vines"/>
 			<item value="enumStalagmite"/>
 			<item value="size"/>
 			<item value="10"/>
@@ -40,17 +44,13 @@
 			<item value="FROZ_BOSS_WALL"/>
 			<item value="froz"/>
 			<item value="laputa"/>
-			<item value="brick_noxis"/>
-			<item value="brick_froz"/>
-			<item value="brick_laputa"/>
-			<item value="BlockInit.BLACK_CRYSTAL"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="764" key="DIALOG_WIDTH"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-		<item value="441" key="DIALOG_HEIGHT"/>
-		<item value="-76" key="DIALOG_X_ORIGIN"/>
-		<item value="371" key="DIALOG_Y_ORIGIN"/>
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="1410" key="DIALOG_X_ORIGIN"/>
+		<item value="359" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

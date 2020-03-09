@@ -23,7 +23,7 @@ public class EntityAngrySnowGolemSoldier extends EntityMob {
 	public EntityAngrySnowGolemSoldier(World worldIn) {
 
 		super(worldIn);
-		this.setSize(0.7F, 1.9F);
+		this.setSize(1F, 1F);
 
 	}
 	
@@ -40,7 +40,7 @@ public class EntityAngrySnowGolemSoldier extends EntityMob {
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(40.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.20000000298023224D);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.10000000298023224D);
         this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(10);
 	}
 

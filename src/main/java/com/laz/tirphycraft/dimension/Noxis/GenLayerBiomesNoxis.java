@@ -8,9 +8,7 @@ import net.minecraft.world.gen.layer.IntCache;
 
 public class GenLayerBiomesNoxis extends GenLayer {
 
-	private Biome[] allowedBiomes = { BiomeInit.NOXIS_LAC, BiomeInit.NOXIS_HILLS, BiomeInit.NOXIS_BIG_FOREST,
-			BiomeInit.NOXIS_BIG_FOREST, BiomeInit.NOXIS, BiomeInit.NOXIS_ICE, BiomeInit.NOXIS_S_HILLS,
-			BiomeInit.NOXIS_S_HILLS, BiomeInit.NOXIS_MUSHROOM, BiomeInit.NOXIS_ROCK };
+	private Biome[] allowedBiomes = { BiomeInit.NOXIS };
 
 	public GenLayerBiomesNoxis(long seed) {
 		super(seed);

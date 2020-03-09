@@ -1,0 +1,5 @@
+package com.laz.tirphycraft.world.gen.generators.noxis;
+
+public class WorldGenNoxisLakes {
+
+}

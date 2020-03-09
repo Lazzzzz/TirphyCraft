@@ -2,24 +2,26 @@ package com.laz.tirphycraft.world.gen.generators.trees.laputa;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.init.BlockInit;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 public class WorldGenStem extends WorldGenAbstractTree {
-	private static final IBlockState TRUNK = BlockInit.STEM.getDefaultState();
+	
+	IBlockState TRUNK;
+	int SIZE;
 
-	public WorldGenStem() {
+	public WorldGenStem(IBlockState block, int nb) {
 		super(false);
+		TRUNK = block;
+		SIZE  = nb;
 	}
 
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 		
 		if (position.getY() >= 1 && position.getY() + 1 <= 240) {
-			int r = rand.nextInt(2)+2;
+			int r = rand.nextInt(SIZE)+2;
 			generateStem(worldIn, rand, position, r, true, true, true, true);
 			return true;
 		}

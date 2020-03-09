@@ -1,5 +1,7 @@
 package com.laz.tirphycraft.util;
 
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -8,44 +10,45 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 
-public class CustomTeleporter extends Teleporter
-{
+public class CustomTeleporter extends Teleporter {
 	private final WorldServer world;
-    private double x, y, z;
-	
-	public CustomTeleporter(WorldServer world, double x, double y, double z) 
-	{
+	private double x, y, z;
+
+	public CustomTeleporter(WorldServer world, double x, double y, double z) {
 		super(world);
 		this.world = world;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
-	
+
 	@Override
-	public void placeInPortal(Entity entity, float rotationYaw) 
-	{
+	public void placeInPortal(Entity entity, float rotationYaw) {
 		this.world.getBlockState(new BlockPos((int) this.x, (int) this.y, (int) this.z));
-        entity.setPosition(this.x, this.y, this.z);
-        entity.motionX = 0.0f;
-        entity.motionY = 0.0f;
-        entity.motionZ = 0.0f;
+		entity.setPosition(this.x, this.y, this.z);
+		entity.motionX = 0.0f;
+		entity.motionY = 0.0f;
+		entity.motionZ = 0.0f;
 	}
-	
-	public static void teleportToDimension(EntityPlayer player, int dimension, double x, double y, double z) 
-	{
-        int oldDimension = player.getEntityWorld().provider.getDimension();
-        EntityPlayerMP entityPlayerMP = (EntityPlayerMP) player;
-        MinecraftServer server = player.getEntityWorld().getMinecraftServer();
-        WorldServer worldServer = server.getWorld(dimension);
-        player.addExperienceLevel(0);
 
-        if (worldServer == null || worldServer.getMinecraftServer() == null)
-        {
-            throw new IllegalArgumentException("Dimension: "+dimension+" doesn't exist!");
-        }
+	public static void teleportToDimension(EntityPlayer player, int dimension, double x, double y, double z) {
+		int oldDimension = player.getEntityWorld().provider.getDimension();
+		EntityPlayerMP entityPlayerMP = (EntityPlayerMP) player;
+		MinecraftServer server = player.getEntityWorld().getMinecraftServer();
+		WorldServer worldServer = server.getWorld(dimension);
+		player.addExperienceLevel(0);
 
-        worldServer.getMinecraftServer().getPlayerList().transferPlayerToDimension(entityPlayerMP, dimension, new CustomTeleporter(worldServer, x, y, z));
-        player.setPositionAndUpdate(x, y, z);
-    }
+		if (worldServer == null || worldServer.getMinecraftServer() == null) {
+			throw new IllegalArgumentException("Dimension: " + dimension + " doesn't exist!");
+		}
+		if (dimension == ConfigHandler.DIMENSION_NOXIS_ID) {
+			worldServer.getMinecraftServer().getPlayerList().transferPlayerToDimension(entityPlayerMP, dimension,
+					new CustomTeleporter(worldServer, 0, y, 0));
+			player.setPositionAndUpdate(0, y, 0);
+		} else {
+			worldServer.getMinecraftServer().getPlayerList().transferPlayerToDimension(entityPlayerMP, dimension,
+					new CustomTeleporter(worldServer, x, y, z));
+			player.setPositionAndUpdate(x, y, z);
+		}
+	}
 }

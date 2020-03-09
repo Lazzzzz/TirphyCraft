@@ -5,6 +5,7 @@ import com.laz.tirphycraft.world.biomes.froz.BiomeFrozDead;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozDense;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozEternal;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozForest;
+import com.laz.tirphycraft.world.biomes.froz.BiomeFrozGiantForest;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozIceMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozMontain;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozPlaine;
@@ -15,14 +16,7 @@ import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMagic;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaMeteorite;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaNoManLand;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeBigForestNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeForestNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeFrozenNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeHillsNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeLacNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeMushroomNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeRockNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeSmallHillsNoxis;
+import com.laz.tirphycraft.world.biomes.noxis.BiomeNoxis;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
@@ -34,15 +28,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class BiomeInit 
 {
-	public static final Biome NOXIS 			= new BiomeForestNoxis();
-	public static final Biome NOXIS_HILLS		= new BiomeHillsNoxis();
-	public static final Biome NOXIS_LAC			= new BiomeLacNoxis();
-	public static final Biome NOXIS_ICE			= new BiomeFrozenNoxis();
-	public static final Biome NOXIS_S_HILLS		= new BiomeSmallHillsNoxis();
-	public static final Biome NOXIS_BIG_FOREST	= new BiomeBigForestNoxis();
-	public static final Biome NOXIS_MUSHROOM    = new BiomeMushroomNoxis();
-	public static final Biome NOXIS_ROCK		= new BiomeRockNoxis();
-	
+	public static final Biome NOXIS				= new BiomeNoxis();
 	
 	public static final Biome LAPUTA			= new BiomeLaputaForest();	
 	public static final Biome LAPUTANML			= new BiomeLaputaNoManLand();
@@ -60,18 +46,12 @@ public class BiomeInit
 	public static final Biome FROZ_DEAD			= new BiomeFrozDead();
 	public static final Biome FROZ_PLATE 		= new BiomeFrozPlate();
 	public static final Biome FROZ_SLAWOMIR     = new BiomeFrozSlawomirBurrows();
+	public static final Biome FROZ_GEANT		= new BiomeFrozGiantForest();
 	
 	
 	public static void registerBiomes()
 	{
-		initBiomeNoOverworld(NOXIS, "Noxis Forest",BiomeType.WARM, Type.PLAINS, Type.DRY);
-		initBiomeNoOverworld(NOXIS_HILLS, "Noxis Hills", BiomeType.WARM, Type.HILLS, Type.MOUNTAIN, Type.DRY);		
-		initBiomeNoOverworld(NOXIS_LAC, "Noxis Lac", BiomeType.COOL, Type.OCEAN, Type.DRY);	
-		initBiomeNoOverworld(NOXIS_ICE, "Noxis Ice", BiomeType.COOL, Type.PLAINS);
-		initBiomeNoOverworld(NOXIS_S_HILLS, "Noxis Small Hills", BiomeType.WARM, Type.HILLS, Type.MOUNTAIN, Type.DRY);
-		initBiomeNoOverworld(NOXIS_BIG_FOREST, "Noxis Big Forest" ,BiomeType.WARM, Type.PLAINS, Type.DRY);
-		initBiomeNoOverworld(NOXIS_MUSHROOM, "Noxis Mushroom" ,BiomeType.WARM, Type.PLAINS, Type.DRY);
-		initBiomeNoOverworld(NOXIS_ROCK, "Noxis Rock", BiomeType.DESERT, Type.DRY);
+		initBiomeNoOverworld(NOXIS, "Noxis Small Hills", BiomeType.WARM, Type.HILLS, Type.MOUNTAIN, Type.DRY);
 		
 		initBiomeNoOverworld(LAPUTA, "Laputa forest", BiomeType.COOL, Type.DENSE, Type.PLAINS);
 		initBiomeNoOverworld(LAPUTANML, "Laputa no man land", BiomeType.COOL, Type.DENSE, Type.PLAINS);
@@ -88,6 +68,7 @@ public class BiomeInit
 		initBiomeNoOverworld(FROZ_DEAD, "froz dead",  BiomeType.ICY, Type.COLD, Type.DENSE);
 		initBiomeNoOverworld(FROZ_PLATE, "froz plate",  BiomeType.ICY, Type.COLD, Type.DENSE);
 		initBiomeNoOverworld(FROZ_SLAWOMIR, "froz Slawomir Burrows",  BiomeType.ICY, Type.COLD, Type.DENSE, Type.RARE);
+		initBiomeNoOverworld(FROZ_GEANT, "froz geant forest",  BiomeType.ICY, Type.COLD, Type.DENSE, Type.RARE);
 		
 } 
 	

@@ -8,11 +8,13 @@ import com.laz.tirphycraft.particles.ParticleGlintPink;
 import com.laz.tirphycraft.particles.ParticleGlintPurple;
 import com.laz.tirphycraft.particles.ParticleGlintWhite;
 import com.laz.tirphycraft.particles.ParticleGlintYellow;
+import com.laz.tirphycraft.particles.ParticleLeaf;
 import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.interfaces.ParticleTypes;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
+import net.minecraft.client.particle.ParticleFallingDust;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -98,4 +100,42 @@ public class ClientProxy extends CommonProxy {
 		}
 	}
 
+	@SuppressWarnings("incomplete-switch")
+	@Override
+	public void spawnParticle(World world, ParticleTypes particleType, double x, double y, double z, double velX,
+			double velY, double velZ, float colorR, float colorG, float colorB) {
+		Minecraft mc = Minecraft.getMinecraft();
+		Entity entity = mc.getRenderViewEntity();
+
+		// ignore the passed-in world, since on SP we get the integrated server world,
+		// which is not really what we want
+		world = this.getClientWorld();
+
+		if (entity != null && mc.effectRenderer != null) {
+			int i = mc.gameSettings.particleSetting;
+
+			if (i == 1 && world.rand.nextInt(3) == 0) {
+				i = 2;
+			}
+
+			double d0 = entity.posX - x;
+			double d1 = entity.posY - y;
+			double d2 = entity.posZ - z;
+
+			if (d0 * d0 + d1 * d1 + d2 * d2 <= 1024D && i <= 1) {
+				Particle particle = null;
+
+				switch (particleType) {
+				case FALLING_LEAF:
+					particle = new ParticleLeaf(world, x, y, z, velX, velY, velZ, colorR, colorG, colorB);
+					break;
+				}
+
+				if (particle != null) {
+					mc.effectRenderer.addEffect(particle);
+				}
+			}
+		}
+	}
+	
 }

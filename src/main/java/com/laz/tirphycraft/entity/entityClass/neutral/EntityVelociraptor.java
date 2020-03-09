@@ -2,6 +2,8 @@ package com.laz.tirphycraft.entity.entityClass.neutral;
 
 import javax.annotation.Nullable;
 
+import com.laz.tirphycraft.init.ItemInit;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -231,7 +233,7 @@ public class EntityVelociraptor extends EntityMob {
 
 	public void feed(EntityPlayer player) {
 		if (player.inventory.getCurrentItem() != null) {
-			if (player.inventory.getCurrentItem().getItem() == Items.BEEF) {
+			if (player.inventory.getCurrentItem().getItem() == ItemInit.FROZEN_BOARCHOP_RAW || player.inventory.getCurrentItem().getItem() == ItemInit.FROZEN_BUFFALO_RAW) {
 				if (!this.tameable) {
 					if (this.rand.nextInt(20) == 0) {
 						this.tameable = true;

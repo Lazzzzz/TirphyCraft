@@ -1,7 +1,5 @@
 package com.laz.tirphycraft.world.gen.generators.froz;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
@@ -9,20 +7,14 @@ import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.StructureUtil;
 import com.laz.tirphycraft.util.interfaces.IStructure;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraft.world.gen.structure.template.Template;
 import net.minecraft.world.gen.structure.template.TemplateManager;
-import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class GenFrozRuinsTemplate extends WorldGenerator implements IStructure {
 	public String structureName;
@@ -35,11 +27,11 @@ public class GenFrozRuinsTemplate extends WorldGenerator implements IStructure {
 	private boolean checkForSawn(Template template, World world, BlockPos pos) {
 		for (int x = 0; x < template.getSize().getX(); x++) {
 			for (int z = 0; z < template.getSize().getZ(); z++) {
-				if (!world.getBlockState(pos.add(x, -1, z)).isFullBlock()
-						|| world.getBlockState(pos.add(x, 0, z)).isFullBlock()
-						|| world.getBlockState(pos.add(x, 1, z)).isFullBlock()) {
-					return false;
-
+				for (int y = 0; y < template.getSize().getY(); y++) {
+					if (!world.getBlockState(pos.add(x, -1, z)).isFullBlock()
+							|| world.getBlockState(pos.add(x, y, z)).isFullBlock()) {
+						return false;
+					}
 				}
 			}
 		}
@@ -52,8 +44,7 @@ public class GenFrozRuinsTemplate extends WorldGenerator implements IStructure {
 		int sizeZ = (int) template.getSize().getZ() / 2;
 
 		BlockPos newPos = pos.add(-sizeX, -1, -sizeZ);
-		
-		
+
 		for (int x = 0; x < template.getSize().getX(); x++) {
 			for (int z = 0; z < template.getSize().getZ(); z++) {
 				for (int y = 0; y < template.getSize().getY(); y++) {
@@ -77,7 +68,6 @@ public class GenFrozRuinsTemplate extends WorldGenerator implements IStructure {
 		boolean canPlace = checkForSawn(template, world, pos);
 
 		if (canPlace) {
-			System.out.println(pos);
 			IBlockState state = world.getBlockState(pos);
 			world.notifyBlockUpdate(pos, state, state, 3);
 			util.placeGood(location, world, settings, pos, rand, mcServer, manager);

@@ -7,11 +7,11 @@ import com.laz.tirphycraft.objects.base.BlockBase;
 import com.laz.tirphycraft.util.interfaces.IHasModel;
 import com.laz.tirphycraft.util.interfaces.IMetaName;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -50,6 +50,11 @@ public class BlockStalagmite extends BlockBase implements IHasModel, IMetaName {
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
 		world.scheduleUpdate(pos, this, this.tickRate(world));
 
+	}
+	
+	@Override
+	public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+		return BlockFaceShape.UNDEFINED;
 	}
 
 	@Override

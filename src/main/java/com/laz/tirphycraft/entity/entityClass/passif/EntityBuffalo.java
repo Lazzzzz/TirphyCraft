@@ -1,6 +1,5 @@
 package com.laz.tirphycraft.entity.entityClass.passif;
 
-import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.entity.SharedMonsterAttributes;

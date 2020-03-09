@@ -57,32 +57,35 @@ public class Altar extends BlockBase {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-
-		if (!playerIn.isSneaking()) {
-			playerIn.sendMessage(new TextComponentString(
-					"\u00a7f" + "when the 5 fragments are gathered at the same place, it will happen..."));
-
-			// white
-		} else if (worldIn.getBlockState(new BlockPos(x - 3, y - 1, z + 2)).getBlock() == BlockInit.WHITE_PILLAR) {
-			playerIn.sendMessage(new TextComponentString("\u00a72" + " --- White fragment active"));
-			// yellow
-			if (worldIn.getBlockState(new BlockPos(x - 2, y - 1, z + 4)).getBlock() == BlockInit.YELLOW_PILLAR) {
-				playerIn.sendMessage(new TextComponentString("\u00a72" + " --- yellow fragment active"));
-				// blue
-				if (worldIn.getBlockState(new BlockPos(x, y - 1, z + 5)).getBlock() == BlockInit.BLUE_PILLAR) {
-					playerIn.sendMessage(new TextComponentString("\u00a72" + " --- blue fragment active"));
-					// red
-					if (worldIn.getBlockState(new BlockPos(x + 2, y - 1, z + 4)).getBlock() == BlockInit.RED_PILLAR) {
-						playerIn.sendMessage(new TextComponentString("\u00a72" + " --- red fragment active"));
-						// green
-						if (worldIn.getBlockState(new BlockPos(x + 3, y - 1, z + 2)).getBlock() == BlockInit.GREEN_PILLAR) {
-							playerIn.sendMessage(new TextComponentString("\u00a72" + " --- green fragment active"));
-							if (playerIn instanceof EntityPlayerMP) {
-								MinecraftServer minecraftserver = FMLCommonHandler.instance().getMinecraftServerInstance();
-								if (minecraftserver != null) {
-									minecraftserver.getCommandManager().executeCommand((EntityPlayerMP) playerIn, "tpdim 120");
-									return true;
+		if (!worldIn.isRemote) {
+			if (!playerIn.isSneaking()) {
+				playerIn.sendMessage(new TextComponentString(
+						"\u00a7f" + "when the 5 fragments are gathered at the same place, it will happen..."));
+	
+				// white
+			} else if (worldIn.getBlockState(new BlockPos(x - 3, y - 1, z + 2)).getBlock() == BlockInit.WHITE_PILLAR) {
+				playerIn.sendMessage(new TextComponentString("\u00a72" + " --- White fragment active"));
+				// yellow
+				if (worldIn.getBlockState(new BlockPos(x - 2, y - 1, z + 4)).getBlock() == BlockInit.YELLOW_PILLAR) {
+					playerIn.sendMessage(new TextComponentString("\u00a72" + " --- yellow fragment active"));
+					// blue
+					if (worldIn.getBlockState(new BlockPos(x, y - 1, z + 5)).getBlock() == BlockInit.BLUE_PILLAR) {
+						playerIn.sendMessage(new TextComponentString("\u00a72" + " --- blue fragment active"));
+						// red
+						if (worldIn.getBlockState(new BlockPos(x + 2, y - 1, z + 4)).getBlock() == BlockInit.RED_PILLAR) {
+							playerIn.sendMessage(new TextComponentString("\u00a72" + " --- red fragment active"));
+							// green
+							if (worldIn.getBlockState(new BlockPos(x + 3, y - 1, z + 2)).getBlock() == BlockInit.GREEN_PILLAR) {
+								playerIn.sendMessage(new TextComponentString("\u00a72" + " --- green fragment active"));
+								if (playerIn instanceof EntityPlayerMP) {
+									MinecraftServer minecraftserver = FMLCommonHandler.instance().getMinecraftServerInstance();
+									if (minecraftserver != null) {
+										minecraftserver.getCommandManager().executeCommand((EntityPlayerMP) playerIn, "tpdim 120");
+										return true;
+									}
 								}
+							} else {
+								playerIn.sendMessage(new TextComponentString("\u00a74" + " Missing fragment"));
 							}
 						} else {
 							playerIn.sendMessage(new TextComponentString("\u00a74" + " Missing fragment"));
@@ -96,9 +99,9 @@ public class Altar extends BlockBase {
 			} else {
 				playerIn.sendMessage(new TextComponentString("\u00a74" + " Missing fragment"));
 			}
-		} else {
-			playerIn.sendMessage(new TextComponentString("\u00a74" + " Missing fragment"));
+			return false;
 		}
-		return false;
+		return true;
+
 	}
 }

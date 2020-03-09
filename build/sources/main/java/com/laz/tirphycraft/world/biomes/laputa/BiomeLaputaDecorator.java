@@ -2,7 +2,7 @@ package com.laz.tirphycraft.world.biomes.laputa;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 import com.laz.tirphycraft.world.gen.generators.laputa.WorldBlackCrystal;
 import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaBigCloud;
@@ -26,7 +26,7 @@ public class BiomeLaputaDecorator {
 	public final WorldGenGeantTree BIG_TREE = new WorldGenGeantTree();
 	public final WorldGenNormalTree NORMAL_TREE = new WorldGenNormalTree();
 	public final WorldGenLaputaMagicPlant MAGIC_PLANT = new WorldGenLaputaMagicPlant();
-	public final WorldGenStem STEM = new WorldGenStem();
+	public final WorldGenStem STEM = new WorldGenStem(BlockInit.STEM.getDefaultState(), 2);
 
 	public void genDecorator(World worldIn, Random rand, BlockPos pos, int tree, int big_tree, int light_pad, int grass,
 			int flower, int crystal, int magic, int stem) {

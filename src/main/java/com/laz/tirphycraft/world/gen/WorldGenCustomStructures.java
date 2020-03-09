@@ -8,10 +8,7 @@ import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaCrystal;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaForest;
 import com.laz.tirphycraft.world.biomes.laputa.BiomeLaputaNoManLand;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeBigForestNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeForestNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeHillsNoxis;
-import com.laz.tirphycraft.world.biomes.noxis.BiomeLacNoxis;
+import com.laz.tirphycraft.world.biomes.noxis.BiomeNoxis;
 import com.laz.tirphycraft.world.gen.generators.structures.laputa.WorldGenDungeonGroundTier2;
 import com.laz.tirphycraft.world.gen.generators.structures.laputa.WorldGenLaputaBossRoom;
 import com.laz.tirphycraft.world.gen.generators.structures.noxis.WorldGenNoxisBasicHouse;
@@ -57,12 +54,12 @@ public class WorldGenCustomStructures implements IWorldGenerator {
 		case 120:
 			int i = new Random().nextInt(50) + 50;
 			generateStructure(ISLAND_CRYSTAL, world, random, chunkX, chunkZ, 500, i, BlockInit.NOXIS_GRASS,
-					BiomeForestNoxis.class, BiomeHillsNoxis.class, BiomeLacNoxis.class);
-			generateStructure(N_B_H_1, world, random, chunkX, chunkZ, 10, 0, BlockInit.NOXIS_GRASS,
-					BiomeForestNoxis.class, BiomeHillsNoxis.class, BiomeLacNoxis.class);
+					BiomeNoxis.class, BiomeNoxis.class, BiomeNoxis.class);
+			generateStructure(N_B_H_1, world, random, chunkX, chunkZ, 10, 0, BlockInit.NOXIS_GRASS, BiomeNoxis.class,
+					BiomeNoxis.class, BiomeNoxis.class);
 
-			generateStructure(TOWER, world, random, chunkX, chunkZ, 100, 0, BlockInit.NOXIS_GRASS,
-					BiomeForestNoxis.class, BiomeLacNoxis.class, BiomeBigForestNoxis.class);
+			generateStructure(TOWER, world, random, chunkX, chunkZ, 100, 0, BlockInit.NOXIS_GRASS, BiomeNoxis.class,
+					BiomeNoxis.class, BiomeNoxis.class);
 			break;
 		case 1:
 			break;

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.laz.tirphycraft.objects.base.BlockBase;
 import com.laz.tirphycraft.objects.base.BlockDungeonBase;
+import com.laz.tirphycraft.objects.base.BlockLightBase;
 import com.laz.tirphycraft.objects.base.BlockLogBase;
 import com.laz.tirphycraft.objects.base.BlockOre;
 import com.laz.tirphycraft.objects.base.BlockPlanksBase;
@@ -53,7 +54,6 @@ import com.laz.tirphycraft.objects.blocks.basicBlock.pick.BlockStalagmite;
 import com.laz.tirphycraft.objects.blocks.customModel.Altar;
 import com.laz.tirphycraft.objects.blocks.customModel.BluePillar;
 import com.laz.tirphycraft.objects.blocks.customModel.GreenPillar;
-import com.laz.tirphycraft.objects.blocks.customModel.Lantern;
 import com.laz.tirphycraft.objects.blocks.customModel.NeutralPillar;
 import com.laz.tirphycraft.objects.blocks.customModel.RedPillar;
 import com.laz.tirphycraft.objects.blocks.customModel.WhitePillar;
@@ -64,6 +64,8 @@ import com.laz.tirphycraft.objects.blocks.customModel.egg.EggCreeperQueen;
 import com.laz.tirphycraft.objects.blocks.customModel.egg.EggHellKing;
 import com.laz.tirphycraft.objects.blocks.customModel.egg.EggPharaon;
 import com.laz.tirphycraft.objects.blocks.customModel.egg.EggPoseidon;
+import com.laz.tirphycraft.objects.blocks.customModel.lantern.Lantern;
+import com.laz.tirphycraft.objects.blocks.customModel.vine.CaveVines;
 import com.laz.tirphycraft.objects.blocks.machine.alloy.BlockAlloyFurnace;
 import com.laz.tirphycraft.objects.blocks.machine.pyrodes.BlockPyrodesFurnace;
 import com.laz.tirphycraft.objects.blocks.trees.leaves.BlockLeavesCoppir;
@@ -75,6 +77,7 @@ import com.laz.tirphycraft.objects.blocks.trees.leaves.BlockNormalLeavesGreen;
 import com.laz.tirphycraft.objects.blocks.trees.leaves.BlockNormalLeavesPurple;
 import com.laz.tirphycraft.objects.blocks.trees.leaves.BlockNormalLeavesWhite;
 import com.laz.tirphycraft.objects.blocks.trees.leaves.BlockNormalLeavesYellow;
+import com.laz.tirphycraft.objects.blocks.trees.sapling.BlockNoxisThorns;
 import com.laz.tirphycraft.objects.blocks.trees.sapling.BlockSaplingCoppir;
 import com.laz.tirphycraft.objects.blocks.trees.sapling.BlockSaplingFroz;
 import com.laz.tirphycraft.objects.blocks.trees.sapling.BlockSaplingGoldir;
@@ -154,6 +157,12 @@ public class BlockInit {
 	
 	//FLOOR
 	public static final Block NOXIS_STONE			= new BlockNoxisStone("noxis_stone", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE);
+	public static final Block NOXIS_BRICK_CARVED	= new BlockNoxisStone("noxis_bricks_carved", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE);
+	public static final Block NOXIS_BRICK_PILLAR	= new BlockNoxisStone("noxis_bricks_pillar", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE);
+	
+	
+	public static final Block NOXIS_ASH_LIT			= new BlockLightBase("noxis_ash_lit", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE, 0.3f);
+	public static final Block NOXIS_THORNS			= new BlockNoxisThorns();
 	public static final Block NOXIS_COBBLESTONE     = new BlockBase("noxis_cobblestone", Material.ROCK, 1.6F, 15, "pickaxe", 0, SoundType.STONE);
 	public static final Block NOXIS_DIRT 			= new BlockBase("noxis_dirt", Material.GROUND, 0.5F, 0, "shovel", 0, SoundType.GROUND);
 	public static final Block NOXIS_FROZEN_DIRT		= new BlockBase("noxis_frozen_dirt", Material.ICE, 0.5F, 0, "shovel", 0, SoundType.GROUND);
@@ -237,6 +246,7 @@ public class BlockInit {
 	//
 	public static final Block STALACTITE				= new BlockStalactite();
 	public static final Block STALAGMITE				= new BlockStalagmite();
+	public static final Block CAVES_VINES				= new CaveVines();
 
 	
 }

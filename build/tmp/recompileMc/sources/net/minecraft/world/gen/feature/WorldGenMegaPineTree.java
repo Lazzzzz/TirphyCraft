@@ -21,10 +21,10 @@ public class WorldGenMegaPineTree extends WorldGenHugeTrees
     private static final IBlockState PODZOL = Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.PODZOL);
     private final boolean useBaseHeight;
 
-    public WorldGenMegaPineTree()
+    public WorldGenMegaPineTree(boolean notify, boolean p_i45457_2_)
     {
-        super(false, 20, 4, ITRUNK, LEAF);
-        this.useBaseHeight = 20;
+        super(notify, 13, 15, TRUNK, LEAF);
+        this.useBaseHeight = p_i45457_2_;
     }
 
     public boolean generate(World worldIn, Random rand, BlockPos position)

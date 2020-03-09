@@ -6,8 +6,11 @@ import com.laz.tirphycraft.objects.base.BlockCrystalBase;
 import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.interfaces.ParticleTypes;
 
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -36,5 +39,8 @@ public class BlockYellowCrystal extends BlockCrystalBase {
 			Reference.PROXY.spawnParticle(worldIn, ParticleTypes.GLINT_YELLOW, d0, d1, d2, 0.0D, 0.01D, 0.0D);
 		}
 	}
-
+	@Override
+	public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+		return BlockFaceShape.UNDEFINED;
+	}
 }

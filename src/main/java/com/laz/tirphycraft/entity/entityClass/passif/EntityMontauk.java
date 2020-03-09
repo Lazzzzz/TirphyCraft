@@ -2,7 +2,6 @@ package com.laz.tirphycraft.entity.entityClass.passif;
 
 import javax.annotation.Nullable;
 
-import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.client.Minecraft;

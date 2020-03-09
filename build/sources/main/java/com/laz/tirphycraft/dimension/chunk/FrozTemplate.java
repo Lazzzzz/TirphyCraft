@@ -3,7 +3,9 @@ package com.laz.tirphycraft.dimension.chunk;
 import java.util.List;
 import java.util.Random;
 
+import com.laz.tirphycraft.dimension.chunk.cave.FrozBigCave;
 import com.laz.tirphycraft.dimension.chunk.cave.FrozCaveGen;
+import com.laz.tirphycraft.dimension.chunk.cave.MapGenBaseMeta;
 import com.laz.tirphycraft.init.BiomeInit;
 import com.laz.tirphycraft.init.BlockInit;
 
@@ -57,6 +59,7 @@ public class FrozTemplate implements IChunkGenerator {
 	private final NoiseGeneratorOctaves noiseGen4;
 	private double stoneNoise[];
 	private MapGenBase caveGenerator;
+	private MapGenBaseMeta bigCaveGenerator;
 
 	public FrozTemplate(World worldIn, long seed) {
 
@@ -76,6 +79,8 @@ public class FrozTemplate implements IChunkGenerator {
 		this.field_185999_r = new float[25];
 		caveGenerator = net.minecraftforge.event.terraingen.TerrainGen.getModdedMapGen(new FrozCaveGen(),
 				net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.CAVE);
+		bigCaveGenerator = new FrozBigCave();
+
 		for (int i = -2; i <= 2; ++i) {
 			for (int j = -2; j <= 2; ++j) {
 				float f = 10.0F / MathHelper.sqrt((float) (i * i + j * j) + 0.2F);
@@ -103,13 +108,16 @@ public class FrozTemplate implements IChunkGenerator {
 		this.setBlocksInChunk(x, z, chunkprimer);
 
 		addIceForestTop(x, z, chunkprimer);
-
 		this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, x * 16, z * 16, 16,
 				16);
 		this.replaceBiomeBlocks(x, z, chunkprimer, this.biomesForGeneration);
+
 		if (this.world.getBiome(new BlockPos(x * 16, 0, z * 16)) != BiomeInit.FROZ_PLAINE) {
 			this.caveGenerator.generate(this.world, x, z, chunkprimer);
 		}
+
+		this.bigCaveGenerator.generate(this.world, x, z, chunkprimer);
+
 		Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
 
 		byte[] abyte = chunk.getBiomeArray();
@@ -117,7 +125,7 @@ public class FrozTemplate implements IChunkGenerator {
 		for (int i = 0; i < abyte.length; ++i) {
 			abyte[i] = (byte) Biome.getIdForBiome(this.biomesForGeneration[i]);
 		}
-		addIceForestTop(x, z, chunkprimer);
+
 
 		chunk.generateSkylightMap();
 		return chunk;

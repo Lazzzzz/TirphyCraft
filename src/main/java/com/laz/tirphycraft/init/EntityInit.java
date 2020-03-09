@@ -131,8 +131,8 @@ public class EntityInit {
 		//PASSIF		
 		
 			//NOXIS
-		EntityRegistry.addSpawn(EntityBuffalo.class, 20, 3, 10, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.NOXIS_HILLS);
-		EntityRegistry.addSpawn(EntityToxisCow.class, 20, 1, 4, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_MUSHROOM);
+		//EntityRegistry.addSpawn(EntityBuffalo.class, 20, 3, 10, EnumCreatureType.AMBIENT, BiomeInit.NOXIS);
+		//EntityRegistry.addSpawn(EntityToxisCow.class, 20, 1, 4, EnumCreatureType.AMBIENT, BiomeInit.NOXIS);
 		
 			//LAPUTA
 		EntityRegistry.addSpawn(EntityDragonFly.class, 20, 1, 1, EnumCreatureType.AMBIENT, BiomeInit.LAPUTA, BiomeInit.LAPUTANML, BiomeInit.LAPUTA_MAGIC);
@@ -141,10 +141,10 @@ public class EntityInit {
 		EntityRegistry.addSpawn(EntityCrystim.class, 20, 1, 4, EnumCreatureType.AMBIENT, BiomeInit.LAPUTA_CRYSTAL);
 		
 			//FROZ
-		EntityRegistry.addSpawn(EntityMontauk.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_ICE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
-		EntityRegistry.addSpawn(EntityFrozenBuffalo.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_ICE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);		
-		EntityRegistry.addSpawn(EntityFrozenBoar.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_ICE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
-		EntityRegistry.addSpawn(EntityColosse.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS_ICE, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
+		EntityRegistry.addSpawn(EntityMontauk.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
+		EntityRegistry.addSpawn(EntityFrozenBuffalo.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);		
+		EntityRegistry.addSpawn(EntityFrozenBoar.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
+		EntityRegistry.addSpawn(EntityColosse.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
 		
 		//MECHANT
 		
@@ -152,16 +152,16 @@ public class EntityInit {
 		EntityRegistry.addSpawn(EntityDemon.class, 5, 1, 3, EnumCreatureType.MONSTER, Biomes.HELL);
 		EntityRegistry.addSpawn(EntityCerbere.class, 5, 1, 3, EnumCreatureType.MONSTER, Biomes.HELL);
 		
-			//NOXIS
-		EntityRegistry.addSpawn(EntityPhorus.class, 5, 1, 3, EnumCreatureType.MONSTER, BiomeInit.NOXIS, BiomeInit.NOXIS_HILLS, BiomeInit.NOXIS_ICE);
-		EntityRegistry.addSpawn(EntityTotam.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS, BiomeInit.NOXIS_HILLS, BiomeInit.NOXIS_ICE);
-		EntityRegistry.addSpawn(EntityGiantSpider.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS_BIG_FOREST, BiomeInit.NOXIS);
-		EntityRegistry.addSpawn(EntityGiril.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS_BIG_FOREST, BiomeInit.NOXIS);
-		EntityRegistry.addSpawn(EntityHeadLess.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS_BIG_FOREST, BiomeInit.NOXIS, BiomeInit.NOXIS_HILLS, BiomeInit.NOXIS_S_HILLS);
-		EntityRegistry.addSpawn(EntitySkull.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS_ROCK);
-		EntityRegistry.addSpawn(EntityFailedGolem.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS_ROCK);
+		//NOXIS 
+		//EntityRegistry.addSpawn(EntityPhorus.class, 5, 1, 3, EnumCreatureType.MONSTER, BiomeInit.NOXIS, BiomeInit.NOXIS, BiomeInit.NOXIS);
+		//EntityRegistry.addSpawn(EntityTotam.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS, BiomeInit.NOXIS, BiomeInit.NOXIS);
+		//EntityRegistry.addSpawn(EntityGiantSpider.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS, BiomeInit.NOXIS);
+		//EntityRegistry.addSpawn(EntityGiril.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS, BiomeInit.NOXIS);
+		//EntityRegistry.addSpawn(EntityHeadLess.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS, BiomeInit.NOXIS, BiomeInit.NOXIS, BiomeInit.NOXIS);
+		//EntityRegistry.addSpawn(EntitySkull.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS);
+		//EntityRegistry.addSpawn(EntityFailedGolem.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.NOXIS);
 		
-			//LAPUTA
+		//LAPUTA
 		EntityRegistry.addSpawn(EntityGrindlyUp.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.LAPUTANML, BiomeInit.LAPUTA, BiomeInit.LAPUTA_MAGIC, BiomeInit.LAPUTA_CRYSTAL);
 		EntityRegistry.addSpawn(EntityGrindlyBoth.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.LAPUTANML, BiomeInit.LAPUTA, BiomeInit.LAPUTA_MAGIC, BiomeInit.LAPUTA_CRYSTAL);
 		EntityRegistry.addSpawn(EntityGrindlyFront.class, 2, 1, 1, EnumCreatureType.MONSTER, BiomeInit.LAPUTANML, BiomeInit.LAPUTA, BiomeInit.LAPUTA_MAGIC, BiomeInit.LAPUTA_CRYSTAL);

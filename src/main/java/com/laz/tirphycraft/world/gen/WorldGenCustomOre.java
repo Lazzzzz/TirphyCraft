@@ -69,9 +69,9 @@ public class WorldGenCustomOre implements IWorldGenerator {
 			runGenerator(ore_overworld_crystal, world, random, chunkX, chunkZ, 10, 10, 256);
 
 		case 120:
-			runGenerator(ore_noxis_purodes, world, random, chunkX, chunkZ, 20, 10, 80);
-			runGenerator(ore_noxis_crystal, world, random, chunkX, chunkZ, 20, 10, 256);
-			runGenerator(ore_noxis_coal_on_coke, world, random, chunkX, chunkZ, 20, 10, 256);
+			runGenerator(ore_noxis_purodes, world, random, chunkX, chunkZ, 20, 10, 30);
+			runGenerator(ore_noxis_crystal, world, random, chunkX, chunkZ, 20, 10, 30);
+			runGenerator(ore_noxis_coal_on_coke, world, random, chunkX, chunkZ, 20, 10, 30);
 
 		case 121:
 			runGenerator(ore_laputa_purodes, world, random, chunkX, chunkZ, 40, 10, 80);

@@ -2,7 +2,6 @@ package com.laz.tirphycraft.world.biomes.froz.caveDecorator;
 
 import java.util.Random;
 
-import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemRange;
 import com.laz.tirphycraft.entity.entityClass.aggressive.EntityAngrySnowGolemSoldier;
 import com.laz.tirphycraft.init.BlockInit;
 
@@ -25,9 +24,9 @@ public class CaveGenMixte extends WorldGenAbstractTree {
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos pos) {
 		for (int i = 0; i < 20; i++) {
-			int x = rand.nextInt(10) - 5;
-			int y = rand.nextInt(10) - 5;
-			int z = rand.nextInt(10) - 5;
+			int x = rand.nextInt(16) - 8;
+			int y = rand.nextInt(16) - 8;
+			int z = rand.nextInt(16) - 8;
 			if (worldIn.getBlockState(pos.add(x, y, z)) == BlockInit.FROZ_STONE.getDefaultState()) {
 
 				if (worldIn.getBlockState(pos.add(x, y, z).up()) == Blocks.AIR.getDefaultState()

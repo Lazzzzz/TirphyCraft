@@ -1,13 +1,9 @@
 package com.laz.tirphycraft.dimension.Laputa;
 
 import com.laz.tirphycraft.entity.entityClass.projectile.EntityMeteorite;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.MobEffects;
-import net.minecraft.init.PotionTypes;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.potion.PotionType;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -41,7 +37,7 @@ public class LaputaEvent {
 		Vec3d vec = event.player.getLookVec();
 		
 
-		if (world.getWorldTime() % 1000 == 0 && event.player.dimension == 121 && !world.isRemote && world.rand.nextInt(10) == 0) {
+		if (world.getWorldTime() % 1000 == 0 && event.player.dimension == ConfigHandler.DIMENSION_LAPUTA_ID && !world.isRemote && world.rand.nextInt(10) == 0) {
 			EntityMeteorite e = new EntityMeteorite(world);
 			e.setPosition(event.player.posX + 50 * -vec.x, event.player.posY + 100, event.player.posZ + 50 * -vec.z);
 			

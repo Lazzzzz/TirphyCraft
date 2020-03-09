@@ -17,6 +17,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
 public class BiomeFrozPlate extends Biome {
+	BiomeFrozCaveDecorator CAVE = new BiomeFrozCaveDecorator();
+	
 	public BiomeFrozPlate() {
 		super(new BiomeProperties("Plate").setBaseHeight(4F).setHeightVariation(0.01F).setTemperature(-10F)
 				.setRainfall(100F).setWaterColor(4092311));
@@ -40,7 +42,7 @@ public class BiomeFrozPlate extends Biome {
 		for (int i = 0; i < 20; i++) {
 			int j = rand.nextInt(16) + 8;
 			int k = rand.nextInt(16) + 8;
-			new BiomeFrozCaveDecorator().genDecorator(worldIn, rand, pos.add(j,0,k), 130);
+			CAVE.genDecorator(worldIn, rand, pos.add(j,0,k), 130);
 		}
 
 		if (rand.nextInt(2) == 0) {

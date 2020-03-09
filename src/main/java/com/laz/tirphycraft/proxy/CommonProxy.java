@@ -16,4 +16,8 @@ public class CommonProxy {
 	public void spawnParticle(World world, ParticleTypes particleType, double x, double y, double z, double velX,
 			double velY, double velZ) {
 	}
+	
+	public void spawnParticle(World world, ParticleTypes particleType, double x, double y, double z, double velX,
+			double velY, double velZ, float colorR, float colorG, float colorB) {
+	}
 }

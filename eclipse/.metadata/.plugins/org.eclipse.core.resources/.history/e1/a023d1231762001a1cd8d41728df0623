@@ -1,0 +1,22 @@
+package com.laz.tirphycraft.event;
+
+import com.laz.tirphycraft.entity.entityClass.boss.EntityQueenCreeper;
+
+import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+@EventBusSubscriber
+public class LightningNoxis {
+
+	@SubscribeEvent
+	public static void getItem(WorldEvent event) {
+	
+	
+	}
+}

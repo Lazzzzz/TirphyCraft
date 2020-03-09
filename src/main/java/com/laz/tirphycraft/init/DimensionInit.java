@@ -12,7 +12,7 @@ public class DimensionInit {
 	public static final DimensionType NOXIS  = DimensionType.register("Noxis", "_noxis", ConfigHandler.DIMENSION_NOXIS_ID, DimensionLibraryNoxis.class, false);
 	public static final DimensionType LAPUTA = DimensionType.register("Laputa", "_laputa", ConfigHandler.DIMENSION_LAPUTA_ID, DimensionLibraryLaputa.class, false);
 	public static final DimensionType FROZ   = DimensionType.register("Froz", "_froz", ConfigHandler.DIMENSION_FROZ_ID, DimensionLibraryFroz.class, false);
-	
+
 	public static void registerDimensions()
 	{
 		DimensionManager.registerDimension(ConfigHandler.DIMENSION_NOXIS_ID, NOXIS);

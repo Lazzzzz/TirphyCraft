@@ -4,7 +4,6 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import com.laz.tirphycraft.util.Reference;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.client.Minecraft;

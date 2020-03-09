@@ -18,7 +18,7 @@ public class BiomeLaputaCrystal extends Biome {
 
 	public BiomeLaputaCrystal() {
 
-		super(new BiomeProperties("Laputa crystal").setBaseHeight(0.125F).setHeightVariation(0.05F).setTemperature(0.5F)
+		super(new BiomeProperties("Laputa crystal").setBaseHeight(4F).setHeightVariation(0.25F).setTemperature(0.5F)
 				.setRainfall(0.0F).setRainDisabled().setWaterColor(5691638));
 
 		topBlock = BlockInit.LAPUTA_GRASS.getDefaultState();

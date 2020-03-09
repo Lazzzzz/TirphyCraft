@@ -1,7 +1,5 @@
 package com.laz.tirphycraft.objects.blocks.basicBlock.pick;
 
-import com.laz.tirphycraft.objects.blocks.basicBlock.froz.dungeon.enumHandlerBlueBrick.EnumType;
-
 import net.minecraft.util.IStringSerializable;
 
 public class enumStalactite {

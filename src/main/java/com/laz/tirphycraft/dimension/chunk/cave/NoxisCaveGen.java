@@ -17,7 +17,7 @@ import net.minecraft.world.gen.MapGenBase;
 public class NoxisCaveGen extends MapGenBase
 {
     protected static final IBlockState BLK_LAVA = Blocks.LAVA.getDefaultState();
-    protected static final IBlockState BLK_AIR = Blocks.AIR.getDefaultState();
+    protected static final IBlockState BLK_AIR = Blocks.FLOWING_LAVA.getDefaultState();
     protected static final IBlockState BLK_SANDSTONE = Blocks.SANDSTONE.getDefaultState();
     protected static final IBlockState BLK_RED_SANDSTONE = Blocks.RED_SANDSTONE.getDefaultState();
 
@@ -214,7 +214,7 @@ public class NoxisCaveGen extends MapGenBase
         {
             return true;
         }
-        else if (p_175793_1_.getBlock() == Blocks.GRASS)
+        else if (p_175793_1_.getBlock() == BlockInit.NOXIS_ASH_LIT)
         {
             return true;
         }
@@ -338,15 +338,13 @@ public class NoxisCaveGen extends MapGenBase
             if (y - 1 < 10)
             {
                 data.setBlockState(x, y, z, BLK_LAVA);
+                this.world.updateBlockTick(new BlockPos(x,y,z), BLK_LAVA.getBlock(), 1, 1);
             }
             else
             {
                 data.setBlockState(x, y, z, BLK_AIR);
+                this.world.scheduleBlockUpdate(new BlockPos(x,y,z), BLK_AIR.getBlock(), 1, 1);
 
-                if (foundTop && data.getBlockState(x, y - 1, z).getBlock() == filler.getBlock())
-                {
-                    data.setBlockState(x, y - 1, z, top.getBlock().getDefaultState());
-                }
             }
         }
     }
