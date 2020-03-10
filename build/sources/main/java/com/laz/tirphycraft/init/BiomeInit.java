@@ -1,5 +1,15 @@
 package com.laz.tirphycraft.init;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.laz.tirphycraft.gosyn.common.world.biomes.stage1.biomeFlory.BiomeFlory;
+import com.laz.tirphycraft.gosyn.common.world.biomes.stage1.biomeMelynchForest.BiomeMelynchForest;
+import com.laz.tirphycraft.gosyn.common.world.biomes.stage1.biomeWetLands.BiomeWetlands;
+import com.laz.tirphycraft.gosyn.common.world.biomes.stage2.MagicForest.BiomeMagicForest;
+import com.laz.tirphycraft.gosyn.common.world.biomes.stage2.Mushrooom.BiomeMushrooom;
+import com.laz.tirphycraft.gosyn.common.world.biomes.stage2.RootForest.BiomeRootForest;
+import com.laz.tirphycraft.gosyn.common.world.biomes.stage3.BiomeDarkForest;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozDead;
 import com.laz.tirphycraft.world.biomes.froz.BiomeFrozDense;
@@ -48,6 +58,17 @@ public class BiomeInit
 	public static final Biome FROZ_SLAWOMIR     = new BiomeFrozSlawomirBurrows();
 	public static final Biome FROZ_GEANT		= new BiomeFrozGiantForest();
 	
+	public static final Biome FLORY 		 = new BiomeFlory();
+	public static final Biome WET_LANDS 	 = new BiomeWetlands();
+	public static final Biome MELYNCH_FOREST = new BiomeMelynchForest();
+	
+	public static final Biome MAGIC_FOREST = new BiomeMagicForest();
+	public static final Biome MUSHROOOM    = new BiomeMushrooom();
+	public static final Biome ROOT_FOREST  = new BiomeRootForest();
+	
+	public static final Biome DARK_FOREST = new BiomeDarkForest();
+
+	public static final List<Biome> biomesSpawn = new ArrayList<>();
 	
 	public static void registerBiomes()
 	{
@@ -69,6 +90,20 @@ public class BiomeInit
 		initBiomeNoOverworld(FROZ_PLATE, "froz plate",  BiomeType.ICY, Type.COLD, Type.DENSE);
 		initBiomeNoOverworld(FROZ_SLAWOMIR, "froz Slawomir Burrows",  BiomeType.ICY, Type.COLD, Type.DENSE, Type.RARE);
 		initBiomeNoOverworld(FROZ_GEANT, "froz geant forest",  BiomeType.ICY, Type.COLD, Type.DENSE, Type.RARE);
+		
+		initBiomeNoOverworld(FLORY, "Flory", BiomeType.COOL, Type.PLAINS, Type.RARE);
+		initBiomeNoOverworld(WET_LANDS, "Wet Lands", BiomeType.WARM, Type.SWAMP, Type.RARE);
+		initBiomeNoOverworld(MELYNCH_FOREST, "Melynch Forest", BiomeType.WARM, Type.FOREST, Type.RARE);
+		
+		initBiomeNoOverworld(MAGIC_FOREST, "Magic Forest", BiomeType.WARM, Type.FOREST, Type.RARE);
+		initBiomeNoOverworld(MUSHROOOM, "Mushrooom", BiomeType.COOL, Type.FOREST, Type.RARE);
+		initBiomeNoOverworld(ROOT_FOREST, "Root Forest", BiomeType.COOL, Type.PLAINS, Type.RARE);
+	
+		initBiomeNoOverworld(DARK_FOREST, "Dark Forest", BiomeType.WARM, Type.FOREST, Type.RARE);
+		
+		biomesSpawn.add(FLORY);
+		biomesSpawn.add(WET_LANDS);
+		biomesSpawn.add(MELYNCH_FOREST);
 		
 } 
 	

@@ -190,7 +190,7 @@ public class LaputaTemplate implements IChunkGenerator {
 				16);
 		this.setBlocksInChunk(x, z, chunkprimer);
 		this.buildSurfaces(chunkprimer);
-
+		
 		Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
 		byte[] abyte = chunk.getBiomeArray();
 

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "YY",
+        "YY"
+    ],
+
+    "key": 
+    {
+        "Y": 
+        {
+            "item": "tirphycraft:gosyn_rock"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:gosyn_rockbrick",
+        "count": 4
+    }
+}

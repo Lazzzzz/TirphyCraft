@@ -1,0 +1,90 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 3/10/20 6:35 PM
+Description: Exception ticking world
+
+java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "VariableDeclarators" to complete LocalVariableDeclaration
+	Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+	sy cannot be resolved
+
+	at com.laz.tirphycraft.gosyn.common.world.gen.stage3.featur.worldGenTorns.generate(worldGenTorns.java:30)
+	at com.laz.tirphycraft.gosyn.common.world.biomes.stage3.BiomeDarkForest.decorate(BiomeDarkForest.java:27)
+	at com.laz.tirphycraft.dimension.chunk.GosynTemplate.populate(GosynTemplate.java:149)
+	at net.minecraft.world.chunk.Chunk.populate(Chunk.java:1094)
+	at net.minecraft.world.chunk.Chunk.populate(Chunk.java:1055)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:169)
+	at net.minecraft.server.management.PlayerChunkMapEntry.providePlayerChunk(PlayerChunkMapEntry.java:130)
+	at net.minecraft.server.management.PlayerChunkMap.tick(PlayerChunkMap.java:183)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:236)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:831)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:743)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:592)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.laz.tirphycraft.gosyn.common.world.gen.stage3.featur.worldGenTorns.generate(worldGenTorns.java:30)
+	at com.laz.tirphycraft.gosyn.common.world.biomes.stage3.BiomeDarkForest.decorate(BiomeDarkForest.java:27)
+	at com.laz.tirphycraft.dimension.chunk.GosynTemplate.populate(GosynTemplate.java:149)
+	at net.minecraft.world.chunk.Chunk.populate(Chunk.java:1094)
+	at net.minecraft.world.chunk.Chunk.populate(Chunk.java:1055)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:169)
+	at net.minecraft.server.management.PlayerChunkMapEntry.providePlayerChunk(PlayerChunkMapEntry.java:130)
+	at net.minecraft.server.management.PlayerChunkMap.tick(PlayerChunkMap.java:183)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:236)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['Player971'/0, l='New World', x=1090.91, y=96.47, z=700.50]]
+	Chunk stats: ServerChunkCache: 1428 Drop: 0
+	Level seed: -8315911364176425890
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:831)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:743)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:592)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1235608976 bytes (1178 MB) / 2052587520 bytes (1957 MB) up to 4225236992 bytes (4029 MB)
+	JVM Flags: 4 total; -Xincgc -Xmx4024M -Xms2024M -Xmx4096m
+	IntCache: cache: 0, tcache: 0, allocated: 1, tallocated: 14
+	FML: MCP 9.42 Powered by Forge 14.23.5.2768 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID          | Version      | Source                           | Signature |
+	|:--------- |:----------- |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft   | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp         | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML         | 8.0.99.99    | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | forge       | 14.23.5.2768 | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | tirphycraft | 0.2          | bin                              | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player971'/0, l='New World', x=1090.91, y=96.47, z=700.50]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

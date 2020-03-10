@@ -4,6 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.laz.tirphycraft.Main;
+import com.laz.tirphycraft.gosyn.common.items.ItemAiguiteGem;
+import com.laz.tirphycraft.gosyn.common.items.ItemCreseolEmptyTablet;
+import com.laz.tirphycraft.gosyn.common.items.ItemCreseolTablet;
+import com.laz.tirphycraft.gosyn.common.items.ItemMelynchStick;
+import com.laz.tirphycraft.gosyn.common.items.tools.aiguite.ToolsAiguiteAxe;
+import com.laz.tirphycraft.gosyn.common.items.tools.aiguite.ToolsAiguitePickaxe;
+import com.laz.tirphycraft.gosyn.common.items.tools.aiguite.ToolsAiguiteShovel;
+import com.laz.tirphycraft.gosyn.common.items.tools.aiguite.ToolsAiguiteSword;
+import com.laz.tirphycraft.gosyn.common.items.tools.melynch.ToolsMelynchAxe;
+import com.laz.tirphycraft.gosyn.common.items.tools.melynch.ToolsMelynchPickaxe;
+import com.laz.tirphycraft.gosyn.common.items.tools.melynch.ToolsMelynchShovel;
+import com.laz.tirphycraft.gosyn.common.items.tools.melynch.ToolsMelynchSword;
 import com.laz.tirphycraft.objects.artefact.ArtefactFeatherOfLight;
 import com.laz.tirphycraft.objects.artefact.ArtefactSunTear;
 import com.laz.tirphycraft.objects.base.ItemBase;
@@ -55,6 +67,7 @@ import com.laz.tirphycraft.objects.items.tools.ToolSwordBase;
 import com.laz.tirphycraft.objects.items.tools.ToolSwordLarge;
 import com.laz.tirphycraft.objects.items.tools.custom.ToolSwordExplosion;
 import com.laz.tirphycraft.objects.items.tools.custom.ToolThunderHarp;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -226,14 +239,31 @@ public class ItemInit {
 	
 	//CLOCKS
 	public static final Item RETURN_CLOCK		   = new ItemClock("return_clock", 0, "Return to overworld");
-	public static final Item NOXIS_CLOCK		   = new ItemClock("noxis_clock", 120, "Go to noxis");
-	public static final Item LAPUTA_CLOCK		   = new ItemClock("laputa_clock", 121, "Go to Laputa");
-	public static final Item FROZ_CLOCK			   = new ItemClock("froz_clock", 123, "Go to Froz");
+	public static final Item NOXIS_CLOCK		   = new ItemClock("noxis_clock", ConfigHandler.DIMENSION_NOXIS_ID, "Go to Noxis");
+	public static final Item LAPUTA_CLOCK		   = new ItemClock("laputa_clock", ConfigHandler.DIMENSION_LAPUTA_ID, "Go to Laputa");
+	public static final Item GOSYN_CLOCK		   = new ItemClock("gosyn_clock", ConfigHandler.DIMENSION_GOSYN_ID, "Go to Gosyn");
+	public static final Item FROZ_CLOCK			   = new ItemClock("froz_clock", ConfigHandler.DIMENSION_FROZ_ID, "Go to Froz");
 	
 	public static final Item DEBUG				   = new debugStickySticky();
 
 	//ARTEFACT
 	public static final Item ARTEFACT_1 		   = new ArtefactFeatherOfLight();
 	public static final Item ARTEFACT_2			   = new ArtefactSunTear();
+	
+	//GOSYN
+	public static final Item MELYNCH_STICK 		  = new ItemMelynchStick();
+	public static final Item AIGUITE_GEM 		  = new ItemAiguiteGem();
+	public static final Item CRESEOL_TABLET_EMPTY = new ItemCreseolEmptyTablet();
+	public static final Item CRESEOL_TABLET 	  = new ItemCreseolTablet();
+	
+	public static final Item MELYNCH_SWORD   = new ToolsMelynchSword();
+	public static final Item MELYNCH_AXE 	 = new ToolsMelynchAxe();
+	public static final Item MELYNCH_PICKAXE = new ToolsMelynchPickaxe();
+	public static final Item MELYNCH_SHOVEL  = new ToolsMelynchShovel();
+		
+	public static final Item AIGUITE_SWORD   = new ToolsAiguiteSword();
+	public static final Item AIGUITE_AXE 	 = new ToolsAiguiteAxe();
+	public static final Item AIGUITE_PICKAXE = new ToolsAiguitePickaxe();
+	public static final Item AIGUITE_SHOVEL  = new ToolsAiguiteShovel();
 		
 }

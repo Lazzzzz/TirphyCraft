@@ -1,0 +1,117 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 3/9/20 10:25 PM
+Description: Colliding entity with block
+
+java.lang.NullPointerException: Colliding entity with block
+	at net.minecraft.world.World.getChunkFromBlockCoords(World.java:354)
+	at com.laz.tirphycraft.gosyn.common.blocks.miscs.portal.BlockPortalNull.onEntityCollidedWithBlock(BlockPortalNull.java:67)
+	at net.minecraft.entity.Entity.doBlockCollisions(Entity.java:1154)
+	at net.minecraft.entity.Entity.move(Entity.java:1071)
+	at net.minecraft.entity.EntityLivingBase.travel(EntityLivingBase.java:2165)
+	at net.minecraft.entity.player.EntityPlayer.travel(EntityPlayer.java:1968)
+	at net.minecraft.entity.EntityLivingBase.onLivingUpdate(EntityLivingBase.java:2616)
+	at net.minecraft.entity.player.EntityPlayer.onLivingUpdate(EntityPlayer.java:577)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:2398)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:272)
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:423)
+	at net.minecraft.network.NetHandlerPlayServer.update(NetHandlerPlayServer.java:185)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher$1.update(NetworkDispatcher.java:212)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:307)
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:197)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:865)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:743)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:592)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.world.World.getChunkFromBlockCoords(World.java:354)
+	at com.laz.tirphycraft.gosyn.common.blocks.miscs.portal.BlockPortalNull.onEntityCollidedWithBlock(BlockPortalNull.java:67)
+
+-- Block being collided with --
+Details:
+	Block: tirphycraft:gosyn_portalnull
+	Block location: World: (-829,5,-752), Chunk: (at 3,0,0 in -52,-47; contains blocks -832,0,-752 to -817,255,-737), Region: (-2,-2; contains chunks -64,-64 to -33,-33, blocks -1024,0,-1024 to -513,255,-513)
+Stacktrace:
+	at net.minecraft.entity.Entity.doBlockCollisions(Entity.java:1154)
+
+-- Entity being checked for collision --
+Details:
+	Entity Type: null (net.minecraft.entity.player.EntityPlayerMP)
+	Entity ID: 10
+	Entity Name: Player820
+	Entity's Exact location: -828.21, 5.05, -751.59
+	Entity's Block location: World: (-829,5,-752), Chunk: (at 3,0,0 in -52,-47; contains blocks -832,0,-752 to -817,255,-737), Region: (-2,-2; contains chunks -64,-64 to -33,-33, blocks -1024,0,-1024 to -513,255,-513)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.entity.Entity.move(Entity.java:1071)
+	at net.minecraft.entity.EntityLivingBase.travel(EntityLivingBase.java:2165)
+	at net.minecraft.entity.player.EntityPlayer.travel(EntityPlayer.java:1968)
+	at net.minecraft.entity.EntityLivingBase.onLivingUpdate(EntityLivingBase.java:2616)
+	at net.minecraft.entity.player.EntityPlayer.onLivingUpdate(EntityPlayer.java:577)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:2398)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:272)
+
+-- Player being ticked --
+Details:
+	Entity Type: null (net.minecraft.entity.player.EntityPlayerMP)
+	Entity ID: 10
+	Entity Name: Player820
+	Entity's Exact location: -828.21, 5.05, -751.59
+	Entity's Block location: World: (-829,5,-752), Chunk: (at 3,0,0 in -52,-47; contains blocks -832,0,-752 to -817,255,-737), Region: (-2,-2; contains chunks -64,-64 to -33,-33, blocks -1024,0,-1024 to -513,255,-513)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:423)
+	at net.minecraft.network.NetHandlerPlayServer.update(NetHandlerPlayServer.java:185)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher$1.update(NetworkDispatcher.java:212)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:307)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@69487293
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:197)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:865)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:743)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:592)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1666663256 bytes (1589 MB) / 2052587520 bytes (1957 MB) up to 4225236992 bytes (4029 MB)
+	JVM Flags: 4 total; -Xincgc -Xmx4024M -Xms2024M -Xmx4096m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2768 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID          | Version      | Source                           | Signature |
+	|:--------- |:----------- |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft   | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp         | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML         | 8.0.99.99    | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | forge       | 14.23.5.2768 | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | tirphycraft | 0.2          | bin                              | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player820'/10, l='New World', x=-828.21, y=5.05, z=-751.59]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

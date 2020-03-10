@@ -26,7 +26,7 @@ public class BiomeLaputaDecorator {
 	public final WorldGenGeantTree BIG_TREE = new WorldGenGeantTree();
 	public final WorldGenNormalTree NORMAL_TREE = new WorldGenNormalTree();
 	public final WorldGenLaputaMagicPlant MAGIC_PLANT = new WorldGenLaputaMagicPlant();
-	public final WorldGenStem STEM = new WorldGenStem(BlockInit.STEM.getDefaultState(), 2);
+	WorldGenStem STEM = new WorldGenStem(BlockInit.STEM.getDefaultState(), 2);
 
 	public void genDecorator(World worldIn, Random rand, BlockPos pos, int tree, int big_tree, int light_pad, int grass,
 			int flower, int crystal, int magic, int stem) {

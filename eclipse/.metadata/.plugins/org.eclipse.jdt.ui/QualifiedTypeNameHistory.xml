@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.minecraftforge.event.ForgeEventFactory"/>
-<fullyQualifiedTypeName name="net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.dimension.chunk.ChunkGeneratorEndBiomes"/>
-<fullyQualifiedTypeName name="net.minecraft.world.gen.IChunkGenerator"/>
-<fullyQualifiedTypeName name="net.minecraft.world.gen.ChunkGeneratorEnd"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.dimension.chunk.test"/>
-<fullyQualifiedTypeName name="net.minecraft.world.chunk.IChunkProvider"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.dimension.chunk.LaputaTemplate"/>
-<fullyQualifiedTypeName name="net.minecraft.world.gen.NoiseGeneratorSimplex"/>
-<fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
-<fullyQualifiedTypeName name="net.minecraft.util.math.MathHelper"/>
 <fullyQualifiedTypeName name="net.minecraft.util.math.ChunkPos"/>
 <fullyQualifiedTypeName name="net.minecraft.world.WorldEntitySpawner"/>
 <fullyQualifiedTypeName name="com.jcraft.jorbis.Block"/>
@@ -21,7 +9,6 @@
 <fullyQualifiedTypeName name="com.laz.tirphycraft.objects.base.BlockLightBase"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.objects.blocks.trees.sapling.BlockSaplingCoppir"/>
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.Main"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.objects.blocks.trees.sapling.BlockNoxisThorns"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.world.biomes.froz.BiomeFrozGiantForest"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.world.gen.generators.froz.WorldGenGiantPick"/>
@@ -49,15 +36,28 @@
 <fullyQualifiedTypeName name="com.laz.tirphycraft.init.DimensionInit"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.world.biomes.laputa.groundDecorator.genLaputaNMLGround"/>
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.init.BlockInit"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.world.biomes.froz.groundDecorator.genFrozEternalGround"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.init.ItemInit"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.world.WorldEvent"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.world.gen.generators.trees.laputa.WorldGenStem"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="net.minecraft.util.math.BlockPos"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.util.handlers.ConfigHandler"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.util.Reference"/>
 <fullyQualifiedTypeName name="net.minecraft.client.particle.ParticleFallingDust"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.particles.ParticleLeaf"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.tabs.TirphycraftTab"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.gosyn.common.blocks.ItemBlockVariants"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.gosyn.common.interfaces.IMetaName"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.util.interfaces.IMetaName"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.util.interfaces.IHasModel"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.init.BlockInit"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.init.ItemInit"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.gosyn.common.blocks.ground.BlockGrass"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.gosyn.common.blocks.plants.stage1.BlockTallGrass"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.gosyn.common.blocks.ground.BlockDirt"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.init.ToolsInit"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.objects.blocks.item.ItemBlockVariants"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.Main"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.gosyn.common.util.jar.getFloorHeight"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.util.Reference"/>
+<fullyQualifiedTypeName name="com.typesafe.config.Config"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.util.handlers.ConfigHandler"/>
 </qualifiedTypeNameHistroy>

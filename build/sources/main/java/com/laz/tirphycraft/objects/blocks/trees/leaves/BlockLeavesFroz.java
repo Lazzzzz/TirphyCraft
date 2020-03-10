@@ -120,7 +120,7 @@ public class BlockLeavesFroz extends BlockLeaves implements IHasModel
 			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState()) {
 				double x = rand.nextDouble();
 				double z = rand.nextDouble();
-				Reference.PROXY.spawnParticle(worldIn, ParticleTypes.FALLING_LEAF, pos.getX() + x, pos.getY(),	pos.getZ() + z, 0.05f, -0.1f, 0, 0.074f, 0.035f, 0.945f);
+				Reference.PROXY.spawnParticle(worldIn, ParticleTypes.FALLING_LEAF, pos.getX() + x, pos.getY(),	pos.getZ() + z, 0.05f, -0.1f, 0, 0.078f, 0.835f, 1f);
 			}
 		}
 	}

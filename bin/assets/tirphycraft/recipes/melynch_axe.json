@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": 
+    [
+        "ZZ",
+        "ZY",
+        " Y"
+    ],
+
+    "key": 
+    {
+        "Z": 
+        {
+            "item": "tirphycraft:melynch_planks"
+        },
+
+        "Y": 
+        {
+            "item": "tirphycraft:melynch_stick"
+        }
+    },
+
+    "result": 
+    {
+        "item": "tirphycraft:melynch_axe"
+    }
+}

@@ -6,12 +6,18 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="particleRed" key="selection"/>
+		<item value="gosyn" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="gosyn"/>
+			<item value="gosyb"/>
+			<item value="&#x09;&#x09;ResourceLocation location = new ResourceLocation(Reference.MOD_ID, &quot;dungeons/&quot; + structureName);"/>
+			<item value="ore"/>
+			<item value="MUSH"/>
+			<item value="air"/>
 			<item value="particleRed"/>
 			<item value="noxis"/>
 			<item value="river"/>
@@ -21,12 +27,6 @@
 			<item value="this.rand"/>
 			<item value="rand"/>
 			<item value="random"/>
-			<item value="digBlock"/>
-			<item value="Y"/>
-			<item value="SET"/>
-			<item value="SETBL"/>
-			<item value="air"/>
-			<item value="froz"/>
 		</list>
 		<list key="replacehistory">
 			<item value="BlockInit.NOXIS_STONE"/>

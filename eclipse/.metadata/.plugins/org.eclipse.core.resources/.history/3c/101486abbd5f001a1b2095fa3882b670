@@ -27,7 +27,7 @@ public class BlockNoxisThorns extends BlockBush implements IHasModel {
 	public BlockTallGrass() {
 		setUnlocalizedName("gosyn_tallgrass");
 		setRegistryName("gosyn_tallgrass");
-		setCreativeTab(Gosyn.gosynplantstab);
+		setCreativeTab(Main.tirphycrafttab);
 		setSoundType(SoundType.PLANT);
 
 		BlockInit.BLOCKS.add(this);

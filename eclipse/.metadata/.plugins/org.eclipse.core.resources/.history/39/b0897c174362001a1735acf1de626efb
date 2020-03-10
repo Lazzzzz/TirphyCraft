@@ -1,0 +1,21 @@
+package gosynmod.common.world.biomes.stage2.Laputa;
+
+import java.util.Random;
+
+import com.laz.tirphycraft.gosyn.common.world.biomes.base.BiomeStage2Base;
+
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class BiomeLaputa extends BiomeStage2Base {
+	
+	public BiomeLaputa() {
+		super("Laputa", 0F, 1F);
+
+	}
+	
+	@Override
+	public void decorate(World worldIn, Random rand, BlockPos pos) {
+		
+	}
+}

@@ -66,13 +66,15 @@ public class ConfigHandler {
 	// WORLD
 	public static int DIMENSION_NOXIS_ID = 120;
 	public static int DIMENSION_LAPUTA_ID = 121;
-	public static int DIMENSION_MUSHROOM_ID = 122;
+	public static int DIMENSION_GOSYN_ID = 122;
 	public static int DIMENSION_FROZ_ID = 123;
 
 	public static int MAX_PASSIF_CREATURE = 50;
 	public static int MAX_SIZE_CLOUD = 50;
 
 	public static boolean SPAWN_BIOMES_OVERWORLD = false;
+	
+	public static int MAX_DAMAGE_TOOLS = 60;
 
 	public static void init(File file) {
 		config = new Configuration(file);
@@ -177,7 +179,7 @@ public class ConfigHandler {
 				2, 1000, "");
 		DIMENSION_LAPUTA_ID = config.getInt("DIMENSION_LAPUTA_ID", category, DIMENSION_LAPUTA_ID,
 				2, 1000, "");
-		DIMENSION_MUSHROOM_ID = config.getInt("DIMENSION_MUSHROOM_ID", category, DIMENSION_MUSHROOM_ID,
+		DIMENSION_GOSYN_ID = config.getInt("DIMENSION_MUSHROOM_ID", category, DIMENSION_GOSYN_ID,
 				2, 1000, "");
 		DIMENSION_FROZ_ID = config.getInt("DIMENSION_FROZ_ID", category, DIMENSION_FROZ_ID,
 				2, 1000, "");

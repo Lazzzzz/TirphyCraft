@@ -1,0 +1,11 @@
+package com.laz.tirphycraft.gosyn.common.world.biomes.stage3;
+
+import com.laz.tirphycraft.gosyn.common.world.biomes.base.BiomeStage3Base;
+
+public class BiomeDarkForest extends BiomeStage3Base{
+
+	public BiomeDarkForest() {
+		super("Dark Forest", 0.05F, 1F);
+	}
+
+}

@@ -2,6 +2,6 @@
     "parent": "block/cross",
     "textures":
     {
-        "cross": "gosyn:blocks/plants/gosyn_tallgrass"
+        "cross": "tirphycraft:blocks/plants/gosyn_tallgrass"
     }
 }

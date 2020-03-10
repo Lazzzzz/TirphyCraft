@@ -1,0 +1,26 @@
+package com.laz.tirphycraft.gosyn.common.items.tools.aiguite;
+
+import com.laz.tirphycraft.gosyn.common.Gosyn;
+import com.laz.tirphycraft.gosyn.common.init.ToolsTypeInit;
+import com.laz.tirphycraft.gosyn.common.items.tools.base.ToolsGosynShovel;
+import com.laz.tirphycraft.init.ItemInit;
+import com.laz.tirphycraft.util.interfaces.IHasModel;
+
+public class ToolsAiguiteShovel extends ToolsGosynShovel implements IHasModel
+{
+	public ToolsAiguiteShovel() 
+	{
+		super(ToolsInit.AIGUITE_TOOL);
+		setUnlocalizedName("aiguite_shovel");
+		setRegistryName("aiguite_shovel");
+		setCreativeTab(Gosyn.gosybtoolstab);
+		
+		ItemInit.ITEMS.add(this);
+	}
+
+	@Override
+	public void registerModels() 
+	{
+		Gosyn.proxy.registerItemRenderer(this, 0, "inventory");
+	}
+}

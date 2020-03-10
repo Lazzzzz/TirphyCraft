@@ -3,10 +3,8 @@ package com.laz.tirphycraft.dimension.Noxis;
 import com.laz.tirphycraft.dimension.chunk.NoxisTemplate;
 import com.laz.tirphycraft.init.DimensionInit;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.gen.IChunkGenerator;
@@ -44,14 +42,19 @@ public class DimensionLibraryNoxis extends WorldProvider {
 		return false;
 	}
 
-	@Override
-	public Vec3d getSkyColor(Entity cameraEntity, float partialTicks) {
-		return new Vec3d(0, 0, 0);
-	}
 	
-	@Override
-	public IRenderHandler getSkyRenderer() {
-		return super.getSkyRenderer();
-	}
-	
+    @Override
+    public float getStarBrightness(float par1) {
+    	return 1F;
+    }
+    
+    @Override
+    public float calculateCelestialAngle(long worldTime, float partialTicks) {
+    	return 0.5f;
+    }
+
+    @Override
+    public IRenderHandler getSkyRenderer() {
+    	return super.getSkyRenderer();
+    }
 }

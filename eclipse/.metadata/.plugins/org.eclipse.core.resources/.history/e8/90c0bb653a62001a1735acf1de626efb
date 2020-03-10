@@ -1,0 +1,58 @@
+package com.laz.tirphycraft.event;
+
+import com.laz.tirphycraft.util.Reference;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.client.event.DrawBlockHighlightEvent;
+import net.minecraftforge.client.event.EntityViewRenderEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+
+@Mod.EventBusSubscriber(value = Side.CLIENT, modid = Reference.MOD_ID)
+public class ClientEvents {
+
+	static float timer = 0f;
+	static float maxFog = 5f;
+	static float steps = 0.00005f;
+
+	@SubscribeEvent
+	public static void onColorFog(EntityViewRenderEvent.RenderFogEvent.FogColors e) {
+		if (Minecraft.getMinecraft().getRenderViewEntity() instanceof EntityPlayer && Minecraft.getMinecraft().getRenderViewEntity().dimension != ConfigHandler.DIMENSION_NOXIS_ID) {
+			e.setRed(0);
+			e.setGreen(0);
+			e.setBlue(0);
+
+		}else {
+			e.setRed(255);
+			e.setGreen(255);
+			e.setBlue(255);
+		}
+	}
+
+	@SubscribeEvent
+	public static void onSetupFogDensity(EntityViewRenderEvent.RenderFogEvent.FogDensity event) {
+		if (Minecraft.getMinecraft().getRenderViewEntity() instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().getRenderViewEntity();
+			if (player.dimension == ConfigHandler.DIMENSION_NOXIS_ID) {
+				if (timer < maxFog)
+					timer += steps / 2;
+				GlStateManager.setFog(GlStateManager.FogMode.EXP);
+				event.setCanceled(true);
+				event.setDensity(timer);
+			} else {
+				if (timer > 0)
+					timer -= steps;
+				if (timer != 0) {
+					GlStateManager.setFog(GlStateManager.FogMode.EXP);
+					event.setCanceled(true);
+					event.setDensity(timer);
+				}
+			}
+		}
+	}
+}
+
