@@ -23,11 +23,12 @@ public class BiomeNoxis extends Biome {
 				.setRainfall(0.0F).setRainDisabled().setWaterColor(1909616));
 
 		this.decorator.treesPerChunk = 4;
-		this.spawnableCaveCreatureList.clear();
+		this.modSpawnableLists.clear();
 		this.spawnableMonsterList.clear();
 		this.spawnableCaveCreatureList.clear();
 		this.spawnableCreatureList.clear();
 		this.spawnableWaterCreatureList.clear();
+		
 
 	}
 

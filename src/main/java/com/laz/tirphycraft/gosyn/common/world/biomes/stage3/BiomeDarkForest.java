@@ -9,8 +9,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class BiomeDarkForest extends BiomeStage3Base{
-	
+public class BiomeDarkForest extends BiomeStage3Base {
+
 	private final WorldGenerator TORNS = new worldGenTorns();
 
 	public BiomeDarkForest() {
@@ -19,13 +19,14 @@ public class BiomeDarkForest extends BiomeStage3Base{
 
 	@Override
 	public void decorate(World worldIn, Random rand, BlockPos pos) {
-		for (int i = 0; i < 128; i++) {
-			int rx = pos.getX() + rand.nextInt(16) + 8;
-			int rz = pos.getZ() + rand.nextInt(16) + 8;
-			BlockPos poss = worldIn.getHeight(pos.add(rx, 0, rz));
+		for (int i = 0; i < 80; i++) {
+			int j = rand.nextInt(16) + 8;
+			int k = rand.nextInt(16) + 8;
+			BlockPos poss = worldIn.getHeight(pos.add(j, 0, k));
+			if (poss.getY() < 51)
+				TORNS.generate(worldIn, rand, poss);
 
-			this.TORNS.generate(worldIn, rand, poss);
 		}
 	}
-	
+
 }

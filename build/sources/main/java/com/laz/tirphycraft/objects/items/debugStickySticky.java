@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.laz.tirphycraft.objects.base.ItemBase;
 import com.laz.tirphycraft.util.interfaces.IStructure;
+import com.laz.tirphycraft.world.gen.generators.structures.tower.WorldGenBattleTower;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenGeantTreeFroz;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,7 +21,7 @@ public class debugStickySticky extends ItemBase implements IStructure {
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-		new WorldGenGeantTreeFroz().generate(worldIn, new Random(), playerIn.getPosition());
+		new WorldGenBattleTower().generate(worldIn, new Random(), playerIn.getPosition());
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 
 	}

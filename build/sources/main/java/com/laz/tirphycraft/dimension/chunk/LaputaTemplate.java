@@ -142,10 +142,11 @@ public class LaputaTemplate implements IChunkGenerator {
 		}
 	}
 
-	public void buildSurfaces(ChunkPrimer primer) {
+	public void buildSurfaces(ChunkPrimer primer, int x, int z) {
 		if (!net.minecraftforge.event.ForgeEventFactory.onReplaceBiomeBlocks(this, this.chunkX, this.chunkZ, primer,
 				this.world))
 			return;
+
 		for (int i = 0; i < 16; ++i) {
 			for (int j = 0; j < 16; ++j) {
 				int k = 1;
@@ -175,6 +176,24 @@ public class LaputaTemplate implements IChunkGenerator {
 				}
 			}
 		}
+		
+
+		buildCloud(primer, x, z);
+	}
+
+	public void buildCloud(ChunkPrimer primer, int xx, int zz) {
+		for (int x = 0; x < 16; x++) {
+			for (int z = 0; z < 16; z++) {
+				int realx = xx * 16 + x;
+				int realz = zz * 16 + z;
+				int height = (int) (8 + Math.sin(realx / 40.0f) * 3 + Math.cos(realz / 40.0f) * 3);
+				for (int y = -height; y < height; y++) {
+					if (primer.getBlockState(x, 24 + y, z) == Blocks.AIR.getDefaultState())
+						primer.setBlockState(x, 24 + y, z, BlockInit.CLOUD.getDefaultState());
+				}
+			}
+		}
+
 	}
 
 	/**
@@ -189,8 +208,8 @@ public class LaputaTemplate implements IChunkGenerator {
 		this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, x * 16, z * 16, 16,
 				16);
 		this.setBlocksInChunk(x, z, chunkprimer);
-		this.buildSurfaces(chunkprimer);
-		
+		this.buildSurfaces(chunkprimer, x, z);
+
 		Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
 		byte[] abyte = chunk.getBiomeArray();
 

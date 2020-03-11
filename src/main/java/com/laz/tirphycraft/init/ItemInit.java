@@ -43,6 +43,7 @@ import com.laz.tirphycraft.objects.items.clock.ItemClock;
 import com.laz.tirphycraft.objects.items.food.ItemCustomFood;
 import com.laz.tirphycraft.objects.items.other.ItemAnkh;
 import com.laz.tirphycraft.objects.items.other.ItemCoins;
+import com.laz.tirphycraft.objects.items.other.ItemMixedDust;
 import com.laz.tirphycraft.objects.items.other.ItemPoseidonEye;
 import com.laz.tirphycraft.objects.items.other.ItemQueenHeart;
 import com.laz.tirphycraft.objects.items.other.ItemRoseFinder;
@@ -117,6 +118,7 @@ public class ItemInit {
 	public static final Item COINS				   = new ItemCoins();
 	public static final Item ROSE_FINDER           = new ItemRoseFinder("rose_finder", 1);
 	public static final Item FROZ_KEY			   = new ItemBase("froz_key", 3);
+	public static final Item MIXED_DUST			   = new ItemMixedDust("mixed_dust", 4);
 	public static final Item ORIGIN_MATTER		   = new ItemBase("origin_matter", 64);	
 	public static final Item ORIGIN_INGOT		   = new ItemBase("origin_ingot", 64);	
 	

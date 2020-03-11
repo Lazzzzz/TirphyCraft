@@ -74,7 +74,7 @@ public class ConfigHandler {
 
 	public static boolean SPAWN_BIOMES_OVERWORLD = false;
 	
-	public static int MAX_DAMAGE_TOOLS = 10;
+	public static int MAX_DAMAGE_TOOLS = 60;
 
 	public static void init(File file) {
 		config = new Configuration(file);

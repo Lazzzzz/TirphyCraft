@@ -191,7 +191,6 @@ public class WorldGenBattleTower extends WorldGenerator implements IStructure {
 
 	private boolean checkForSawn(Template template, World world, BlockPos pos) {
 		boolean flag = true;
-
 		for (int i = 0; i < template.getSize().getX(); i++) {
 			for (int j = 0; j < template.getSize().getZ(); j++) {
 				BlockPos down = pos.add(i, -1, j);
@@ -202,7 +201,9 @@ public class WorldGenBattleTower extends WorldGenerator implements IStructure {
 
 			}
 		}
-		return flag;
+		return true;
+
+		//return flag;
 	}
 
 	private void fillChest(World world, Template template, BlockPos pos) {

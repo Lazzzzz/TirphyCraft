@@ -141,10 +141,10 @@ public class EntityInit {
 		EntityRegistry.addSpawn(EntityCrystim.class, 20, 1, 4, EnumCreatureType.AMBIENT, BiomeInit.LAPUTA_CRYSTAL);
 		
 			//FROZ
-		EntityRegistry.addSpawn(EntityMontauk.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
-		EntityRegistry.addSpawn(EntityFrozenBuffalo.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);		
-		EntityRegistry.addSpawn(EntityFrozenBoar.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
-		EntityRegistry.addSpawn(EntityColosse.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.NOXIS, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
+		EntityRegistry.addSpawn(EntityMontauk.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
+		EntityRegistry.addSpawn(EntityFrozenBuffalo.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);		
+		EntityRegistry.addSpawn(EntityFrozenBoar.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
+		EntityRegistry.addSpawn(EntityColosse.class, 20, 3, 5, EnumCreatureType.AMBIENT, BiomeInit.FROZ_DENSE, BiomeInit.FROZ_PLAINE);
 		
 		//MECHANT
 		

@@ -20,58 +20,32 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockCloud extends BlockBase {
-	
-	public BlockCloud() { 
-	super("cloud", Material.WEB, 0F, 0F, "pickaxe", 0, SoundType.SNOW);
-	this.translucent = true;
+
+	public BlockCloud() {
+		super("cloud", Material.WEB, 0F, 0F, "pickaxe", 0, SoundType.SNOW);
+		this.setLightLevel(0.3f);
 	}
 
-    @Nullable
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
-    {
-        return NULL_AABB;
-    }
-    @Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-    	if  (entityIn instanceof EntityMeteorite) {
-    		worldIn.setBlockToAir(pos);
-    	}
-    	
-    	if (entityIn.motionY < 0) {
-    		entityIn.motionY = -0.01;
-	    	entityIn.fallDistance = 0;
-	    	entityIn.onGround = true;
 
-    }}
-    public int quantityDropped(Random random)
-    {
-        return 0;
-    }
+	@Override
+	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+	}
 
-    @Override
-    public boolean isOpaqueCube(IBlockState state)
-    {
-        return false;
-    }    
-    
-    @Override
-    @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer()
-    {
-        return BlockRenderLayer.CUTOUT_MIPPED;
-    }
-  
+	public int quantityDropped(Random random) {
+		return 0;
+	}
 
-    public boolean isFullCube(IBlockState state)
-    {
-        return false;
-    }
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return true;
+	}
 
-    protected boolean canSilkHarvest()
-    {
-        return true;
-    }
-	
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+
+	protected boolean canSilkHarvest() {
+		return true;
+	}
+
 }
-
-

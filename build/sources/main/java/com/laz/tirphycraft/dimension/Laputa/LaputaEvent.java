@@ -37,7 +37,7 @@ public class LaputaEvent {
 		Vec3d vec = event.player.getLookVec();
 		
 
-		if (world.getWorldTime() % 1000 == 0 && event.player.dimension == ConfigHandler.DIMENSION_LAPUTA_ID && !world.isRemote && world.rand.nextInt(10) == 0) {
+		if (world.getWorldTime() % 1500 == 0 && event.player.dimension == ConfigHandler.DIMENSION_LAPUTA_ID && !world.isRemote && world.rand.nextInt(10) == 0) {
 			EntityMeteorite e = new EntityMeteorite(world);
 			e.setPosition(event.player.posX + 50 * -vec.x, event.player.posY + 100, event.player.posZ + 50 * -vec.z);
 			
