@@ -11,10 +11,15 @@ import net.minecraft.world.gen.IChunkGenerator;
 
 public class DimensionLibraryLaputa extends WorldProvider {
     
+	public int posX[];
+	public int posY[];
+	
 	@Override
 	public void init() {
 		this.hasSkyLight = true;
 		this.biomeProvider = new BiomeProviderLaputa(this.world.getSeed());
+		this.posX = new int [5];
+		this.posY = new int [5];
 	}
 
 	public DimensionType getDimensionType() {
@@ -24,7 +29,10 @@ public class DimensionLibraryLaputa extends WorldProvider {
 
 	@Override
 	public IChunkGenerator createChunkGenerator() {
-		return new LaputaTemplate(this.world, this.world.getSeed());
+		LaputaTemplate chunk = new LaputaTemplate(this.world, this.world.getSeed());
+		this.posX = chunk.getTowerPosX();
+		this.posY = chunk.getTowerPosY();
+		return chunk;
 	}
 
 	

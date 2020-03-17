@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.minecraftforge.event.entity.EntityMobGriefingEvent"/>
-<fullyQualifiedTypeName name="net.minecraftforge.event.entity.EntityEvent"/>
-<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.init.EntityInit"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.entity.entityClass.boss.EntityQueenCreeper"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="net.minecraft.world.DimensionType"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.dimension.chunk.arcana.WorldProviderArcana"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.init.DimensionInit"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.world.biomes.laputa.groundDecorator.genLaputaNMLGround"/>
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
@@ -38,7 +28,6 @@
 <fullyQualifiedTypeName name="com.laz.tirphycraft.util.interfaces.ParticleTypes"/>
 <fullyQualifiedTypeName name="net.minecraft.util.text.ITextComponent"/>
 <fullyQualifiedTypeName name="net.minecraft.util.text.TextComponentString"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.util.handlers.ConfigHandler"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="net.minecraft.util.math.BlockPos"/>
 <fullyQualifiedTypeName name="net.minecraft.world.gen.feature.WorldGenerator"/>
@@ -53,11 +42,22 @@
 <fullyQualifiedTypeName name="net.minecraft.world.biome.Biome"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.init.BiomeInit"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
-<fullyQualifiedTypeName name="com.laz.tirphycraft.init.ItemInit"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.objects.items.other.ItemMixedDust"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.EntityItemPickupEvent"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
 <fullyQualifiedTypeName name="net.minecraft.util.math.ChunkPos"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="net.minecraft.world.end.DragonFightManager"/>
+<fullyQualifiedTypeName name="net.minecraft.world.chunk.ChunkPrimer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="net.minecraft.block.state.IBlockState"/>
 <fullyQualifiedTypeName name="com.laz.tirphycraft.init.BlockInit"/>
+<fullyQualifiedTypeName name="net.minecraft.world.gen.IChunkGenerator"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.dimension.chunk.LaputaTemplate"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.dimension.Laputa.DimensionLibraryLaputa"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.util.handlers.ConfigHandler"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.init.ItemInit"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.io.PipedOutputStream"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerInteractEvent"/>
+<fullyQualifiedTypeName name="com.laz.tirphycraft.event.CrystalDirectionSolarTower"/>
 </qualifiedTypeNameHistroy>

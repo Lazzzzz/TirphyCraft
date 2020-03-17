@@ -1,0 +1,91 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 3/13/20 12:27 PM
+Description: Exception generating new chunk
+
+java.lang.ArrayIndexOutOfBoundsException: 65536
+	at net.minecraft.world.chunk.ChunkPrimer.setBlockState(ChunkPrimer.java:20)
+	at com.laz.tirphycraft.dimension.chunk.LaputaTemplate.SolarPillar(LaputaTemplate.java:421)
+	at com.laz.tirphycraft.dimension.chunk.LaputaTemplate.buildSurfaces(LaputaTemplate.java:181)
+	at com.laz.tirphycraft.dimension.chunk.LaputaTemplate.generateChunk(LaputaTemplate.java:211)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:155)
+	at net.minecraft.server.management.PlayerChunkMapEntry.providePlayerChunk(PlayerChunkMapEntry.java:130)
+	at net.minecraft.server.management.PlayerChunkMap.tick(PlayerChunkMap.java:183)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:236)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:831)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:743)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:592)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.world.chunk.ChunkPrimer.setBlockState(ChunkPrimer.java:20)
+	at com.laz.tirphycraft.dimension.chunk.LaputaTemplate.SolarPillar(LaputaTemplate.java:421)
+	at com.laz.tirphycraft.dimension.chunk.LaputaTemplate.buildSurfaces(LaputaTemplate.java:181)
+	at com.laz.tirphycraft.dimension.chunk.LaputaTemplate.generateChunk(LaputaTemplate.java:211)
+
+-- Chunk to be generated --
+Details:
+	Location: 0,0
+	Position hash: 0
+	Generator: com.laz.tirphycraft.dimension.chunk.LaputaTemplate@22c11df4
+Stacktrace:
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:155)
+	at net.minecraft.server.management.PlayerChunkMapEntry.providePlayerChunk(PlayerChunkMapEntry.java:130)
+	at net.minecraft.server.management.PlayerChunkMap.tick(PlayerChunkMap.java:183)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:236)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['Player278'/64, l='New World', x=36.50, y=45.00, z=-7.32]]
+	Chunk stats: ServerChunkCache: 27 Drop: 0
+	Level seed: -8315911364176425890
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:831)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:743)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:592)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1597909184 bytes (1523 MB) / 2052587520 bytes (1957 MB) up to 4225236992 bytes (4029 MB)
+	JVM Flags: 4 total; -Xincgc -Xmx4024M -Xms2024M -Xmx4096m
+	IntCache: cache: 0, tcache: 0, allocated: 1, tallocated: 14
+	FML: MCP 9.42 Powered by Forge 14.23.5.2768 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID          | Version      | Source                           | Signature |
+	|:--------- |:----------- |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft   | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp         | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML         | 8.0.99.99    | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | forge       | 14.23.5.2768 | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | tirphycraft | 0.2          | bin                              | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player278'/64, l='New World', x=36.50, y=45.00, z=-7.32]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

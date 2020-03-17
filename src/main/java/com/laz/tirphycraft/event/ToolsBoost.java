@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @EventBusSubscriber
 public class ToolsBoost {
 
+	//WIP
+	
 	@SubscribeEvent
 	public static void getItem(PlayerInteractEvent event) {
 		if (!event.getWorld().isRemote) {

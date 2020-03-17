@@ -1,0 +1,93 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 3/13/20 5:57 PM
+Description: Ticking player
+
+java.lang.NullPointerException: Ticking player
+	at com.laz.tirphycraft.event.CrystalDirectionSolarTower.eventParticles(CrystalDirectionSolarTower.java:66)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_5_CrystalDirectionSolarTower_eventParticles_PlayerTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPostTick(FMLCommonHandler.java:370)
+	at net.minecraft.entity.player.EntityPlayer.updateSize(EntityPlayer.java:416)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:326)
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:423)
+	at net.minecraft.network.NetHandlerPlayServer.update(NetHandlerPlayServer.java:185)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher$1.update(NetworkDispatcher.java:212)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:307)
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:197)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:865)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:743)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:592)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.laz.tirphycraft.event.CrystalDirectionSolarTower.eventParticles(CrystalDirectionSolarTower.java:66)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_5_CrystalDirectionSolarTower_eventParticles_PlayerTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPostTick(FMLCommonHandler.java:370)
+	at net.minecraft.entity.player.EntityPlayer.updateSize(EntityPlayer.java:416)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:326)
+
+-- Player being ticked --
+Details:
+	Entity Type: null (net.minecraft.entity.player.EntityPlayerMP)
+	Entity ID: 4
+	Entity Name: Player807
+	Entity's Exact location: -194.59, 32.25, -370.41
+	Entity's Block location: World: (-195,32,-371), Chunk: (at 13,2,13 in -13,-24; contains blocks -208,0,-384 to -193,255,-369), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:423)
+	at net.minecraft.network.NetHandlerPlayServer.update(NetHandlerPlayServer.java:185)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher$1.update(NetworkDispatcher.java:212)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:307)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@687df8f3
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:197)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:865)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:743)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:592)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1328419664 bytes (1266 MB) / 2052587520 bytes (1957 MB) up to 4225236992 bytes (4029 MB)
+	JVM Flags: 4 total; -Xincgc -Xmx4024M -Xms2024M -Xmx4096m
+	IntCache: cache: 0, tcache: 0, allocated: 1, tallocated: 14
+	FML: MCP 9.42 Powered by Forge 14.23.5.2768 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID          | Version      | Source                           | Signature |
+	|:--------- |:----------- |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft   | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp         | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML         | 8.0.99.99    | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | forge       | 14.23.5.2768 | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | tirphycraft | 0.2          | bin                              | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player807'/4, l='New World', x=-194.59, y=32.25, z=-370.41]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

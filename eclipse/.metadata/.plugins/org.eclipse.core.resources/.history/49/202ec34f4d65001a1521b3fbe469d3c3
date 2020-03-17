@@ -1,0 +1,75 @@
+package com.laz.tirphycraft.event;
+
+import java.util.Random;
+
+import com.laz.tirphycraft.Main;
+import com.laz.tirphycraft.dimension.Laputa.DimensionLibraryLaputa;
+import com.laz.tirphycraft.dimension.chunk.LaputaTemplate;
+import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.init.ItemInit;
+import com.laz.tirphycraft.util.handlers.ConfigHandler;
+import com.laz.tirphycraft.util.interfaces.ParticleTypes;
+
+import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@EventBusSubscriber
+public class CrystalDirectionSolarTower {
+
+	private static Random rand = new Random();
+
+	static BlockPos posEvent;
+	static int counter = 5 * 20;
+	static int timer = 5 * 20; // 5s
+
+	static DimensionLibraryLaputa gen;
+
+	@SubscribeEvent
+	public static void getItem(PlayerInteractEvent event) {
+		if (!event.getWorld().isRemote && event.getEntityPlayer().dimension == ConfigHandler.DIMENSION_LAPUTA_ID) {
+			EntityPlayer player = event.getEntityPlayer();
+			BlockPos pos = event.getPos();
+			Block block = event.getWorld().getBlockState(pos).getBlock();
+
+			if (block == BlockInit.LAPUTA_BLUE && player.inventory.getCurrentItem().getItem() == ItemInit.AIGUITE_GEM) {
+				gen = (DimensionLibraryLaputa) player.world.provider;
+				posEvent = pos;
+				counter = 0;
+				player.inventory.getCurrentItem().setCount(player.inventory.getCurrentItem().getCount() - 1);
+
+			}
+		}
+	}
+
+	@SideOnly(value = Side.CLIENT)
+	@SubscribeEvent
+	public static void eventParticles(PlayerTickEvent event) {
+		EntityPlayer player = event.player;
+		if (counter < timer) {
+			counter++;
+			double dirX = (posEvent.getX() - (gen.posX[0] * 16));
+			double dirZ = (posEvent.getY() - (gen.posX[0] * 16));
+			System.out.println(dirX);
+			System.out.println(dirZ);
+			double vy = rand.nextDouble();
+			Main.proxy.spawnParticle(player.world, ParticleTypes.GLINT_BLUE, posEvent.getX() + rand.nextDouble(),
+					posEvent.getY() + rand.nextDouble(), posEvent.getZ() + rand.nextDouble(), 0.2 * Math.sin(dirX), 0.1f, -0.2 * Math.cos(dirX));
+
+		} else {
+			posEvent = null;
+			gen = null;
+		}
+
+	}
+}

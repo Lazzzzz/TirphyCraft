@@ -53,6 +53,11 @@ public class LaputaTemplate implements IChunkGenerator {
 	private int chunkX = 0;
 	private int chunkZ = 0;
 
+	int nbCrystal = 5;
+
+	int[] posX;
+	int[] posY;
+
 	public LaputaTemplate(World p_i47241_1_, long p_i47241_3_) {
 		this.world = p_i47241_1_;
 		this.rand = new Random(p_i47241_3_);
@@ -76,12 +81,44 @@ public class LaputaTemplate implements IChunkGenerator {
 		this.lperlinNoise2 = ctx.getLPerlin2();
 		this.perlinNoise1 = ctx.getPerlin();
 		this.islandNoise = ctx.getIsland();
+		this.posX = new int[nbCrystal];
+		this.posY = new int[nbCrystal];
+		setTowerPos(posX);
+		setTowerPos(posY);
 	}
 
 	/**
 	 * Generates a bare-bones chunk of nothing but stone or ocean blocks, formed,
 	 * but featureless.
 	 */
+	
+	public int[] getTowerPosX() {
+		return this.posX;
+	}
+	public int[] getTowerPosY() {
+		return this.posY;
+	}
+
+	public void setTowerPos(int tab[]) {
+		boolean notUse;
+		int tempPos;
+		int radius = 128; // chunk
+		for (int i = 0; i < nbCrystal; i++) {
+			tempPos = this.rand.nextInt(radius) - radius / 2;
+			notUse = true;
+			for (int j = 0; j < nbCrystal; j++) {
+				if (tab[j] == tempPos) {
+					notUse = false;
+					i -= 1;
+				}
+			}
+			if (notUse) {
+				tab[i] = tempPos;
+			}
+		}
+
+	}
+
 	public void setBlocksInChunk(int x, int z, ChunkPrimer primer) {
 		int i = 2;
 		int j = 3;
@@ -176,9 +213,14 @@ public class LaputaTemplate implements IChunkGenerator {
 				}
 			}
 		}
-		
 
 		buildCloud(primer, x, z);
+		if (x == posX[0] && z == posY[0]) SolarPillar(primer, x, z, BlockInit.LAPUTA_BLUE.getDefaultState());
+		if (x == posX[1] && z == posY[1]) SolarPillar(primer, x, z, BlockInit.LAPUTA_GREEN.getDefaultState());
+		if (x == posX[2] && z == posY[2]) SolarPillar(primer, x, z, BlockInit.LAPUTA_PURPLE.getDefaultState());
+		if (x == posX[3] && z == posY[3]) SolarPillar(primer, x, z, BlockInit.LAPUTA_PINK.getDefaultState());
+		if (x == posX[4] && z == posY[4]) SolarPillar(primer, x, z, BlockInit.LAPUTA_YELLOW.getDefaultState());
+		
 	}
 
 	public void buildCloud(ChunkPrimer primer, int xx, int zz) {
@@ -409,6 +451,51 @@ public class LaputaTemplate implements IChunkGenerator {
 		biome.decorate(this.world, this.rand, pos);
 
 		WorldEntitySpawner.performWorldGenSpawning(this.world, biome, x + 8, z + 8, 16, 16, this.rand);
+	}
+
+	public void SolarPillar(ChunkPrimer primer, int x, int z, IBlockState CRYSTAL) {
+		IBlockState BLOCK = BlockInit.BRICK_LAPUTA.getDefaultState();
+		
+		for (int k = 0; k < 100; k++) {
+			for (int i = (int) k / 20; i < 16 - (int) k / 20; i++) {
+				for (int j = (int) k / 20; j < 16 - (int) k / 20; j++) {
+					if (rand.nextInt(50) < 45) primer.setBlockState(i, k, j, BLOCK);
+					else primer.setBlockState(i, k, j, CRYSTAL);
+
+				}
+			}
+		}
+
+		makeCrown(primer, x, 20, z , 16, -8, -8);
+		makeCrown(primer, x, 40, z , 14, -6, -6);
+		makeCrown(primer, x, 60, z , 12, -4, -4);
+		makeCrown(primer, x, 80, z , 10, -2, -2);
+		makeCrown(primer, x, 100, z, 8, 0, 0);
+		primer.setBlockState(7, 100, 7, BLOCK);
+		primer.setBlockState(8, 100, 7, BLOCK);
+		primer.setBlockState(8, 100, 8, BLOCK);
+		primer.setBlockState(7, 100, 8, BLOCK);
+		
+	}
+
+
+	public void makeCrown(ChunkPrimer primer, int x, int y, int z, int size, int offX, int offY) {
+		for (int i = -size/2; i < size/2 + 1; i++) {
+			for (int j = 0; j < Math.abs(i); j++) {
+				if (i < 0) {
+					primer.setBlockState(i + size + offX          , y + j , size / 2 + offY          , BlockInit.BRICK_LAPUTA.getDefaultState());
+					primer.setBlockState(i + size + offX          , y + j , size + size/2 - 1 + offY , BlockInit.BRICK_LAPUTA.getDefaultState());
+					primer.setBlockState(size/ 2 + offX           , y + j , i + size + offY          , BlockInit.BRICK_LAPUTA.getDefaultState());
+					primer.setBlockState(size/2 + size -1 + offX  , y + j , i + size + offY          , BlockInit.BRICK_LAPUTA.getDefaultState());
+				} else {
+					primer.setBlockState(i + size - 1 + offX      , y + j , size/2 + offY            , BlockInit.BRICK_LAPUTA.getDefaultState());
+					primer.setBlockState(i + size - 1 + offX      , y + j , size + size/2 - 1 + offY , BlockInit.BRICK_LAPUTA.getDefaultState());
+					primer.setBlockState(size/ 2 + offX           , y + j , i + size - 1 + offY      , BlockInit.BRICK_LAPUTA.getDefaultState());
+					primer.setBlockState(size/2 + size -1 + offX  , y + j , i + size - 1 + offY      , BlockInit.BRICK_LAPUTA.getDefaultState());
+				
+				}
+			}
+		}
 	}
 
 }
