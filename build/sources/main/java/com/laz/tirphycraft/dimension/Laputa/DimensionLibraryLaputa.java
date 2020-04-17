@@ -26,7 +26,6 @@ public class DimensionLibraryLaputa extends WorldProvider {
 		return DimensionInit.LAPUTA;
 	}
 
-
 	@Override
 	public IChunkGenerator createChunkGenerator() {
 		LaputaTemplate chunk = new LaputaTemplate(this.world, this.world.getSeed());

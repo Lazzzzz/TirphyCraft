@@ -4,7 +4,6 @@ import java.util.Random;
 
 import com.laz.tirphycraft.init.ItemInit;
 import com.laz.tirphycraft.init.PotionInit;
-import com.laz.tirphycraft.util.handlers.ConfigHandler;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;

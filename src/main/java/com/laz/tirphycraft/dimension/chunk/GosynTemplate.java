@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Random;
 
 import com.laz.tirphycraft.dimension.Gosyn.chunkGenSettings;
-import com.laz.tirphycraft.dimension.Gosyn.chunkGenSettings.Factory;
 import com.laz.tirphycraft.gosyn.common.world.gen.cave.GosynCaveGen;
 import com.laz.tirphycraft.init.BlockInit;
 

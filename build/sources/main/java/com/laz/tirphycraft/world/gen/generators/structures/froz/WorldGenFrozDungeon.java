@@ -38,13 +38,16 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 
 		BlockPos p = position;
 
+		boolean flag = checkSpace(worldIn, new BlockPos(position.getX() - rayon /2 - 10, position.getY() - 40, position.getZ()- rayon / 2 - 10), rayon / 2 - 10, rayon / 2 - 10);
+		if (flag == false) return flag;
+		
 		for (int i = 0; i < roomList.length; i++) {
 			boolean done = false;
 			int o = 0;
+			
 			while (done == false) {
 				o ++;
 				if (o == 100) {
-					System.out.println("IMPOSSIBLE....");
 					return false;
 				}
 				p = new BlockPos(position.getX() + rand.nextInt(rayon / 2) - rayon / 4, 30,
@@ -71,7 +74,7 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 		for (int i = 0; i < roomList.length - 1; i++) {
 			BlockPos room1 = roomList[i];
 			BlockPos room2 = roomList[i + 1];
-
+			
 			connectRoom(worldIn, rand, room1, room2, 4);
 		}
 
@@ -329,7 +332,9 @@ public class WorldGenFrozDungeon extends WorldGenerator implements IStructure {
 	}
 
 	private void placeStoneBrick(World worldIn, BlockPos pos, Random rand) {
-		worldIn.setBlockState(pos, Blocks.STONEBRICK.getStateFromMeta(rand.nextInt(3)));
+		int i = rand.nextInt(11);
+		if (i == 4 || i == 5  || i == 6) i = 0;
+		worldIn.setBlockState(pos, BlockInit.FROZ_BLUE_BRICK.getStateFromMeta(i));
 	}
 
 	private void wallCorridorZaxis(World worldIn, int i, int difX, int height, BlockPos room2, Random rand) {

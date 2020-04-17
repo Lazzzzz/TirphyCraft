@@ -2,6 +2,7 @@ package com.laz.tirphycraft.world.gen.generators.trees.laputa;
 
 import java.util.Random;
 
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -21,9 +22,11 @@ public class WorldGenStem extends WorldGenAbstractTree {
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 		
 		if (position.getY() >= 1 && position.getY() + 1 <= 240) {
-			int r = rand.nextInt(SIZE)+2;
-			generateStem(worldIn, rand, position, r, true, true, true, true);
-			return true;
+			if (worldIn.getBlockState(position.down()).getMaterial() == Material.GROUND) {
+				int r = rand.nextInt(SIZE)+2;
+				generateStem(worldIn, rand, position, r, true, true, true, true);
+				return true;
+			}
 		}
 
 		return false;

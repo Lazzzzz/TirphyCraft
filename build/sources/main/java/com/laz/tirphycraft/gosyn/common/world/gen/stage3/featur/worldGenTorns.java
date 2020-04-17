@@ -4,8 +4,6 @@ import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
 
-import net.minecraft.block.BlockLeaves;
-import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -22,7 +20,7 @@ public class worldGenTorns extends WorldGenerator {
 	@Override
 	public boolean generate(World world, Random rand, BlockPos pos) {
 
-		// make a 3-5 long stack going up
+
 		int nextLength = 2 + rand.nextInt(4);
 		int maxLength = 2 + rand.nextInt(4) + rand.nextInt(4) + rand.nextInt(4);
 
@@ -36,21 +34,15 @@ public class worldGenTorns extends WorldGenerator {
 			BlockPos dPos = pos.offset(dir, i);
 
 			if (Math.abs(dPos.getX() - oPos.getX()) < MAX_SPREAD && Math.abs(dPos.getZ() - oPos.getZ()) < MAX_SPREAD && canPlaceThorns(world, dPos)) {
-				this.setBlockAndNotifyAdequately(world, dPos, BlockInit.STEM.getDefaultState());
-				//System.out.println(dPos);
+				this.setBlockAndNotifyAdequately(world, dPos, BlockInit.GOSYN_THORNS.getDefaultState());
 
-				// did we make it to the end?
 				if (i == length - 1) {
 					complete = true;
-					// maybe a leaf?  or a rose?
 					if (rand.nextInt(CHANCE_OF_LEAF) == 0 && world.isAirBlock(dPos.offset(dir))) {
 						if (rand.nextInt(CHANCE_LEAF_IS_ROSE) > 0) {
-							// leaf
-							this.setBlockAndNotifyAdequately(world, dPos.offset(dir), BlockInit.STEM.getDefaultState());
-							//System.out.println(dPos.offset(dir));
+							this.setBlockAndNotifyAdequately(world, dPos.offset(dir), BlockInit.GOSYN_THORNS.getDefaultState());
 						} else {
-							// rose
-							this.setBlockAndNotifyAdequately(world, dPos.offset(dir), BlockInit.STEM.getDefaultState());
+							this.setBlockAndNotifyAdequately(world, dPos.offset(dir), BlockInit.GOSYN_THORNS.getDefaultState());
 						}
 					}
 				}
@@ -59,7 +51,6 @@ public class worldGenTorns extends WorldGenerator {
 			}
 		}
 
-		// add another off the end
 		if (complete && maxLength > 1) {
 
 			EnumFacing nextDir = EnumFacing.random(rand);
@@ -70,7 +61,6 @@ public class worldGenTorns extends WorldGenerator {
 			this.placeThorns(world, rand, nextPos, nextLength, nextDir, maxLength - 1, oPos);
 		}
 
-		// maybe another branch off the middle
 		if (complete && length > 3 && rand.nextInt(CHANCE_OF_BRANCH) == 0) {
 
 			int middle = rand.nextInt(length);
@@ -82,8 +72,6 @@ public class worldGenTorns extends WorldGenerator {
 
 			this.placeThorns(world, rand, nextPos, nextLength, nextDir, maxLength - 1, oPos);
 		}
-
-		// maybe a leaf
 		if (complete && length > 3 && rand.nextInt(CHANCE_OF_LEAF) == 0) {
 
 			int middle = rand.nextInt(length);
@@ -93,7 +81,7 @@ public class worldGenTorns extends WorldGenerator {
 			BlockPos nextPos = pos.offset(dir, middle).offset(nextDir);
 
 			if (world.isAirBlock(nextPos)) {
-				this.setBlockAndNotifyAdequately(world, nextPos, BlockInit.STEM.getDefaultState());
+				this.setBlockAndNotifyAdequately(world, nextPos, BlockInit.GOSYN_THORNS.getDefaultState());
 			}
 		}
 	}

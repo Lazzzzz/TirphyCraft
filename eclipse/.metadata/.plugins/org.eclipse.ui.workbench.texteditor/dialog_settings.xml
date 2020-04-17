@@ -6,29 +6,30 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="Snow" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="beam"/>
-			<item value="createChunkGenerator"/>
-			<item value="ender"/>
-			<item value="NOXIS"/>
-			<item value="buildSurfaces"/>
-			<item value="ori"/>
-			<item value="gosyn"/>
-			<item value="gosyb"/>
-			<item value="&#x09;&#x09;ResourceLocation location = new ResourceLocation(Reference.MOD_ID, &quot;dungeons/&quot; + structureName);"/>
-			<item value="ore"/>
-			<item value="MUSH"/>
-			<item value="air"/>
-			<item value="particleRed"/>
-			<item value="noxis"/>
-			<item value="river"/>
+			<item value="multi"/>
+			<item value="snow"/>
+			<item value="doExplosionB"/>
+			<item value="&#x09;public void buildFloor(World worldIn, Random rand, BlockPos position, int sizex, int sizey, int sizez) {"/>
+			<item value="sound"/>
+			<item value="SPAW"/>
+			<item value="BRICK_FROZ"/>
+			<item value="gosyn_portal"/>
+			<item value="portal"/>
+			<item value="port"/>
+			<item value="NoxisTemplate"/>
+			<item value="eventParticles"/>
+			<item value="render"/>
+			<item value="Fly"/>
+			<item value="fly"/>
 		</list>
 		<list key="replacehistory">
+			<item value="FROZ_BLUE_BRICK"/>
 			<item value="BlockInit.NOXIS_STONE"/>
 			<item value="OBSIDIAN"/>
 			<item value="tirphycraft:cave"/>
@@ -43,14 +44,13 @@
 			<item value="atlas"/>
 			<item value="FROZ_BOSS_WALL"/>
 			<item value="froz"/>
-			<item value="laputa"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="1495" key="DIALOG_X_ORIGIN"/>
-		<item value="440" key="DIALOG_Y_ORIGIN"/>
+		<item value="1355" key="DIALOG_X_ORIGIN"/>
+		<item value="418" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -3,6 +3,8 @@ package com.laz.tirphycraft.init;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.laz.tirphycraft.blockTile.tesseractActivated.BlockCrystalTesseractActivated;
+import com.laz.tirphycraft.gosyn.common.blocks.counter.BlockSpiritCounter;
 import com.laz.tirphycraft.gosyn.common.blocks.deco.BlockRockBrick;
 import com.laz.tirphycraft.gosyn.common.blocks.deco.BlockCreseolBrick.BlockCreseolBrick;
 import com.laz.tirphycraft.gosyn.common.blocks.deco.stairs.StairCreseolBrick;
@@ -24,8 +26,7 @@ import com.laz.tirphycraft.gosyn.common.blocks.ground.BlockDirtyGrass;
 import com.laz.tirphycraft.gosyn.common.blocks.ground.BlockGrass;
 import com.laz.tirphycraft.gosyn.common.blocks.ground.BlockMud;
 import com.laz.tirphycraft.gosyn.common.blocks.ground.BlockRock;
-import com.laz.tirphycraft.gosyn.common.blocks.miscs.portal.BlockGosynPortal;
-import com.laz.tirphycraft.gosyn.common.blocks.miscs.portal.BlockPortalNull;
+import com.laz.tirphycraft.gosyn.common.blocks.ground.BlockThorns;
 import com.laz.tirphycraft.gosyn.common.blocks.ore.BlockOreAiguite;
 import com.laz.tirphycraft.gosyn.common.blocks.ore.BlockOreEmcoel;
 import com.laz.tirphycraft.gosyn.common.blocks.plants.BlockCaveGrass;
@@ -65,7 +66,6 @@ import com.laz.tirphycraft.objects.base.BlockLightBase;
 import com.laz.tirphycraft.objects.base.BlockLogBase;
 import com.laz.tirphycraft.objects.base.BlockOre;
 import com.laz.tirphycraft.objects.base.BlockPlanksBase;
-import com.laz.tirphycraft.objects.base.BlockPortalBase;
 import com.laz.tirphycraft.objects.base.BlockStairsBase;
 import com.laz.tirphycraft.objects.base.GrassBase;
 import com.laz.tirphycraft.objects.blocks.basicBlock.BlockBrickDungeon;
@@ -100,6 +100,7 @@ import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.crystal.BlockYellowC
 import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.plant.BlockLaputaBush;
 import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.plant.BlockLaputaGrass;
 import com.laz.tirphycraft.objects.blocks.basicBlock.laputa.plant.BlockLaputaTallGrass;
+import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockCorrupted;
 import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockMushroomLeaves;
 import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockNoxisFrozenGrass;
 import com.laz.tirphycraft.objects.blocks.basicBlock.noxis.BlockNoxisGrass;
@@ -139,6 +140,12 @@ import com.laz.tirphycraft.objects.blocks.trees.sapling.BlockSaplingFroz;
 import com.laz.tirphycraft.objects.blocks.trees.sapling.BlockSaplingGoldir;
 import com.laz.tirphycraft.objects.blocks.trees.sapling.BlockSaplingNormal;
 import com.laz.tirphycraft.objects.blocks.trees.sapling.BlockSaplingSilvir;
+import com.laz.tirphycraft.objects.portal.froz.BlockFrozPortal;
+import com.laz.tirphycraft.objects.portal.froz.BlockFrozPortalNull;
+import com.laz.tirphycraft.objects.portal.gosyn.BlockGosynPortal;
+import com.laz.tirphycraft.objects.portal.gosyn.BlockGosynPortalNull;
+import com.laz.tirphycraft.objects.portal.laputa.BlockLaputaPortal;
+import com.laz.tirphycraft.objects.portal.laputa.BlockLaputaPortalNull;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -165,6 +172,8 @@ public class BlockInit {
 	public static final Block LAPUTA_PURPLE				= new BlockPurpleCrystalFull();
 	public static final Block LAPUTA_GREEN				= new BlockGreenCrystalFull();
 	public static final Block LAPUTA_YELLOW				= new BlockYellowCrystalFull();
+	public static final Block GOSYN_THORNS				= new BlockThorns();
+	
 	
 	//LOGS
 	public static final Block LOG_COPPIR 		= new BlockLogBase("log_coppir");
@@ -208,14 +217,16 @@ public class BlockInit {
 	public static final Block HISOIRE_ICE     	= new BlockBase("histoire_ice", Material.ROCK, 1.5F, 15, "pickaxe", 2, SoundType.STONE);
 	
 	//TILE ENTITY
-	public static final Block PYRODES_FURNACE 	= new BlockPyrodesFurnace("pyrodes_furnace");
-	public static final Block ALLOY_FURNACE 	= new BlockAlloyFurnace("alloy_furnace");	
+	public static final Block PYRODES_FURNACE 	 = new BlockPyrodesFurnace("pyrodes_furnace");
+	public static final Block ALLOY_FURNACE 	 = new BlockAlloyFurnace("alloy_furnace");	
+	public static final Block COUNTER            = new BlockSpiritCounter();
+	public static final Block TESSERACT_ACTIVATE = new BlockCrystalTesseractActivated();
 	
 	//FLOOR
 	public static final Block NOXIS_STONE			= new BlockNoxisStone("noxis_stone", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE);
 	public static final Block NOXIS_BRICK_CARVED	= new BlockNoxisStone("noxis_bricks_carved", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE);
 	public static final Block NOXIS_BRICK_PILLAR	= new BlockNoxisStone("noxis_bricks_pillar", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE);
-	
+	public static final Block CORRUPTED				= new BlockCorrupted();
 	
 	public static final Block NOXIS_ASH_LIT			= new BlockLightBase("noxis_ash_lit", Material.ROCK, 1.5F, 15, "pickaxe", 0, SoundType.STONE, 0.3f);
 	public static final Block NOXIS_THORNS			= new BlockNoxisThorns();
@@ -243,9 +254,10 @@ public class BlockInit {
 	public static final Block STAIRS_SILVIR			= new BlockStairsBase("stairs_silvir", Material.WOOD, 2, 2, "axe", 0, SoundType.WOOD, PLANKS_SILVIR.getDefaultState(), true);
 	public static final Block STAIRS_GOLDIR			= new BlockStairsBase("stairs_goldir", Material.WOOD, 2, 2, "axe", 0, SoundType.WOOD, PLANKS_GOLDIR.getDefaultState(), true);
 	public static final Block STAIRS_FROZ			= new BlockStairsBase("stairs_froz", Material.WOOD, 2, 2, "axe", 0, SoundType.WOOD, PLANKS_GOLDIR.getDefaultState(), true);
-	public static final Block STAIRS_BRICK_NOXIS	= new BlockStairsBase("stairs_brick_noxis", Material.ROCK, 1.6F, 15, "pickaxe", 0, SoundType.WOOD, BRICK_NOXIS.getDefaultState(), false);
-	public static final Block STAIRS_BRICK_LAPUTA	= new BlockStairsBase("stairs_brick_laputa", Material.ROCK, 1.6F, 15, "pickaxe", 0, SoundType.WOOD, BRICK_LAPUTA.getDefaultState(), false);
-	public static final Block STAIRS_BRICK_FROZ		= new BlockStairsBase("stairs_brick_froz", Material.ROCK, 1.6F, 15, "pickaxe", 0, SoundType.WOOD, BRICK_FROZ.getDefaultState(), false);
+	public static final Block STAIRS_BRICK_NOXIS	= new BlockStairsBase("stairs_brick_noxis", Material.ROCK, 1.6F, 15, "pickaxe", 0, SoundType.GROUND, BRICK_NOXIS.getDefaultState(), false);
+	public static final Block STAIRS_BRICK_LAPUTA	= new BlockStairsBase("stairs_brick_laputa", Material.ROCK, 1.6F, 15, "pickaxe", 0, SoundType.GROUND, BRICK_LAPUTA.getDefaultState(), false);
+	public static final Block STAIRS_BRICK_FROZ		= new BlockStairsBase("stairs_brick_froz", Material.ROCK, 1.6F, 15, "pickaxe", 0, SoundType.GROUND, BRICK_FROZ.getDefaultState(), false);
+	public static final Block STAIRS_CORRUPTED		= new BlockStairsBase("stairs_corrupted", Material.ROCK, 1.6F, 15, "pickaxe", 0, SoundType.GROUND, CORRUPTED.getDefaultState(), false);
 	
 	//MODEL 
 	public static final Block NEUTRAL_PILLAR 		= new NeutralPillar("neutral_pillar");
@@ -284,8 +296,13 @@ public class BlockInit {
 	public static final Block EGG_ARTIKON				= new EggArtikon("egg_artikon");
 	
 	//PORTAL
-	public static final Block PORTAL_LAPUTA				= new BlockPortalBase("portal_laputa", 121);
-	public static final Block PORTAL_FROZ				= new BlockPortalBase("portal_froz", 123);
+	public static final Block GOSYN_PORTAL	   	= new BlockGosynPortal();
+	public static final Block GOSYN_PORTALNULL 	= new BlockGosynPortalNull();
+	public static final Block LAPUTA_PORTAL	   	= new BlockLaputaPortal();
+	public static final Block LAPUTA_PORTALNULL = new BlockLaputaPortalNull();
+	public static final Block FROZ_PORTAL	    = new BlockFrozPortal();
+	public static final Block FROZ_PORTALNULL   = new BlockFrozPortalNull();
+	
 	
 	//DUNGEONS
 	public static final Block BRICK_DUNGEON 			= new BlockBrickDungeon();
@@ -338,6 +355,7 @@ public class BlockInit {
 	//ORE
 	public static final Block ORE_EMCOEL	 = new BlockOreEmcoel();
 	public static final Block ORE_AIGUITE	 = new BlockOreAiguite();
+	public static final Block GOSYN_MULTIBLOCK = new BlockGosynMultiBlock();
 	
 	//TILE 
 	public static final Block LOOTJAR = new BlockJar();
@@ -371,9 +389,5 @@ public class BlockInit {
 	public static final Block CORRUPTED_GRASS   = new BlockCorruptedGrass();
 	public static final Block CORRUPTED_HANGING = new BlockCorruptedHangingPlant();
 	
-	public static final Block GOSYN_PORTAL	   = new BlockGosynPortal();
-	public static final Block GOSYN_PORTALNULL = new BlockPortalNull();
-	public static final Block GOSYN_MULTIBLOCK = new BlockGosynMultiBlock();
-
 	
 }

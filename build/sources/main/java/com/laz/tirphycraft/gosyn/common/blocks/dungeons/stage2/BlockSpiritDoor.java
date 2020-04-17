@@ -2,8 +2,8 @@ package com.laz.tirphycraft.gosyn.common.blocks.dungeons.stage2;
 
 import javax.annotation.Nullable;
 
-import com.laz.tirphycraft.gosyn.common.blocks.miscs.portal.enumPortal;
 import com.laz.tirphycraft.init.BlockInit;
+import com.laz.tirphycraft.objects.portal.enumPortal;
 import com.laz.tirphycraft.util.interfaces.IMetaName;
 
 import net.minecraft.block.Block;

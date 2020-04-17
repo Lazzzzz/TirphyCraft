@@ -168,7 +168,7 @@ public class FrozTemplate implements IChunkGenerator {
 						this.world.setBlockState(blockpos2, Blocks.ICE.getDefaultState(), 2);
 					}
 					if (this.world.canSnowAt(blockpos1, true)) {
-						this.world.setBlockState(blockpos1, Blocks.SNOW_LAYER.getDefaultState(), 2);
+						this.world.setBlockState(blockpos1, Blocks.SNOW_LAYER.getStateFromMeta(rand.nextInt(3)), 2);
 					}
 				}
 			}

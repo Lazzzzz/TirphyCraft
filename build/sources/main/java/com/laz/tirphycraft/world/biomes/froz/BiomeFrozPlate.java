@@ -4,7 +4,8 @@ import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
 import com.laz.tirphycraft.world.biomes.froz.caveDecorator.BiomeFrozCaveDecorator;
-import com.laz.tirphycraft.world.gen.generators.froz.WorldGenIceVillage;
+import com.laz.tirphycraft.world.gen.generators.froz.city.WorldGenBuilding;
+import com.laz.tirphycraft.world.gen.generators.froz.city.WorldGenGravel;
 import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenFrozNormalTree;
 
 import net.minecraft.block.BlockLeaves;
@@ -15,6 +16,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.chunk.Chunk;
 
 public class BiomeFrozPlate extends Biome {
 	BiomeFrozCaveDecorator CAVE = new BiomeFrozCaveDecorator();
@@ -34,18 +36,36 @@ public class BiomeFrozPlate extends Biome {
 
 	@Override
 	public void decorate(World worldIn, Random rand, BlockPos pos) {
-		if (rand.nextInt(50) == 0) {
-			int j = rand.nextInt(16) + 8;
-			int k = rand.nextInt(16) + 8;
-			new WorldGenIceVillage().generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
+		Chunk chunk = worldIn.getChunkFromBlockCoords(pos);
+		for (int i = 0; i < 16; i++) {
+			for (int j = 0; j < 16; j++) {
+				int x = chunk.x * 16 + i + 8;
+				int z = chunk.z * 16 + j + 8;
+				CAVE.genDecorator(worldIn, rand, new BlockPos(x, 0, z));
+				BlockPos p = worldIn.getHeight(new BlockPos(x, 0, z)).down();
+				if (rand.nextBoolean() && p.getY() > 125) {
+					if (rand.nextInt(4) == 0) worldIn.setBlockState(p, Blocks.CONCRETE.getStateFromMeta(15));
+					else worldIn.setBlockState(worldIn.getHeight(new BlockPos(x, 0, z)).down(), Blocks.CONCRETE_POWDER.getStateFromMeta(15));
+					if (rand.nextInt(100) == 0) worldIn.setBlockState(p, Blocks.GLOWSTONE.getDefaultState());
+				}
+			}
 		}
-		for (int i = 0; i < 20; i++) {
-			int j = rand.nextInt(16) + 8;
-			int k = rand.nextInt(16) + 8;
-			CAVE.genDecorator(worldIn, rand, pos.add(j,0,k), 130);
-		}
-
+		
+		//generate city
 		if (rand.nextInt(2) == 0) {
+			int j = chunk.x * 16 + 8;
+			int k = chunk.z * 16 + 8;
+			new WorldGenBuilding(rand.nextInt(5) +15 , rand.nextInt(5) +5, rand.nextInt(10) +2).generate(worldIn, rand, new BlockPos(j, worldIn.getHeight(pos).getY(), k));
+		}else {
+			
+		}
+		for (int i = 0; i < 4; i ++) {
+			int j = rand.nextInt(16) + 8;
+			int k = rand.nextInt(16) + 8;
+			new WorldGenGravel().generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
+		}
+		
+		for (int i = 0; i < 5 ; i++) {
 			int j = rand.nextInt(16) + 8;
 			int k = rand.nextInt(16) + 8;
 			if (rand.nextBoolean()) {
@@ -60,7 +80,7 @@ public class BiomeFrozPlate extends Biome {
 								worldIn.getHeight(pos.add(j, 0, k)));
 			}
 		}
-
+		
 	}
 
 	@Override

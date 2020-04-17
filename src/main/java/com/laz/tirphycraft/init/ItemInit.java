@@ -42,6 +42,7 @@ import com.laz.tirphycraft.objects.items.bow.BowPyrodes;
 import com.laz.tirphycraft.objects.items.clock.ItemClock;
 import com.laz.tirphycraft.objects.items.food.ItemCustomFood;
 import com.laz.tirphycraft.objects.items.legendary.TotemLevitation;
+import com.laz.tirphycraft.objects.items.legendary.TotemThunder;
 import com.laz.tirphycraft.objects.items.other.ItemAnkh;
 import com.laz.tirphycraft.objects.items.other.ItemCoins;
 import com.laz.tirphycraft.objects.items.other.ItemMixedDust;
@@ -98,6 +99,7 @@ public class ItemInit {
 	
 	//TOTEM
 	public static final Item TOTEM_LEVITATION       = new TotemLevitation();
+	public static final Item TOTEM_THUNDER 	        = new TotemThunder();
 	
 	//FRAGMENT
 	public static final Item FRAGMENT_BLUE   	   = new ItemBase("fragment_blue", 16);

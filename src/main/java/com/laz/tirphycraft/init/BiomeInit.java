@@ -70,7 +70,7 @@ public class BiomeInit
 	
 	public static final Biome DARK_FOREST = new BiomeDarkForest();
 
-	public static final List<Biome> biomesSpawn = new ArrayList<>();
+	public static final List<Biome> biomesSpawn  = new ArrayList<>();
 	
 	public static void registerBiomes()
 	{
@@ -107,6 +107,21 @@ public class BiomeInit
 		biomesSpawn.add(FLORY);
 		biomesSpawn.add(WET_LANDS);
 		biomesSpawn.add(MELYNCH_FOREST);
+		
+		biomesSpawn.add(LAPUTA);
+		biomesSpawn.add(LAPUTANML);
+		biomesSpawn.add(LAPUTA_MAGIC);
+		biomesSpawn.add(LAPUTA_CRYSTAL);
+		biomesSpawn.add(LAPUTA_RAINBOW);
+		biomesSpawn.add(FROZ_DEAD);
+		biomesSpawn.add(FROZ_PLAINE);
+		biomesSpawn.add(FROZ_DENSE);
+		biomesSpawn.add(FROZ_MONTAIN);
+		biomesSpawn.add(FROZ_ICE_MONTAIN);
+		biomesSpawn.add(FROZ_FOREST);
+		biomesSpawn.add(FROZ_PLATE);
+		biomesSpawn.add(FROZ_SLAWOMIR);
+		biomesSpawn.add(FROZ_GEANT);
 		
 } 
 	

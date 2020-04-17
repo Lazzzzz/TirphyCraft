@@ -41,6 +41,8 @@ import com.laz.tirphycraft.objects.items.armor.ArmorTenium;
 import com.laz.tirphycraft.objects.items.bow.BowPyrodes;
 import com.laz.tirphycraft.objects.items.clock.ItemClock;
 import com.laz.tirphycraft.objects.items.food.ItemCustomFood;
+import com.laz.tirphycraft.objects.items.legendary.TotemLevitation;
+import com.laz.tirphycraft.objects.items.legendary.TotemThunder;
 import com.laz.tirphycraft.objects.items.other.ItemAnkh;
 import com.laz.tirphycraft.objects.items.other.ItemCoins;
 import com.laz.tirphycraft.objects.items.other.ItemMixedDust;
@@ -93,7 +95,11 @@ public class ItemInit {
 
 	public static final Item AMULET_1_LUCK			= new Amulet_1_speed();
 	public static final Item AMULET_2_LUCK			= new Amulet_2_speed(); 
-	public static final Item AMULET_3_LUCK			= new Amulet_3_speed(); 
+	public static final Item AMULET_3_LUCK			= new Amulet_3_speed();
+	
+	//TOTEM
+	public static final Item TOTEM_LEVITATION       = new TotemLevitation();
+	public static final Item TOTEM_THUNDER 	        = new TotemThunder();
 	
 	//FRAGMENT
 	public static final Item FRAGMENT_BLUE   	   = new ItemBase("fragment_blue", 16);

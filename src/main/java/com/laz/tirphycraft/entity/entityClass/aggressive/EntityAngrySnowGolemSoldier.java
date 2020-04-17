@@ -89,5 +89,10 @@ public class EntityAngrySnowGolemSoldier extends EntityMob {
 		return true;
 	}
 
+	
+	@Override
+	public boolean canBeHitWithPotion() {
+		return false;
+	}
 
 }

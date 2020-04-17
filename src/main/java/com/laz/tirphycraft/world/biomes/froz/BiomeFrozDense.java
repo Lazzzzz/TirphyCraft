@@ -12,7 +12,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.feature.WorldGenTaiga2;
 
 public class BiomeFrozDense extends Biome {
@@ -36,29 +36,40 @@ public class BiomeFrozDense extends Biome {
 	
 	@Override
 	public void decorate(World worldIn, Random rand, BlockPos pos) {
+		Chunk chunk = worldIn.getChunkFromBlockCoords(pos);
+		for (int i = 0; i < 16; i++) {
+			for (int j = 0; j < 16; j++) {
+				int x = chunk.x * 16 + i + 8;
+				int z = chunk.z * 16 + j + 8;
+				CAVE.genDecorator(worldIn, rand, new BlockPos(x, 0, z));
+			}
+		}
+		
+		
 		int o = rand.nextInt(70);
 		if (o==1) {
 			int j = rand.nextInt(16) + 8;
 			int k = rand.nextInt(16) + 8;
 			PLANT_ROSE.generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
 		}
-		for (int i = 0; i < 20; i++) {
-			int j = rand.nextInt(16) + 8;
-			int k = rand.nextInt(16) + 8;
-			CAVE.genDecorator(worldIn, rand, pos.add(j,0,k), 80);
+
+		o = rand.nextInt(50);
+		int j = rand.nextInt(16) + 8;
+		int k = rand.nextInt(16) + 8;
+		
+		if (o == 1) {
+			new WorldGenFrozBigTree().generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
+		}
+		else if (o > 1 && o < 5) {
+			new WorldGenTaiga2(true).generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
+		}
+		else {
+			new WorldGenFrozNormalTree(rand.nextInt(8)+2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState()).generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));;
 		}
 		
 		super.decorate(worldIn, rand, pos);
 	}
 	
-	@Override
-	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
-		int o = rand.nextInt(50);
-		if (o==1) return new WorldGenFrozBigTree();
-		else if (rand.nextInt(5) == 0)  return new WorldGenTaiga2(true);
-		else return new WorldGenFrozNormalTree(rand.nextInt(8)+2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState());
-
-	}
 	
 	@Override
 	public int getGrassColorAtPos(BlockPos pos) {

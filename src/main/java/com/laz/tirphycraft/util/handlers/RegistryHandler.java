@@ -45,6 +45,7 @@ public class RegistryHandler {
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
 		TileEntityHandler.registerTileEntities();
+		TileRenderHandler.register();
 
 	}
 

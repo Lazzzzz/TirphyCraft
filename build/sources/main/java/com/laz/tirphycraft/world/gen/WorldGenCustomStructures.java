@@ -53,7 +53,7 @@ public class WorldGenCustomStructures implements IWorldGenerator {
 			break;
 		case 120:
 			int i = new Random().nextInt(50) + 50;
-			generateStructure(ISLAND_CRYSTAL, world, random, chunkX, chunkZ, 500, i, BlockInit.NOXIS_GRASS,
+			generateStructure(ISLAND_CRYSTAL, world, random, chunkX, chunkZ, 500, i, Blocks.AIR,
 					BiomeNoxis.class, BiomeNoxis.class, BiomeNoxis.class);
 			generateStructure(N_B_H_1, world, random, chunkX, chunkZ, 10, 0, BlockInit.NOXIS_GRASS, BiomeNoxis.class,
 					BiomeNoxis.class, BiomeNoxis.class);

@@ -16,6 +16,7 @@ public class BiomeNoxis extends Biome {
 
 	private genNoxisGround GROUND = new genNoxisGround();
 	public static WorldGenStem TREE = new WorldGenStem(BlockInit.LOG_MYSTICAL.getDefaultState(), 3);
+	public genNoxisTower TOWER = new genNoxisTower();
 	
 	public BiomeNoxis() {
 
@@ -41,6 +42,10 @@ public class BiomeNoxis extends Biome {
 				int z = chunk.z * 16 + j + 8;
 				GROUND.generate(worldIn, rand, worldIn.getHeight(new BlockPos(x, 0, z)));
 			}
+		}
+		
+		if (chunk.x == -1 && chunk.z == -1) {
+			TOWER.generator(worldIn, new BlockPos(chunk.x * 16, 60, chunk.z * 16));
 		}
 
 		if (rand.nextInt(6) == 0) {

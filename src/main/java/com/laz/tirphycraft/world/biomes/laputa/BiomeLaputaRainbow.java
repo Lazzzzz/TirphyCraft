@@ -3,8 +3,6 @@ package com.laz.tirphycraft.world.biomes.laputa;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaCave;
-import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaPick;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.normal.worldGenBlueTree;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.normal.worldGenGreenTree;
 import com.laz.tirphycraft.world.gen.generators.trees.noxis.normal.worldGenPurpleTree;

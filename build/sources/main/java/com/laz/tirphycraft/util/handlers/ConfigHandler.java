@@ -70,7 +70,7 @@ public class ConfigHandler {
 	public static int DIMENSION_FROZ_ID = 123;
 
 	public static int MAX_PASSIF_CREATURE = 50;
-	public static int MAX_SIZE_CLOUD = 50;
+	public static int MAX_SIZE_CLOUD = 10;
 
 	public static boolean SPAWN_BIOMES_OVERWORLD = false;
 	

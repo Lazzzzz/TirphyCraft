@@ -1,0 +1,66 @@
+1584992564093	Rename package 'com.laz.tirphycraft.blockRender'
+1584992565678	Rename package 'com.laz.tirphycraft.blockRende'
+1584992600715	Move compilation unit
+1584992607015	Rename package 'com.laz.tirphycraft.blockRender.crystalTesseract'
+1584992608796	Rename package 'com.laz.tirphycraft.blockRender.crystalTesserac'
+1584992647676	Rename type 'BlockMagicalMushrooom'
+1584992656941	Rename type 'TileEntityMagicalMushroooms'
+1584992913429	Rename type 'CrystalTesseract'
+1584992955014	Rename type 'RenderCrystalTesseract'
+1584992975732	Rename compilation unit 'RenderCrystalTesseractBlue.java'
+1584998044786	Delete element
+1584998074542	Rename resource 'CrystalTesseract-texturemap.png'
+1584998132727	Rename resource 'TesseractBlue.png'
+1585000273963	Copy file
+1585045257923	Rename package 'com.laz.tirphycraft.blockRender.crystalTesseract'
+1585046888079	Rename type 'BlockCrystalTesseractBlue'
+1585046892601	Rename type 'RenderCrystalTesseractBlue'
+1585046894941	Rename type 'TileEntityCrystalTesseractBlue'
+1585070660856	Rename type 'BlockCrystalTesseract'
+1585070669494	Rename type 'ModelCrystalTesseract'
+1585070679996	Rename type 'RenderCrystalTesseract'
+1585070682636	Rename type 'TileEntityCrystalTesseract'
+1585070711711	Copy compilation units
+1585070717233	Rename type 'BlockCrystalTesseractBlue'
+1585070721823	Rename type 'ModelCrystalTesseractBlue'
+1585070724580	Move compilation unit
+1585070741612	Move compilation unit
+1585070808273	Delete element
+1585070815182	Rename type 'RenderCrystalTesseractBlue'
+1585070849647	Rename type 'TileEntityCrystalTesseractBlue'
+1585071051320	Delete element
+1585071119293	Copy compilation units
+1585071121085	Copy compilation units
+1585071122396	Copy compilation units
+1585071123251	Copy compilation units
+1585071144263	Delete elements
+1585071268691	Delete elements
+1585071275599	Rename package 'com.laz.tirphycraft.blockTile.tesseractBlue'
+1585071293406	Rename type 'BlockCrystalTesseractBlue'
+1585071306533	Rename type 'RenderCrystalTesseractBlue'
+1585071311600	Rename type 'TileEntityCrystalTesseractBlue'
+1585071811345	Rename resource 'tesseractblue.png'
+1585071829324	Delete elements
+1585072835516	Delete element
+1585164831183	Copy file
+1585183233477	Rename compilation unit 'ToolsBoost.java'
+1585183676126	Delete element
+1585183677989	Delete element
+1585246939446	Move compilation units
+1585246941662	Delete element
+1585246959273	Move compilation units
+1585246986001	Copy compilation units
+1585246993437	Rename type 'BlockGosynPortal'
+1585247024349	Rename package 'com.laz.tirphycraft.objects.portal.froz'
+1585247038232	Copy compilation units
+1585247044003	Rename type 'BlockLaputaPortal'
+1585247261673	Rename type 'BlockPortalNull'
+1585247268247	Rename type 'BlockPortalNull'
+1585247279692	Rename type 'BlockPortalNull'
+1585250711771	Move compilation unit
+1585250789477	Copy file
+1585250794689	Copy file
+1585250823702	Copy file
+1585250828210	Copy file
+1585250890121	Copy files
+1585250898797	Copy files

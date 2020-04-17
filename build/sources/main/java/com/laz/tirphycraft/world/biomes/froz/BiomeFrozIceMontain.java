@@ -48,20 +48,14 @@ public class BiomeFrozIceMontain extends Biome {
 				int x = chunk.x * 16 + i + 8;
 				int z = chunk.z * 16 + j + 8;
 				new genFrozEternalGround().generate(worldIn, rand, worldIn.getHeight(new BlockPos(x, 0, z)));
+				CAVE.genDecorator(worldIn, rand, new BlockPos(x, 0, z));
 			}
 		}
 		
-		
-		int o = rand.nextInt(7);
-		if (o == 0) {
+		if (rand.nextInt(7) == 0) {
 			int j = rand.nextInt(16) + 16;
 			int k = rand.nextInt(16) + 16;
 			new WorldGenGiantPick(rand.nextInt(20) + 10).generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));
-		}
-		for (int i = 0; i < 20; i++) {
-			int j = rand.nextInt(16) + 8;
-			int k = rand.nextInt(16) + 8;
-			CAVE.genDecorator(worldIn, rand, pos.add(j,0,k), 80);
 		}
 	}
 

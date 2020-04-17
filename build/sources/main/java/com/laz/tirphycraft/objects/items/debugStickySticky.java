@@ -2,10 +2,9 @@ package com.laz.tirphycraft.objects.items;
 
 import java.util.Random;
 
+import com.laz.tirphycraft.init.BiomeInit;
 import com.laz.tirphycraft.objects.base.ItemBase;
 import com.laz.tirphycraft.util.interfaces.IStructure;
-import com.laz.tirphycraft.world.gen.generators.structures.tower.WorldGenBattleTower;
-import com.laz.tirphycraft.world.gen.generators.trees.froz.WorldGenGeantTreeFroz;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -21,7 +20,7 @@ public class debugStickySticky extends ItemBase implements IStructure {
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-		new WorldGenBattleTower().generate(worldIn, new Random(), playerIn.getPosition());
+		if (!worldIn.isRemote) BiomeInit.MAGIC_FOREST.decorate(worldIn, new Random(), playerIn.getPosition());		
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 
 	}

@@ -70,7 +70,6 @@ public class FortnestMazePlacer {
 			if (q1.equals(".") && q2.equals(".")) {
 				done = true;
 				new FortnestStairs().generate(world, rand, pos.add(i * 8, 1, j * 8));
-				System.out.println("yolo");
 			}
 
 		}

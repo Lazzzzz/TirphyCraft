@@ -12,6 +12,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.chunk.Chunk;
 
 public class BiomeFrozGiantForest extends Biome {
 
@@ -35,6 +36,15 @@ public class BiomeFrozGiantForest extends Biome {
 
 	@Override
 	public void decorate(World worldIn, Random rand, BlockPos pos) {
+		Chunk chunk = worldIn.getChunkFromBlockCoords(pos);
+		for (int i = 0; i < 16; i++) {
+			for (int j = 0; j < 16; j++) {
+				int x = chunk.x * 16 + i + 8;
+				int z = chunk.z * 16 + j + 8;
+				CAVE.genDecorator(worldIn, rand, new BlockPos(x, 0, z));
+			}
+		}
+		
 		int j = rand.nextInt(16) + 8;
 		int k = rand.nextInt(16) + 8;
 		new WorldGenGeantTreeFroz().generate(worldIn, rand, worldIn.getHeight(pos.add(j, 0, k)));

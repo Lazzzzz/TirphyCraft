@@ -3,7 +3,6 @@ package com.laz.tirphycraft.world.biomes.laputa;
 import java.util.Random;
 
 import com.laz.tirphycraft.init.BlockInit;
-import com.laz.tirphycraft.util.handlers.ConfigHandler;
 import com.laz.tirphycraft.world.gen.generators.laputa.WorldBlackCrystal;
 import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaBigCloud;
 import com.laz.tirphycraft.world.gen.generators.laputa.WorldGenLaputaFlower;
@@ -39,7 +38,7 @@ public class BiomeLaputaDecorator {
 		genFlower(worldIn, rand, pos, flower);
 		genMagic(worldIn, rand, pos, magic);
 		genStem(worldIn, rand, pos, stem);
-		genCloud(worldIn, rand, pos);
+		//genCloud(worldIn, rand, pos);
 	}
 
 	public void genTree(World worldIn, Random rand, BlockPos pos, int tree) {
@@ -195,7 +194,7 @@ public class BiomeLaputaDecorator {
 			int j = rand.nextInt(16) + 8;
 			int k = rand.nextInt(16) + 8;
 			WorldGenLaputaBigCloud BIG_CLOUD = new WorldGenLaputaBigCloud();
-			BIG_CLOUD.setAmount(ConfigHandler.MAX_SIZE_CLOUD);
+			BIG_CLOUD.setAmount(8);
 			BIG_CLOUD.generate(worldIn, rand, new BlockPos(pos.getX() + j, rand.nextInt(150) + 35, pos.getZ() + k));
 		}
 	}

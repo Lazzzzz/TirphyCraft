@@ -11,7 +11,6 @@ import com.laz.tirphycraft.gosyn.common.items.tools.base.ToolsGosynSword;
 import com.laz.tirphycraft.util.handlers.ConfigHandler;
 import com.laz.tirphycraft.util.interfaces.ParticleTypes;
 
-import ca.weblite.objc.Client;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -20,7 +19,6 @@ import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

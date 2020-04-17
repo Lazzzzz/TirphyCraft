@@ -39,7 +39,7 @@ public class NoxisTemplate implements IChunkGenerator
     /** A NoiseGeneratorOctaves used in generating terrain */
     public NoiseGeneratorOctaves noiseGen6;
     /** Reference to the World object. */
-    private final World world;
+    public final World world;
     /** are map structures going to be generated (e.g. strongholds) */
     private final boolean mapFeaturesEnabled;
     private final BlockPos spawnPoint;
@@ -150,8 +150,25 @@ public class NoxisTemplate implements IChunkGenerator
                 }
             }
         }
+        
+        flatTerrain(x, z, primer);
+      
     }
 
+    public void flatTerrain(int x, int z, ChunkPrimer primer) {
+    	if (x >= -10 && x < 10) {
+        	if (z >= -10 && z < 10) {
+        		for (int i = 60; i < 90; i++) {
+        			for (int j = 0; j < 16; j++) {
+            			for (int k = 0; k < 16; k++) {
+            				primer.setBlockState(j, i, k, Blocks.AIR.getDefaultState());
+            			}
+        			}
+        		}
+        	}	
+    	}
+    }
+    
     public void buildSurfaces(ChunkPrimer primer)
     {
         if (!net.minecraftforge.event.ForgeEventFactory.onReplaceBiomeBlocks(this, this.chunkX, this.chunkZ, primer, this.world)) return;

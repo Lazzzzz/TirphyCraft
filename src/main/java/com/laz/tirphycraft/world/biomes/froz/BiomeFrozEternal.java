@@ -46,6 +46,7 @@ public class BiomeFrozEternal extends Biome {
 				int x = chunk.x * 16 + i + 8;
 				int z = chunk.z * 16 + j + 8;
 				GROUND.generate(worldIn, rand, worldIn.getHeight(new BlockPos(x, 0, z)));
+				CAVE.genDecorator(worldIn, rand, new BlockPos(x, 0, z));
 			}
 		}
 		
@@ -57,16 +58,16 @@ public class BiomeFrozEternal extends Biome {
 		j = rand.nextInt(16) + 8;
 		k = rand.nextInt(16) + 8;
 		
-		if (rand.nextInt(70) == 0) new WorldGenFrozBigTree().generate(worldIn, rand, worldIn.getHeight(pos.add(j, rand.nextInt(5), k)));
-		if (rand.nextBoolean())	new WorldGenFrozNormalTree(rand.nextInt(4) + 2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState()).generate(worldIn, rand, worldIn.getHeight(pos.add(j, rand.nextInt(5), k)));
-		else new WorldGenFrozSlick().generate(worldIn, rand, worldIn.getHeight(pos.add(j, rand.nextInt(5), k)));
-	
-		for (int i = 0; i < 20; i++) {
-			j = rand.nextInt(16) + 8;
-			k = rand.nextInt(16) + 8;
-			CAVE.genDecorator(worldIn, rand, pos.add(j,0,k), 80);
+		if (rand.nextInt(70) == 0) {
+			new WorldGenFrozBigTree().generate(worldIn, rand, worldIn.getHeight(pos.add(j, rand.nextInt(5), k)));
 		}
-		
+		if (rand.nextBoolean())	{
+			new WorldGenFrozNormalTree(rand.nextInt(4) + 2, BlockInit.LEAVES_FROZ.getDefaultState(), BlockInit.LOG_FROZ.getDefaultState()).generate(worldIn, rand, worldIn.getHeight(pos.add(j, rand.nextInt(5), k)));
+		}
+		else {
+			new WorldGenFrozSlick().generate(worldIn, rand, worldIn.getHeight(pos.add(j, rand.nextInt(5), k)));
+		}
+	
 	}
 	
 
